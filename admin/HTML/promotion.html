@@ -1,0 +1,370 @@
+<!-- promotion.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion Management</title>
+    <link rel="stylesheet" href="../CSS/promotion.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="favorites.html">
+                    <img src="../images/icons/favorite.svg" class="icon" alt="Favorite"/>
+                    <span class="label">Favorites</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="promotion-header">
+                    <h1>Promotion</h1>
+                    <button class="add-new-promotion">Add New Promotion</button>
+                </div>
+                <div class="search-promotion">
+                    <input type="text" placeholder="Search promotion name" class="search-input-small">
+                </div>
+                <div class="promotion-table-container">
+                    <table class="promotion-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Promotion</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Description</th>
+                                <th>Condition</th>
+                                <th>Sale</th>
+                                <th>Max Usage Limit</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-promotion-id="1">
+                                <td>1</td>
+                                <td>Mua 2 tặng 1</td>
+                                <td>10/10/2020</td>
+                                <td>10/11/2020</td>
+                                <td>Mã ta đẹp đẽn</td>
+                                <td>Mua 2 trả 1 lần 63</td>
+                                <td>Không</td>
+                                <td></td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr data-promotion-id="2">
+                                <td>2</td>
+                                <td>Giảm 5% cho món đồn</td>
+                                <td>10/10/2020</td>
+                                <td>10/11/2020</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr data-promotion-id="3">
+                                <td>3</td>
+                                <td>Mua 2 matcha giảm 20%</td>
+                                <td>10/9/2021</td>
+                                <td>8/3/2021</td>
+                                <td>635</td>
+                                <td>635</td>
+                                <td>635</td>
+                                <td>635</td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr data-promotion-id="4">
+                                <td>4</td>
+                                <td>Tặng Tote</td>
+                                <td>10/9/2021</td>
+                                <td>8/3/2021</td>
+                                <td>67</td>
+                                <td>67</td>
+                                <td>67</td>
+                                <td>67</td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr data-promotion-id="5">
+                                <td>5</td>
+                                <td>Cóc gì nhỉ PL</td>
+                                <td>10/9/2021</td>
+                                <td>8/3/2021</td>
+                                <td>52</td>
+                                <td>52</td>
+                                <td>52</td>
+                                <td>52</td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr data-promotion-id="6">
+                                <td>6</td>
+                                <td>Giảm 10% tất cả</td>
+                                <td>10/9/2021</td>
+                                <td>8/3/2021</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr data-promotion-id="7">
+                                <td>7</td>
+                                <td>Vì sao dua ảnh đến</td>
+                                <td>10/9/2021</td>
+                                <td>8/3/2021</td>
+                                <td>635</td>
+                                <td>635</td>
+                                <td>635</td>
+                                <td>635</td>
+                                <td>
+                                    <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span>Showing 1-09 of 78</span>
+                        <button>&lt;</button>
+                        <button>&gt;</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Edit/Add Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Promotion</h2>
+            <form id="editForm">
+                <label for="name">Promotion Name:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="from">From Date:</label>
+                <input type="date" id="from" name="from">
+                
+                <label for="to">To Date:</label>
+                <input type="date" id="to" name="to">
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+                
+                <label for="condition">Condition:</label>
+                <textarea id="condition" name="condition"></textarea>
+                
+                <label for="sale">Sale (e.g., % or amount):</label>
+                <input type="text" id="sale" name="sale">
+                
+                <label for="max_usage">Max Usage Limit:</label>
+                <input type="number" id="max_usage" name="max_usage">
+                
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-details">&times;</span>
+            <h2>Promotion Details</h2>
+            <div id="detailsContent">
+                <!-- Dynamic content here -->
+                <p>Total Sales: <span id="total-sales"></span></p>
+                <p>Best Selling Product: <span id="best-product"></span></p>
+                <!-- Add more stats as needed -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Edit modal functionality
+        const editModal = document.getElementById('editModal');
+        const editClose = editModal.querySelector('.close');
+        const editForm = document.getElementById('editForm');
+        const editIcons = document.querySelectorAll('.edit');
+        const addButton = document.querySelector('.add-new-promotion');
+
+        editIcons.forEach(icon => {
+            icon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const row = icon.closest('tr');
+                document.getElementById('name').value = row.cells[1].textContent;
+                document.getElementById('from').value = row.cells[2].textContent.split('/').reverse().join('-'); // Convert to YYYY-MM-DD
+                document.getElementById('to').value = row.cells[3].textContent.split('/').reverse().join('-');
+                document.getElementById('description').value = row.cells[4].textContent;
+                document.getElementById('condition').value = row.cells[5].textContent;
+                document.getElementById('sale').value = row.cells[6].textContent;
+                document.getElementById('max_usage').value = row.cells[7].textContent;
+                editModal.style.display = 'block';
+            });
+        });
+
+        addButton.addEventListener('click', () => {
+            // Clear form for add
+            editForm.reset();
+            editModal.querySelector('h2').textContent = 'Add Promotion';
+            editModal.style.display = 'block';
+        });
+
+        editClose.onclick = function() {
+            editModal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == editModal) {
+                editModal.style.display = 'none';
+            }
+        }
+
+        editForm.onsubmit = function(e) {
+            e.preventDefault();
+            // Update or add row (demo logic)
+            editModal.style.display = 'none';
+        }
+
+        // Delete functionality
+        const deleteIcons = document.querySelectorAll('.delete');
+        deleteIcons.forEach(icon => {
+            icon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (confirm('Are you sure you want to delete this promotion?')) {
+                    icon.closest('tr').remove();
+                }
+            });
+        });
+
+        // Details modal functionality
+        const detailsModal = document.getElementById('detailsModal');
+        const detailsClose = detailsModal.querySelector('.close-details');
+        const rows = document.querySelectorAll('.promotion-table tbody tr');
+
+        rows.forEach(row => {
+            row.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('action-icon')) {
+                    // Fake data for demo
+                    const promoName = row.cells[1].textContent;
+                    document.getElementById('total-sales').textContent = Math.floor(Math.random() * 1000) + ' units';
+                    document.getElementById('best-product').textContent = 'Matcha Latte (or fetch from data)';
+                    detailsModal.querySelector('h2').textContent = `Details for ${promoName}`;
+                    detailsModal.style.display = 'block';
+                }
+            });
+        });
+
+        detailsClose.onclick = function() {
+            detailsModal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == detailsModal) {
+                detailsModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

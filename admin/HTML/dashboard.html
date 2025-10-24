@@ -1,0 +1,315 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item active">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="favorites.html">
+                    <img src="../images/icons/favorite.svg" class="icon" alt="Favorite"/>
+                    <span class="label">Favorites</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Dashboard</h1>
+                <section class="stats">
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/totaluser.svg" alt="TotalUser"/></div>
+                        <h2>Total User</h2>
+                        <p class="value">40,689</p>
+                        <p class="change up">▲ 8.6% Up from yesterday</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/Order.svg" alt="Order"/></div>
+                        <h2>Total Order</h2>
+                        <p class="value">10293</p>
+                        <p class="change up">▲ 1.3% Up past week</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/TotalSales.svg" alt="TotalSales"/></div>
+                        <h2>Total Sales</h2>
+                        <p class="value">$89,000</p>
+                        <p class="change down">▼ 4.3% Down from yesterday</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/sandclock.svg" alt="SandClock"/></div>
+                        <h2>Total Pending</h2>
+                        <p class="value">24</p>
+                        <p class="change up">▲ 1.9% Up from yesterday</p>
+                    </div>
+                </section>
+                <section class="sales-details">
+                    <div class="header">
+                        <h2>Sales Details</h2>
+                        <select>
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <canvas id="salesChart"></canvas>
+                </section>
+                <section class="deals-details">
+                    <div class="header">
+                        <h2>Deals Details</h2>
+                        <select>
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Location</th>
+                                <th>Date - Time</th>
+                                <th>Piece</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="apple-watch.png" alt="Apple Watch"> Apple Watch</td>
+                                <td>6096 Marjolaine Landing</td>
+                                <td>12/09/2019 12:53 PM</td>
+                                <td>423</td>
+                                <td>$34,295</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Additional charts from the new image -->
+                <section class="revenue">
+                    <div class="header">
+                        <h2>Revenue</h2>
+                        <select>
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <canvas id="revenueChart"></canvas>
+                </section>
+                <section class="additional-stats">
+                    <div class="customers-card">
+                        <h2>Customers</h2>
+                        <canvas id="customersChart" width="150" height="150"></canvas>
+                        <div class="customer-numbers">
+                            <p class="new-customers">34,249 <span>New Customers</span></p>
+                            <p class="repeated">1,420 <span>Repeated</span></p>
+                        </div>
+                    </div>
+                    <div class="featured-product">
+                        <h2>Featured Product</h2>
+                        <p>Beats Headphone 2019</p>
+                        <p class="price">$38.00</p>
+                    </div>
+                    <div class="sales-analytics">
+                        <h2>Sales Analytics</h2>
+                        <canvas id="analyticsChart"></canvas>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Original Sales Chart
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(salesCtx, {
+            type: 'line',
+            data: {
+                labels: ['5k', '10k', '15k', '20k', '25k', '30k', '35k', '40k', '45k', '50k', '55k', '60k'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [5, 10, 15, 20, 35, 30, 25, 35, 30, 25, 20, 15],
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) { return value + '%' }
+                        }
+                    }
+                }
+            }
+        });
+
+        // New Revenue Chart (Area chart with Sales and Profit)
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['10a', '20a', '30a', '40a', '50a', '60a', '70a', '80a', '90a', '100a'],
+                datasets: [
+                    {
+                        label: 'Sales',
+                        data: [20, 30, 25, 40, 35, 50, 45, 60, 55, 50],
+                        borderColor: '#FFA07A',
+                        backgroundColor: 'rgba(255, 160, 122, 0.5)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Profit',
+                        data: [10, 20, 15, 30, 25, 40, 35, 50, 45, 40],
+                        borderColor: '#BA55D3',
+                        backgroundColor: 'rgba(186, 85, 211, 0.5)',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Customers Donut Chart
+        const customersCtx = document.getElementById('customersChart').getContext('2d');
+        const customersChart = new Chart(customersCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['New Customers', 'Repeated'],
+                datasets: [{
+                    data: [34249, 1420],
+                    backgroundColor: ['#32CD32', '#ADD8E6'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutout: '70%',
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // Sales Analytics Chart
+        const analyticsCtx = document.getElementById('analyticsChart').getContext('2d');
+        const analyticsChart = new Chart(analyticsCtx, {
+            type: 'line',
+            data: {
+                labels: ['2015', '2016', '2017', '2018', '2019'],
+                datasets: [
+                    {
+                        label: 'Series 1',
+                        data: [10, 20, 15, 25, 20],
+                        borderColor: '#00BFFF',
+                        fill: false,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Series 2',
+                        data: [15, 25, 20, 30, 25],
+                        borderColor: '#90EE90',
+                        fill: false,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

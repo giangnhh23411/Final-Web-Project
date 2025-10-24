@@ -1,0 +1,348 @@
+<!-- orderlist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="../CSS/orderlist.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="favorites.html">
+                    <img src="../images/icons/favorite.svg" class="icon" alt="Favorite"/>
+                    <span class="label">Favorites</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                       <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Order List</h1>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Filter By Date</label>
+                        <input type="date" id="filterDate">
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter By Product</label>
+                        <button id="selectProductsBtn">Select Products</button>
+                        <div id="selectedProducts" class="selected-items"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter By Status</label>
+                        <select id="filterStatus">
+                            <option value="">All</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Processing">Processing</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="On Hold">On Hold</option>
+                            <option value="In Transit">In Transit</option>
+                        </select>
+                    </div>
+                    <button id="applyFilter">Apply Filter</button>
+                    <button id="resetFilter">Reset Filter</button>
+                </div>
+                <section class="order-table">
+                    <table id="orderTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Date</th>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00001</td>
+                                <td>Giang Nguyen</td>
+                                <td>KTX Khu B, Dĩ An</td>
+                                <td>04 Sep 2019</td>
+                                <td>Trà Lái Dừa Thơm</td>
+                                <td>1</td>
+                                <td>$43.30</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>00002</td>
+                                <td>Khai Dao</td>
+                                <td>KTX Khu B, Dĩ An</td>
+                                <td>28 May 2019</td>
+                                <td>Trà 50a Phúc Long</td>
+                                <td>1</td>
+                                <td>$12.00</td>
+                                <td><span class="status processing">Processing</span></td>
+                            </tr>
+                            <tr>
+                                <td>00003</td>
+                                <td>Doanh Nguyen</td>
+                                <td>KTX Khu B, Dĩ An</td>
+                                <td>23 Nov 2019</td>
+                                <td>Cà Phê Sữa</td>
+                                <td>1</td>
+                                <td>$15.00</td>
+                                <td><span class="status rejected">Rejected</span></td>
+                            </tr>
+                            <tr>
+                                <td>00004</td>
+                                <td>Hoang Nguyen</td>
+                                <td>Bons Suối Tidé, Đồng Hóa, ĐT An</td>
+                                <td>05 Feb 2019</td>
+                                <td>Trà Việt Sen</td>
+                                <td>1</td>
+                                <td>$20.00</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>00005</td>
+                                <td>Trinh Nguyen</td>
+                                <td>Bons Suối Tidé, Đồng Hóa, ĐT An</td>
+                                <td>29 Jul 2019</td>
+                                <td>Trà Việt Sen</td>
+                                <td>1</td>
+                                <td>$20.00</td>
+                                <td><span class="status processing">Processing</span></td>
+                            </tr>
+                            <tr>
+                                <td>00006</td>
+                                <td>Tam Bui</td>
+                                <td>Bons Suối Tidé, Đồng Hóa, ĐT An</td>
+                                <td>15 Aug 2019</td>
+                                <td>Hồng Trà Dao</td>
+                                <td>1</td>
+                                <td>$60.00</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>00007</td>
+                                <td>Tram Nguyen</td>
+                                <td>Bons Thống Nhất, Đồng Hóa, ĐT An</td>
+                                <td>21 Dec 2019</td>
+                                <td>Trà Sữa Lài</td>
+                                <td>1</td>
+                                <td>$24.59</td>
+                                <td><span class="status processing">Processing</span></td>
+                            </tr>
+                            <tr>
+                                <td>00008</td>
+                                <td>Phuoc Le</td>
+                                <td>Bons Thống Nhất, Đồng Hóa, ĐT An</td>
+                                <td>30 Apr 2019</td>
+                                <td>Trà 50 Ô Long</td>
+                                <td>1</td>
+                                <td>$12.00</td>
+                                <td><span class="status on-hold">On Hold</span></td>
+                            </tr>
+                            <tr>
+                                <td>00009</td>
+                                <td>Tuan Nguyen</td>
+                                <td>Bons Thống Nhất, Đồng Hóa, ĐT An</td>
+                                <td>09 Jan 2019</td>
+                                <td>Matcha Latte</td>
+                                <td>1</td>
+                                <td>$18.00</td>
+                                <td><span class="status in-transit">In Transit</span></td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                    <div class="pagination">Showing 1-9 of 78</div>
+                </section>
+                <!-- Product Selection Modal -->
+                <div id="productModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeProductModal()">&times;</span>
+                        <h2>Select Product</h2>
+                        <div class="button-group">
+                            <button class="type-button" data-value="Bánh Trung Thu">Bánh Trung Thu</button>
+                            <button class="type-button" data-value="Trà">Trà</button>
+                            <button class="type-button" data-value="Cà Phê">Cà Phê</button>
+                            <button class="type-button" data-value="Bánh">Bánh</button>
+                            <button class="type-button" data-value="Đóng Gói">Đóng Gói</button>
+                            <button class="type-button" data-value="Thức Uống">Thức Uống</button>
+                            <button class="type-button" data-value="Sô Cô La">Sô Cô La</button>
+                            <button class="type-button" data-value="Khác">Khác</button>
+                            <!-- Add more buttons as needed -->
+                        </div>
+                        <p class="note">*You can choose multiple Order type</p>
+                        <button class="apply-btn" onclick="applyProductSelection()">Apply Now</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Product modal
+        const selectProductsBtn = document.getElementById('selectProductsBtn');
+        const productModal = document.getElementById('productModal');
+        const selectedProductsDiv = document.getElementById('selectedProducts');
+        const typeButtons = document.querySelectorAll('.type-button');
+
+        selectProductsBtn.addEventListener('click', () => {
+            productModal.style.display = 'block';
+        });
+
+        typeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('selected');
+            });
+        });
+
+        function closeProductModal() {
+            productModal.style.display = 'none';
+        }
+
+        function applyProductSelection() {
+            const selectedButtons = document.querySelectorAll('.type-button.selected');
+            const selectedProducts = Array.from(selectedButtons).map(btn => btn.dataset.value);
+            selectedProductsDiv.innerHTML = selectedProducts.length > 0 ? selectedProducts.join(', ') : '';
+            closeProductModal();
+        }
+
+        // Filter functionality
+        const applyFilter = document.getElementById('applyFilter');
+        const resetFilter = document.getElementById('resetFilter');
+        const filterDate = document.getElementById('filterDate');
+        const filterStatus = document.getElementById('filterStatus');
+        const table = document.getElementById('orderTable');
+        const rows = table.querySelectorAll('tbody tr');
+
+        applyFilter.addEventListener('click', () => {
+            const selectedDate = filterDate.value;
+            const selectedButtons = document.querySelectorAll('.type-button.selected');
+            const selectedProducts = Array.from(selectedButtons).map(btn => btn.dataset.value);
+            const selectedStatus = filterStatus.value;
+
+            rows.forEach(row => {
+                const dateCell = row.querySelector('td:nth-child(4)').textContent.trim();
+                const productCell = row.querySelector('td:nth-child(5)').textContent.trim();
+                const statusCell = row.querySelector('td:nth-child(8) span').textContent.trim();
+
+                let showRow = true;
+
+                if (selectedDate && dateCell !== formatDate(new Date(selectedDate))) {
+                    showRow = false;
+                }
+
+                if (selectedProducts.length > 0 && !selectedProducts.includes(productCell)) {
+                    showRow = false;
+                }
+
+                if (selectedStatus && statusCell !== selectedStatus) {
+                    showRow = false;
+                }
+
+                row.style.display = showRow ? '' : 'none';
+            });
+        });
+
+        resetFilter.addEventListener('click', () => {
+            filterDate.value = '';
+            filterStatus.value = '';
+            typeButtons.forEach(btn => btn.classList.remove('selected'));
+            selectedProductsDiv.innerHTML = '';
+            rows.forEach(row => row.style.display = '');
+        });
+
+        // Helper to format date as in table (e.g., "04 Sep 2019")
+        function formatDate(date) {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = months[date.getMonth()];
+            const year = date.getFullYear();
+            return `${day} ${month} ${year}`;
+        }
+    </script>
+</body>
+</html>
