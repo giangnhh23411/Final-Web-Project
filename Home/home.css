@@ -690,6 +690,73 @@ footer {
   line-height: 1;
 }
 
+/* PRODUCT ICONS */
+.product-img {
+  position: relative;
+}
+
+.product-icons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-icons {
+  opacity: 1;
+}
+
+.cart-icon-btn, .heart-icon-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cart-icon-btn:hover {
+  background-color: var(--accent-pink);
+  color: white;
+  transform: scale(1.1);
+}
+
+.heart-icon-btn:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* CART ICON BADGE */
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--accent-pink);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
 /* RESPONSIVE */
 @media(max-width:480px){
   .checklist li { width: 100%; }

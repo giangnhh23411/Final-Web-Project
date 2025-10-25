@@ -20,9 +20,9 @@
       <div class="contact-right">
         <div class="contact-item">English▼</div>
         <div class="contact-item">VND▼</div>
-        <div class="contact-item">Login👤</div>
+        <div class="contact-item" id="loginStatus" onclick="toggleLogin()" style="cursor: pointer;">Login👤</div>
         <div class="contact-item">Wishlist♡</div>
-        <div class="contact-item">🛒</div>
+        <div class="contact-item cart-link" onclick="goToCart()" style="cursor: pointer;">🛒</div>
 
         <form class="search-bar">
           <input type="text" placeholder="Search..." />
@@ -100,6 +100,7 @@
           <!-- actions -->
           <div class="buy-row">
             <a href="#" class="btn-buy">MUA NGAY</a>
+            <button class="btn-add-cart" onclick="addToCartFromProductPage()">THÊM VÀO GIỎ HÀNG</button>
 
             <div class="share-row">
               <span class="share-label">Chia sẻ</span>
@@ -297,6 +298,112 @@
       </div>
     </div>
   </footer>
+
+  <!-- Include cart manager -->
+  <script src="../Home/cart-manager.js"></script>
+  
+  <script>
+    // Hàm thêm sản phẩm vào giỏ hàng từ trang product details
+    function addToCartFromProductPage() {
+      // Đọc thông tin sản phẩm từ localStorage
+      const productData = JSON.parse(localStorage.getItem('phuclong_current_product') || '{}');
+      
+      if (productData.id) {
+        // Gọi hàm addToCart từ cart-manager.js
+        addToCart(productData.id, productData.name, productData.price, productData.image);
+      } else {
+        // Fallback nếu không có dữ liệu
+        addToCart('tra-ba-tuoc-luu-do', 'Trà bá tước lựu đỏ', 55000, 'Trà thơm đậm vị/TraBaTuocLuuDo.png');
+      }
+    }
+
+    // Hàm chuyển đến giỏ hàng
+    function goToCart() {
+      window.location.href = '../shopping-cart/index.html';
+    }
+
+    // Cập nhật trạng thái đăng nhập khi trang load
+    function updateLoginStatus() {
+      const isLoggedIn = localStorage.getItem('phuclong_user_logged_in') === 'true';
+      const loginStatus = document.getElementById('loginStatus');
+      
+      if (loginStatus) {
+        loginStatus.textContent = isLoggedIn ? 'Logout👤' : 'Login👤';
+      }
+    }
+
+    // Cập nhật cart icon khi trang load
+    function updateCartIcon() {
+      const cart = JSON.parse(localStorage.getItem('phuclong_cart') || '[]');
+      const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+      const cartIcon = document.querySelector('.cart-link');
+      
+      if (cartIcon && totalItems > 0) {
+        // Xóa badge cũ nếu có
+        const existingBadge = cartIcon.querySelector('.cart-badge');
+        if (existingBadge) {
+          existingBadge.remove();
+        }
+        
+        // Thêm badge mới
+        const badge = document.createElement('span');
+        badge.className = 'cart-badge';
+        badge.textContent = totalItems;
+        badge.style.cssText = `
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: #fb2e86;
+          color: white;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+        `;
+        cartIcon.style.position = 'relative';
+        cartIcon.appendChild(badge);
+      }
+    }
+
+    // Cập nhật thông tin sản phẩm từ localStorage
+    function updateProductInfo() {
+      const productData = JSON.parse(localStorage.getItem('phuclong_current_product') || '{}');
+      
+      if (productData.id) {
+        // Cập nhật tên sản phẩm
+        const productName = document.querySelector('.product-name');
+        if (productName) {
+          productName.textContent = productData.name;
+        }
+        
+        // Cập nhật hình ảnh
+        const productImage = document.querySelector('.product-main-image img');
+        if (productImage) {
+          productImage.src = `../images/${productData.image}`;
+          productImage.alt = productData.name;
+        }
+        
+        // Cập nhật giá
+        const priceElements = document.querySelectorAll('.size-price');
+        priceElements.forEach(element => {
+          element.textContent = `${productData.price.toLocaleString()}₫`;
+        });
+        
+        console.log('Updated product info:', productData);
+      }
+    }
+
+    // Khởi tạo khi trang load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateLoginStatus();
+      updateCartIcon();
+      updateProductInfo();
+    });
+  </script>
 
 </body>
 </html>

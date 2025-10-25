@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Review - Phuc Long</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <span class="email">sales@phuclong.masangroup.com</span>
+                    <span class="phone">1800 6779</span>
+                </div>
+                <div class="top-bar-right">
+                    <span class="language">VIE</span>
+                    <span class="currency">VND</span>
+                    <span class="login">Login</span>
+                    <span class="wishlist">Wishlist</span>
+                    <div class="cart-icon">
+                        <img src="images/Group.png" alt="Cart" class="cart-icon-img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="nav-left">
+                    <div class="logo">PHUC LONG</div>
+                </div>
+                <div class="nav-right">
+                    <div class="nav-menu">
+                        <span class="nav-item">Home</span>
+                        <span class="nav-item">Pages</span>
+                        <span class="nav-item">Products</span>
+                        <span class="nav-item">Blog</span>
+                        <span class="nav-item">Shop</span>
+                        <span class="nav-item">Contact</span>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="" class="search-input">
+                        <button class="search-btn">
+                            <img src="images/search-icon.svg" alt="Search" class="search-icon">
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Background Overlay -->
+            <div class="overlay"></div>
+            
+            <!-- Write Review Modal -->
+            <div class="modal write-review-modal" id="writeReviewModal">
+                <div class="modal-content">
+                    <h2 class="modal-title">WRITE A REVIEW</h2>
+                    
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices uistique amet erat vitae eget dolor los vitae lobortis quis bibendum quam,
+                    </p>
+                    
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <div class="product-image">
+                            <img src="images/hong-tra-dao-20250205072158.png" alt="Hồng Trà Đào">
+                        </div>
+                        <div class="product-details">
+                            <h3>Hồng Trà Đào</h3>
+                            <p>Color: Brown</p>
+                            <p>Size: M</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Rating -->
+                    <div class="rating-section">
+                        <div class="rating-label">EXCELLENT</div>
+                        <div class="stars" id="starRating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Input -->
+                    <div class="review-input-section">
+                        <textarea 
+                            class="review-textarea" 
+                            placeholder="Write your review here"
+                            rows="6"
+                        ></textarea>
+                    </div>
+                    
+                    <!-- Photo Upload -->
+                    <div class="photo-upload-section">
+                        <div class="upload-area">
+                            <div class="camera-icon">📷</div>
+                            <p>Upload your photos here</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button class="submit-btn" onclick="showSuccessModal()">Send Review</button>
+                </div>
+            </div>
+
+            <!-- Review Sent Modal -->
+            <div class="modal success-modal" id="successModal" style="display: none;">
+                <div class="modal-content success-content">
+                    <button class="close-btn" onclick="closeModal()">×</button>
+                    
+                    <!-- Success Icon -->
+                    <div class="success-icon">
+                        <div class="checkmark-circle">
+                            <div class="checkmark">✓</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Success Message -->
+                    <h2 class="success-title">Review Sent!</h2>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <!-- Footer Content -->
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">PHUC LONG</h3>
+                    <div class="email-signup">
+                        <input type="email" placeholder="Enter Email Address" class="email-input">
+                        <button class="signup-btn">Sign Up</button>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Contact info:</h4>
+                        <p>17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Coffee</a></li>
+                        <li><a href="#">Tea</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Orders History</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Terms and Services</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright Bar -->
+            <div class="copyright-bar">
+                <div class="copyright-left">
+                    <span>©Webecy - All Rights Reserved</span>
+                </div>
+                <div class="copyright-right">
+                    <div class="social-icons">
+                        <div class="social-icon facebook">
+                            <img src="images/Group 202.png" alt="Facebook">
+                        </div>
+                        <div class="social-icon instagram">
+                            <img src="images/Group 203.png" alt="Instagram">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showSuccessModal() {
+            document.getElementById('writeReviewModal').style.display = 'none';
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+            document.getElementById('writeReviewModal').style.display = 'flex';
+        }
+
+        // Star rating functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.star');
+            const ratingLabel = document.querySelector('.rating-label');
+            
+            const ratingTexts = {
+                1: 'POOR',
+                2: 'FAIR', 
+                3: 'GOOD',
+                4: 'VERY GOOD',
+                5: 'EXCELLENT'
+            };
+            
+            stars.forEach((star, index) => {
+                star.addEventListener('click', function() {
+                    const rating = parseInt(this.getAttribute('data-rating'));
+                    
+                    // Update all stars
+                    stars.forEach((s, i) => {
+                        if (i < rating) {
+                            s.classList.add('filled');
+                        } else {
+                            s.classList.remove('filled');
+                        }
+                    });
+                    
+                    // Update rating label
+                    ratingLabel.textContent = ratingTexts[rating];
+                });
+                
+                star.addEventListener('mouseenter', function() {
+                    const rating = parseInt(this.getAttribute('data-rating'));
+                    
+                    // Highlight stars on hover
+                    stars.forEach((s, i) => {
+                        if (i < rating) {
+                            s.style.color = '#7e33e0';
+                        } else {
+                            s.style.color = '#ddd';
+                        }
+                    });
+                });
+            });
+            
+            // Reset stars when mouse leaves the container
+            document.querySelector('.stars').addEventListener('mouseleave', function() {
+                stars.forEach(star => {
+                    star.style.color = '#7e33e0';
+                });
+            });
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

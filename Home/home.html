@@ -20,9 +20,9 @@
       <div class="contact-right">
         <div class="contact-item">VIE ▼</div>
         <div class="contact-item">VND ▼</div>
-        <div class="contact-item">Login</div>
+        <div class="contact-item" id="loginStatus" onclick="toggleLogin()" style="cursor: pointer;">Login</div>
         <div class="contact-item">Wishlist</div>
-        <div class="contact-item">🛒</div>
+        <div class="contact-item cart-link" onclick="goToCart()" style="cursor: pointer;">🛒</div>
 
         <form class="search-bar">
           <input type="text" placeholder="Search..." />
@@ -64,53 +64,73 @@
       <div class="carousel-window">
         <div class="carousel-track">
           <!-- SP1 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('hong-tra-dao', 'Hồng trà đào', 60000, 'images/HongTraDao.png')" style="cursor: pointer;">
             <div class="product-img">
               <img src="images/HongTraDao.png" alt="Hồng trà đào" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao', 'Hồng trà đào', 60000, 'images/HongTraDao.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
             <div class="product-name">Hồng trà đào</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">60.000đ - 69.000đ</div>
+            <div class="product-price">60.000 - 69.000₫</div>
           </div>
 
           <!-- SP2 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-ba-tuoc-luu-do', 'Trà bá tước lựu đỏ', 60000, 'images/TraBaTuocLuuDo.png')" style="cursor: pointer;">
             <div class="product-img">
               <img src="images/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-ba-tuoc-luu-do', 'Trà bá tước lựu đỏ', 60000, 'images/TraBaTuocLuuDo.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
             <div class="product-name">Trà bá tước lựu đỏ</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">60.000đ - 69.000đ</div>
+            <div class="product-price">60.000 - 69.000₫</div>
           </div>
 
           <!-- SP3 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-lai-dac-thom', 'Trà lài đặc thơm', 59000, 'images/TraLaiDacThom.png')" style="cursor: pointer;">
             <div class="product-img">
               <img src="images/TraLaiDacThom.png" alt="Trà lài đặc thơm" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-dac-thom', 'Trà lài đặc thơm', 59000, 'images/TraLaiDacThom.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
             <div class="product-name">Trà lài đặc thơm</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">59.000đ - 65.000đ</div>
+            <div class="product-price">59.000 - 65.000₫</div>
           </div>
 
           <!-- SP4 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-lai-mang-cau-thach-dua', 'Trà lài măng cầu thạch dừa', 60000, 'images/TraLaiMangCauThachDua.png')" style="cursor: pointer;">
             <div class="product-img">
               <img src="images/TraLaiMangCauThachDua.png" alt="Trà lài măng cầu thạch dừa" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-mang-cau-thach-dua', 'Trà lài măng cầu thạch dừa', 60000, 'images/TraLaiMangCauThachDua.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
             <div class="product-name">Trà lài măng cầu thạch dừa</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">60.000đ - 69.000đ</div>
+            <div class="product-price">60.000 - 69.000₫</div>
           </div>
 
           <!-- SP5 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-lucky-tea', 'Trà Lucky Tea', 59000, 'images/TraLuckyTea.png')" style="cursor: pointer;">
             <div class="product-img">
               <img src="images/TraLuckyTea.png" alt="Trà Lucky Tea" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lucky-tea', 'Trà Lucky Tea', 59000, 'images/TraLuckyTea.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
             <div class="product-name">Trà Lucky Tea</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">59.000đ - 69.000đ</div>
+            <div class="product-price">59.000 - 69.000₫</div>
           </div>
         </div>
       </div>
@@ -131,53 +151,73 @@
       <div class="carousel-window">
         <div class="carousel-track">
           <!-- SP1 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-sua-matcha', 'Trà sữa matcha', 49000, 'images/TraNhanSen.png')" style="cursor: pointer;">
             <div class="product-img">
-              <img src="images/TraNhanSen.png" alt="Trà nhãn sen" />
+              <img src="images/TraNhanSen.png" alt="Trà sữa matcha" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-matcha', 'Trà sữa matcha', 49000, 'images/TraNhanSen.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
-            <div class="product-name">Trà nhãn sen</div>
+            <div class="product-name">Trà sữa matcha</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">49.000đ - 65.000đ</div>
+            <div class="product-price">49.000 - 65.000₫</div>
           </div>
 
           <!-- SP2 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('hong-tra-dao-sua-thach-konjac', 'Hồng trà đào sữa thạch Konjac', 54000, 'images/TraOLongCamDaoThachKonjac.png')" style="cursor: pointer;">
             <div class="product-img">
-              <img src="images/TraOLongCamDaoThachKonjac.png" alt="Trà Ô Long cam đào thạch Konjac" />
+              <img src="images/TraOLongCamDaoThachKonjac.png" alt="Hồng trà đào sữa thạch Konjac" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao-sua-thach-konjac', 'Hồng trà đào sữa thạch Konjac', 54000, 'images/TraOLongCamDaoThachKonjac.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
-            <div class="product-name">Trà Ô Long cam đào thạch Konjac</div>
+            <div class="product-name">Hồng trà đào sữa thạch Konjac</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">54.000đ - 65.000đ</div>
+            <div class="product-price">54.000 - 65.000₫</div>
           </div>
 
           <!-- SP3 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('hong-tra-sua', 'Hồng trà sữa', 45000, 'images/TraOLongDau.png')" style="cursor: pointer;">
             <div class="product-img">
-              <img src="images/TraOLongDau.png" alt="Trà Ô Long dâu" />
+              <img src="images/TraOLongDau.png" alt="Hồng trà sữa" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-sua', 'Hồng trà sữa', 45000, 'images/TraOLongDau.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
-            <div class="product-name">Trà Ô Long dâu</div>
+            <div class="product-name">Hồng trà sữa</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">45.000đ - 55.000đ</div>
+            <div class="product-price">45.000 - 55.000₫</div>
           </div>
 
           <!-- SP4 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-sua-ba-tuoc', 'Trà sữa bá tước', 50000, 'images/TraOLongLaiBuoi.png')" style="cursor: pointer;">
             <div class="product-img">
-              <img src="images/TraOLongLaiBuoi.png" alt="Trà Ô Long lài bưởi" />
+              <img src="images/TraOLongLaiBuoi.png" alt="Trà sữa bá tước" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-ba-tuoc', 'Trà sữa bá tước', 50000, 'images/TraOLongLaiBuoi.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
-            <div class="product-name">Trà Ô Long lài bưởi</div>
+            <div class="product-name">Trà sữa bá tước</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">50.000đ - 55.000đ</div>
+            <div class="product-price">50.000 - 55.000₫</div>
           </div>
 
           <!-- SP5 -->
-          <div class="product-card">
+          <div class="product-card" onclick="goToProductDetail('tra-sua-lai', 'Trà sữa lài', 55000, 'images/TraVaiSen.png')" style="cursor: pointer;">
             <div class="product-img">
-              <img src="images/TraVaiSen.png" alt="Trà vải sen" />
+              <img src="images/TraVaiSen.png" alt="Trà sữa lài" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-lai', 'Trà sữa lài', 55000, 'images/TraVaiSen.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
             </div>
-            <div class="product-name">Trà vải sen</div>
+            <div class="product-name">Trà sữa lài</div>
             <div class="product-size">Size: M - L</div>
-            <div class="product-price">55.000đ - 59.000đ</div>
+            <div class="product-price">55.000 - 59.000₫</div>
           </div>
         </div>
       </div>
@@ -384,5 +424,37 @@
   </footer>
 
   <script src="home.js"></script>
+  <script src="cart-manager.js"></script>
+  <script>
+    // Debug script
+    console.log('Home page loaded');
+    console.log('addToCart function exists:', typeof addToCart);
+    console.log('cartManager exists:', typeof cartManager);
+    
+    // Test function
+    function testAddToCart() {
+      console.log('Testing addToCart...');
+      addToCart('test', 'Test Product', 10000, 'test.png');
+    }
+    
+    // Make test function global
+    window.testAddToCart = testAddToCart;
+
+    // Hàm chuyển đến trang chi tiết sản phẩm
+    function goToProductDetail(productId, productName, productPrice, productImage) {
+      // Lưu thông tin sản phẩm vào localStorage để trang product details có thể đọc
+      const productData = {
+        id: productId,
+        name: productName,
+        price: productPrice,
+        image: productImage
+      };
+      
+      localStorage.setItem('phuclong_current_product', JSON.stringify(productData));
+      
+      // Chuyển đến trang product details
+      window.location.href = '../product details/product details.html';
+    }
+  </script>
 </body>
 </html>

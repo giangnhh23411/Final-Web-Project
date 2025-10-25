@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout/Shipping - Phuc Long</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <span class="email">sales@phuclong.masangroup.com</span>
+                    <span class="phone">1800 6779</span>
+                </div>
+                <div class="top-bar-right">
+                    <span class="language">VIE</span>
+                    <span class="currency">VND</span>
+                    <span class="login">Login</span>
+                    <span class="wishlist">Wishlist</span>
+                    <div class="cart-icon">
+                        <img src="images/Group.png" alt="Cart" class="cart-icon-img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="nav-left">
+                    <div class="logo">Phuc Long</div>
+                </div>
+                <div class="nav-right">
+                    <div class="nav-menu">
+                        <span class="nav-item">Home</span>
+                        <span class="nav-item">Pages</span>
+                        <span class="nav-item">Products</span>
+                        <span class="nav-item">Blog</span>
+                        <span class="nav-item">Shop</span>
+                        <span class="nav-item">Contact</span>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="" class="search-input">
+                        <button class="search-btn">
+                            <img src="images/search-icon.svg" alt="Search" class="search-icon">
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+            <img src="images/1280x400-banner-web-20251010111718 1.png" alt="Game Promotion Banner" class="banner-image">
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <span class="breadcrumb-item">PHUC LONG</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Cart</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item active">Information</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Shipping</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Payment</span>
+                </div>
+
+                <div class="checkout-container">
+                    <!-- Left Column - Contact & Shipping Form -->
+                    <div class="checkout-left">
+                        <!-- Contact Information -->
+                        <div class="form-section">
+                            <h3 class="section-title">Contact Information</h3>
+                            <div class="form-group">
+                                <input type="text" placeholder="Email or mobile phone number" class="form-input">
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter">
+                                <label for="newsletter">Keep me up to date on news and excluive offers</label>
+                            </div>
+                            <div class="login-link">
+                                <a href="#">Already have an account? Log in</a>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h3 class="section-title">Shipping Address</h3>
+                            <div class="form-row">
+                                <input type="text" placeholder="First name (optional)" class="form-input">
+                                <input type="text" placeholder="Last name" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Address" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Appaetnentment,suit.e.t.c (optinal)" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="City" class="form-input">
+                            </div>
+                            <div class="form-row">
+                                <select class="form-input">
+                                    <option>Bangladesh</option>
+                                </select>
+                                <input type="text" placeholder="Postal Code" class="form-input">
+                            </div>
+                        </div>
+
+                        <button class="continue-btn">Continue Shipping</button>
+                    </div>
+
+                    <!-- Right Column - Order Summary -->
+                    <div class="checkout-right">
+                        <div class="order-summary">
+                            <h3 class="summary-title">Order Summary</h3>
+                            
+                            <!-- Product Items -->
+                            <div class="product-items">
+                                <div class="product-item">
+                                    <img src="images/60000072-tra-lai-hop-giay_d078fcf5-b941-4b6b-b9f7-e38736346ec5-og.png" alt="Jasmine Tea" class="product-image">
+                                    <div class="product-details">
+                                        <h4>Trà Lài Hộp Giấy</h4>
+                                        <p>Quantity: 1</p>
+                                        <p>Size: XL</p>
+                                    </div>
+                                    <div class="product-price">$32.00</div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <img src="images/60000103-tra-lai-u-lanh-tui-tam-giac_67d9ae74-5d48-451f-8f14-bd013eb0830e-og.png" alt="Cold Brew Tea" class="product-image">
+                                    <div class="product-details">
+                                        <h4>Trà Lài Ướp Lạnh Túi Tam Giác</h4>
+                                        <p>Quantity: 1</p>
+                                        <p>Size: XL</p>
+                                    </div>
+                                    <div class="product-price">$32.00</div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <img src="images/60000453-ca-phe-arabica-culi-500g_750ca307-6695-4ea9-906e-45d767f6e8c5-og.png" alt="Coffee Bean" class="product-image">
+                                    <div class="product-details">
+                                        <h4>Cà Phê Arabica Culi 500g</h4>
+                                        <p>Quantity: 1</p>
+                                        <p>Size: XL</p>
+                                    </div>
+                                    <div class="product-price">$32.00</div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <img src="images/65000125-tra-nhan-sen-20230413023131 1.png" alt="Lotus Tea" class="product-image">
+                                    <div class="product-details">
+                                        <h4>Trà Nhân Sen</h4>
+                                        <p>Quantity: 1</p>
+                                        <p>Size: XL</p>
+                                    </div>
+                                    <div class="product-price">$32.00</div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <img src="images/hong-tra-dao-20250205072158.png" alt="Peach Tea" class="product-image">
+                                    <div class="product-details">
+                                        <h4>Hồng Trà Đào</h4>
+                                        <p>Quantity: 1</p>
+                                        <p>Size: XL</p>
+                                    </div>
+                                    <div class="product-price">$32.00</div>
+                                </div>
+                            </div>
+
+                            <!-- Summary Totals -->
+                            <div class="summary-totals">
+                                <div class="total-row">
+                                    <span>Subtotals:</span>
+                                    <span>£219.00</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Totals:</span>
+                                    <span>£325.00</span>
+                                </div>
+                                <p class="shipping-note">Shipping & taxes calculated at checkout</p>
+                            </div>
+
+                            <button class="checkout-btn">Proceed To Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <!-- Footer Content -->
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">Phuc Long</h3>
+                    <div class="email-signup">
+                        <input type="email" placeholder="Enter Email Address" class="email-input">
+                        <button class="signup-btn">Sign Up</button>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Contact Info</h4>
+                        <p>Floor 7, Room 702, Central Plaza Building, No. 17<br>
+                        Le Duan street, Ben Nghe ward, district 1, Ho Chi Minh city.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Drinks</a></li>
+                        <li><a href="#">Bakery</a></li>
+                        <li><a href="#">Mooncake</a></li>
+                        <li><a href="#">Halloween Collections</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Orders History</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Browse the Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright Bar -->
+            <div class="copyright-bar">
+                <div class="copyright-left">
+                    <span>©phuclong.com - All Rights Reserved</span>
+                </div>
+                <div class="copyright-right">
+                    <div class="social-icons">
+                        <div class="social-icon facebook">
+                            <img src="images/Group 202.png" alt="Facebook">
+                        </div>
+                        <div class="social-icon instagram">
+                            <img src="images/Group 203.png" alt="Instagram">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

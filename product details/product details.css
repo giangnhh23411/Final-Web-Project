@@ -286,8 +286,9 @@ img {
 /* buy row */
 .buy-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
+  align-items: center;
 }
 .btn-buy {
   display: inline-block;
@@ -300,6 +301,26 @@ img {
   padding: 8px 12px;
   text-decoration: none;
   width: fit-content;
+}
+
+.btn-add-cart {
+  display: inline-block;
+  background-color: #fff;
+  color: var(--accent-pink);
+  border: 2px solid var(--accent-pink);
+  font-weight: 600;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: var(--accent-pink);
+  color: #fff;
 }
 
 /* share row */
