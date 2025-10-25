@@ -1,24 +1,24 @@
 <!-- shared/header.html -->
 <div class="site-header-sticky-wrapper">
 
-  <!-- TOP CONTACT BAR (thanh tím) -->
+  <!-- THANH TÍM -->
   <div class="top-contact-bar">
     <div class="top-contact-inner">
 
-      <!-- Bên trái: email + phone -->
+      <!-- BÊN TRÁI -->
       <div class="contact-left">
         <div class="contact-item">✉ sales@phuclong.masangroup.com</div>
         <div class="contact-item">☎ 1800 6779</div>
       </div>
 
-      <!-- Bên phải: language, currency, login, wishlist, cart, search -->
+      <!-- BÊN PHẢI -->
       <div class="contact-right">
+
         <!-- LANGUAGE DROPDOWN -->
         <div class="contact-item dropdown-wrapper">
           <button class="dropdown-toggle">
             English <span class="chevron">▼</span>
           </button>
-
           <ul class="dropdown-menu">
             <li><button class="dropdown-option">VIE</button></li>
             <li><button class="dropdown-option">中</button></li>
@@ -31,7 +31,6 @@
           <button class="dropdown-toggle">
             VND <span class="chevron">▼</span>
           </button>
-
           <ul class="dropdown-menu">
             <li><button class="dropdown-option">VND</button></li>
             <li><button class="dropdown-option">USD</button></li>
@@ -39,8 +38,8 @@
         </div>
 
         <!-- LOGIN -->
-        <div class="contact-item contact-clickable">
-          <span>Login</span>
+        <div class="contact-item contact-clickable" onclick="toggleLogin()" id="loginStatus">
+          Login
           <img
             src="../images/shared images/login.png"
             alt="Login"
@@ -50,7 +49,7 @@
 
         <!-- WISHLIST -->
         <div class="contact-item contact-clickable">
-          <span>Wishlist</span>
+          Wishlist
           <img
             src="../images/shared images/wishlist.png"
             alt="Wishlist"
@@ -59,7 +58,7 @@
         </div>
 
         <!-- CART -->
-        <div class="contact-item contact-clickable">
+        <div class="contact-item contact-clickable" onclick="goToCart()">
           <img
             src="../images/shared images/cart.png"
             alt="Cart"
@@ -79,6 +78,7 @@
           </button>
         </form>
       </div><!-- /.contact-right -->
+
     </div><!-- /.top-contact-inner -->
   </div><!-- /.top-contact-bar -->
 
