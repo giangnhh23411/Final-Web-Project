@@ -5,54 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Phuc Long - Homepage</title>
 
+  <!-- CSS dùng chung cho header/footer (sticky, dropdown, footer layout) -->
+  <link rel="stylesheet" href="../shared/header-footer.css" />
+
+  <!-- CSS riêng của trang home -->
   <link rel="stylesheet" href="home.css" />
 </head>
 <body>
 
-  <!-- TOP CONTACT BAR -->
-  <div class="top-contact-bar">
-    <div class="top-contact-inner">
-      <div class="contact-left">
-        <div class="contact-item">sales@phuclong.masangroup.com</div>
-        <div class="contact-item">1800 6779</div>
-      </div>
+  <!-- HEADER sẽ được inject bằng fetch() trong layout.js -->
+  <div id="site-header"></div>
 
-      <div class="contact-right">
-        <div class="contact-item">VIE ▼</div>
-        <div class="contact-item">VND ▼</div>
-        <div class="contact-item" id="loginStatus" onclick="toggleLogin()" style="cursor: pointer;">Login</div>
-        <div class="contact-item">Wishlist</div>
-        <div class="contact-item cart-link" onclick="goToCart()" style="cursor: pointer;">🛒</div>
-
-        <form class="search-bar">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">🔍</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- MAIN NAV -->
-  <header class="main-nav-wrapper">
-    <div class="main-nav-inner">
-      <div class="brand-area">Phuc Long</div>
-      <nav class="nav-links">
-        <a class="active" href="#">Home</a>
-        <a href="#">Pages</a>
-        <a href="#">Products</a>
-        <a href="#">Blog</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO (Banner tím Halloween) -->
+  <!-- =============== HERO (Banner tím Halloween) =============== -->
   <section class="hero">
-    <div class="hero-inner"><!-- text nằm sẵn trong Banner 1.jpg --></div>
+    <div class="hero-inner">
+      <img src="../images/Banner 1.jpg" alt="Halloween Banner" class="hero-banner-img" />
+    </div>
   </section>
 
-  <!-- BEST SELLERS #1: TRÀ THƠM CHẤT LƯỢNG -->
+  <!-- =============== BEST SELLERS #1: TRÀ THƠM CHẤT LƯỢNG =============== -->
   <section class="section-best-sellers">
     <div class="carousel-header">
       BEST SELLERS – TRÀ THƠM CHẤT LƯỢNG
@@ -63,12 +34,18 @@
 
       <div class="carousel-window">
         <div class="carousel-track">
+
           <!-- SP1 -->
-          <div class="product-card" onclick="goToProductDetail('hong-tra-dao', 'Hồng trà đào', 60000, 'images/HongTraDao.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('hong-tra-dao','Hồng trà đào',60000,'../images/Trà thơm đậm vị/HongTraDao.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/HongTraDao.png" alt="Hồng trà đào" />
+              <img src="../images/Trà thơm đậm vị/HongTraDao.png" alt="Hồng trà đào" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao', 'Hồng trà đào', 60000, 'images/HongTraDao.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('hong-tra-dao','Hồng trà đào',60000,'../images/Trà thơm đậm vị/HongTraDao.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -78,11 +55,16 @@
           </div>
 
           <!-- SP2 -->
-          <div class="product-card" onclick="goToProductDetail('tra-ba-tuoc-luu-do', 'Trà bá tước lựu đỏ', 60000, 'images/TraBaTuocLuuDo.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-ba-tuoc-luu-do','Trà bá tước lựu đỏ',60000,'../images/Trà thơm đậm vị/TraBaTuocLuuDo.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
+              <img src="../images/Trà thơm đậm vị/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-ba-tuoc-luu-do', 'Trà bá tước lựu đỏ', 60000, 'images/TraBaTuocLuuDo.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-ba-tuoc-luu-do','Trà bá tước lựu đỏ',60000,'../images/Trà thơm đậm vị/TraBaTuocLuuDo.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -92,39 +74,54 @@
           </div>
 
           <!-- SP3 -->
-          <div class="product-card" onclick="goToProductDetail('tra-lai-dac-thom', 'Trà lài đặc thơm', 59000, 'images/TraLaiDacThom.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-lai-dac-thom','Trà lài đác thơm',59000,'../images/Trà thơm đậm vị/TraLaiDacThom.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraLaiDacThom.png" alt="Trà lài đặc thơm" />
+              <img src="../images/Trà thơm đậm vị/TraLaiDacThom.png" alt="Trà lài đác thơm" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-dac-thom', 'Trà lài đặc thơm', 59000, 'images/TraLaiDacThom.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-lai-dac-thom','Trà lài đác thơm',59000,'../images/Trà thơm đậm vị/TraLaiDacThom.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
-            <div class="product-name">Trà lài đặc thơm</div>
+            <div class="product-name">Trà lài đác thơm</div>
             <div class="product-size">Size: M - L</div>
             <div class="product-price">59.000 - 65.000₫</div>
           </div>
 
           <!-- SP4 -->
-          <div class="product-card" onclick="goToProductDetail('tra-lai-mang-cau-thach-dua', 'Trà lài măng cầu thạch dừa', 60000, 'images/TraLaiMangCauThachDua.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-lai-mang-cau-thach-dua','Trà lài mãng cầu thạch dừa',60000,'../images/Trà thơm đậm vị/TraLaiMangCauThachDua.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraLaiMangCauThachDua.png" alt="Trà lài măng cầu thạch dừa" />
+              <img src="../images/Trà thơm đậm vị/TraLaiMangCauThachDua.png" alt="Trà lài mãng cầu thạch dừa" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-mang-cau-thach-dua', 'Trà lài măng cầu thạch dừa', 60000, 'images/TraLaiMangCauThachDua.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-lai-mang-cau-thach-dua','Trà lài mãng cầu thạch dừa',60000,'../images/Trà thơm đậm vị/TraLaiMangCauThachDua.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
-            <div class="product-name">Trà lài măng cầu thạch dừa</div>
+            <div class="product-name">Trà lài mãng cầu thạch dừa</div>
             <div class="product-size">Size: M - L</div>
             <div class="product-price">60.000 - 69.000₫</div>
           </div>
 
           <!-- SP5 -->
-          <div class="product-card" onclick="goToProductDetail('tra-lucky-tea', 'Trà Lucky Tea', 59000, 'images/TraLuckyTea.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-lucky-tea','Trà Lucky Tea',59000,'../images/Trà thơm đậm vị/TraLuckyTea.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraLuckyTea.png" alt="Trà Lucky Tea" />
+              <img src="../images/Trà thơm đậm vị/TraLuckyTea.png" alt="Trà Lucky Tea" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lucky-tea', 'Trà Lucky Tea', 59000, 'images/TraLuckyTea.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-lucky-tea','Trà Lucky Tea',59000,'../images/Trà thơm đậm vị/TraLuckyTea.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -132,14 +129,15 @@
             <div class="product-size">Size: M - L</div>
             <div class="product-price">59.000 - 69.000₫</div>
           </div>
-        </div>
-      </div>
+
+        </div><!-- /.carousel-track -->
+      </div><!-- /.carousel-window -->
 
       <button class="carousel-arrow right" data-dir="right">›</button>
     </div>
   </section>
 
-  <!-- BEST SELLERS #2: TRÀ SỮA ĐẬM VỊ -->
+  <!-- =============== BEST SELLERS #2: TRÀ SỮA ĐẬM VỊ =============== -->
   <section class="section-best-sellers">
     <div class="carousel-header">
       BEST SELLERS – TRÀ SỮA ĐẬM VỊ
@@ -150,12 +148,18 @@
 
       <div class="carousel-window">
         <div class="carousel-track">
+
           <!-- SP1 -->
-          <div class="product-card" onclick="goToProductDetail('tra-sua-matcha', 'Trà sữa matcha', 49000, 'images/TraNhanSen.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-sua-matcha','Trà sữa matcha',49000,'../images/Trà sữa đậm vị/TraNhanSen.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraNhanSen.png" alt="Trà sữa matcha" />
+              <img src="../images/Trà sữa đậm vị/TraNhanSen.png" alt="Trà sữa matcha" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-matcha', 'Trà sữa matcha', 49000, 'images/TraNhanSen.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-sua-matcha','Trà sữa matcha',49000,'../images/Trà sữa đậm vị/TraNhanSen.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -165,11 +169,16 @@
           </div>
 
           <!-- SP2 -->
-          <div class="product-card" onclick="goToProductDetail('hong-tra-dao-sua-thach-konjac', 'Hồng trà đào sữa thạch Konjac', 54000, 'images/TraOLongCamDaoThachKonjac.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('hong-tra-dao-sua-thach-konjac','Hồng trà đào sữa thạch Konjac',54000,'../images/Trà thơm đậm vị/TraOLongCamDaoThachKonjac.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraOLongCamDaoThachKonjac.png" alt="Hồng trà đào sữa thạch Konjac" />
+              <img src="../images/Trà thơm đậm vị/TraOLongCamDaoThachKonjac.png" alt="Hồng trà đào sữa thạch Konjac" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao-sua-thach-konjac', 'Hồng trà đào sữa thạch Konjac', 54000, 'images/TraOLongCamDaoThachKonjac.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('hong-tra-dao-sua-thach-konjac','Hồng trà đào sữa thạch Konjac',54000,'../images/Trà thơm đậm vị/TraOLongCamDaoThachKonjac.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -179,11 +188,16 @@
           </div>
 
           <!-- SP3 -->
-          <div class="product-card" onclick="goToProductDetail('hong-tra-sua', 'Hồng trà sữa', 45000, 'images/TraOLongDau.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('hong-tra-sua','Hồng trà sữa',45000,'../images/Trà thơm đậm vị/TraOLongDau.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraOLongDau.png" alt="Hồng trà sữa" />
+              <img src="../images/Trà thơm đậm vị/TraOLongDau.png" alt="Hồng trà sữa" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-sua', 'Hồng trà sữa', 45000, 'images/TraOLongDau.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('hong-tra-sua','Hồng trà sữa',45000,'../images/Trà thơm đậm vị/TraOLongDau.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -193,11 +207,16 @@
           </div>
 
           <!-- SP4 -->
-          <div class="product-card" onclick="goToProductDetail('tra-sua-ba-tuoc', 'Trà sữa bá tước', 50000, 'images/TraOLongLaiBuoi.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-sua-ba-tuoc','Trà sữa bá tước',50000,'../images/Trà thơm đậm vị/TraOLongLaiBuoi.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraOLongLaiBuoi.png" alt="Trà sữa bá tước" />
+              <img src="../images/Trà thơm đậm vị/TraOLongLaiBuoi.png" alt="Trà sữa bá tước" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-ba-tuoc', 'Trà sữa bá tước', 50000, 'images/TraOLongLaiBuoi.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-sua-ba-tuoc','Trà sữa bá tước',50000,'../images/Trà thơm đậm vị/TraOLongLaiBuoi.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -207,11 +226,16 @@
           </div>
 
           <!-- SP5 -->
-          <div class="product-card" onclick="goToProductDetail('tra-sua-lai', 'Trà sữa lài', 55000, 'images/TraVaiSen.png')" style="cursor: pointer;">
+          <div class="product-card"
+               onclick="goToProductDetail('tra-sua-lai','Trà sữa lài',55000,'../images/Trà thơm đậm vị/TraVaiSen.png')"
+               style="cursor:pointer;">
             <div class="product-img">
-              <img src="images/TraVaiSen.png" alt="Trà sữa lài" />
+              <img src="../images/Trà thơm đậm vị/TraVaiSen.png" alt="Trà sữa lài" />
               <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-lai', 'Trà sữa lài', 55000, 'images/TraVaiSen.png')">🛒</button>
+                <button class="cart-icon-btn"
+                        onclick="event.stopPropagation(); addToCart('tra-sua-lai','Trà sữa lài',55000,'../images/Trà thơm đậm vị/TraVaiSen.png')">
+                  🛒
+                </button>
                 <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
               </div>
             </div>
@@ -219,40 +243,43 @@
             <div class="product-size">Size: M - L</div>
             <div class="product-price">55.000 - 59.000₫</div>
           </div>
-        </div>
-      </div>
+
+        </div><!-- /.carousel-track -->
+      </div><!-- /.carousel-window -->
 
       <button class="carousel-arrow right" data-dir="right">›</button>
     </div>
   </section>
 
-  <!-- BỘ SƯU TẬP ĐÁM CUỐI KẸ -->
+  <!-- =============== BỘ SƯU TẬP ĐÁM CUỚI KẸ =============== -->
   <section class="collection-wrapper">
     <div class="collection-inner">
       <div class="collection-image-card">
-        <img src="images/Đám cưới kẹ.jpg" alt="Bộ sưu tập Đám cưới kẹ" />
+        <img src="../images/Đám cưới kẹ.jpg" alt="Bộ sưu tập Đám cưới kẹ" />
       </div>
       <div class="collection-copy">
-        <h3>
-          <span>BỘ SƯU TẬP</span>
-          <span>ĐÁM CUỐI KẸ</span>
+        <h3 class="collection-title">
+          <span>BỘ SƯU TẬP</span><br />
+          <span>ĐÁM CUỚI KẸ</span>
         </h3>
+
         <div class="bullets">
           <p>BST phiên bản Halloween – đồ uống & bánh ngọt phong cách gothic.</p>
           <p>Hợp tác Phúc Long × ShopeeFood; combo “Ăn Hỷ Nhà Kẹ” chỉ 89K (giá gốc 114K).</p>
           <p>Áp dụng tại cửa hàng Phúc Long chọn lọc & đặt qua ShopeeFood; số lượng và thời gian có hạn.</p>
         </div>
+
         <a class="cta-btn" href="#">XEM NGAY</a>
       </div>
     </div>
   </section>
 
-  <!-- COMBO "ĂN HỶ NHÀ KẸ" -->
+  <!-- =============== COMBO "ĂN HỶ NHÀ KẸ" =============== -->
   <section class="combo-banner">
-    <!-- Banner 2.jpg chứa layout combo -->
+    <img src="../images/Banner 2.jpg" alt="Combo Ăn Hỷ Nhà Kẹ" class="combo-img" />
   </section>
 
-  <!-- DISCOUNT ITEM -->
+  <!-- =============== DISCOUNT ITEM =============== -->
   <section class="discount-section">
     <div class="discount-header">
       <h2>Discount Item</h2>
@@ -269,7 +296,9 @@
         <div class="product-title">Trà sữa Phúc Long</div>
 
         <p class="desc">
-          Experience the perfect harmony of bold tea flavor and smooth creamy milk — a timeless signature of Phuc Long. Brewed from premium tea leaves, our milk tea delivers an authentic aroma and balanced sweetness that refreshes every sip.
+          Experience the perfect harmony of bold tea flavor and smooth creamy milk — a timeless signature of Phuc Long.
+          Brewed from premium tea leaves, our milk tea delivers an authentic aroma and balanced sweetness that refreshes
+          every sip.
         </p>
 
         <ul class="checklist">
@@ -285,16 +314,18 @@
       <div class="discount-visual">
         <div class="discount-circle-bg"></div>
         <div class="discount-image-wrapper">
-          <img src="images/aboutPL.jpg" alt="Trà sữa Phúc Long" />
+          <img src="../images/aboutPL.jpg" alt="Trà sữa Phúc Long" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NEWSLETTER CTA -->
+  <!-- =============== NEWSLETTER CTA =============== -->
   <section class="newsletter-banner">
     <div class="newsletter-inner">
-      <div class="newsletter-left"></div>
+      <div class="newsletter-left">
+        <img src="../images/ChienGameNhanQua.jpg" alt="Chiến game săn quà" />
+      </div>
       <div class="newsletter-right">
         <h3>Get Latest Update By Subscribe Our Newsletter</h3>
         <a class="btn-shop-now" href="#">Shop Now</a>
@@ -302,16 +333,18 @@
     </div>
   </section>
 
-  <!-- BLOG -->
+  <!-- =============== BLOG =============== -->
   <section class="blog-section">
     <div class="blog-header">
       <h2>Leatest Blog</h2>
     </div>
 
     <div class="blog-cards">
+
+      <!-- BLOG 1 -->
       <article class="blog-card">
         <div class="blog-image">
-          <img src="images/Blog/blog1.jpg" alt="Blog 1" />
+          <img src="../images/Blog/blog1.jpg" alt="Blog 1" />
         </div>
         <div class="blog-content">
           <div class="blog-meta">
@@ -327,9 +360,10 @@
         </div>
       </article>
 
+      <!-- BLOG 2 -->
       <article class="blog-card">
         <div class="blog-image">
-          <img src="images/Blog/blog2.jpg" alt="Blog 2" />
+          <img src="../images/Blog/blog2.jpg" alt="Blog 2" />
         </div>
         <div class="blog-content">
           <div class="blog-meta">
@@ -345,9 +379,10 @@
         </div>
       </article>
 
+      <!-- BLOG 3 -->
       <article class="blog-card">
         <div class="blog-image">
-          <img src="images/Blog/blog3.jpg" alt="Blog 3" />
+          <img src="../images/Blog/blog3.jpg" alt="Blog 3" />
         </div>
         <div class="blog-content">
           <div class="blog-meta">
@@ -362,98 +397,58 @@
           <a class="blog-readmore" href="#">Read More</a>
         </div>
       </article>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col footer-newsletter">
-        <h4>Phuc Long</h4>
-        <div class="newsletter-input-row">
-          <input type="email" placeholder="Enter Email Address" />
-          <button>Sign Up</button>
-        </div>
+  <!-- FOOTER sẽ được inject -->
+  <div id="site-footer"></div>
 
-        <div class="footer-address">
-          <strong>Contact Info</strong><br />
-          Floor 7, Room 702, Central Plaza Building, No. 17 Le Duan street,
-          Ben Nghe ward, district 1, Ho Chi Minh city.
-        </div>
-      </div>
+  <!-- JS chung: inject header/footer + dropdown -->
+  <script src="../shared/layout.js"></script>
 
-      <div class="footer-col">
-        <h4>Products</h4>
-        <div class="footer-links">
-          <a href="#">Drinks</a>
-          <a href="#">Bakery</a>
-          <a href="#">Mooncake</a>
-          <a href="#">Halloween Collections</a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Customer Care</h4>
-        <div class="footer-links">
-          <a href="#">My Account</a>
-          <a href="#">Discount</a>
-          <a href="#">Returns</a>
-          <a href="#">Orders History</a>
-          <a href="#">Order Tracking</a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <div class="footer-links">
-          <a href="#">Blog</a>
-          <a href="#">Browse the Shop</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <div>©phuclong.com - All Rights Reserved</div>
-        <div class="footer-social">
-          <div class="social-circle">f</div>
-          <div class="social-circle">📷</div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <!-- JS riêng: carousel, cart, login test, product detail redirect -->
   <script src="home.js"></script>
   <script src="cart-manager.js"></script>
+
   <script>
-    // Debug script
     console.log('Home page loaded');
     console.log('addToCart function exists:', typeof addToCart);
     console.log('cartManager exists:', typeof cartManager);
-    
-    // Test function
+
     function testAddToCart() {
       console.log('Testing addToCart...');
       addToCart('test', 'Test Product', 10000, 'test.png');
     }
-    
-    // Make test function global
     window.testAddToCart = testAddToCart;
 
     // Hàm chuyển đến trang chi tiết sản phẩm
     function goToProductDetail(productId, productName, productPrice, productImage) {
-      // Lưu thông tin sản phẩm vào localStorage để trang product details có thể đọc
       const productData = {
         id: productId,
         name: productName,
         price: productPrice,
         image: productImage
       };
-      
       localStorage.setItem('phuclong_current_product', JSON.stringify(productData));
-      
-      // Chuyển đến trang product details
       window.location.href = '../product details/product details.html';
+    }
+
+    // Nếu bạn muốn toggle Login / Logged in (ví dụ mini demo)
+    function toggleLogin() {
+      const el = document.getElementById("loginStatus");
+      if (!el) return;
+      if (el.textContent.trim() === "Login") {
+        el.textContent = "Hello, User";
+      } else {
+        el.textContent = "Login";
+      }
+    }
+
+    // Ví dụ điều hướng giỏ hàng
+    function goToCart() {
+      // TODO: sau này gắn link cart.html thật
+      alert("Đi đến giỏ hàng!");
     }
   </script>
 </body>
