@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - Phuc Long</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Assets/CSS/shopping-cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
                     <span class="login">Login</span>
                     <span class="wishlist">Wishlist</span>
                     <div class="cart-icon">
-                        <img src="images/Group.png" alt="Cart" class="cart-icon-img">
+                        <img src="../Assets/images/shopping-cart/Group.png" alt="Cart" class="cart-icon-img">
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div class="nav-left">
                     <div class="logo" onclick="goToHome()" style="cursor: pointer;">PHUC LONG</div>
                     <div class="cart-title">
-                        <img src="images/11 shopping cart copy 1.png" alt="Shopping Cart" class="cart-icon-nav">
+                        <img src="../Assets/images/shopping-cart/11 shopping cart copy 1.png" alt="Shopping Cart" class="cart-icon-nav">
                         <span class="cart-text">SHOPPING CART</span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="search-box">
                         <input type="text" placeholder="" class="search-input">
                         <button class="search-btn">
-                            <img src="images/search-icon.svg" alt="Search" class="search-icon">
+                            <img src="../Assets/images/shopping-cart/search-icon.svg" alt="Search" class="search-icon">
                         </button>
                     </div>
                 </div>
@@ -215,10 +215,10 @@
                 <div class="copyright-right">
                     <div class="social-icons">
                         <div class="social-icon facebook">
-                            <img src="images/Group 202.png" alt="Facebook">
+                            <img src="../Assets/images/shopping-cart/Group 202.png" alt="Facebook">
                         </div>
                         <div class="social-icon instagram">
-                            <img src="images/Group 203.png" alt="Instagram">
+                            <img src="../Assets/images/shopping-cart/Group 203.png" alt="Instagram">
                         </div>
                     </div>
                 </div>
@@ -262,7 +262,7 @@
             }
         }
     </script>
-    <script src="../Home/cart-manager.js"></script>
+    <script src="../Assets/JS/cart-manager.js"></script>
     <script>
         function loadCartData() {
             console.log('Loading cart data...');
@@ -286,7 +286,7 @@
                     ">
                         <h3 style="color: #333; margin-bottom: 15px; font-size: 24px;">Giỏ hàng trống</h3>
                         <p style="color: #666; margin-bottom: 20px; font-size: 16px;">Bạn chưa có sản phẩm nào trong giỏ hàng.</p>
-                        <a href="../Home/home.html" style="
+                        <a href="../ClientSite/index.html" style="
                             background-color: #fb2e86;
                             color: white;
                             padding: 12px 24px;
@@ -310,7 +310,7 @@
                         </div>
                         <div class="product-details">
                             <div class="product-image">
-                                <img src="../Home/images/${item.image}" alt="${item.name}">
+                                <img src="../Assets/images/${item.image}" alt="${item.name}">
                             </div>
                             <div class="product-info">
                                 <h3>${item.name}</h3>

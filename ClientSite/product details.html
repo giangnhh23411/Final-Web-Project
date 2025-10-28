@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Phuc Long - Product Details</title>
 
-  <link rel="stylesheet" href="product details.css" />
+  <link rel="stylesheet" href="../Assets/CSS/product details.css" />
 </head>
 <body>
 
@@ -64,7 +64,7 @@
 
         <!-- IMAGE LEFT -->
         <div class="product-main-image">
-          <img src="../images/Trà thơm đậm vị/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
+          <img src="../Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
         </div>
 
         <!-- INFO RIGHT -->
@@ -156,7 +156,7 @@
         <!-- card 1 -->
         <div class="rec-card">
           <div class="rec-imgwrap">
-            <img src="../images/Trà thơm đậm vị/TraLaiPhucBonTu.png" alt="Trà lài phúc bồn tử" />
+            <img src="../Assets/images/Trà thơm đậm vị/TraLaiPhucBonTu.png" alt="Trà lài phúc bồn tử" />
             <div class="rec-actions">
               <button title="Giỏ hàng">🛒</button>
               <button title="Wishlist">♡</button>
@@ -174,7 +174,7 @@
         <!-- card 2 -->
         <div class="rec-card">
           <div class="rec-imgwrap">
-            <img src="../images/Trà thơm đậm vị/TraOLongDau.png" alt="Trà ô long dâu" />
+            <img src="../Assets/images/Trà thơm đậm vị/TraOLongDau.png" alt="Trà ô long dâu" />
             <div class="rec-actions">
               <button>🛒</button>
               <button>♡</button>
@@ -192,7 +192,7 @@
         <!-- card 3 -->
         <div class="rec-card">
           <div class="rec-imgwrap">
-            <img src="../images/Trà thơm đậm vị/TraLuckyTea.png" alt="Trà Lucky Tea" />
+            <img src="../Assets/images/Trà thơm đậm vị/TraLuckyTea.png" alt="Trà Lucky Tea" />
             <div class="rec-actions">
               <button>🛒</button>
               <button>♡</button>
@@ -210,7 +210,7 @@
         <!-- card 4 -->
         <div class="rec-card">
           <div class="rec-imgwrap">
-            <img src="../images/Trà thơm đậm vị/TraOLongCamDaoThachKonjac.png" alt="Trà ô long cam đào" />
+            <img src="../Assets/images/Trà thơm đậm vị/TraOLongCamDaoThachKonjac.png" alt="Trà ô long cam đào" />
             <div class="rec-actions">
               <button>🛒</button>
               <button>♡</button>
@@ -300,7 +300,7 @@
   </footer>
 
   <!-- Include cart manager -->
-  <script src="../Home/cart-manager.js"></script>
+  <script src="../Assets/JS/cart-manager.js"></script>
   
   <script>
     // Hàm thêm sản phẩm vào giỏ hàng từ trang product details
@@ -319,7 +319,7 @@
 
     // Hàm chuyển đến giỏ hàng
     function goToCart() {
-      window.location.href = '../shopping-cart/index.html';
+      window.location.href = '../ClientSite/shopping-cart.html';
     }
 
     // Cập nhật trạng thái đăng nhập khi trang load
@@ -383,7 +383,7 @@
         // Cập nhật hình ảnh
         const productImage = document.querySelector('.product-main-image img');
         if (productImage) {
-          productImage.src = `../images/${productData.image}`;
+          productImage.src = `../Assets/images/${productData.image}`;
           productImage.alt = productData.name;
         }
         
