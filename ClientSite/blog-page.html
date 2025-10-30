@@ -5,138 +5,133 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Phuc Long - Blog Page</title>
 
-  <link rel="stylesheet" href="blog page.css" />
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="../Assets/CSS/blog-page.css" />
+  <!-- CSS header/footer dùng chung -->
+  <link rel="stylesheet" href="../Assets/Components/header-footer.css" />
+
+  <!-- Override để ảnh nét + đúng tỉ lệ & một số tinh chỉnh UI -->
+  <style>
+    /* --- THUMBNAIL: giữ tỉ lệ gốc, không méo, không vỡ, đồng chiều cao --- */
+    .blog-post .post-image{
+      display:flex; align-items:center; justify-content:center;
+      background:#faf8ff; border-radius:10px; overflow:hidden;
+      height: 280px;            /* đồng nhất chiều cao khung */
+      border:1px solid #eceafa; box-shadow:0 10px 24px rgba(22,0,80,.06);
+    }
+    .blog-post .post-image img{
+      height:100%; width:auto; object-fit:contain; display:block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;             /* PNG nhỏ sẽ nét hơn */
+      transition: transform .25s ease, box-shadow .25s ease;
+      background:#fff;
+    }
+    .blog-post .post-image img:hover{ transform:scale(1.02); box-shadow:0 10px 20px rgba(0,0,0,.12); }
+
+    /* Meta chips, title, excerpt, pagination tinh chỉnh nhẹ */
+    .post-meta-row{ gap:10px; margin:12px 0 14px; align-items:center; }
+    .post-meta-row .post-meta-tag, .post-meta-row .post-meta-date{
+      background:#f6f4ff; border:1px solid #e7e4ff; color:#3a2e7a;
+      font-weight:600; font-size:11px; line-height:20px; padding:2px 10px; border-radius:999px;
+    }
+    .post-title{ font-size:20px; line-height:1.35; margin:0 0 10px; color:#0b0c3b; }
+    .post-title a{ color:inherit; text-decoration:none; }
+    .post-title a:hover{ color:#4b008c; }
+    .post-excerpt{ max-width:740px; font-size:13.5px; color:var(--brand-text-mid); }
+    .pagination-row{ justify-content:center; margin-top:36px; gap:10px; }
+
+    /* Sidebar Follow: icon thật FB/IG + size + hover */
+    .follow-row{ display:flex; align-items:center; gap:12px; margin-top:8px; }
+    .follow-row a img{
+      width:28px; height:28px; border-radius:50%; display:block; transition:transform .2s ease;
+    }
+    .follow-row a img:hover{ transform:scale(1.1); }
+  </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-contact-bar">
-    <div class="top-contact-inner">
-      <div class="contact-left">
-        <div class="contact-item">✉ sales@phuclong.masangroup.com</div>
-        <div class="contact-item">☎ 1800 6779</div>
-      </div>
+  <!-- Header inject -->
+  <div id="site-header"></div>
 
-      <div class="contact-right">
-        <div class="contact-item">English▼</div>
-        <div class="contact-item">VND▼</div>
-        <div class="contact-item">Login👤</div>
-        <div class="contact-item">Wishlist♡</div>
-        <div class="contact-item">🛒</div>
-
-        <form class="search-bar">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">🔍</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- NAV BAR -->
-  <header class="main-nav-wrapper">
-    <div class="main-nav-inner">
-      <div class="brand-area">Phuc Long</div>
-      <nav class="nav-links">
-        <a class="active" href="#">Home</a>
-        <a href="#">Pages</a>
-        <a href="#">Products</a>
-        <a href="#">Blog</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO / BREADCRUMB -->
+  <!-- HERO -->
   <section class="page-hero">
     <div class="page-hero-inner">
       <h1 class="page-title">Blog Page</h1>
-      <div class="breadcrumb">
-        Home . Pages . <span>Blog Page</span>
-      </div>
+      <div class="breadcrumb">Home . Pages . <span>Blog Page</span></div>
     </div>
   </section>
 
-  <!-- BLOG CONTENT + SIDEBAR -->
+  <!-- CONTENT -->
   <main class="page-content">
     <div class="content-inner">
 
-      <!-- LEFT COLUMN: POSTS -->
+      <!-- LEFT: LIST POSTS -->
       <section class="blog-list">
 
         <!-- POST 1 -->
         <article class="blog-post">
-          <div class="post-image">
-            <img src="../images/Blog/blog1.jpg" alt="Post image 1" />
-          </div>
+          <a class="post-image" href="blog1.html">
+            <img src="../Assets/images/Blog1.png" alt="Boogey Wedding – Save the Date" loading="lazy" />
+          </a>
 
           <div class="post-meta-row">
-            <span class="post-meta-tag">Surf Auxion</span>
-            <span class="post-meta-date">Aug 09 2020</span>
+            <span class="post-meta-tag">Promotion</span>
+            <span class="post-meta-date">Oct 01 2025</span>
           </div>
 
           <h2 class="post-title">
-            Mauris at orci non vulputate diam tincidunt nec.
+            <a href="blog1.html">Boogey Wedding – Save the Date</a>
           </h2>
 
           <p class="post-excerpt">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum.
-            Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.
+            Halloween’s power couple has arrived at Phuc Long. Bold Black Tea–Hibiscus–Red Plum blends, and a limited combo from 89K.
           </p>
 
-          <a class="read-more" href="#">
-            Read More <span class="plus">+</span>
-          </a>
+          <a class="read-more" href="blog1.html">Read More <span class="plus">+</span></a>
         </article>
 
         <!-- POST 2 -->
         <article class="blog-post">
-          <div class="post-image">
-            <img src="../images/Blog/blog2.jpg" alt="Post image 2" />
-          </div>
+          <a class="post-image" href="blog2.html">
+            <img src="../Assets/images/Blog2.png" alt="Game On Top – 100% Prizes" loading="lazy" />
+          </a>
 
           <div class="post-meta-row">
-            <span class="post-meta-tag">Surf Auxion</span>
-            <span class="post-meta-date">Aug 09 2020</span>
+            <span class="post-meta-tag">Mini-game</span>
+            <span class="post-meta-date">Oct 10 2025</span>
           </div>
 
           <h2 class="post-title">
-            Aenean vitae in aliquam ultrices lectus. Etiam.
+            <a href="blog2.html">Game On Top – 100% Prizes</a>
           </h2>
 
           <p class="post-excerpt">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum.
-            Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.
+            Play the mini-game, win instantly, and climb the leaderboard. Guaranteed 100% prizes during the campaign period.
           </p>
 
-          <a class="read-more" href="#">
-            Read More <span class="plus">+</span>
-          </a>
+          <a class="read-more" href="blog2.html">Read More <span class="plus">+</span></a>
         </article>
 
         <!-- POST 3 -->
         <article class="blog-post">
-          <div class="post-image">
-            <img src="../images/Blog/blog3.jpg" alt="Post image 3" />
-          </div>
+          <a class="post-image" href="blog3.html">
+            <img src="../Assets/images/Blog3.png" alt="Mad for Tea – 100% Prizes" loading="lazy" />
+          </a>
 
           <div class="post-meta-row">
-            <span class="post-meta-tag">Surf Auxion</span>
-            <span class="post-meta-date">Aug 09 2020</span>
+            <span class="post-meta-tag">Mini-game</span>
+            <span class="post-meta-date">Jun 24 2025</span>
           </div>
 
           <h2 class="post-title">
-            Sit nam congue feugiat nisl, mauris amet nisi.
+            <a href="blog3.html">Mad for Tea – 100% Prizes</a>
           </h2>
 
           <p class="post-excerpt">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum.
-            Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.
+            Open the “Mad for Tea” game, complete tasks to earn plays, and hunt for 100,000 free cups. Coupons valid through Jul 31, 2025.
           </p>
 
-          <a class="read-more" href="#">
-            Read More <span class="plus">+</span>
-          </a>
+          <a class="read-more" href="blog3.html">Read More <span class="plus">+</span></a>
         </article>
 
         <!-- PAGINATION -->
@@ -148,10 +143,9 @@
         </div>
       </section>
 
-      <!-- RIGHT COLUMN: SIDEBAR -->
+      <!-- RIGHT: SIDEBAR rút gọn -->
       <aside class="sidebar">
-
-        <!-- SEARCH BOX -->
+        <!-- SEARCH -->
         <section class="sidebar-block">
           <h3 class="sidebar-title">Search</h3>
           <form class="sidebar-search">
@@ -163,235 +157,75 @@
         <!-- CATEGORIES -->
         <section class="sidebar-block">
           <h3 class="sidebar-title">Categories</h3>
-
           <ul class="cat-list">
-            <li><a href="#">Hotdish <span>(10)</span></a></li>
-            <li><a href="#">Women <span>(11)</span></a></li>
-            <li><a href="#">Women <span>(11)</span></a></li>
-            <li><a href="#">Women <span>(11)</span></a></li>
-            <li><a href="#">Women <span>(11)</span></a></li>
+            <li><a href="#">Promotions <span>(3)</span></a></li>
+            <li><a href="#">Mini-game <span>(2)</span></a></li>
+            <li><a href="#">Seasonal <span>(1)</span></a></li>
           </ul>
         </section>
 
-        <!-- RECENT POST -->
+        <!-- RECENT POSTS (dùng thumbnail Blog[i].png) -->
         <section class="sidebar-block">
           <h3 class="sidebar-title">Recent Post</h3>
 
           <div class="recent-item">
             <div class="recent-thumb">
-              <img src="../images/Blog/thumb1.jpg" alt="thumb1" />
+              <a href="blog1.html"><img src="../Assets/images/Blog1.png" alt="Boogey Wedding thumb" /></a>
             </div>
             <div class="recent-info">
-              <a class="recent-text" href="#">It is a long established fact</a>
-              <div class="recent-date">Aug 09 2020</div>
+              <a class="recent-text" href="blog1.html">Boogey Wedding</a>
+              <div class="recent-date">Oct 01 2025</div>
             </div>
           </div>
 
           <div class="recent-item">
             <div class="recent-thumb">
-              <img src="../images/Blog/thumb2.jpg" alt="thumb2" />
+              <a href="blog2.html"><img src="../Assets/images/Blog2.png" alt="Game On Top thumb" /></a>
             </div>
             <div class="recent-info">
-              <a class="recent-text" href="#">It is a long established fact</a>
-              <div class="recent-date">Aug 09 2020</div>
+              <a class="recent-text" href="blog2.html">Game On Top</a>
+              <div class="recent-date">Oct 10 2025</div>
             </div>
           </div>
 
           <div class="recent-item">
             <div class="recent-thumb">
-              <img src="../images/Blog/thumb3.jpg" alt="thumb3" />
+              <a href="blog3.html"><img src="../Assets/images/Blog3.png" alt="Mad for Tea thumb" /></a>
             </div>
             <div class="recent-info">
-              <a class="recent-text" href="#">It is a long established fact</a>
-              <div class="recent-date">Aug 09 2020</div>
-            </div>
-          </div>
-
-          <div class="recent-item">
-            <div class="recent-thumb">
-              <img src="../images/Blog/thumb4.jpg" alt="thumb4" />
-            </div>
-            <div class="recent-info">
-              <a class="recent-text" href="#">It is a long established fact</a>
-              <div class="recent-date">Aug 09 2020</div>
+              <a class="recent-text" href="blog3.html">Mad for Tea</a>
+              <div class="recent-date">Jun 24 2025</div>
             </div>
           </div>
         </section>
 
-        <!-- SALE PRODUCT -->
-        <section class="sidebar-block">
-          <h3 class="sidebar-title">Sale Product</h3>
-
-          <div class="recent-item">
-            <div class="recent-thumb product-thumb">
-              <img src="../images/Blog/thumb1.jpg" alt="prod1" />
-            </div>
-            <div class="recent-info">
-              <a class="recent-text" href="#">Elit ornare in metus</a>
-              <div class="recent-date">$26.00</div>
-            </div>
-          </div>
-
-          <div class="recent-item">
-            <div class="recent-thumb product-thumb">
-              <img src="../images/Blog/thumb2.jpg" alt="prod2" />
-            </div>
-            <div class="recent-info">
-              <a class="recent-text" href="#">Viverra posuere mi vitae</a>
-              <div class="recent-date">$49.00</div>
-            </div>
-          </div>
-
-          <div class="recent-item">
-            <div class="recent-thumb product-thumb">
-              <img src="../images/Blog/thumb3.jpg" alt="prod3" />
-            </div>
-            <div class="recent-info">
-              <a class="recent-text" href="#">Mauris non dui nec</a>
-              <div class="recent-date">$32.00</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- OFFER PRODUCT -->
-        <section class="sidebar-block">
-          <h3 class="sidebar-title">Offer product</h3>
-
-          <div class="offer-grid">
-            <!-- each offer item -->
-            <div class="offer-item">
-              <div class="offer-img">
-                <img src="../images/Blog/prod1.png" alt="Offer 1" />
-              </div>
-              <div class="offer-info">
-                <div class="offer-name">Duis lectus est.</div>
-                <div class="offer-price">$32.00 - $40.00</div>
-              </div>
-            </div>
-
-            <div class="offer-item">
-              <div class="offer-img">
-                <img src="../images/Blog/prod2.png" alt="Offer 2" />
-              </div>
-              <div class="offer-info">
-                <div class="offer-name">Sol placerat.</div>
-                <div class="offer-price">$12.00 - $15.00</div>
-              </div>
-            </div>
-
-            <div class="offer-item">
-              <div class="offer-img">
-                <img src="../images/Blog/prod3.png" alt="Offer 3" />
-              </div>
-              <div class="offer-info">
-                <div class="offer-name">Nets proin.</div>
-                <div class="offer-price">$29.00</div>
-              </div>
-            </div>
-
-            <div class="offer-item">
-              <div class="offer-img">
-                <img src="../images/Blog/prod4.png" alt="Offer 4" />
-              </div>
-              <div class="offer-info">
-                <div class="offer-name">Platea in.</div>
-                <div class="offer-price">$15.00 - $19.00</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- FOLLOW -->
+        <!-- FOLLOW: dùng icon thật + link -->
         <section class="sidebar-block">
           <h3 class="sidebar-title">Follow</h3>
           <div class="follow-row">
-            <a class="follow-dot fb" href="#" title="facebook">f</a>
-            <a class="follow-dot tw" href="#" title="twitter">🐦</a>
-            <a class="follow-dot ig" href="#" title="instagram">◎</a>
+            <a href="https://www.facebook.com/phuclongcoffeeandtea" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Phuc Long">
+              <img src="../Assets/images/LogoFacebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/phuclongcoffeeandtea/" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Phuc Long">
+              <img src="../Assets/images/LogoInstagram.png" alt="Instagram" />
+            </a>
           </div>
         </section>
-
-        <!-- TAGS -->
-        <section class="sidebar-block">
-          <h3 class="sidebar-title">Tags</h3>
-          <div class="tag-list">
-            <a class="tag-link" href="#">General</a>
-            <a class="tag-link" href="#">Atsumi</a>
-            <a class="tag-link" href="#">Imus</a>
-            <a class="tag-link" href="#">Bibassa</a>
-            <a class="tag-link" href="#">Nulla</a>
-          </div>
-        </section>
-
       </aside>
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-inner">
+  <!-- Footer inject -->
+  <div id="site-footer"></div>
 
-        <div class="footer-col footer-newsletter">
-          <h4>Phuc Long</h4>
-
-          <div class="newsletter-input-row">
-            <input type="email" placeholder="Enter Email Address" />
-            <button>Sign Up</button>
-          </div>
-
-          <div class="footer-address">
-            <div class="footer-col-title">Contact Info</div>
-            <div class="footer-col-text">
-              Floor 7, Room 702, Central Plaza Building, No. 17<br/>
-              Le Duan street, Ben Nghe ward, district 1, Ho Chi Minh city.
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul class="footer-links">
-            <li><a href="#">Drinks</a></li>
-            <li><a href="#">Bakery</a></li>
-            <li><a href="#">Mooncake</a></li>
-            <li><a href="#">Halloween Collections</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Customer Care</h4>
-          <ul class="footer-links">
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Discount</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Orders History</a></li>
-            <li><a href="#">Order Tracking</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Browse the Shop</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <div class="footer-copy">©phuclong.com - All Rights Reserved</div>
-
-        <div class="footer-social">
-          <a class="social-circle" href="#" aria-label="Facebook">f</a>
-          <a class="social-circle" href="#" aria-label="Instagram">◎</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <!-- Import header/footer -->
+  <script
+    src="../Assets/Components/layout.js"
+    defer
+    data-header="../Assets/Components/header.html"
+    data-footer="../Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
 </body>
 </html>
