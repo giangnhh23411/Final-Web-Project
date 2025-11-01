@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Phuc Long - Shop Grid Default</title>
+
+  <!-- CSS chung của dự án -->
+  <link rel="stylesheet" href="../Assets/CSS/external.css" />
+
+  <!-- CSS riêng cho trang shop-grid -->
+  <style>
+    :root{
+      --brand-purple-dark:#2b0054;--brand-purple:#4b008c;--accent-pink:#ff1f8a;
+      --text:#0b0c3b;--muted:#5a5a7a;--border:#ece9ff;--shadow:0 10px 26px rgba(0,0,0,.06);
+      --radius:12px;--max:1280px;
+    }
+    body{color:var(--text)}
+    /* Hero */
+    .page-hero{background:linear-gradient(180deg,#f4f2ff 0%,#fbfaff 100%);border-bottom:1px solid var(--border)}
+    .page-hero-inner{max-width:var(--max);margin:0 auto;padding:24px 16px}
+    .page-title{margin:0 0 6px;font-size:24px}
+    .breadcrumb{color:#7a78a6;font-size:13px}
+    .breadcrumb span{color:#4b008c;font-weight:600}
+
+    /* Controls */
+    .shop-controls{border-bottom:1px solid var(--border)}
+    .shop-controls-inner{max-width:var(--max);margin:0 auto;padding:14px 16px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .shop-headline{font-weight:700}
+    .shop-results{font-size:12px;color:var(--muted)}
+    .shop-controls-right{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .control-group{display:flex;gap:8px;align-items:center}
+    .control-group select,.filter-search{
+      height:34px;border:1px solid var(--border);border-radius:8px;padding:0 10px;outline:none
+    }
+    .view-icons .view-btn{height:34px;width:34px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer}
+    .view-icons .view-btn.active{background:var(--brand-purple);color:#fff;border-color:var(--brand-purple)}
+
+    /* Grid */
+    .product-listing{padding:24px 0}
+    .product-grid{max-width:var(--max);margin:0 auto;padding:0 16px;display:grid;gap:18px}
+    @media(min-width:640px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:960px){.product-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:1200px){.product-grid{grid-template-columns:repeat(4,1fr)}}
+
+    .shop-card{
+      background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);overflow:hidden;transition:transform .12s ease, box-shadow .2s ease
+    }
+    .shop-card:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(22,0,80,.08)}
+    .shop-card-imgwrap{position:relative;height:230px;display:flex;align-items:center;justify-content:center;background:#fff}
+    .shop-card-imgwrap img{max-height:210px;width:auto;object-fit:contain}
+
+    /* Hover icons (🛒 ❤ 🔍 ↺) */
+    .shop-card-actions{position:absolute;top:10px;right:10px;display:flex;gap:8px;opacity:0;transition:opacity .25s ease}
+    .shop-card:hover .shop-card-actions{opacity:1}
+    .action-btn{
+      background:rgba(255,255,255,.95);border:1px solid #eee;border-radius:50%;
+      width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+      cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.1);transition:transform .15s ease, background .2s ease, color .2s ease;
+      font-size:16px
+    }
+    .action-btn:hover{transform:scale(1.08)}
+    .btn-cart:hover{background:var(--accent-pink);color:#fff}
+    .btn-heart.active{background:#ff6b6b;color:#fff;border-color:#ff6b6b}
+
+    .shop-card-info{padding:14px 14px 16px;text-align:center}
+    .shop-card-name{font-size:14px;color:#d10071;font-weight:700;margin-bottom:6px}
+    .shop-card-price{font-size:13px;color:var(--text);font-weight:600}
+
+    /* Toast */
+    .toast{position:fixed;top:20px;right:20px;z-index:9999;background:#28a745;color:#fff;padding:12px 16px;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
+    .toast.err{background:#dc3545}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-title">Shop Grid Default</h1>
+        <div class="breadcrumb">Home . Pages . <span>Shop Grid Default</span></div>
+      </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section class="shop-controls">
+      <div class="shop-controls-inner">
+        <div class="shop-controls-left">
+          <div class="shop-headline">Ecommerce Accessories &amp; Fashion item</div>
+          <div class="shop-results">About 9.620 results (0.62 seconds)</div>
+        </div>
+
+        <div class="shop-controls-right">
+          <div class="control-group">
+            <label for="per-page">Per Page:</label>
+            <select id="per-page">
+              <option>12</option><option>24</option><option>48</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="sort-by">Sort By:</label>
+            <select id="sort-by">
+              <option value="best">Best Match</option>
+              <option value="asc">Price: Low to High</option>
+              <option value="desc">Price: High to Low</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label>View:</label>
+            <div class="view-icons">
+              <button class="view-btn active" title="grid view">▦</button>
+              <button class="view-btn" title="list view">☰</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <input class="filter-search" id="q" type="text" placeholder="Search products..." />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="product-listing">
+      <div class="product-grid" id="grid"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Nạp header/footer -->
+  <script
+    src="../Assets/Components/layout.js"
+    defer
+    data-header="../Assets/Components/header.html"
+    data-footer="../Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
+
+  <script>
+    /************ DỮ LIỆU ************/
+    const PRODUCTS = [
+      { id:'tra-vai-sen', name:'Trà vải sen', priceMin:59000, priceMax:65000, img:'../Assets/images/Trà thơm đậm vị/TraVaiSen.png' },
+      { id:'hong-tra-dao', name:'Hồng trà đào', priceMin:45000, priceMax:55000, img:'../Assets/images/Trà thơm đậm vị/HongTraDao.png' },
+      { id:'lai-mang-cau', name:'Trà lài mãng cầu', priceMin:60000, priceMax:69000, img:'../Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png' },
+      { id:'lai-phuc-bon-tu', name:'Trà lài phúc bồn tử', priceMin:59000, priceMax:65000, img:'../Assets/images/Trà thơm đậm vị/TraLaiPhucBonTu.png' },
+      { id:'olong-dau', name:'Trà ô long dâu', priceMin:45000, priceMax:55000, img:'../Assets/images/Trà thơm đậm vị/TraOLongDau.png' },
+      { id:'olong-lai-buoi', name:'Trà ô long lài bưởi', priceMin:50000, priceMax:55000, img:'../Assets/images/Trà thơm đậm vị/TraOLongLaiBuoi.png' },
+      { id:'vai-lai', name:'Trà vải lài', priceMin:49000, priceMax:59000, img:'../Assets/images/Trà thơm đậm vị/TraVaiLai.png' },
+      { id:'nhan-sen', name:'Trà nhân sen', priceMin:49000, priceMax:65000, img:'../Assets/images/Trà thơm đậm vị/TraNhanSen.png' },
+      { id:'lucky-tea', name:'Trà Lucky Tea', priceMin:59000, priceMax:69000, img:'../Assets/images/Trà thơm đậm vị/TraLuckyTea.png' },
+      { id:'lai-dac-thom', name:'Trà lài đác thơm', priceMin:59000, priceMax:65000, img:'../Assets/images/Trà thơm đậm vị/TraLaiDacThom.png' },
+      { id:'ba-tuoc-luu-do', name:'Trà bá tước lựu đỏ', priceMin:55000, priceMax:69000, img:'../Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png' },
+    ];
+
+    /************ STORAGE KEYS ************/
+    const CART_KEY = 'phuclong_cart';
+    const WISHLIST_KEY = 'phuclong_wishlist';
+
+    const cart = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+    const wishlist = new Set(JSON.parse(localStorage.getItem(WISHLIST_KEY) || '[]'));
+
+    function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+    function saveWishlist(){ localStorage.setItem(WISHLIST_KEY, JSON.stringify([...wishlist])); }
+
+    function money(v){ return v.toLocaleString('vi-VN') + '₫'; }
+
+    function toast(msg, err=false){
+      const n=document.createElement('div');
+      n.className='toast'+(err?' err':''); n.textContent=msg;
+      document.body.appendChild(n); setTimeout(()=>n.remove(),2200);
+    }
+
+    function addToCart(p){
+      const f=cart.find(i=>i.id===p.id);
+      if(f) f.quantity+=1;
+      else cart.push({id:p.id,name:p.name,price:p.priceMin,image:p.img,quantity:1});
+      saveCart(); toast(`Đã thêm "${p.name}" vào giỏ hàng!`);
+    }
+
+    function toggleWishlist(id,btn){
+      if(wishlist.has(id)){ wishlist.delete(id); btn.classList.remove('active'); toast('Đã bỏ khỏi wishlist'); }
+      else { wishlist.add(id); btn.classList.add('active'); toast('Đã thêm vào wishlist'); }
+      saveWishlist();
+    }
+
+    function render(list){
+      const grid=document.getElementById('grid'); grid.innerHTML='';
+      list.forEach(p=>{
+        const el=document.createElement('article');
+        el.className='shop-card';
+        el.innerHTML=`
+          <div class="shop-card-imgwrap">
+            <img loading="lazy" src="${p.img}" alt="${p.name}">
+            <div class="shop-card-actions">
+              <button class="action-btn btn-heart ${wishlist.has(p.id)?'active':''}" title="Yêu thích">❤</button>
+              <button class="action-btn btn-cart" title="Thêm vào giỏ">🛒</button>
+              <button class="action-btn" title="Xem nhanh">🔍</button>
+              <button class="action-btn" title="So sánh">↺</button>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-card-name">${p.name}</div>
+            <div class="shop-card-price">${money(p.priceMin)} - ${money(p.priceMax)}</div>
+          </div>
+        `;
+        const [btnHeart, btnCart] = el.querySelectorAll('.shop-card-actions .action-btn');
+        btnHeart.addEventListener('click', e=>{ e.stopPropagation(); toggleWishlist(p.id, btnHeart); });
+        btnCart.addEventListener('click', e=>{ e.stopPropagation(); addToCart(p); });
+
+        // click vào card -> sang trang chi tiết (nếu có)
+        el.addEventListener('click', ()=>{
+          localStorage.setItem('phuclong_current_product', JSON.stringify({id:p.id,name:p.name,price:p.priceMin,image:p.img}));
+          window.location.href = 'product-details.html';
+        });
+
+        grid.appendChild(el);
+      });
+    }
+
+    // tìm kiếm đơn giản
+    const q = document.getElementById('q');
+    q.addEventListener('input', ()=>{
+      const s = q.value.trim().toLowerCase();
+      render(PRODUCTS.filter(p => p.name.toLowerCase().includes(s)));
+    });
+
+    // sort đơn giản
+    document.getElementById('sort-by').addEventListener('change',(e)=>{
+      const v=e.target.value;
+      const arr=[...PRODUCTS];
+      if(v==='asc') arr.sort((a,b)=>a.priceMin-b.priceMin);
+      if(v==='desc') arr.sort((a,b)=>b.priceMin-a.priceMin);
+      render(arr);
+    });
+
+    // khởi tạo
+    render(PRODUCTS);
+  </script>
+</body>
+</html>

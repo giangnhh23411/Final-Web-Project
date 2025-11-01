@@ -5,162 +5,228 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Phuc Long - My Account</title>
 
-  <link rel="stylesheet" href="my account.css" />
+  <!-- CSS chung -->
+  <link rel="stylesheet" href="../Assets/CSS/external.css" />
+
+  <!-- Page styles: chỉ vài rule để “đẹp lung linh”, không đụng CSS global -->
+  <style>
+    /* Canvas nhẹ nhàng */
+    .page-hero {
+      background: linear-gradient(180deg, #f5f2ff 0%, #faf9ff 100%);
+      border-bottom: 1px solid #eceafa;
+    }
+
+    /* Layout khu vực login */
+    .login-section { padding: 40px 16px 64px; }
+    .login-shell {
+      max-width: 1024px; margin: 0 auto;
+      display: grid; gap: 28px;
+    }
+    @media (min-width: 920px) {
+      .login-shell { grid-template-columns: 1.1fr .9fr; align-items: center; }
+    }
+
+    /* Card trái: form */
+    .login-card {
+      background: #fff;
+      border: 1px solid #e9e7ff;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(40, 0, 120, .07);
+      padding: 28px 22px;
+    }
+    .login-title {
+      margin: 0 0 6px; color: #0b0c3b; font-size: 24px; font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .login-subtitle {
+      margin: 0 0 18px; color: #6b7190; font-size: 13.5px;
+    }
+
+    /* Input + icon */
+    .form-group { margin-bottom: 14px; }
+    .field {
+      position: relative;
+    }
+    .field input {
+      width: 100%; height: 46px; border-radius: 12px;
+      border: 1px solid #dfe3f1; background: #fff;
+      padding: 0 44px 0 42px; font-size: 14px; color: #0f123d;
+      outline: none; transition: box-shadow .2s, border-color .2s, transform .05s;
+    }
+    .field input:focus {
+      border-color: #bda7ff;
+      box-shadow: 0 0 0 4px rgba(120, 97, 255, .12);
+    }
+    .field input::placeholder { color: #9aa2c0; }
+    .field .icon {
+      position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+      width: 18px; height: 18px; opacity: .85;
+    }
+    .field .btn-eye {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      border: 0; background: transparent; cursor: pointer; padding: 6px; opacity: .7;
+    }
+    .field .btn-eye:hover { opacity: 1; }
+
+    /* Row phụ */
+    .form-row { display: flex; align-items: center; gap: 10px; }
+    .between   { justify-content: space-between; }
+    .checkbox  { display: inline-flex; align-items: center; gap: 8px; color: #424767; font-size: 13px; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; width: 100%;
+      height: 44px; border-radius: 12px; border: 0; cursor: pointer;
+      background: linear-gradient(90deg, #5c2cd5, #a92bdc);
+      color: #fff; font-weight: 700; font-size: 15px;
+      box-shadow: 0 10px 22px rgba(145, 21, 220, .25);
+      transition: transform .08s ease, filter .2s ease;
+    }
+    .btn-primary:hover { filter: brightness(1.04); }
+    .btn-primary:active { transform: translateY(1px); }
+
+    .help-row {
+      margin-top: 12px; text-align: center; font-size: 13px; color: #61698b;
+    }
+    .link-primary { color: #6d2bd7; text-decoration: none; font-weight: 600; }
+    .link-primary:hover { color: #8e57ff; }
+
+    /* Card phải: khối promo/benefits */
+    .side-card {
+      background: radial-gradient(1200px 600px at 0% 0%, #efe9ff 0%, #fff 60%);
+      border: 1px dashed #ded7ff;
+      border-radius: 16px; padding: 26px 22px;
+    }
+    .side-title { margin:0 0 8px; color:#3a247e; font-size:18px; font-weight:800; }
+    .side-bullets { margin: 0; padding: 0; list-style: none; }
+    .side-bullets li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0; border-bottom: 1px dashed #efeaff; color:#4a4f73; font-size: 13.5px;
+    }
+    .side-bullets li:last-child { border-bottom: 0; }
+    .tick { color: #7e2bff; font-weight: 900; margin-top: 1px; }
+
+    /* nhỏ hơn mobile */
+    @media (max-width: 420px) {
+      .login-card { padding: 22px 16px; }
+      .field input { height: 44px; }
+      .btn-primary { height: 42px; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- TOP CONTACT BAR -->
-  <div class="top-contact-bar">
-    <div class="top-contact-inner">
-      <div class="contact-left">
-        <div class="contact-item">✉ sales@phuclong.masangroup.com</div>
-        <div class="contact-item">☎ 1800 6779</div>
-      </div>
+  <!-- Header inject -->
+  <div id="site-header"></div>
 
-      <div class="contact-right">
-        <div class="contact-item">English▼</div>
-        <div class="contact-item">VND▼</div>
-        <div class="contact-item">Login👤</div>
-        <div class="contact-item">Wishlist♡</div>
-        <div class="contact-item">🛒</div>
-
-        <form class="search-bar">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">🔍</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- MAIN NAV -->
-  <header class="main-nav-wrapper">
-    <div class="main-nav-inner">
-      <div class="brand-area">Phuc Long</div>
-      <nav class="nav-links">
-        <a class="active" href="#">Home</a>
-        <a href="#">Pages</a>
-        <a href="#">Products</a>
-        <a href="#">Blog</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- PAGE HERO -->
+  <!-- HERO -->
   <section class="page-hero">
     <div class="page-hero-inner">
       <h1 class="page-title">My Account</h1>
-      <div class="breadcrumb">
-        Home . Pages . <span>My Account</span>
-      </div>
+      <div class="breadcrumb">Home . Pages . <span>My Account</span></div>
     </div>
   </section>
 
-  <!-- LOGIN CARD SECTION -->
+  <!-- LOGIN AREA -->
   <section class="login-section">
-    <div class="login-wrapper">
+    <div class="login-shell">
+
+      <!-- FORM CARD -->
       <div class="login-card">
-
         <h2 class="login-title">Login</h2>
-        <p class="login-subtitle">
-          Please login using account detail bellow.
-        </p>
+        <p class="login-subtitle">Please login using account detail below.</p>
 
-        <form class="login-form">
+        <form id="loginForm" class="login-form" novalidate>
+          <!-- email -->
           <div class="form-group">
-            <input type="email" placeholder="Email Address" />
+            <label class="field" aria-label="Email Address">
+              <!-- mail icon -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="#6a6f8d" stroke-width="1.6" rx="2" ry="2"/>
+                <path d="M4 7l8 6 8-6" stroke="#6a6f8d" stroke-width="1.6" fill="none" />
+              </svg>
+              <input id="loginEmail" type="email" placeholder="Email Address" required />
+            </label>
           </div>
 
+          <!-- password -->
           <div class="form-group">
-            <input type="password" placeholder="Password" />
+            <label class="field" aria-label="Password">
+              <!-- lock icon -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="10" width="14" height="10" rx="2" stroke="#6a6f8d" stroke-width="1.6"></rect>
+                <path d="M8 10V8a4 4 0 118 0v2" stroke="#6a6f8d" stroke-width="1.6"></path>
+              </svg>
+              <input id="loginPassword" type="password" placeholder="Password" required minlength="4" />
+              <button type="button" class="btn-eye" aria-label="Show/Hide password" onclick="
+                const i=document.getElementById('loginPassword');
+                i.type = i.type==='password' ? 'text' : 'password';
+              ">
+                <!-- eye icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" stroke="#6a6f8d" stroke-width="1.6"/>
+                  <circle cx="12" cy="12" r="3" stroke="#6a6f8d" stroke-width="1.6"/>
+                </svg>
+              </button>
+            </label>
           </div>
 
-          <div class="forgot-row">
-            <a href="#" class="forgot-link">Forgot your password?</a>
+          <!-- row phụ -->
+          <div class="form-row between" style="margin: 8px 0 14px;">
+            <label class="checkbox">
+              <input id="rememberMe" type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" id="forgotLink" class="link-primary">Forgot your password?</a>
           </div>
 
-          <button class="btn-signin" type="submit">Sign In</button>
+          <!-- submit -->
+          <button class="btn-primary" type="submit">
+            Sign In
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
 
-          <div class="signup-row">
+          <div class="help-row">
             Don't have an Account?
-            <a href="#" class="signup-link">Create account</a>
+            <a href="#" id="openRegister" class="link-primary">Create account</a>
           </div>
         </form>
-
       </div>
+
+      <!-- BENEFITS / PROMO CARD -->
+      <aside class="side-card" aria-label="Account Benefits">
+        <h3 class="side-title">Why create an account?</h3>
+        <ul class="side-bullets">
+          <li><span class="tick">✓</span> Sync your cart and wishlist across devices.</li>
+          <li><span class="tick">✓</span> Track orders, view history, manage addresses.</li>
+          <li><span class="tick">✓</span> Early access to promotions and seasonal collections.</li>
+          <li><span class="tick">✓</span> Faster checkout with saved preferences.</li>
+        </ul>
+        <p style="margin:14px 0 0; font-size:12.5px; color:#6a6f8d">
+          By signing in, you agree to our <a class="link-primary" href="terms-services.html">Terms & Services</a>.
+        </p>
+      </aside>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-inner">
+  <!-- Footer inject -->
+  <div id="site-footer"></div>
 
-        <!-- Col 1 -->
-        <div class="footer-col footer-newsletter">
-          <h4>Phuc Long</h4>
+  <!-- Header/Footer loader -->
+  <script
+    src="../Assets/Components/layout.js"
+    defer
+    data-header="../Assets/Components/header.html"
+    data-footer="../Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
 
-          <div class="newsletter-input-row">
-            <input type="email" placeholder="Enter Email Address" />
-            <button>Sign Up</button>
-          </div>
-
-          <div class="footer-address">
-            <div class="footer-col-title">Contact Info</div>
-            <div class="footer-col-text">
-              Floor 7, Room 702, Central Plaza Building, No. 17<br/>
-              Le Duan street, Ben Nghe ward, district 1, Ho Chi Minh city.
-            </div>
-          </div>
-        </div>
-
-        <!-- Col 2 -->
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul class="footer-links">
-            <li><a href="#">Drinks</a></li>
-            <li><a href="#">Bakery</a></li>
-            <li><a href="#">Mooncake</a></li>
-            <li><a href="#">Halloween Collections</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3 -->
-        <div class="footer-col">
-          <h4>Customer Care</h4>
-          <ul class="footer-links">
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Discount</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Orders History</a></li>
-            <li><a href="#">Order Tracking</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4 -->
-        <div class="footer-col">
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Browse the Shop</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <div class="footer-copy">©phuclong.com - All Rights Reserved</div>
-
-        <div class="footer-social">
-          <a class="social-circle" href="#" aria-label="Facebook">f</a>
-          <a class="social-circle" href="#" aria-label="Instagram">◎</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <!-- LocalStorage login handler -->
+  <script src="../Assets/JS/login.js" defer></script>
 </body>
 </html>
