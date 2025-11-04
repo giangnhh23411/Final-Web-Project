@@ -62,7 +62,7 @@
 
     /* BEST SELLERS */
     .section-best-sellers{max-width:var(--max-width-page);margin:32px auto 16px;padding:0 16px}
-    .carousel-header{text-align:center;font-size:18px;font-weight:600;color:var(--brand-text-dark);line-height:1.4;text-transform:uppercase;margin-bottom:24px}
+    .carousel-header{text-align:center;font-size:18px;font-weight:600;color:var(--brand-text-dark);text-transform:uppercase;margin-bottom:24px}
     .carousel{position:relative;display:flex;align-items:center}
     .carousel-window{overflow:hidden;width:100%}
     .carousel-track{display:flex;flex-wrap:nowrap;gap:16px;scroll-behavior:smooth}
@@ -161,6 +161,26 @@
       .newsletter-inner{grid-template-columns:1fr}
       .footer-top{grid-template-columns:1fr}
     }
+
+    /* ===== STORE LOCATOR ===== */
+    .store-locator{max-width:var(--max-width-page);margin:32px auto;padding:0 16px}
+    .sl-grid{display:grid;gap:16px}
+    @media(min-width:992px){.sl-grid{grid-template-columns:1.4fr 1fr}}
+    #sl-map{width:100%;height:420px;border:1px solid #dedcff;border-radius:8px}
+    .sl-panel{border:1px solid #dedcff;border-radius:8px;padding:12px}
+    .sl-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+    .sl-toolbar input,.sl-toolbar select{height:34px;padding:0 10px;border:1px solid #ddd;border-radius:6px;font-size:13px}
+    .sl-toolbar button{height:34px;padding:0 12px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+    .sl-toolbar button.primary{background:#fb2e86;color:#fff;border-color:#fb2e86}
+    #sl-list{display:flex;flex-direction:column;gap:10px;max-height:420px;overflow:auto}
+    .sl-item{display:grid;grid-template-columns:40px 1fr;gap:10px;padding:10px;border:1px solid #eee;border-radius:8px;background:#fff}
+    .sl-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#efe9ff;color:#4b008c;font-weight:700}
+    .sl-meta{font-size:12px;color:var(--brand-text-mid);line-height:1.5}
+    .sl-status{color:#6b7280}
+    .sl-status.open{color:#16a34a}
+    .sl-distance{margin-left:8px;color:#0d9488}
+    .sl-btn{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:6px;background:#f3f4f6}
+    .sl-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
   </style>
 </head>
 <body>
@@ -388,71 +408,98 @@
   </section>
 
   <!-- BLOG -->
-<section class="blog-section">
-  <div class="blog-header"><h2>Latest Blog</h2></div>
-  <div class="blog-cards">
+  <section class="blog-section">
+    <div class="blog-header"><h2>Latest Blog</h2></div>
+    <div class="blog-cards">
+      <!-- Blog 1 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="Assets/images/blog1-in.jpg" alt="Boogey Wedding – Halloween Collection | Phuc Long" />
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <div>✦ Phuc Long Team</div>
+            <div>📅 25 October, 2025</div>
+          </div>
+          <div class="blog-title">Boogey Wedding – Halloween Collection</div>
+          <div class="blog-desc">
+            Step into Phuc Long’s spooky season with “Boogey Wedding” — a limited Halloween
+            collection featuring gothic-style beverages and sweet treats, now available
+            at select stores and ShopeeFood combos.
+          </div>
+          <a class="blog-readmore" href="ClientSite/blog1.html">Read More</a>
+        </div>
+      </article>
+      <!-- Blog 2 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="Assets/images/blog2-in.jpg" alt="Game On Top – 100% Prizes | Phuc Long" />
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <div>✦ Phuc Long Team</div>
+            <div>📅 10 October, 2025</div>
+          </div>
+          <div class="blog-title">Game On Top – 100% Prizes</div>
+          <div class="blog-desc">
+            Join Phuc Long’s mini-game “Game On Top” and win instantly — 100% chance of prizes.
+            Play, share, climb the leaderboard, and redeem drink vouchers throughout the campaign.
+          </div>
+          <a class="blog-readmore" href="ClientSite/blog2.html">Read More</a>
+        </div>
+      </article>
+      <!-- Blog 3 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="Assets/images/blog3-in.jpg" alt="Mad for Tea – 100% Prizes | Phuc Long" />
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <div>✦ Phuc Long Team</div>
+            <div>📅 24 June, 2025</div>
+          </div>
+          <div class="blog-title">Mad for Tea – 100% Prizes</div>
+          <div class="blog-desc">
+            Open the mini-game, complete tasks, and hunt for 100,000 free cups of tea — 100% win rate.
+            Play daily, invite friends, and claim exclusive Phuc Long rewards.
+          </div>
+          <a class="blog-readmore" href="ClientSite/blog3.html">Read More</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <!-- Blog 1 -->
-    <article class="blog-card">
-      <div class="blog-image">
-        <img src="Assets/images/blog1-in.jpg" alt="Boogey Wedding – Halloween Collection | Phuc Long" />
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <div>✦ Phuc Long Team</div>
-          <div>📅 25 October, 2025</div>
-        </div>
-        <div class="blog-title">Boogey Wedding – Halloween Collection</div>
-        <div class="blog-desc">
-          Step into Phuc Long’s spooky season with “Boogey Wedding” — a limited Halloween
-          collection featuring gothic-style beverages and sweet treats, now available
-          at select stores and ShopeeFood combos.
-        </div>
-        <a class="blog-readmore" href="ClientSite/blog1.html">Read More</a>
-      </div>
-    </article>
+  <!-- STORE LOCATOR (MAP) -->
+  <section class="store-locator" id="store-locator">
+    <h2 style="text-align:center;margin:0 0 16px">Danh sách cửa hàng Phúc Long</h2>
 
-    <!-- Blog 2 -->
-    <article class="blog-card">
-      <div class="blog-image">
-        <img src="Assets/images/blog2-in.jpg" alt="Game On Top – 100% Prizes | Phuc Long" />
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <div>✦ Phuc Long Team</div>
-          <div>📅 10 October, 2025</div>
-        </div>
-        <div class="blog-title">Game On Top – 100% Prizes</div>
-        <div class="blog-desc">
-          Join Phuc Long’s mini-game “Game On Top” and win instantly — 100% chance of prizes.
-          Play, share, climb the leaderboard, and redeem drink vouchers throughout the campaign.
-        </div>
-        <a class="blog-readmore" href="ClientSite/blog2.html">Read More</a>
-      </div>
-    </article>
+    <div class="sl-toolbar">
+      <input id="sl-q" type="search" placeholder="Tìm tên/địa chỉ cửa hàng…" style="flex:1;min-width:200px">
+      <select id="sl-province" style="min-width:160px">
+        <option value="">Tỉnh thành</option>
+      </select>
+      <select id="sl-district" style="min-width:160px">
+        <option value="">Quận/huyện</option>
+      </select>
+      <select id="sl-ward" style="min-width:160px">
+        <option value="">Phường/xã</option>
+      </select>
+      <button id="sl-locate" title="Lấy vị trí của bạn">📍 Vị trí của tôi</button>
+      <button id="sl-sort" data-active="0" title="Sắp theo khoảng cách">↕ Sắp xếp</button>
+      <button id="sl-clear" title="Xóa lọc">✖ Xóa</button>
+    </div>
 
-    <!-- Blog 3 -->
-    <article class="blog-card">
-      <div class="blog-image">
-        <img src="Assets/images/blog3-in.jpg" alt="Mad for Tea – 100% Prizes | Phuc Long" />
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <div>✦ Phuc Long Team</div>
-          <div>📅 24 June, 2025</div>
+    <div class="sl-grid">
+      <div id="sl-map"></div>
+      <div class="sl-panel">
+        <div class="sl-header">
+          <strong>Danh sách cửa hàng</strong>
+          <span><b id="sl-count">0</b> cửa hàng</span>
         </div>
-        <div class="blog-title">Mad for Tea – 100% Prizes</div>
-        <div class="blog-desc">
-          Open the mini-game, complete tasks, and hunt for 100,000 free cups of tea — 100% win rate.
-          Play daily, invite friends, and claim exclusive Phuc Long rewards.
-        </div>
-        <a class="blog-readmore" href="ClientSite/blog3.html">Read More</a>
+        <div id="sl-list"></div>
       </div>
-    </article>
-
-  </div>
-</section>
-
+    </div>
+  </section>
 
   <!-- Footer được load động -->
   <div id="footer-placeholder"></div>
@@ -726,5 +773,11 @@
       window.location.href='product details.html';
     }
   </script>
+
+  <!-- JS của store-locator -->
+  <script src="Assets/JS/map.js"></script>
+
+  <!-- Google Maps (thay API key của bạn) -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=marker&callback=initLocatorMap"></script>
 </body>
 </html>
