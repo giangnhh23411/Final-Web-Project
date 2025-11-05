@@ -1,0 +1,528 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item active">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Dashboard</h1>
+                <button id="refreshBtn" style="margin-bottom: 20px; background-color: #007bff; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Refresh Stats</button>
+                <section class="stats">
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/totaluser.svg" alt="TotalUser"/></div>
+                        <h2>Total User</h2>
+                        <p class="value" id="totalUsers">0</p>
+                        <p class="change" id="usersChange">0% from yesterday</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/Order.svg" alt="Order"/></div>
+                        <h2>Total Order</h2>
+                        <p class="value" id="totalOrders">0</p>
+                        <p class="change" id="ordersChange">0% from last week</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/TotalSales.svg" alt="TotalSales"/></div>
+                        <h2>Total Sales</h2>
+                        <p class="value" id="totalSales">$0</p>
+                        <p class="change" id="salesChange">0% from yesterday</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><img src="../images/icons/sandclock.svg" alt="SandClock"/></div>
+                        <h2>Total Pending</h2>
+                        <p class="value" id="totalPending">0</p>
+                        <p class="change" id="pendingChange">0% from yesterday</p>
+                    </div>
+                </section>
+                <section class="sales-details">
+                    <div class="header">
+                        <h2>Sales Details</h2>
+                        <select id="revenuePeriod">
+                            <option value="year">Year</option>
+                            <option value="month">Month</option>
+                        </select>
+                    </div>
+                    <canvas id="revenueChart"></canvas>
+                </section>
+                <section class="deals-details">
+                    <div class="header">
+                        <h2>Deals Details</h2>
+                        <select>
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Location</th>
+                                <th>Date - Time</th>
+                                <th>Piece</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dealsTableBody">
+                            <!-- Dynamic rows will be added here -->
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Additional charts from the new image -->
+                <section class="revenue">
+                    <div class="header">
+                        <h2>Revenue</h2>
+                        <select>
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <canvas id="revenueChartOld"></canvas>
+                </section>
+                <section class="additional-stats">
+                    <div class="customers-card">
+                        <h2>Customers</h2>
+                        <canvas id="customersChart" width="150" height="150"></canvas>
+                        <div class="customer-numbers">
+                            <p class="new-customers" id="newCustomers">0 <span>New Customers</span></p>
+                            <p class="repeated" id="repeatedCustomers">0 <span>Repeated</span></p>
+                        </div>
+                    </div>
+                    <div class="featured-product">
+                        <h2>Featured Product</h2>
+                        <p id="featuredProductName">Loading...</p>
+                        <p class="price" id="featuredProductPrice">$0.00</p>
+                    </div>
+                    <div class="sales-analytics">
+                        <h2>Sales Analytics</h2>
+                        <canvas id="analyticsChart"></canvas>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        const API_URL = 'http://localhost:8000/api';
+
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Helper to format date to YYYY-MM-DD
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+
+        // Fetch users
+        async function fetchUsers() {
+            try {
+                const res = await fetch(`${API_URL}/users`);
+                if (!res.ok) throw new Error('Failed to fetch users');
+                const { data } = await res.json();
+                return data;
+            } catch (err) {
+                console.error('Error fetching users:', err);
+                return [];
+            }
+        }
+
+        // Fetch orders
+        async function fetchOrders(status = null) {
+            try {
+                let url = `${API_URL}/orders`;
+                if (status) url += `?order_status=${status}`;
+                const res = await fetch(url);
+                if (!res.ok) throw new Error('Failed to fetch orders');
+                const { data } = await res.json();
+                return data;
+            } catch (err) {
+                console.error('Error fetching orders:', err);
+                return [];
+            }
+        }
+
+        // Fetch order items for a specific order
+        async function fetchOrderItems(orderId) {
+            try {
+                const res = await fetch(`${API_URL}/order_items?order_id=${orderId}`);
+                if (!res.ok) throw new Error('Failed to fetch order items');
+                const { data } = await res.json();
+                return data;
+            } catch (err) {
+                console.error('Error fetching order items:', err);
+                return [];
+            }
+        }
+
+        // Fetch products
+        async function fetchProducts() {
+            try {
+                const res = await fetch(`${API_URL}/products`);
+                if (!res.ok) throw new Error('Failed to fetch products');
+                const { data } = await res.json();
+                return data;
+            } catch (err) {
+                console.error('Error fetching products:', err);
+                return [];
+            }
+        }
+
+        // Calculate stats
+        async function calculateStats() {
+            const users = await fetchUsers();
+            const totalUsers = users.length;
+
+            // Calculate users change from yesterday
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(today.getDate() - 1);
+            const todayStr = formatDate(today);
+            const yesterdayStr = formatDate(yesterday);
+
+            const todayUsers = users.filter(u => formatDate(new Date(u.created_at)) === todayStr).length;
+            const yesterdayUsers = users.filter(u => formatDate(new Date(u.created_at)) === yesterdayStr).length;
+            let usersChange = 0;
+            if (yesterdayUsers > 0) {
+                usersChange = ((todayUsers - yesterdayUsers) / yesterdayUsers * 100).toFixed(1);
+            }
+            const usersChangeClass = usersChange >= 0 ? 'up' : 'down';
+            const usersChangeArrow = usersChange >= 0 ? '▲' : '▼';
+
+            document.getElementById('totalUsers').textContent = totalUsers;
+            document.getElementById('usersChange').innerHTML = `<span class="${usersChangeClass}">${usersChangeArrow} ${Math.abs(usersChange)}% ${usersChange >= 0 ? 'Up' : 'Down'} from yesterday</span>`;
+
+            const allOrders = await fetchOrders();
+            const totalOrders = allOrders.length;
+
+            // Calculate orders change from last week
+            const lastWeek = new Date(today);
+            lastWeek.setDate(today.getDate() - 7);
+            const thisWeekStart = new Date(today);
+            thisWeekStart.setDate(today.getDate() - today.getDay()); // Start of current week (Sunday)
+            const lastWeekStart = new Date(lastWeek);
+            lastWeekStart.setDate(lastWeek.getDate() - lastWeek.getDay());
+
+            const thisWeekOrders = allOrders.filter(o => new Date(o.created_at) >= thisWeekStart).length;
+            const lastWeekOrders = allOrders.filter(o => new Date(o.created_at) >= lastWeekStart && new Date(o.created_at) < thisWeekStart).length;
+            let ordersChange = 0;
+            if (lastWeekOrders > 0) {
+                ordersChange = ((thisWeekOrders - lastWeekOrders) / lastWeekOrders * 100).toFixed(1);
+            }
+            const ordersChangeClass = ordersChange >= 0 ? 'up' : 'down';
+            const ordersChangeArrow = ordersChange >= 0 ? '▲' : '▼';
+
+            document.getElementById('totalOrders').textContent = totalOrders;
+            document.getElementById('ordersChange').innerHTML = `<span class="${ordersChangeClass}">${ordersChangeArrow} ${Math.abs(ordersChange)}% ${ordersChange >= 0 ? 'Up' : 'Down'} from last week</span>`;
+
+            const deliveredOrders = await fetchOrders('Delivered');
+            const totalSales = deliveredOrders.reduce((sum, order) => sum + (order.total_amount || 0), 0);
+
+            // Calculate sales change from yesterday
+            const todaySales = deliveredOrders.filter(o => formatDate(new Date(o.updated_at || o.created_at)) === todayStr).reduce((sum, o) => sum + o.total_amount, 0);
+            const yesterdaySales = deliveredOrders.filter(o => formatDate(new Date(o.updated_at || o.created_at)) === yesterdayStr).reduce((sum, o) => sum + o.total_amount, 0);
+            let salesChange = 0;
+            if (yesterdaySales > 0) {
+                salesChange = ((todaySales - yesterdaySales) / yesterdaySales * 100).toFixed(1);
+            }
+            const salesChangeClass = salesChange >= 0 ? 'up' : 'down';
+            const salesChangeArrow = salesChange >= 0 ? '▲' : '▼';
+
+            document.getElementById('totalSales').textContent = `$${totalSales.toFixed(2)}`;
+            document.getElementById('salesChange').innerHTML = `<span class="${salesChangeClass}">${salesChangeArrow} ${Math.abs(salesChange)}% ${salesChange >= 0 ? 'Up' : 'Down'} from yesterday</span>`;
+
+            const pendingOrders = await fetchOrders('Pending');
+            const totalPending = pendingOrders.length;
+
+            // Calculate pending change from yesterday
+            const todayPending = pendingOrders.filter(o => formatDate(new Date(o.created_at)) === todayStr).length;
+            const yesterdayPending = pendingOrders.filter(o => formatDate(new Date(o.created_at)) === yesterdayStr).length;
+            let pendingChange = 0;
+            if (yesterdayPending > 0) {
+                pendingChange = ((todayPending - yesterdayPending) / yesterdayPending * 100).toFixed(1);
+            }
+            const pendingChangeClass = pendingChange >= 0 ? 'up' : 'down';
+            const pendingChangeArrow = pendingChange >= 0 ? '▲' : '▼';
+
+            document.getElementById('totalPending').textContent = totalPending;
+            document.getElementById('pendingChange').innerHTML = `<span class="${pendingChangeClass}">${pendingChangeArrow} ${Math.abs(pendingChange)}% ${pendingChange >= 0 ? 'Up' : 'Down'} from yesterday</span>`;
+
+            // New Customers (registered this month) and Repeated (total - new)
+            const thisMonth = today.getMonth() + 1;
+            const newCustomers = users.filter(u => new Date(u.created_at).getMonth() + 1 === thisMonth).length;
+            const repeatedCustomers = totalUsers - newCustomers; // Placeholder, for actual repeated, query users with multiple orders
+
+            document.getElementById('newCustomers').innerHTML = `${newCustomers} <span>New Customers</span>`;
+            document.getElementById('repeatedCustomers').innerHTML = `${repeatedCustomers} <span>Repeated</span>`;
+
+            // Featured Product: Highest revenue product
+            const agg = await aggregateProductSales(deliveredOrders);
+            if (Object.keys(agg).length > 0) {
+                const topProductId = Object.entries(agg).sort((a, b) => b[1].revenue - a[1].revenue)[0][0];
+                const products = await fetchProducts();
+                const topProduct = products.find(p => p._id === topProductId);
+                if (topProduct) {
+                    document.getElementById('featuredProductName').textContent = topProduct.name;
+                    document.getElementById('featuredProductPrice').textContent = `$${topProduct.price.toFixed(2)}`;
+                }
+            }
+
+            // Update charts
+            updateRevenueChart(deliveredOrders);
+            updateCustomersChart(newCustomers, repeatedCustomers);
+            updateAnalyticsChart(); // Placeholder data
+        }
+
+        // Aggregate product sales for featured
+        async function aggregateProductSales(orders) {
+            let allItems = [];
+            for (const order of orders) {
+                const items = await fetchOrderItems(order._id);
+                allItems = allItems.concat(items);
+            }
+            const agg = {};
+            allItems.forEach(item => {
+                const pid = item.product_id;
+                if (!agg[pid]) agg[pid] = { revenue: 0 };
+                agg[pid].revenue += parseFloat(item.line_total || 0);
+            });
+            return agg;
+        }
+
+        // Update Revenue Chart (dynamic by year/month)
+        let revenueChartInstance;
+        function updateRevenueChart(orders) {
+            const ctx = document.getElementById('revenueChart').getContext('2d');
+            if (revenueChartInstance) revenueChartInstance.destroy();
+
+            const period = document.getElementById('revenuePeriod').value;
+            const grouped = groupOrdersByPeriod(orders, period);
+
+            const labels = Object.keys(grouped).sort();
+            const data = labels.map(label => grouped[label]);
+
+            revenueChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Revenue',
+                        data: data,
+                        borderColor: '#4CAF50',
+                        backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Group orders by year or month based on delivered orders
+        function groupOrdersByPeriod(orders, period) {
+            const grouped = {};
+            orders.forEach(order => {
+                const date = new Date(order.updated_at || order.created_at); // Use updated_at if available for delivery date
+                let key;
+                if (period === 'year') {
+                    key = date.getFullYear().toString();
+                } else { // month
+                    key = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`;
+                }
+                if (!grouped[key]) grouped[key] = 0;
+                grouped[key] += order.total_amount || 0;
+            });
+            return grouped;
+        }
+
+        // Update Customers Chart
+        function updateCustomersChart(newCust, repeated) {
+            const ctx = document.getElementById('customersChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['New Customers', 'Repeated'],
+                    datasets: [{
+                        data: [newCust, repeated],
+                        backgroundColor: ['#32CD32', '#ADD8E6'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    cutout: '70%',
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        // Update Analytics Chart (placeholder, can fetch actual analytics if endpoint added)
+        function updateAnalyticsChart() {
+            const ctx = document.getElementById('analyticsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2015', '2016', '2017', '2018', '2019'],
+                    datasets: [
+                        {
+                            label: 'Series 1',
+                            data: [10, 20, 15, 25, 20],
+                            borderColor: '#00BFFF',
+                            fill: false,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Series 2',
+                            data: [15, 25, 20, 30, 25],
+                            borderColor: '#90EE90',
+                            fill: false,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Load deals table (recent 5 delivered orders as example)
+        async function loadDealsTable() {
+            const deliveredOrders = await fetchOrders('Delivered');
+            const tbody = document.getElementById('dealsTableBody');
+            tbody.innerHTML = '';
+            const recent = deliveredOrders.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0, 5); // Recent 5
+            for (const order of recent) {
+                const items = await fetchOrderItems(order._id);
+                const productName = items.length > 0 ? items[0].product_name : 'Unknown';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${productName}</td>
+                    <td>${order.shipping_address || 'Unknown'}</td>
+                    <td>${new Date(order.created_at).toLocaleString()}</td>
+                    <td>${items.reduce((sum, i) => sum + i.quantity, 0)}</td>
+                    <td>$${order.total_amount.toFixed(2)}</td>
+                    <td><span class="status delivered">Delivered</span></td>
+                `;
+                tbody.appendChild(row);
+            }
+        }
+
+        // Init
+        async function init() {
+            await calculateStats();
+            await loadDealsTable();
+            // Auto-refresh every 60 seconds
+            setInterval(async () => {
+                await calculateStats();
+                await loadDealsTable();
+            }, 60000);
+        }
+        init();
+
+        // Refresh button
+        document.getElementById('refreshBtn').addEventListener('click', async () => {
+            await calculateStats();
+            await loadDealsTable();
+        });
+
+        // Event for changing revenue period
+        document.getElementById('revenuePeriod').addEventListener('change', async () => {
+            const deliveredOrders = await fetchOrders('Delivered');
+            updateRevenueChart(deliveredOrders);
+        });
+
+    </script>
+</body>
+</html>

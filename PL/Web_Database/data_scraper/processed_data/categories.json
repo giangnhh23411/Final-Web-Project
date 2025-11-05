@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Bánh",
+    "slug": "bánh",
+    "is_active": true,
+    "_id": "6906ce5a1440315f50ee4bdc"
+  },
+  {
+    "name": "Thức uống",
+    "slug": "thức-uống",
+    "is_active": true,
+    "_id": "6906ce5a1440315f50ee4bdd"
+  },
+  {
+    "name": "Sản phẩm đóng gói - Trà",
+    "slug": "sản-phẩm-đóng-gói-trà",
+    "is_active": true,
+    "_id": "6906ce5a1440315f50ee4bde"
+  },
+  {
+    "name": "Sản phẩm đóng gói - Cà phê",
+    "slug": "sản-phẩm-đóng-gói-cà-phê",
+    "is_active": true,
+    "_id": "6906ce5a1440315f50ee4bdf"
+  },
+  {
+    "name": "Sản phẩm đóng gói - Khác",
+    "slug": "sản-phẩm-đóng-gói-khác",
+    "is_active": true,
+    "_id": "6906ce5a1440315f50ee4be0"
+  }
+]

@@ -1,0 +1,449 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02a63",
+        "itemNo": "60000650",
+        "__v": 0,
+        "basicItemNo": "60000650",
+        "basicMatl": null,
+        "id": "9a5296c9-fe01-486a-8dd0-fa75c1cf0d38",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110101",
+        "mch5": "211010103",
+        "mch6": "211010103",
+        "mediaItems": [
+          {
+            "id": "e0236414-2e78-4b64-bdb7-e5856442256e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000650-banh-mi-phuc-long-m-_69ceeba5-e7f9-4fad-8393-25d66a47a878-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000650-banh-mi-phuc-long-m-_69ceeba5-e7f9-4fad-8393-25d66a47a878-og.png",
+        "name": "Bánh mì Phúc Long 170g",
+        "price": 38000,
+        "salePrice": 38000,
+        "seoName": "banh-mi-phuc-long-170g--s60000650",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "9a5296c9-fe01-486a-8dd0-fa75c1cf0d38",
+            "itemNo": "60000650",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000650-banh-mi-phuc-long-m-_69ceeba5-e7f9-4fad-8393-25d66a47a878-og.png",
+            "name": "Bánh mì Phúc Long 170g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Bánh mì Phúc Long 170g",
+        "updatedDate": "2025-11-02T01:09:24.183Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a65",
+        "itemNo": "60000778",
+        "__v": 0,
+        "basicItemNo": "60000778",
+        "basicMatl": null,
+        "id": "2b1205d9-a2d6-452d-a8bc-bf7374f395ab",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "20903b55-47f1-4dca-ae19-71fa1b9f725c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000297-20230517030841.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000297-20230517030841.png",
+        "name": "Trà hương sen Thái Nguyên 100g",
+        "price": 40000,
+        "salePrice": 40000,
+        "seoName": "tra-huong-sen-thai-nguyen-100g--s60000778",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "2b1205d9-a2d6-452d-a8bc-bf7374f395ab",
+            "itemNo": "60000778",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000297-20230517030841.png",
+            "name": "Trà hương sen Thái Nguyên 100g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà hương sen Thái Nguyên 100g",
+        "updatedDate": "2025-11-02T01:09:24.225Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a66",
+        "itemNo": "60000777",
+        "__v": 0,
+        "basicItemNo": "60000777",
+        "basicMatl": null,
+        "id": "e5859469-6dbb-4bd0-b399-96e14d396a25",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "4d872a92-f942-4613-9156-0ac8fc848096",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000147-20230517031935.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000147-20230517031935.png",
+        "name": "Trà lài Thái nguyên 100g",
+        "price": 40000,
+        "salePrice": 40000,
+        "seoName": "tra-lai-thai-nguyen-100g--s60000777",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "e5859469-6dbb-4bd0-b399-96e14d396a25",
+            "itemNo": "60000777",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000147-20230517031935.png",
+            "name": "Trà lài Thái nguyên 100g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài Thái nguyên 100g",
+        "updatedDate": "2025-11-02T01:09:24.205Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a67",
+        "itemNo": "60000779",
+        "__v": 0,
+        "basicItemNo": "60000779",
+        "basicMatl": null,
+        "id": "271237fd-f9bb-4395-9a4b-b7287cbccdcd",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "c7f3b23b-85f8-4ab6-a4f0-c2dafea09538",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000368-20230517034224.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000368-20230517034224.png",
+        "name": "Trà xanh Thái Nguyên 100g",
+        "price": 35000,
+        "salePrice": 35000,
+        "seoName": "tra-xanh-thai-nguyen-100g--s60000779",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "271237fd-f9bb-4395-9a4b-b7287cbccdcd",
+            "itemNo": "60000779",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000368-20230517034224.png",
+            "name": "Trà xanh Thái Nguyên 100g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà xanh Thái Nguyên 100g",
+        "updatedDate": "2025-11-02T01:09:24.252Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a68",
+        "itemNo": "60000820",
+        "__v": 0,
+        "basicItemNo": "60000820",
+        "basicMatl": null,
+        "id": "2498e0e0-784c-490c-a384-067727c4c850",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "1f07274f-2bae-4bf1-94dd-b168f1686926",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_hong_tra-20241104082520.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_hong_tra-20241104082520.png",
+        "name": "Trà hồng trà túi lọc 2g x 25gói x 20 hộp",
+        "price": 37000,
+        "salePrice": 37000,
+        "seoName": "tra-hong-tra-tui-loc-2g-x-25goi-x-20-hop--s60000820",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "2498e0e0-784c-490c-a384-067727c4c850",
+            "itemNo": "60000820",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_hong_tra-20241104082520.png",
+            "name": "Trà hồng trà túi lọc 2g x 25gói x 20 hộp",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà hồng trà túi lọc 2g x 25gói x 20 hộp",
+        "updatedDate": "2025-11-02T01:09:24.273Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a6f",
+        "itemNo": "60000824",
+        "__v": 0,
+        "basicItemNo": "60000824",
+        "basicMatl": null,
+        "id": "44fa23aa-36e9-438b-afaf-bcfc3da07df9",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "c08a6adb-3717-4238-a978-999bc22a1dc1",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_lai-20241104092339.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_lai-20241104092339.png",
+        "name": "Trà hương lài túi lọc 2gx25góix20 hộp",
+        "price": 37000,
+        "salePrice": 37000,
+        "seoName": "tra-huong-lai-tui-loc-2gx25goix20-hop--s60000824",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "44fa23aa-36e9-438b-afaf-bcfc3da07df9",
+            "itemNo": "60000824",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_lai-20241104092339.png",
+            "name": "Trà hương lài túi lọc 2gx25góix20 hộp",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà hương lài túi lọc 2gx25góix20 hộp",
+        "updatedDate": "2025-11-02T01:09:24.313Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a70",
+        "itemNo": "60000823",
+        "__v": 0,
+        "basicItemNo": "60000823",
+        "basicMatl": null,
+        "id": "d7402382-7ad5-4a73-9780-a8bf5381cbbc",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "be0ecd24-466f-42ff-9c7d-c4a0730eab9d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000092-20230517032840.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000092-20230517032840.png",
+        "name": "Trà lài 100G x 15 lon (lon giấy)",
+        "price": 75000,
+        "salePrice": 75000,
+        "seoName": "tra-lai-100g-x-15-lon-lon-giay--s60000823",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "d7402382-7ad5-4a73-9780-a8bf5381cbbc",
+            "itemNo": "60000823",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000092-20230517032840.png",
+            "name": "Trà lài 100G x 15 lon (lon giấy)",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài 100G x 15 lon (lon giấy)",
+        "updatedDate": "2025-11-02T01:09:24.293Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a71",
+        "itemNo": "60000825",
+        "__v": 0,
+        "basicItemNo": "60000825",
+        "basicMatl": null,
+        "id": "32f66ad0-ed98-42c7-b388-79bf3f2bc886",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "34f15fca-6e02-44a1-9962-e6842861d313",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_olong-20241104102427.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_olong-20241104102427.png",
+        "name": "Trà ô long túi lọc 2gx 25góix20 hộp",
+        "price": 38000,
+        "salePrice": 38000,
+        "seoName": "tra-o-long-tui-loc-2gx-25goix20-hop--s60000825",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "32f66ad0-ed98-42c7-b388-79bf3f2bc886",
+            "itemNo": "60000825",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_olong-20241104102427.png",
+            "name": "Trà ô long túi lọc 2gx 25góix20 hộp",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà ô long túi lọc 2gx 25góix20 hộp",
+        "updatedDate": "2025-11-02T01:09:24.335Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a74",
+        "itemNo": "60000828",
+        "__v": 0,
+        "basicItemNo": "60000828",
+        "basicMatl": null,
+        "id": "f48f9ff3-fc65-4d85-b3d1-cc4c5992e40c",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "57214a2d-57e6-4155-86ab-7b882361b695",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000235-20230517033014.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000235-20230517033014.png",
+        "name": "Trà hương sen mới (lon giấy) 100gx15 lon",
+        "price": 58000,
+        "salePrice": 58000,
+        "seoName": "tra-huong-sen-moi-lon-giay-100gx15-lon--s60000828",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "f48f9ff3-fc65-4d85-b3d1-cc4c5992e40c",
+            "itemNo": "60000828",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000235-20230517033014.png",
+            "name": "Trà hương sen mới (lon giấy) 100gx15 lon",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà hương sen mới (lon giấy) 100gx15 lon",
+        "updatedDate": "2025-11-02T01:09:24.356Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a77",
+        "itemNo": "60000831",
+        "__v": 0,
+        "basicItemNo": "60000831",
+        "basicMatl": null,
+        "id": "4ef63ba7-c190-427e-aef2-b41e1261aa40",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110104",
+        "mch5": "111010401",
+        "mch6": "111010401",
+        "mediaItems": [
+          {
+            "id": "5432e446-424b-4910-bf01-103da07654c8",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_sen-20241104102100.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_sen-20241104102100.png",
+        "name": "Trà hương sen túi lọc 2gx25góix20hộp",
+        "price": 38000,
+        "salePrice": 38000,
+        "seoName": "tra-huong-sen-tui-loc-2gx25goix20hop--s60000831",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "4ef63ba7-c190-427e-aef2-b41e1261aa40",
+            "itemNo": "60000831",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_sen-20241104102100.png",
+            "name": "Trà hương sen túi lọc 2gx25góix20hộp",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà hương sen túi lọc 2gx25góix20hộp",
+        "updatedDate": "2025-11-02T01:09:24.398Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 5,
+    "pagingCounter": 41,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 4,
+    "next": 6
+  }
+}

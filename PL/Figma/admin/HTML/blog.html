@@ -1,0 +1,565 @@
+<!-- blog.html (Admin) - Updated to work with backend at BACKEND URL -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Admin — Blog Management</title>
+  <link rel="stylesheet" href="../CSS/blog.css" />
+  <style>
+    /* Quick styles */
+    .btn { padding:8px 12px;border-radius:8px;cursor:pointer;border:0;font-weight:700; }
+    .btn-primary{background:#4b008c;color:#fff}
+    .btn-ghost{background:#fff;border:1px solid #ddd}
+    .table-img { width:72px;height:48px;object-fit:cover;border-radius:6px }
+    .actions img{width:20px;height:20px;cursor:pointer;margin-left:8px}
+    .modal { display:none; position:fixed; inset:0;background:rgba(0,0,0,.4);align-items:center;justify-content:center;z-index:40; }
+    .modal.show{display:flex}
+    .modal .modal-content{background:#fff;padding:18px;border-radius:12px;max-width:900px;width:100%;max-height:90vh;overflow:auto;}
+    .form-row{display:flex;gap:10px;margin-bottom:10px}
+    .form-row>label{min-width:110px;align-self:center}
+    input[type="text"], select, textarea, input[type="date"]{width:100%;padding:8px;border-radius:8px;border:1px solid #ddd}
+    textarea{min-height:160px}
+    .small { font-size:.9rem;color:#666 }
+    .filters { display:flex;gap:10px;align-items:center;margin:10px 0 18px;flex-wrap:wrap }
+    .pagination { margin-top:12px;display:flex;gap:6px;align-items:center }
+    .main-content{flex:1;background:#f7f7fb;padding:18px;box-sizing:border-box}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .nav-left .search-input{padding:8px;border-radius:8px;border:1px solid #ddd;width:280px}
+    .user-profile{display:flex;align-items:center;gap:8px}
+    .user-profile img{width:36px;height:36px;object-fit:cover;border-radius:50%}
+    table.blog-table th, table.blog-table td { padding:8px 10px; border-bottom:1px solid #eee; vertical-align:middle }
+    table.blog-table thead th { background: #faf9ff; font-weight:700 }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+    <div class="main-content">
+      <header>
+        <div class="nav-left">
+          <input type="text" placeholder="Search" id="global-search" class="search-input">
+        </div>
+        <div class="nav-right">
+          <div style="width:20px; height:20px; margin:10px;">
+            <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+          </div>
+          <div class="user-profile">
+            <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+            <div style="display:flex;flex-direction:column;line-height:1">
+              <span style="font-weight:700">Doanh Nguyen</span>
+              <span class="small">Admin</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="blog-header" style="display:flex;justify-content:space-between;align-items:center;">
+          <h1>Blog Management</h1>
+          <div>
+            <button id="btn-refresh" class="btn btn-ghost">Refresh</button>
+            <button id="btn-add" class="btn btn-primary">Add New Blog</button>
+          </div>
+        </div>
+
+        <div class="filters">
+          <select id="category-filter">
+            <option value="">All categories</option>
+            <option value="Promotion">Promotion</option>
+            <option value="Brand Story">Brand Story</option>
+            <option value="Instruction">Instruction</option>
+            <option value="Review">Review</option>
+            <option value="Workshop">Workshop</option>
+          </select>
+
+          <div style="display:flex;gap:6px;align-items:center">
+            <label for="date-from" class="small" style="margin-right:6px">From</label>
+            <input type="date" id="date-from" />
+          </div>
+          <div style="display:flex;gap:6px;align-items:center">
+            <label for="date-to" class="small" style="margin-right:6px">To</label>
+            <input type="date" id="date-to" />
+          </div>
+
+          <select id="interaction-sort">
+            <option value="">Sort by</option>
+            <option value="likes-desc">Likes ↓</option>
+            <option value="comments-desc">Comments ↓</option>
+            <option value="shares-desc">Shares ↓</option>
+          </select>
+
+          <div style="margin-left:auto" class="small">Total: <span id="total-count">0</span></div>
+        </div>
+
+        <div class="blog-table-container">
+          <table class="blog-table" style="width:100%;border-collapse:collapse">
+            <thead>
+              <tr style="text-align:left">
+                <th style="width:48px">#</th>
+                <th style="width:120px">Preview</th>
+                <th>Title</th>
+                <th style="width:140px">Category</th>
+                <th style="width:220px">Excerpt</th>
+                <th style="width:80px">Like</th>
+                <th style="width:80px">Comment</th>
+                <th style="width:80px">Share</th>
+                <th style="width:110px">Action</th>
+              </tr>
+            </thead>
+            <tbody id="blogs-tbody">
+            </tbody>
+          </table>
+
+          <div class="pagination" id="pagination">
+            <button id="prev-page" class="btn">‹</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" class="btn">›</button>
+            <select id="page-size" style="margin-left:8px">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="25">25</option>
+            </select>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal (Create / Edit) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modal-close" style="float:right" class="btn">✕</button>
+      <h2 id="modal-title">Add Blog</h2>
+
+      <form id="blog-form">
+        <input type="hidden" id="blog-id" value="">
+
+        <div class="form-row">
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="Promotion">Promotion</option>
+            <option value="Brand Story">Brand Story</option>
+            <option value="Instruction">Instruction</option>
+            <option value="Review">Review</option>
+            <option value="Workshop">Workshop</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="lead">Lead</label>
+          <input id="lead" name="lead" type="text" />
+        </div>
+
+        <div class="form-row">
+          <label for="date_display">Date</label>
+          <input id="date_display" name="date_display" type="date" />
+        </div>
+
+        <div style="margin-bottom:10px">
+          <label for="content">Content (HTML or Markdown)</label>
+          <textarea id="content" name="content" placeholder="<p>...</p>"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="attached">Attached file</label>
+          <input id="attached" name="attached" type="file" accept="image/*" />
+        </div>
+
+        <div class="form-row">
+          <label>Preview</label>
+          <img id="attached-preview" src="" alt="" style="max-width:220px;border-radius:8px;display:none" />
+        </div>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">
+          <button type="button" id="btn-cancel" class="btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-save">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script>
+  // ---------- CONFIG ----------
+  const BACKEND = 'http://localhost:8000'; // <-- đổi nếu backend chạy chỗ khác
+  const API_BASE = `${BACKEND}/api/blogs`;
+  const UPLOADS_API = `${BACKEND}/api/uploads`;
+
+  // ---------- STATE ----------
+  let state = { page: 1, limit: 10, total: 0, sort: '', category: '', search: '' };
+
+  // DOM refs
+  const tbody = document.getElementById('blogs-tbody');
+  const totalCountEl = document.getElementById('total-count');
+  const pageInfo = document.getElementById('page-info');
+  const prevPage = document.getElementById('prev-page');
+  const nextPage = document.getElementById('next-page');
+  const pageSize = document.getElementById('page-size');
+  const categoryFilter = document.getElementById('category-filter');
+  const dateFrom = document.getElementById('date-from');
+  const dateTo = document.getElementById('date-to');
+  const sortSelect = document.getElementById('interaction-sort');
+  const searchInput = document.getElementById('global-search');
+  const btnAdd = document.getElementById('btn-add');
+  const btnRefresh = document.getElementById('btn-refresh');
+
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalClose = document.getElementById('modal-close');
+  const form = document.getElementById('blog-form');
+  const blogIdInput = document.getElementById('blog-id');
+  const titleInput = document.getElementById('title');
+  const categoryInput = document.getElementById('category');
+  const contentInput = document.getElementById('content');
+  const leadInput = document.getElementById('lead');
+  const dateDisplayInput = document.getElementById('date_display');
+  const attachedInput = document.getElementById('attached');
+  const attachedPreview = document.getElementById('attached-preview');
+  const btnCancel = document.getElementById('btn-cancel');
+
+  // helpers
+  function toast(msg){ alert(msg); }
+  function truncateText(htmlOrText, n = 140){
+    const tmp = document.createElement('div');
+    tmp.innerHTML = htmlOrText || '';
+    const text = tmp.textContent || tmp.innerText || '';
+    return text.length > n ? text.slice(0,n) + '…' : text;
+  }
+
+  function buildQueryParams() {
+    const params = new URLSearchParams();
+    params.set('page', state.page);
+    params.set('limit', state.limit);
+    if (state.category) params.set('category', state.category);
+    if (state.sort) params.set('sort', state.sort);
+    if (state.search) params.set('search', state.search);
+    if (dateFrom.value) params.set('date_from', dateFrom.value);
+    if (dateTo.value) params.set('date_to', dateTo.value);
+    return params.toString();
+  }
+
+  async function loadBlogs(){
+    const qs = buildQueryParams();
+    const url = `${API_BASE}?${qs}`;
+    console.log('[loadBlogs] url=', url);
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        const txt = await res.text();
+        console.error('loadBlogs error body:', txt);
+        throw new Error(`HTTP ${res.status}`);
+      }
+      const data = await res.json();
+      // expected { items: [...], total: N, page, limit } (server returns this shape)
+      const items = Array.isArray(data.items) ? data.items : (Array.isArray(data) ? data : []);
+      state.total = typeof data.total === 'number' ? data.total : items.length;
+      renderTable(items);
+    } catch (e) {
+      console.error('loadBlogs failed', e);
+      tbody.innerHTML = `<tr><td colspan="9" class="small" style="color:#b00">Không thể load dữ liệu — kiểm tra console</td></tr>`;
+    }
+  }
+
+  function renderTable(items = []){
+    tbody.innerHTML = '';
+    if (!items.length) {
+      tbody.innerHTML = '<tr><td colspan="9" class="small">No items</td></tr>';
+      totalCountEl.textContent = 0;
+      pageInfo.textContent = `Page ${state.page}`;
+      return;
+    }
+    items.forEach((it, idx) => {
+      const tr = document.createElement('tr');
+
+      const indexTd = document.createElement('td');
+      indexTd.textContent = (state.page - 1) * state.limit + idx + 1;
+      tr.appendChild(indexTd);
+
+      const previewTd = document.createElement('td');
+      if (it.attached_file) {
+        const img = document.createElement('img');
+        img.src = it.attached_file;
+        img.alt = it.title || 'preview';
+        img.className = 'table-img';
+        previewTd.appendChild(img);
+      } else {
+        previewTd.textContent = '-';
+        previewTd.classList.add('small');
+      }
+      tr.appendChild(previewTd);
+
+      const titleTd = document.createElement('td');
+      titleTd.textContent = it.title || '';
+      tr.appendChild(titleTd);
+
+      const catTd = document.createElement('td');
+      catTd.textContent = it.category || '';
+      tr.appendChild(catTd);
+
+      const excerptTd = document.createElement('td');
+      excerptTd.textContent = truncateText(it.lead || it.content || '', 140);
+      tr.appendChild(excerptTd);
+
+      const likeTd = document.createElement('td');
+      likeTd.textContent = typeof it.like_count === 'number' ? it.like_count : 0;
+      tr.appendChild(likeTd);
+
+      const cmtTd = document.createElement('td');
+      cmtTd.textContent = typeof it.comment_count === 'number' ? it.comment_count : 0;
+      tr.appendChild(cmtTd);
+
+      const shareTd = document.createElement('td');
+      shareTd.textContent = typeof it.share_count === 'number' ? it.share_count : 0;
+      tr.appendChild(shareTd);
+
+      const actionTd = document.createElement('td');
+      actionTd.className = 'actions';
+      const editImg = document.createElement('img');
+      editImg.src = '../images/icons/edit.svg';
+      editImg.alt = 'Edit';
+      editImg.title = 'Edit';
+      editImg.addEventListener('click', () => openEdit(it));
+      actionTd.appendChild(editImg);
+      const delImg = document.createElement('img');
+      delImg.src = '../images/icons/delete.svg';
+      delImg.alt = 'Delete';
+      delImg.title = 'Delete';
+      delImg.addEventListener('click', () => removeBlog(it._id));
+      actionTd.appendChild(delImg);
+      tr.appendChild(actionTd);
+
+      tbody.appendChild(tr);
+    });
+
+    totalCountEl.textContent = state.total;
+    pageInfo.textContent = `Page ${state.page} • Showing ${items.length} items`;
+    prevPage.disabled = state.page <= 1;
+    const maxPage = Math.max(1, Math.ceil(state.total / state.limit));
+    nextPage.disabled = state.page >= maxPage;
+  }
+
+  // CRUD UI handlers
+  function showModal(mode='create'){
+    modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
+    modalTitle.textContent = mode === 'create' ? 'Add Blog' : 'Edit Blog';
+  }
+  function hideModal(){
+    modal.classList.remove('show'); modal.setAttribute('aria-hidden','true');
+    form.reset(); attachedPreview.style.display = 'none'; blogIdInput.value = '';
+  }
+
+  function openEdit(item){
+    blogIdInput.value = item._id || '';
+    titleInput.value = item.title || '';
+    categoryInput.value = item.category || '';
+    leadInput.value = item.lead || '';
+    contentInput.value = item.content || '';
+    if (item.date_display) {
+      // expecting YYYY-MM-DD
+      dateDisplayInput.value = item.date_display.slice(0,10);
+    } else {
+      dateDisplayInput.value = '';
+    }
+    if (item.attached_file) {
+      attachedPreview.src = item.attached_file;
+      attachedPreview.style.display = '';
+    } else attachedPreview.style.display = 'none';
+    showModal('edit');
+  }
+
+  function openCreate(){
+    form.reset(); attachedPreview.style.display = 'none'; blogIdInput.value = '';
+    showModal('create');
+  }
+
+  async function uploadFile(file){
+    if (!file) return null;
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      const res = await fetch(UPLOADS_API, { method: 'POST', body: fd });
+      if (!res.ok) {
+        const txt = await res.text();
+        console.warn('uploadFile non-ok body', txt);
+        throw new Error('Upload failed');
+      }
+      const data = await res.json();
+      return data.url || null;
+    } catch (e) {
+      console.warn('Upload error', e);
+      // fallback: convert to dataURL (not ideal)
+      return await new Promise(resolve => {
+        const r = new FileReader();
+        r.onload = () => resolve(r.result);
+        r.readAsDataURL(file);
+      });
+    }
+  }
+
+  async function saveBlog(e){
+    e.preventDefault();
+    const id = blogIdInput.value || '';
+    const payload = {
+      title: titleInput.value.trim(),
+      category: categoryInput.value,
+      lead: leadInput.value.trim(),
+      content: contentInput.value.trim(),
+      date_display: dateDisplayInput.value || null
+    };
+    const file = attachedInput.files[0];
+    if (file) {
+      const url = await uploadFile(file);
+      if (url) payload.attached_file = url;
+    }
+    try {
+      let res;
+      if (id) {
+        res = await fetch(`${API_BASE}/${encodeURIComponent(id)}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } else {
+        res = await fetch(API_BASE, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      }
+      if (!res.ok) {
+        const txt = await res.text();
+        console.error('saveBlog failed body', txt);
+        throw new Error('Save failed');
+      }
+      toast('Saved');
+      hideModal();
+      loadBlogs();
+    } catch (err) {
+      console.error(err);
+      toast('Lỗi khi lưu bài viết');
+    }
+  }
+
+  async function removeBlog(id){
+    if (!confirm('Bạn có chắc muốn xoá bài này?')) return;
+    try {
+      const res = await fetch(`${API_BASE}/${encodeURIComponent(id)}`, { method: 'DELETE' });
+      if (!res.ok) {
+        const t = await res.text();
+        console.error('removeBlog failed body', t);
+        throw new Error('Delete failed');
+      }
+      toast('Đã xóa');
+      loadBlogs();
+    } catch (e) {
+      console.error(e);
+      toast('Xoá thất bại');
+    }
+  }
+
+  // events wiring
+  btnAdd.addEventListener('click', openCreate);
+  modalClose.addEventListener('click', hideModal);
+  btnCancel.addEventListener('click', hideModal);
+  form.addEventListener('submit', saveBlog);
+  btnRefresh.addEventListener('click', () => { state.page = 1; loadBlogs(); });
+
+  prevPage.addEventListener('click', () => { state.page = Math.max(1, state.page - 1); loadBlogs(); });
+  nextPage.addEventListener('click', () => { state.page += 1; loadBlogs(); });
+  pageSize.addEventListener('change', () => { state.limit = parseInt(pageSize.value,10); state.page = 1; loadBlogs(); });
+  categoryFilter.addEventListener('change', () => { state.category = categoryFilter.value; state.page = 1; loadBlogs(); });
+  sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; state.page = 1; loadBlogs(); });
+  dateFrom.addEventListener('change', () => { state.page = 1; loadBlogs(); });
+  dateTo.addEventListener('change', () => { state.page = 1; loadBlogs(); });
+  searchInput.addEventListener('input', (e) => { state.search = e.target.value.trim(); state.page = 1; loadBlogs(); });
+
+  attachedInput.addEventListener('change', (e) => {
+    const f = e.target.files[0];
+    if (!f) { attachedPreview.style.display = 'none'; return; }
+    const r = new FileReader();
+    r.onload = () => { attachedPreview.src = r.result; attachedPreview.style.display = ''; };
+    r.readAsDataURL(f);
+  });
+
+  // init
+  loadBlogs();
+
+  // UI niceties
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideModal(); });
+  const toggleMenu = document.getElementById('toggleMenu');
+  const sidebar = document.querySelector('.sidebar');
+  if (toggleMenu) toggleMenu.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+
+</script>
+</body>
+</html>

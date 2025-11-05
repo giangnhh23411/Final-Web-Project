@@ -1,0 +1,640 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../CSS/products.css">
+    <style>
+        /* CSS thêm cho modal (giữ nguyên) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        form label { display: block; margin: 10px 0 5px; }
+        form input, form textarea, form select { width: 100%; padding: 8px; margin-bottom: 10px; }
+        .pagination { margin-top: 20px; text-align: center; }
+        .pagination button { margin: 0 5px; }
+
+        /* Chỉnh kích thước hình ảnh */
+        .product-card img, .table-img {
+            width: 100%; /* Chiếm full width của card/cell */
+            max-height: 200px; /* Giới hạn chiều cao tối đa */
+            object-fit: contain; /* Giữ tỷ lệ, không crop, phù hợp với ảnh dài */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Chỉnh nút Edit/Delete/Add cho đẹp hơn */
+        .view-toggle button, #addProductBtn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 20px; /* Rounded */
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .view-toggle button.active, #addProductBtn:hover {
+            background-color: #007bff; /* Blue khi active/hover */
+            color: white;
+        }
+        #addProductBtn {
+            background-color: #28a745; /* Green cho Add */
+            color: white;
+        }
+        #addProductBtn:hover {
+            background-color: #218838;
+        }
+
+        /* Nút Edit/Delete trong grid */
+        .product-card .actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .product-card button {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .product-card .edit-btn {
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+        .product-card .edit-btn:hover {
+            background-color: #0056b3;
+        }
+        .product-card .delete-btn {
+            background-color: #dc3545; /* Red */
+            color: white;
+        }
+        .product-card .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* Nút Edit/Delete trong table */
+        .product-table td .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .product-table button {
+            padding: 4px 8px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .product-table .edit-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .product-table .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        /* Thêm cho filter */
+        .filter-options {
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .filter-options select, .filter-options input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <!-- Sidebar giữ nguyên -->
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" id="searchInput" placeholder="Search by name or SKU" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Product</h1>
+                <div class="view-toggle">
+                    <button id="gridViewBtn" class="active">Grid View</button>
+                    <button id="tableViewBtn">Table View</button>
+                    <button id="addProductBtn" style="margin-left: 20px;">Add Product</button>
+                </div>
+                <div class="filter-options">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <!-- Categories sẽ load động -->
+                    </select>
+                    <input type="number" id="minPrice" placeholder="Min Price">
+                    <input type="number" id="maxPrice" placeholder="Max Price">
+                    <button id="applyFilter">Apply Filter</button>
+                </div>
+                <section class="banner">
+                    <h2>September 12-22</h2>
+                    <h3>Enjoy free home delivery in this summer</h3>
+                    <p>Designer Dress - Pick from trendy Designer Dress.</p>
+                    <button class="get-started">Get Started</button>
+                </section>
+                <section id="gridView" class="product-grid">
+                    <!-- Products sẽ render động ở đây -->
+                </section>
+                <section id="tableView" class="product-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Category</th> <!-- Thêm cột mới -->
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows sẽ render động ở đây -->
+                        </tbody>
+                    </table>
+                </section>
+                <div class="pagination">
+                    <button id="prevPage" disabled>Previous</button>
+                    <span id="pageInfo">Page 1</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal cho Add/Edit Product -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add Product</h2>
+            <form id="productForm">
+                <input type="hidden" id="editSku" />
+                <label for="sku">SKU (required):</label>
+                <input type="text" id="sku" required>
+                <label for="name">Name (required):</label>
+                <input type="text" id="name" required>
+                <label for="description">Description:</label>
+                <textarea id="description"></textarea>
+                <label for="images">Images (comma-separated URLs):</label>
+                <input type="text" id="images">
+                <label for="price">Price:</label>
+                <input type="number" id="price" step="0.01">
+                <label for="stock_quantity">Stock Quantity:</label>
+                <input type="number" id="stock_quantity">
+                <label for="categorySelect">Category (required):</label>
+                <select id="categorySelect" required>
+                    <option value="">Select Category</option>
+                    <!-- Categories sẽ load động -->
+                </select>
+                <label for="is_active">Active:</label>
+                <input type="checkbox" id="is_active" checked>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000/api';
+        let currentPage = 1;
+        let pageSize = 20;  // Default từ API
+        let totalItems = 0;
+        let allProducts = []; // Để lưu full data cho lọc client-side
+        let categories = []; // Lưu list categories
+
+        // Toggle sidebar (giữ nguyên)
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Toggle view
+        const gridViewBtn = document.getElementById('gridViewBtn');
+        const tableViewBtn = document.getElementById('tableViewBtn');
+        const gridView = document.getElementById('gridView');
+        const tableView = document.getElementById('tableView');
+
+        gridViewBtn.addEventListener('click', () => {
+            gridView.style.display = 'grid';
+            tableView.style.display = 'none';
+            gridViewBtn.classList.add('active');
+            tableViewBtn.classList.remove('active');
+            renderGrid(applyFilters(allProducts).slice((currentPage-1)*pageSize, currentPage*pageSize)); // Re-render khi switch
+        });
+
+        tableViewBtn.addEventListener('click', () => {
+            gridView.style.display = 'none';
+            tableView.style.display = 'block';
+            tableViewBtn.classList.add('active');
+            gridViewBtn.classList.remove('active');
+            renderTable(applyFilters(allProducts).slice((currentPage-1)*pageSize, currentPage*pageSize)); // Re-render khi switch
+        });
+
+        // Modal handling (giữ nguyên)
+        const modal = document.getElementById('productModal');
+        const closeBtn = document.querySelector('.close');
+        const addBtn = document.getElementById('addProductBtn');
+        const form = document.getElementById('productForm');
+        const modalTitle = document.getElementById('modalTitle');
+
+        addBtn.addEventListener('click', () => {
+            resetForm();
+            modalTitle.textContent = 'Add Product';
+            modal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Reset form for add
+        function resetForm() {
+            document.getElementById('editSku').value = '';
+            document.getElementById('sku').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('images').value = '';
+            document.getElementById('price').value = '';
+            document.getElementById('stock_quantity').value = '';
+            document.getElementById('categorySelect').value = '';  // Reset select
+            document.getElementById('is_active').checked = true;
+            document.getElementById('sku').disabled = false;  // SKU editable for add
+        }
+
+        // Submit form (add or edit)
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const sku = document.getElementById('sku').value;
+            const editSku = document.getElementById('editSku').value;  // For edit, use original SKU
+            const payload = {
+                sku: sku,
+                name: document.getElementById('name').value,
+                description: document.getElementById('description').value,
+                images: document.getElementById('images').value.split(',').map(img => img.trim()).filter(img => img),
+                price: parseFloat(document.getElementById('price').value) || 0,
+                stock_quantity: parseInt(document.getElementById('stock_quantity').value) || 0,
+                category_id: document.getElementById('categorySelect').value || null,  // Sử dụng select value
+                is_active: document.getElementById('is_active').checked
+            };
+
+            try {
+                let res;
+                if (editSku) {
+                    // Edit (PUT)
+                    res = await fetch(`${API_URL}/products/${editSku}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } else {
+                    // Add (POST)
+                    res = await fetch(`${API_URL}/products`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                }
+
+                if (!res.ok) {
+                    const error = await res.text();
+                    throw new Error(error);
+                }
+                modal.style.display = 'none';
+                await fetchCategories(); // Refresh nếu cần
+                fetchProducts();  // Refresh list
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        });
+
+        // Fetch categories
+        async function fetchCategories() {
+            try {
+                const res = await fetch(`${API_URL}/categories`);
+                if (!res.ok) throw new Error('Failed to fetch categories');
+                const { data } = await res.json();
+                categories = data;
+                const filterSelect = document.getElementById('categoryFilter');
+                filterSelect.innerHTML = '<option value="">All Categories</option>';
+                const modalSelect = document.getElementById('categorySelect');
+                modalSelect.innerHTML = '<option value="">Select Category</option>';
+                categories.forEach(cat => {
+                    const optionFilter = document.createElement('option');
+                    optionFilter.value = cat._id;
+                    optionFilter.textContent = cat.name;
+                    filterSelect.appendChild(optionFilter);
+
+                    const optionModal = document.createElement('option');
+                    optionModal.value = cat._id;
+                    optionModal.textContent = cat.name;
+                    modalSelect.appendChild(optionModal);
+                });
+            } catch (err) {
+                alert('Error fetching categories: ' + err.message);
+            }
+        }
+
+        // Fetch and render products
+        async function fetchProducts(page = 1) {
+            try {
+                const res = await fetch(`${API_URL}/products?page=${page}&pageSize=${pageSize}`);
+                if (!res.ok) throw new Error('Failed to fetch');
+                const { data, paging } = await res.json();
+                allProducts = data; // Lưu full cho lọc (nếu paging nhiều, cần fetch all hoặc server-side filter)
+                totalItems = paging.total;
+                currentPage = paging.page;
+                await enrichWithCategoryNames(allProducts); // Thêm name từ category_id
+                renderGrid(applyFilters(allProducts).slice((currentPage-1)*pageSize, currentPage*pageSize));
+                renderTable(applyFilters(allProducts).slice((currentPage-1)*pageSize, currentPage*pageSize));
+                updatePagination();
+            } catch (err) {
+                alert('Error fetching products: ' + err.message);
+            }
+        }
+
+        // Enrich products with category name
+        async function enrichWithCategoryNames(products) {
+            for (let product of products) {
+                if (product.category_id) {
+                    const cat = categories.find(c => c._id === product.category_id);
+                    product.category_name = cat ? cat.name : 'Unknown';
+                } else {
+                    product.category_name = 'No Category';
+                }
+            }
+        }
+
+        // Render grid (không có category)
+        function renderGrid(products) {
+            gridView.innerHTML = '';
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                const imgSrc = product.images && product.images.length > 0 ? product.images[0] : 'placeholder.png';
+                card.innerHTML = `
+                    <img src="${imgSrc}" alt="${product.name}">
+                    <h4>${product.name}</h4>
+                    <p>${product.price.toFixed(2)}</p>
+                    <div class="actions">
+                        <button class="edit-btn" onclick="editProduct('${product.sku}')">Edit</button>
+                        <button class="delete-btn" onclick="deleteProduct('${product.sku}')">Delete</button>
+                    </div>
+                `;
+                gridView.appendChild(card);
+            });
+        }
+
+        // Render table với category
+        function renderTable(products) {
+            const tbody = tableView.querySelector('tbody');
+            tbody.innerHTML = '';
+            products.forEach(product => {
+                const row = document.createElement('tr');
+                const imgSrc = product.images && product.images.length > 0 ? product.images[0] : 'placeholder.png';
+                row.innerHTML = `
+                    <td><img src="${imgSrc}" alt="${product.name}" class="table-img"></td>
+                    <td>${product.name}</td>
+                    <td>${product.price.toFixed(2)}</td>
+                    <td>${product.category_name || 'No Category'}</td> <!-- Thêm cột -->
+                    <td class="actions">
+                        <button class="edit-btn" onclick="editProduct('${product.sku}')">Edit</button>
+                        <button class="delete-btn" onclick="deleteProduct('${product.sku}')">Delete</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Edit product: Load data vào modal
+        async function editProduct(sku) {
+            try {
+                const res = await fetch(`${API_URL}/products/${sku}`);
+                if (!res.ok) throw new Error('Failed to fetch product');
+                const product = await res.json();
+                document.getElementById('editSku').value = sku;
+                document.getElementById('sku').value = sku;
+                document.getElementById('sku').disabled = true;  // SKU không edit
+                document.getElementById('name').value = product.name;
+                document.getElementById('description').value = product.description || '';
+                document.getElementById('images').value = product.images ? product.images.join(', ') : '';
+                document.getElementById('price').value = product.price;
+                document.getElementById('stock_quantity').value = product.stock_quantity;
+                document.getElementById('categorySelect').value = product.category_id || '';  // Set select
+                document.getElementById('is_active').checked = product.is_active;
+                modalTitle.textContent = 'Edit Product';
+                modal.style.display = 'block';
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        // Delete product (giữ nguyên)
+        async function deleteProduct(sku) {
+            if (!confirm('Are you sure to delete?')) return;
+            try {
+                const res = await fetch(`${API_URL}/products/${sku}`, { method: 'DELETE' });
+                if (!res.ok) throw new Error('Failed to delete');
+                fetchProducts();
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        // Pagination (giữ nguyên, nhưng dùng slice cho client-side)
+        function updatePagination() {
+            document.getElementById('pageInfo').textContent = `Page ${currentPage}`;
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage * pageSize >= applyFilters(allProducts).length; // Dùng filtered length
+        }
+
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderViews();
+                updatePagination();
+            }
+        });
+
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage * pageSize < applyFilters(allProducts).length) {
+                currentPage++;
+                renderViews();
+                updatePagination();
+            }
+        });
+
+        // Function to render current view
+        function renderViews() {
+            const filtered = applyFilters(allProducts);
+            const paged = filtered.slice((currentPage-1)*pageSize, currentPage*pageSize);
+            if (gridView.style.display !== 'none') {
+                renderGrid(paged);
+            } else {
+                renderTable(paged);
+            }
+        }
+
+        // Tìm kiếm và lọc
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', () => {
+            currentPage = 1;
+            renderViews();
+            updatePagination();
+        });
+
+        const applyFilterBtn = document.getElementById('applyFilter');
+        applyFilterBtn.addEventListener('click', () => {
+            currentPage = 1;
+            renderViews();
+            updatePagination();
+        });
+
+        // Hàm apply filters (client-side)
+        function applyFilters(products) {
+            let filtered = products;
+
+            // Search by name/sku
+            const search = searchInput.value.toLowerCase();
+            if (search) {
+                filtered = filtered.filter(p => p.name.toLowerCase().includes(search) || p.sku.toLowerCase().includes(search));
+            }
+
+            // Filter by category
+            const catId = document.getElementById('categoryFilter').value;
+            if (catId) {
+                filtered = filtered.filter(p => p.category_id === catId);
+            }
+
+            // Filter by price
+            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+            filtered = filtered.filter(p => p.price >= minPrice && p.price <= maxPrice);
+
+            return filtered;
+        }
+
+        // Load initial data
+        async function init() {
+            await fetchCategories();
+            fetchProducts();
+        }
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02ad2",
+        "itemNo": "65000106",
+        "__v": 0,
+        "basicItemNo": "65000106",
+        "basicMatl": "65000106",
+        "id": "e981f4e7-bd5a-43d5-b7fa-8caaaea05ee0",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "dee1afd2-ebf5-4137-b0f2-edd1eec0712f",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+        "name": "Trà Sữa Matcha (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-sua-matcha-l--s65000106",
+        "shortDesc": "<p><br></p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "7e1bfa2f-2ce0-41a4-b59c-345ae659af71",
+            "itemNo": "65000076",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+            "name": "Trà Sữa Matcha (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -16000
+          },
+          {
+            "id": "e981f4e7-bd5a-43d5-b7fa-8caaaea05ee0",
+            "itemNo": "65000106",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+            "name": "Trà Sữa Matcha (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Sữa Matcha (L)",
+        "updatedDate": "2025-11-02T01:09:25.559Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ad5",
+        "itemNo": "65000107",
+        "__v": 0,
+        "basicItemNo": "65000107",
+        "basicMatl": "65000107",
+        "id": "c0a98277-d05d-4e83-bbca-678ceec62474",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "9e8c0827-b1fb-4091-8517-cd5619a33955",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033804.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033804.png",
+        "name": "Trà Ô Long Dâu (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-o-long-dau-l--s65000107",
+        "shortDesc": "<p>MỚI - BST TEARAMISU</p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "c0a98277-d05d-4e83-bbca-678ceec62474",
+            "itemNo": "65000107",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033804.png",
+            "name": "Trà Ô Long Dâu (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "f73e9948-5435-4d17-a875-81d33b3c80d3",
+            "itemNo": "65000089",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033744.png",
+            "name": "Trà Ô Long Dâu (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -6000
+          }
+        ],
+        "subName": "Trà Ô Long Dâu (L)",
+        "updatedDate": "2025-11-02T01:09:25.586Z"
+      },
+      {
+        "_id": "6906839c2969ebf6f2e10d42",
+        "itemNo": "65000459",
+        "__v": 0,
+        "basicItemNo": "65000459",
+        "basicMatl": "65000459",
+        "id": "3156574a-0c71-417d-9223-7135ade374b7",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "dba1c30e-87b9-468a-942e-e50125499fb4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+        "name": "Matcha Latte Oatside Nguyên Vị (L)",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "matcha-latte-oatside-nguyen-vi-l--s65000459",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "21fcec3d-0960-451c-ae5e-e5e2acac23b5",
+            "itemNo": "65000461",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "3156574a-0c71-417d-9223-7135ade374b7",
+            "itemNo": "65000459",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Latte Oatside Nguyên Vị (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "90e1f483-3f9a-494a-b9d8-f9525e65e017",
+            "itemNo": "65000462",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Oatside Tuyết Lạnh (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "9a55aa4c-332a-4415-b05d-3a59f3bf26e7",
+            "itemNo": "65000460",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Thanh Yên (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Matcha Latte Oatside Nguyên Vị (L)",
+        "updatedDate": "2025-11-02T02:02:45.056Z"
+      },
+      {
+        "_id": "6906839c2969ebf6f2e10d43",
+        "itemNo": "65000460",
+        "__v": 0,
+        "basicItemNo": "65000459",
+        "basicMatl": "65000459",
+        "id": "9a55aa4c-332a-4415-b05d-3a59f3bf26e7",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "dba1c30e-87b9-468a-942e-e50125499fb4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png"
+          },
+          {
+            "id": "3f74dd4e-bb37-49f3-9c0a-1df8dd4b8acb",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-yuzu-1-20250809071850.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+        "name": "Matcha Dừa Thanh Yên (L)",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "matcha-dua-thanh-yen-l--s65000460",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "21fcec3d-0960-451c-ae5e-e5e2acac23b5",
+            "itemNo": "65000461",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "3156574a-0c71-417d-9223-7135ade374b7",
+            "itemNo": "65000459",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Latte Oatside Nguyên Vị (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "90e1f483-3f9a-494a-b9d8-f9525e65e017",
+            "itemNo": "65000462",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Oatside Tuyết Lạnh (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "9a55aa4c-332a-4415-b05d-3a59f3bf26e7",
+            "itemNo": "65000460",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Thanh Yên (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Matcha Dừa Thanh Yên (L)",
+        "updatedDate": "2025-11-02T02:02:45.564Z"
+      },
+      {
+        "_id": "6906839c2969ebf6f2e10d47",
+        "itemNo": "65000461",
+        "__v": 0,
+        "basicItemNo": "65000459",
+        "basicMatl": "65000459",
+        "id": "21fcec3d-0960-451c-ae5e-e5e2acac23b5",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "dba1c30e-87b9-468a-942e-e50125499fb4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png"
+          },
+          {
+            "id": "260b8504-fb13-452c-a5ef-51323d6cd334",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-coco-1-20250809072005.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+        "name": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "matcha-dua-dao-pho-mai-man-l--s65000461",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "21fcec3d-0960-451c-ae5e-e5e2acac23b5",
+            "itemNo": "65000461",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "3156574a-0c71-417d-9223-7135ade374b7",
+            "itemNo": "65000459",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Latte Oatside Nguyên Vị (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "90e1f483-3f9a-494a-b9d8-f9525e65e017",
+            "itemNo": "65000462",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Oatside Tuyết Lạnh (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "9a55aa4c-332a-4415-b05d-3a59f3bf26e7",
+            "itemNo": "65000460",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Thanh Yên (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+        "updatedDate": "2025-11-02T02:02:45.599Z"
+      },
+      {
+        "_id": "6906839c2969ebf6f2e10d48",
+        "itemNo": "65000462",
+        "__v": 0,
+        "basicItemNo": "65000459",
+        "basicMatl": "65000459",
+        "id": "90e1f483-3f9a-494a-b9d8-f9525e65e017",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14404",
+        "mch4": "1440401",
+        "mch5": "144040101",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "dba1c30e-87b9-468a-942e-e50125499fb4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png"
+          },
+          {
+            "id": "7e401a6d-17a7-4a37-abf8-442a99a64c2c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-da-xay-1-20250809072037.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+        "name": "Matcha Oatside Tuyết Lạnh (L)",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "matcha-oatside-tuyet-lanh-l--s65000462",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "21fcec3d-0960-451c-ae5e-e5e2acac23b5",
+            "itemNo": "65000461",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "3156574a-0c71-417d-9223-7135ade374b7",
+            "itemNo": "65000459",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Latte Oatside Nguyên Vị (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "90e1f483-3f9a-494a-b9d8-f9525e65e017",
+            "itemNo": "65000462",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Oatside Tuyết Lạnh (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "9a55aa4c-332a-4415-b05d-3a59f3bf26e7",
+            "itemNo": "65000460",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+            "name": "Matcha Dừa Thanh Yên (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Matcha Oatside Tuyết Lạnh (L)",
+        "updatedDate": "2025-11-02T02:02:45.646Z"
+      },
+      {
+        "_id": "6906839c2969ebf6f2e10d49",
+        "itemNo": "65000474",
+        "__v": 0,
+        "basicItemNo": "65000474",
+        "basicMatl": null,
+        "id": "542c5662-55f2-474d-a1e8-96bf8c91f72a",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "17defbee-8c91-4925-8dcc-4cef60a6b563",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-2-20251001015150.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-2-20251001015150.jpg",
+        "name": "Bà Kẹ",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "ba-ke--s65000474",
+        "shortDesc": "<p>Ăn Hỷ Nhà Kẹ</p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "542c5662-55f2-474d-a1e8-96bf8c91f72a",
+            "itemNo": "65000474",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-2-20251001015150.jpg",
+            "name": "Bà Kẹ",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Bà Kẹ",
+        "updatedDate": "2025-11-02T02:02:45.679Z"
+      },
+      {
+        "_id": "6906839c2969ebf6f2e10d4d",
+        "itemNo": "65000475",
+        "__v": 0,
+        "basicItemNo": "65000475",
+        "basicMatl": null,
+        "id": "e533cee0-d424-46f1-bda9-be550b27ef9a",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "d1ffa9d2-0c81-4f39-9d2b-0af78ac53c2e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-copy-20251001015114.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-copy-20251001015114.jpg",
+        "name": "Ông Kẹ",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "ong-ke--s65000475",
+        "shortDesc": "<p>Ăn Hỷ Nhà Kẹ</p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "e533cee0-d424-46f1-bda9-be550b27ef9a",
+            "itemNo": "65000475",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-copy-20251001015114.jpg",
+            "name": "Ông Kẹ",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Ông Kẹ",
+        "updatedDate": "2025-11-02T02:02:45.705Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd44",
+        "itemNo": "65000113",
+        "__v": 0,
+        "basicItemNo": "65000114",
+        "basicMatl": "65000114",
+        "id": "e4a9c03f-62c8-4600-83e7-01bca28bf498",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "31dd9f57-369c-455c-909f-db4b06e97f1d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000113-65000114-tra-vai-lai_f7d2efd5-5465-4598-a619-f9619a52720e-og.png"
+          },
+          {
+            "id": "b0f7dead-d5e8-4455-9a41-d4b226f11f24",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000113-65000114-tra-vai-lai_f7d2efd5-5465-4598-a619-f9619a52720e-og.png",
+        "name": "Trà Vải Lài (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-vai-lai-m--s65000113",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "74faa3dd-43e5-4e26-ae54-39433d33429f",
+            "itemNo": "65000114",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png",
+            "name": "Trà Vải Lài (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 6000
+          },
+          {
+            "id": "e4a9c03f-62c8-4600-83e7-01bca28bf498",
+            "itemNo": "65000113",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000113-65000114-tra-vai-lai_f7d2efd5-5465-4598-a619-f9619a52720e-og.png",
+            "name": "Trà Vải Lài (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Vải Lài (M)",
+        "updatedDate": "2025-11-02T01:34:07.153Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd47",
+        "itemNo": "65000115",
+        "__v": 0,
+        "basicItemNo": "65000116",
+        "basicMatl": "65000116",
+        "id": "84db5ba4-08f8-4176-8a8f-d6dd7cfec532",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "e945f272-9ecb-4ba4-9df2-d4b2530c12c0",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_2f7aa440-6aa0-447b-84a3-3186c360e124-og.png"
+          },
+          {
+            "id": "2c543f0d-a560-468c-9f43-9e28beede583",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_2f7aa440-6aa0-447b-84a3-3186c360e124-og.png",
+        "name": "Trà Vải Sen (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-vai-sen-m--s65000115",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "8439d3a4-8cbf-458a-9527-705eb9a8d861",
+            "itemNo": "65000116",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png",
+            "name": "Trà Vải Sen (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -4000
+          },
+          {
+            "id": "84db5ba4-08f8-4176-8a8f-d6dd7cfec532",
+            "itemNo": "65000115",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_2f7aa440-6aa0-447b-84a3-3186c360e124-og.png",
+            "name": "Trà Vải Sen (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Vải Sen (M)",
+        "updatedDate": "2025-11-02T01:34:07.402Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 10,
+    "pagingCounter": 91,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 9,
+    "next": 11
+  }
+}

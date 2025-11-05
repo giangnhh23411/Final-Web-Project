@@ -1,0 +1,146 @@
+<!-- inbox.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link rel="stylesheet" href="../CSS/inbox.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>        
+            <div class="sidebar-item active">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Inbox</h1>
+                <div class="message-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sender</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="unread">
+                                <td>Doanh Nguyen (Colleague)</td>
+                                <td>Project Update</td>
+                                <td>2025-10-24 14:30</td>
+                                <td><span class="status unread">Unread</span></td>
+                            </tr>
+                            <tr class="read">
+                                <td>Customer John Doe</td>
+                                <td>Inquiry about Product</td>
+                                <td>2025-10-23 10:15</td>
+                                <td><span class="status read">Read</span></td>
+                            </tr>
+                            <tr class="unread">
+                                <td>Giang Nguyen (Manager)</td>
+                                <td>Meeting Schedule</td>
+                                <td>2025-10-25 09:00</td>
+                                <td><span class="status unread">Unread</span></td>
+                            </tr>
+                            <tr class="read">
+                                <td>Customer Jane Smith</td>
+                                <td>Feedback on Order</td>
+                                <td>2025-10-22 16:45</td>
+                                <td><span class="status read">Read</span></td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02a4b",
+        "itemNo": "60000557",
+        "__v": 0,
+        "basicItemNo": "60000557",
+        "basicMatl": null,
+        "id": "f061bbfa-25c1-4da4-b2b1-1be272a6794f",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "bfe4215b-499b-4a2b-8ba4-f8703ad7a488",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000557-ca-phe-robusta-khong-bo-200g_06846b85-540b-491b-b6f4-362c9a4161b0-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000557-ca-phe-robusta-khong-bo-200g_06846b85-540b-491b-b6f4-362c9a4161b0-og.png",
+        "name": "Cà phê rang nguyên hạt Robusta 200g",
+        "price": 80000,
+        "salePrice": 80000,
+        "seoName": "ca-phe-rang-nguyen-hat-robusta-200g--s60000557",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "f061bbfa-25c1-4da4-b2b1-1be272a6794f",
+            "itemNo": "60000557",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000557-ca-phe-robusta-khong-bo-200g_06846b85-540b-491b-b6f4-362c9a4161b0-og.png",
+            "name": "Cà phê rang nguyên hạt Robusta 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt Robusta 200g",
+        "updatedDate": "2025-11-02T01:09:23.992Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a4c",
+        "itemNo": "60000553",
+        "__v": 0,
+        "basicItemNo": "60000553",
+        "basicMatl": null,
+        "id": "35cc93e9-fcaf-4acf-aa08-90928ac45b66",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "31558772-797c-48fa-ad56-8766920fd2a6",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000553-ca-phe-robusta-culi-phuc-long-500g_e7fed8fb-c0b7-4461-80a1-df8060fd965c-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000553-ca-phe-robusta-culi-phuc-long-500g_e7fed8fb-c0b7-4461-80a1-df8060fd965c-og.png",
+        "name": "Cà phê rang pha trộn Robusta Culi 500g",
+        "price": 175000,
+        "salePrice": 175000,
+        "seoName": "ca-phe-rang-pha-tron-robusta-culi-500g--s60000553",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "35cc93e9-fcaf-4acf-aa08-90928ac45b66",
+            "itemNo": "60000553",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000553-ca-phe-robusta-culi-phuc-long-500g_e7fed8fb-c0b7-4461-80a1-df8060fd965c-og.png",
+            "name": "Cà phê rang pha trộn Robusta Culi 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang pha trộn Robusta Culi 500g",
+        "updatedDate": "2025-11-02T01:09:23.950Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a4d",
+        "itemNo": "60000556",
+        "__v": 0,
+        "basicItemNo": "60000556",
+        "basicMatl": null,
+        "id": "049c1ca3-4252-4f0c-9ea3-e988ca605715",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "14bbb9f8-914a-490b-9ee3-5817f6f02948",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000556-ca-phe-robusta-khong-bo-500g_79381b3b-9189-4483-a78f-6449ac6d73a8-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000556-ca-phe-robusta-khong-bo-500g_79381b3b-9189-4483-a78f-6449ac6d73a8-og.png",
+        "name": "Cà phê rang nguyên hạt Robusta 500g",
+        "price": 180000,
+        "salePrice": 180000,
+        "seoName": "ca-phe-rang-nguyen-hat-robusta-500g--s60000556",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "049c1ca3-4252-4f0c-9ea3-e988ca605715",
+            "itemNo": "60000556",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000556-ca-phe-robusta-khong-bo-500g_79381b3b-9189-4483-a78f-6449ac6d73a8-og.png",
+            "name": "Cà phê rang nguyên hạt Robusta 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt Robusta 500g",
+        "updatedDate": "2025-11-02T01:09:23.972Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a4f",
+        "itemNo": "60000577",
+        "__v": 0,
+        "basicItemNo": "60000577",
+        "basicMatl": null,
+        "id": "1f86f0d3-8b1d-4f19-a7b3-3bf34c5a9726",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "2cf39719-5729-45dc-b27d-f25953d62125",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000577-ca-phe-royal-khong-bo-phuc-long-200g_e30d7dbd-ec17-47f1-b2b4-bbe4bcf7459d-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000577-ca-phe-royal-khong-bo-phuc-long-200g_e30d7dbd-ec17-47f1-b2b4-bbe4bcf7459d-og.png",
+        "name": "Cà phê rang ng hạt Royal Special 200g",
+        "price": 95000,
+        "salePrice": 95000,
+        "seoName": "ca-phe-rang-ng-hat-royal-special-200g--s60000577",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "1f86f0d3-8b1d-4f19-a7b3-3bf34c5a9726",
+            "itemNo": "60000577",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000577-ca-phe-royal-khong-bo-phuc-long-200g_e30d7dbd-ec17-47f1-b2b4-bbe4bcf7459d-og.png",
+            "name": "Cà phê rang ng hạt Royal Special 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang ng hạt Royal Special 200g",
+        "updatedDate": "2025-11-02T01:09:24.034Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a52",
+        "itemNo": "60000639",
+        "__v": 0,
+        "basicItemNo": "60000639",
+        "basicMatl": null,
+        "id": "7e5d19a4-cd2e-499e-8656-d6af3866c7a1",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110101",
+        "mch5": "211010101",
+        "mch6": "211010101",
+        "mediaItems": [
+          {
+            "id": "faa91dd2-77b4-43dd-bc1c-ae3c466c084b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000639-butter-chocolate-croissant-45g_08fa60a8-dcbc-4e71-aabc-95c0370b9352-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000639-butter-chocolate-croissant-45g_08fa60a8-dcbc-4e71-aabc-95c0370b9352-og.png",
+        "name": "Bánh croissant choco 45g",
+        "price": 22000,
+        "salePrice": 22000,
+        "seoName": "banh-croissant-choco-45g--s60000639",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "7e5d19a4-cd2e-499e-8656-d6af3866c7a1",
+            "itemNo": "60000639",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000639-butter-chocolate-croissant-45g_08fa60a8-dcbc-4e71-aabc-95c0370b9352-og.png",
+            "name": "Bánh croissant choco 45g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Bánh croissant choco 45g",
+        "updatedDate": "2025-11-02T01:09:24.075Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a57",
+        "itemNo": "60000641",
+        "__v": 0,
+        "basicItemNo": "60000641",
+        "basicMatl": null,
+        "id": "88fec114-2a38-4bd0-9b3d-8670c8945167",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110101",
+        "mch5": "211010101",
+        "mch6": "211010101",
+        "mediaItems": [
+          {
+            "id": "17d5f711-b125-4f4d-88e2-c4585733d915",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/flan-20241004031750.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/flan-20241004031750.png",
+        "name": "Bánh Flan Phúc Long",
+        "price": 20000,
+        "salePrice": 20000,
+        "seoName": "banh-flan-phuc-long--s60000641",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "88fec114-2a38-4bd0-9b3d-8670c8945167",
+            "itemNo": "60000641",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/flan-20241004031750.png",
+            "name": "Bánh Flan Phúc Long",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Bánh Flan Phúc Long",
+        "updatedDate": "2025-11-02T01:09:24.096Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a59",
+        "itemNo": "60000578",
+        "__v": 0,
+        "basicItemNo": "60000578",
+        "basicMatl": null,
+        "id": "13d19365-011f-4ad2-9a7d-ce17b09ff5ad",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "73c8d288-2734-4e94-a4f5-5f4fd645ff1e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000578-ca-phe-royal-khong-bo-phuc-long-500g_d333b600-3aa7-4947-b7ba-450458b384d0-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000578-ca-phe-royal-khong-bo-phuc-long-500g_d333b600-3aa7-4947-b7ba-450458b384d0-og.png",
+        "name": "Cà phê rang ng hạt Royal Special 500g",
+        "price": 220000,
+        "salePrice": 220000,
+        "seoName": "ca-phe-rang-ng-hat-royal-special-500g--s60000578",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "13d19365-011f-4ad2-9a7d-ce17b09ff5ad",
+            "itemNo": "60000578",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000578-ca-phe-royal-khong-bo-phuc-long-500g_d333b600-3aa7-4947-b7ba-450458b384d0-og.png",
+            "name": "Cà phê rang ng hạt Royal Special 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang ng hạt Royal Special 500g",
+        "updatedDate": "2025-11-02T01:09:24.054Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a5a",
+        "itemNo": "60000644",
+        "__v": 0,
+        "basicItemNo": "60000644",
+        "basicMatl": null,
+        "id": "6441b7fe-e207-4c90-a3b5-23a63b4e4d17",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110101",
+        "mch5": "211010101",
+        "mch6": "211010101",
+        "mediaItems": [
+          {
+            "id": "78bf0d5e-e13d-4891-8bad-18d5bdfb8567",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000644-passion-panna-cotta_225037c1-1c48-40f1-bab1-f26d54a6ce6b-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000644-passion-panna-cotta_225037c1-1c48-40f1-bab1-f26d54a6ce6b-og.png",
+        "name": "Panna Cotta Chanh Dây 120g",
+        "price": 35000,
+        "salePrice": 35000,
+        "seoName": "panna-cotta-chanh-day-120g--s60000644",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "6441b7fe-e207-4c90-a3b5-23a63b4e4d17",
+            "itemNo": "60000644",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000644-passion-panna-cotta_225037c1-1c48-40f1-bab1-f26d54a6ce6b-og.png",
+            "name": "Panna Cotta Chanh Dây 120g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Panna Cotta Chanh Dây 120g",
+        "updatedDate": "2025-11-02T01:09:24.138Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a5b",
+        "itemNo": "60000648",
+        "__v": 0,
+        "basicItemNo": "60000648",
+        "basicMatl": null,
+        "id": "6262dca3-55aa-4238-bd4e-475b8f3f367c",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110101",
+        "mch5": "211010101",
+        "mch6": "211010101",
+        "mediaItems": [
+          {
+            "id": "3b0c99a3-3256-48cd-9461-89186b44bef2",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/03/68000021-pure-butter-croissant-banh-sung-bo-60g-20230328024455.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/03/68000021-pure-butter-croissant-banh-sung-bo-60g-20230328024455.png",
+        "name": "Bánh croissant 60g",
+        "price": 25000,
+        "salePrice": 25000,
+        "seoName": "banh-croissant-60g--s60000648",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "6262dca3-55aa-4238-bd4e-475b8f3f367c",
+            "itemNo": "60000648",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/03/68000021-pure-butter-croissant-banh-sung-bo-60g-20230328024455.png",
+            "name": "Bánh croissant 60g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Bánh croissant 60g",
+        "updatedDate": "2025-11-02T01:09:24.160Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a5c",
+        "itemNo": "60000643",
+        "__v": 0,
+        "basicItemNo": "60000643",
+        "basicMatl": null,
+        "id": "c500f909-ab7e-470e-868d-f51aea210e0a",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110101",
+        "mch5": "211010101",
+        "mch6": "211010101",
+        "mediaItems": [
+          {
+            "id": "91d27fb0-809e-4587-b48a-b3c9fad049ea",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000643-tiramisu-mini_b87000d1-71a7-4652-9c41-6565acf281f7-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000643-tiramisu-mini_b87000d1-71a7-4652-9c41-6565acf281f7-og.png",
+        "name": "Bánh Tiramisu",
+        "price": 38000,
+        "salePrice": 38000,
+        "seoName": "banh-tiramisu--s60000643",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "c500f909-ab7e-470e-868d-f51aea210e0a",
+            "itemNo": "60000643",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000643-tiramisu-mini_b87000d1-71a7-4652-9c41-6565acf281f7-og.png",
+            "name": "Bánh Tiramisu",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Bánh Tiramisu",
+        "updatedDate": "2025-11-02T01:09:24.116Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 4,
+    "pagingCounter": 31,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 3,
+    "next": 5
+  }
+}

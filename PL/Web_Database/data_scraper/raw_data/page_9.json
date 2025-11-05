@@ -1,0 +1,811 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02abf",
+        "itemNo": "65000094",
+        "__v": 0,
+        "basicItemNo": "65000102",
+        "basicMatl": "65000102",
+        "id": "83d9ebe6-0405-4770-82aa-183adc4cf531",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "dab2267f-d4b6-4f00-8575-452c6216ce42",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png"
+          },
+          {
+            "id": "38702db5-a481-43fb-b536-277afc39ca9b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_71e576ea-c184-4b35-94e9-935b07b37d5e-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+        "name": "Trà Sữa Phúc Long (M)",
+        "optionals": [
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "tra-sua-phuc-long-m--s65000094",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "83d9ebe6-0405-4770-82aa-183adc4cf531",
+            "itemNo": "65000094",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+            "name": "Trà Sữa Phúc Long (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "ce37bda5-c8da-4e4b-a40b-3d7fd86225c1",
+            "itemNo": "65000102",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+            "name": "Trà Sữa Phúc Long (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -5000
+          }
+        ],
+        "subName": "Trà Sữa Phúc Long (M)",
+        "updatedDate": "2025-11-02T01:09:25.320Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ac1",
+        "itemNo": "65000100",
+        "__v": 0,
+        "basicItemNo": "65000100",
+        "basicMatl": "65000100",
+        "id": "ed98d5f1-d1bf-45df-a26b-4320fa5e44f8",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "4108692d-d975-481c-b8d2-98b5c17b688a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png",
+        "name": "Hồng Trà Đào (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "hong-tra-dao-l--s65000100",
+        "shortDesc": "<p><br></p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "1a0b18cd-ebc2-4c2b-b800-a022421dec97",
+            "itemNo": "65000085",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250206030110.png",
+            "name": "Hồng Trà Đào (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -16000
+          },
+          {
+            "id": "ed98d5f1-d1bf-45df-a26b-4320fa5e44f8",
+            "itemNo": "65000100",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png",
+            "name": "Hồng Trà Đào (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Hồng Trà Đào (L)",
+        "updatedDate": "2025-11-02T01:09:25.387Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ac2",
+        "itemNo": "65000085",
+        "__v": 0,
+        "basicItemNo": "65000100",
+        "basicMatl": "65000100",
+        "id": "1a0b18cd-ebc2-4c2b-b800-a022421dec97",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "036b7ff9-1879-4495-a0c0-d06a12686210",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250206030110.png"
+          },
+          {
+            "id": "4108692d-d975-481c-b8d2-98b5c17b688a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250206030110.png",
+        "name": "Hồng Trà Đào (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "hong-tra-dao-m--s65000085",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "1a0b18cd-ebc2-4c2b-b800-a022421dec97",
+            "itemNo": "65000085",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250206030110.png",
+            "name": "Hồng Trà Đào (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "ed98d5f1-d1bf-45df-a26b-4320fa5e44f8",
+            "itemNo": "65000100",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png",
+            "name": "Hồng Trà Đào (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -4000
+          }
+        ],
+        "subName": "Hồng Trà Đào (M)",
+        "updatedDate": "2025-11-02T01:09:25.205Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ac4",
+        "itemNo": "65000101",
+        "__v": 0,
+        "basicItemNo": "65000101",
+        "basicMatl": "65000101",
+        "id": "33afeec5-2fea-43cf-8c09-be3f09dd3446",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "294a5e05-27d6-4409-9b4b-f736048fc13d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_b2aa9ed3-4cc8-43e2-932b-802878bf314d-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_b2aa9ed3-4cc8-43e2-932b-802878bf314d-og.png",
+        "name": "Trà Sữa Ô Long (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-sua-o-long-l--s65000101",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "33afeec5-2fea-43cf-8c09-be3f09dd3446",
+            "itemNo": "65000101",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_b2aa9ed3-4cc8-43e2-932b-802878bf314d-og.png",
+            "name": "Trà Sữa Ô Long (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "6b36c911-52d4-4d59-b87f-cadc3e3d5985",
+            "itemNo": "65000087",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_b2aa9ed3-4cc8-43e2-932b-802878bf314d-og.png",
+            "name": "Trà Sữa Ô Long (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -14000
+          }
+        ],
+        "subName": "Trà Sữa Ô Long (L)",
+        "updatedDate": "2025-11-02T01:09:25.421Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ac7",
+        "itemNo": "65000102",
+        "__v": 0,
+        "basicItemNo": "65000102",
+        "basicMatl": "65000102",
+        "id": "ce37bda5-c8da-4e4b-a40b-3d7fd86225c1",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "dab2267f-d4b6-4f00-8575-452c6216ce42",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+        "name": "Trà Sữa Phúc Long (L)",
+        "optionals": [
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-sua-phuc-long-l--s65000102",
+        "shortDesc": "<p>Best Seller</p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "83d9ebe6-0405-4770-82aa-183adc4cf531",
+            "itemNo": "65000094",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+            "name": "Trà Sữa Phúc Long (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -14000
+          },
+          {
+            "id": "ce37bda5-c8da-4e4b-a40b-3d7fd86225c1",
+            "itemNo": "65000102",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+            "name": "Trà Sữa Phúc Long (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Sữa Phúc Long (L)",
+        "updatedDate": "2025-11-02T01:09:25.452Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ac8",
+        "itemNo": "65000075",
+        "__v": 0,
+        "basicItemNo": "65000075",
+        "basicMatl": "65000075",
+        "id": "04f86e3f-96da-4d4e-b4ec-8d60df6fd321",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14404",
+        "mch4": "1440401",
+        "mch5": "144040101",
+        "mch6": "144040101",
+        "mediaItems": [
+          {
+            "id": "0eb2d34c-2784-4f01-a7d6-01f04fd3c219",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/matcha-da-xay-20250205064621.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/matcha-da-xay-20250205064621.png",
+        "name": "Đá xay Matcha",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "da-xay-matcha--s65000075",
+        "shortDesc": "<p><br></p>",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "04f86e3f-96da-4d4e-b4ec-8d60df6fd321",
+            "itemNo": "65000075",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/matcha-da-xay-20250205064621.png",
+            "name": "Đá xay Matcha",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Đá xay Matcha",
+        "updatedDate": "2025-11-02T01:09:25.078Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ac9",
+        "itemNo": "65000099",
+        "__v": 0,
+        "basicItemNo": "65000099",
+        "basicMatl": "65000099",
+        "id": "1e351481-4385-467b-b131-88417f0dde58",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "8fd43297-23bc-435b-9f1d-7ee8fab6889c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_30c9a4d2-957e-4152-b377-33b68f4da0c5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_30c9a4d2-957e-4152-b377-33b68f4da0c5-og.png",
+        "name": "Hồng Trà Sữa (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "hong-tra-sua-l--s65000099",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "1e351481-4385-467b-b131-88417f0dde58",
+            "itemNo": "65000099",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_30c9a4d2-957e-4152-b377-33b68f4da0c5-og.png",
+            "name": "Hồng Trà Sữa (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "51065d48-a836-4c5c-8704-df7980c39d43",
+            "itemNo": "65000082",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_30c9a4d2-957e-4152-b377-33b68f4da0c5-og.png",
+            "name": "Hồng Trà Sữa (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -10000
+          }
+        ],
+        "subName": "Hồng Trà Sữa (L)",
+        "updatedDate": "2025-11-02T01:09:25.347Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02acf",
+        "itemNo": "65000104",
+        "__v": 0,
+        "basicItemNo": "65000104",
+        "basicMatl": null,
+        "id": "acccadee-b374-4dde-bd0c-d615eb9b3218",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "141",
+        "mch3": "14101",
+        "mch4": "1410101",
+        "mch5": "141010101",
+        "mch6": "141010101",
+        "mediaItems": [
+          {
+            "id": "7e47564e-421e-4e8e-a387-4c402e38b534",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_3dd1ee3f-2665-4cd2-b8b0-41af829bc3c0-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_3dd1ee3f-2665-4cd2-b8b0-41af829bc3c0-og.jpg",
+        "name": "Đào (3 miếng)",
+        "price": 20000,
+        "salePrice": 20000,
+        "seoName": "dao-3-mieng--s65000104",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "acccadee-b374-4dde-bd0c-d615eb9b3218",
+            "itemNo": "65000104",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_3dd1ee3f-2665-4cd2-b8b0-41af829bc3c0-og.jpg",
+            "name": "Đào (3 miếng)",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Đào (3 miếng)",
+        "updatedDate": "2025-11-02T01:09:25.512Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ad0",
+        "itemNo": "65000105",
+        "__v": 0,
+        "basicItemNo": "65000105",
+        "basicMatl": "65000105",
+        "id": "8f99270b-d5f2-4a33-a1e3-083a13f0ff45",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "b288da75-70bb-4e66-9a9b-c47df8beeba4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250205072009.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250205072009.png",
+        "name": "Hồng Trà Chanh (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 49000,
+        "salePrice": 49000,
+        "seoName": "hong-tra-chanh-l--s65000105",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "8f99270b-d5f2-4a33-a1e3-083a13f0ff45",
+            "itemNo": "65000105",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250205072009.png",
+            "name": "Hồng Trà Chanh (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "c088ccea-3e23-4939-91f5-57641d6bbdfe",
+            "itemNo": "65000080",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250205072009.png",
+            "name": "Hồng Trà Chanh (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -19000
+          }
+        ],
+        "subName": "Hồng Trà Chanh (L)",
+        "updatedDate": "2025-11-02T01:09:25.533Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02ad1",
+        "itemNo": "65000103",
+        "__v": 0,
+        "basicItemNo": "65000103",
+        "basicMatl": "65000103",
+        "id": "e43187d0-e7f0-4074-8195-62674cda96b5",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "66fa9676-4d41-4dab-a159-165ada670d07",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_e1d1ff51-2c3f-4870-a3d5-9a1388c4d63f-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_e1d1ff51-2c3f-4870-a3d5-9a1388c4d63f-og.png",
+        "name": "Hồng Trà Đào Sữa Thạch Konjac (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "hong-tra-dao-sua-thach-konjac-l--s65000103",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "21bbf4c2-c02d-48d9-841d-097017e73c4d",
+            "itemNo": "65000086",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_e1d1ff51-2c3f-4870-a3d5-9a1388c4d63f-og.png",
+            "name": "Hồng Trà Đào Sữa Thạch Konjac (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -11000
+          },
+          {
+            "id": "e43187d0-e7f0-4074-8195-62674cda96b5",
+            "itemNo": "65000103",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_e1d1ff51-2c3f-4870-a3d5-9a1388c4d63f-og.png",
+            "name": "Hồng Trà Đào Sữa Thạch Konjac (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Hồng Trà Đào Sữa Thạch Konjac (L)",
+        "updatedDate": "2025-11-02T01:09:25.483Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 9,
+    "pagingCounter": 81,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 8,
+    "next": 10
+  }
+}

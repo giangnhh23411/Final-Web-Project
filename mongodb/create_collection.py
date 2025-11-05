@@ -1,11 +1,23 @@
 from pymongo import MongoClient, errors
 from pymongo.server_api import ServerApi
+from pymongo.read_preferences import ReadPreference
+from typing import List, Dict, Any
+import argparse
+import json
+from pathlib import Path
 
 # Connection URI from mongodb_connection.py
 uri = "mongodb+srv://plwebdatabase123:PLWebsite123@plweb.escgc7n.mongodb.net/?retryWrites=true&w=majority&appName=PLWeb"
 
 # Create client
 client = MongoClient(uri, server_api=ServerApi('1'))
+# Read-only client prefers secondary to avoid requiring Primary for simple reads
+client_ro = MongoClient(
+    uri,
+    server_api=ServerApi('1'),
+    read_preference=ReadPreference.SECONDARY_PREFERRED,
+    retryWrites=False,
+)
 
 # Select database (assuming 'plweb' based on appName and username)
 db = client['plweb']
@@ -52,11 +64,13 @@ users_validator = {
         }
     }
 }
-create_collection_with_validator('users', users_validator)
-db.users.create_index('email', unique=True)
+def setup_schema(database):
+    # Users
+    create_collection_with_validator('users', users_validator)
+    database.users.create_index('email', unique=True)
 
 # 2. Categories collection
-categories_validator = {
+    categories_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['name', 'slug', 'is_active'],
@@ -70,11 +84,11 @@ categories_validator = {
         }
     }
 }
-create_collection_with_validator('categories', categories_validator)
-db.categories.create_index('slug', unique=True)
+    create_collection_with_validator('categories', categories_validator)
+    database.categories.create_index('slug', unique=True)
 
 # 3. Order_Items collection
-order_items_validator = {
+    order_items_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['order_id', 'product_id', 'sku', 'qty', 'unit_price', 'total_price'],
@@ -89,10 +103,10 @@ order_items_validator = {
         }
     }
 }
-create_collection_with_validator('order_items', order_items_validator)
+    create_collection_with_validator('order_items', order_items_validator)
 
 # 4. Products collection
-products_validator = {
+    products_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['sku', 'name', 'category_id', 'price', 'currency', 'stock_quantity', 'is_active', 'created_at', 'updated_at'],
@@ -117,11 +131,11 @@ products_validator = {
         }
     }
 }
-create_collection_with_validator('products', products_validator)
-db.products.create_index('sku', unique=True)
+    create_collection_with_validator('products', products_validator)
+    database.products.create_index('sku', unique=True)
 
 # 5. Carts collection
-carts_validator = {
+    carts_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['items', 'created_at', 'updated_at'],
@@ -147,10 +161,10 @@ carts_validator = {
         }
     }
 }
-create_collection_with_validator('carts', carts_validator)
+    create_collection_with_validator('carts', carts_validator)
 
 # 6. Payments collection
-payments_validator = {
+    payments_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['order_id', 'method', 'status', 'amount', 'created_at'],
@@ -167,11 +181,11 @@ payments_validator = {
         }
     }
 }
-create_collection_with_validator('payments', payments_validator)
-db.payments.create_index('transaction_id', unique=True)
+    create_collection_with_validator('payments', payments_validator)
+    database.payments.create_index('transaction_id', unique=True)
 
 # 7. Orders collection
-orders_validator = {
+    orders_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['order_no', 'user_id', 'items', 'subtotal', 'total_amount', 'currency', 'payment_status', 'order_status', 'shipping_address', 'created_at', 'updated_at'],
@@ -208,11 +222,11 @@ orders_validator = {
         }
     }
 }
-create_collection_with_validator('orders', orders_validator)
-db.orders.create_index('order_no', unique=True)
+    create_collection_with_validator('orders', orders_validator)
+    database.orders.create_index('order_no', unique=True)
 
 # 8. Vouchers collection
-vouchers_validator = {
+    vouchers_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['code', 'type', 'value', 'start_at', 'end_at', 'status'],
@@ -231,11 +245,11 @@ vouchers_validator = {
         }
     }
 }
-create_collection_with_validator('vouchers', vouchers_validator)
-db.vouchers.create_index('code', unique=True)
+    create_collection_with_validator('vouchers', vouchers_validator)
+    database.vouchers.create_index('code', unique=True)
 
 # 9. Shipments collection
-shipments_validator = {
+    shipments_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['_id', 'order_id', 'carrier', 'status'],  # Add the required fields here
@@ -262,10 +276,10 @@ shipments_validator = {
         }
     }
 }
-create_collection_with_validator('shipments', shipments_validator)
+    create_collection_with_validator('shipments', shipments_validator)
 
 # 10. Statuses collection (assuming for blog posts based on attributes)
-statuses_validator = {
+    statuses_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['title', 'slug', 'content', 'author_id', 'status'],
@@ -281,11 +295,11 @@ statuses_validator = {
         }
     }
 }
-create_collection_with_validator('statuses', statuses_validator)
-db.statuses.create_index('slug', unique=True)
+    create_collection_with_validator('statuses', statuses_validator)
+    database.statuses.create_index('slug', unique=True)
 
 # 11. Sessions collection
-sessions_validator = {
+    sessions_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['user_id', 'token_hash', 'expires_at'],
@@ -298,11 +312,11 @@ sessions_validator = {
         }
     }
 }
-create_collection_with_validator('sessions', sessions_validator)
-db.sessions.create_index('token_hash', unique=True)
+    create_collection_with_validator('sessions', sessions_validator)
+    database.sessions.create_index('token_hash', unique=True)
 
 # 12. Notifications collection
-notifications_validator = {
+    notifications_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['to_user', 'type', 'payload', 'sent_status'],
@@ -316,10 +330,10 @@ notifications_validator = {
         }
     }
 }
-create_collection_with_validator('notifications', notifications_validator)
+    create_collection_with_validator('notifications', notifications_validator)
 
 # 13. Policies collection
-policies_validator = {
+    policies_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['key', 'title', 'content', 'last_updated', 'is_active'],
@@ -333,11 +347,11 @@ policies_validator = {
         }
     }
 }
-create_collection_with_validator('policies', policies_validator)
-db.policies.create_index('key', unique=True)
+    create_collection_with_validator('policies', policies_validator)
+    database.policies.create_index('key', unique=True)
 
 # 14. Admin_Logs collection
-admin_logs_validator = {
+    admin_logs_validator = {
     '$jsonSchema': {
         'bsonType': 'object',
         'required': ['actor_id', 'action', 'entity_type', 'timestamp'],
@@ -352,7 +366,120 @@ admin_logs_validator = {
         }
     }
 }
-create_collection_with_validator('admin_logs', admin_logs_validator)
+    create_collection_with_validator('admin_logs', admin_logs_validator)
 
-# Close the client
-client.close()
+def list_databases(mongo_client: MongoClient) -> List[str]:
+    # Use explicit secondaryPreferred on admin DB to avoid Primary requirement
+    admin_db = mongo_client.get_database("admin", read_preference=ReadPreference.SECONDARY_PREFERRED)
+    res = admin_db.command({"listDatabases": 1, "nameOnly": True})
+    return sorted([d.get("name", "") for d in res.get("databases", [])])
+
+
+def list_collections(database) -> List[str]:
+    # Ensure read preference is secondaryPreferred
+    db_ro = database.client.get_database(database.name, read_preference=ReadPreference.SECONDARY_PREFERRED)
+    return sorted(db_ro.list_collection_names())
+
+
+def infer_top_level_fields(database, collection_name: str, sample_limit: int = 10000) -> List[str]:
+    pipeline = [
+        {"$limit": sample_limit},
+        {"$project": {"pairs": {"$objectToArray": "$$ROOT"}}},
+        {"$unwind": "$pairs"},
+        {"$group": {"_id": "$pairs.k"}},
+        {"$sort": {"_id": 1}},
+    ]
+    return [d["_id"] for d in database[collection_name].aggregate(pipeline, allowDiskUse=True)]
+
+
+def infer_array_fields(database, collection_name: str, array_path: str, sample_limit: int = 10000) -> List[str]:
+    # array_path like "sizes"
+    pipeline = [
+        {"$limit": sample_limit},
+        {"$unwind": f"${array_path}"},
+        {"$project": {"pairs": {"$objectToArray": f"${array_path}"}}},
+        {"$unwind": "$pairs"},
+        {"$group": {"_id": "$pairs.k"}},
+        {"$sort": {"_id": 1}},
+    ]
+    return [d["_id"] for d in database[collection_name].aggregate(pipeline, allowDiskUse=True)]
+
+
+def import_json_array(database, collection_name: str, file_path: str) -> Dict[str, Any]:
+    path = Path(file_path)
+    if not path.exists():
+        raise FileNotFoundError(f"File not found: {file_path}")
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    # support either { items: [...] } or [...] at root
+    docs = data.get("items") if isinstance(data, dict) else data
+    if not isinstance(docs, list):
+        raise ValueError("JSON must be an array or have 'items' array.")
+    if not docs:
+        return {"inserted": 0}
+    try:
+        result = database[collection_name].insert_many(docs, ordered=False)
+        return {"inserted": len(result.inserted_ids)}
+    except errors.BulkWriteError as bwe:
+        inserted = sum(1 for w in bwe.details.get("writeErrors", []) if w.get("code") == 11000)
+        # Even on bulk errors, some may be inserted
+        return {"inserted": bwe.details.get("nInserted", 0), "duplicates": inserted}
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Mongo utilities: list DB/collections, infer fields, import JSON")
+    sub = parser.add_subparsers(dest="cmd")
+
+    sub.add_parser("list-dbs")
+
+    p_list_col = sub.add_parser("list-cols")
+    p_list_col.add_argument("db", nargs="?", default="plweb")
+
+    p_fields = sub.add_parser("fields")
+    p_fields.add_argument("collection")
+    p_fields.add_argument("--db", default="plweb")
+    p_fields.add_argument("--limit", type=int, default=10000)
+
+    p_sizes = sub.add_parser("fields-sizes")
+    p_sizes.add_argument("collection")
+    p_sizes.add_argument("--db", default="plweb")
+    p_sizes.add_argument("--array", default="sizes")
+    p_sizes.add_argument("--limit", type=int, default=10000)
+
+    p_import = sub.add_parser("import-json")
+    p_import.add_argument("collection")
+    p_import.add_argument("file")
+    p_import.add_argument("--db", default="plweb")
+
+    sub.add_parser("init-schema")
+
+    args = parser.parse_args()
+
+    if args.cmd == "list-dbs":
+        print("\n".join(list_databases(client_ro)))
+    elif args.cmd == "list-cols":
+        database = client_ro[args.db]
+        print("\n".join(list_collections(database)))
+    elif args.cmd == "fields":
+        database = client_ro[args.db]
+        fields = infer_top_level_fields(database, args.collection, args.limit)
+        print("\n".join(fields))
+    elif args.cmd == "fields-sizes":
+        database = client_ro[args.db]
+        fields = infer_array_fields(database, args.collection, args.array, args.limit)
+        print("\n".join(fields))
+    elif args.cmd == "import-json":
+        database = client[args.db]
+        result = import_json_array(database, args.collection, args.file)
+        print(json.dumps(result))
+    elif args.cmd == "init-schema":
+        setup_schema(client["plweb"])  # or choose args for DB if needed
+        print("Schema initialization completed.")
+    else:
+        parser.print_help()
+
+    client.close()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,449 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02a34",
+        "itemNo": "60000452",
+        "__v": 0,
+        "basicItemNo": "60000452",
+        "basicMatl": null,
+        "id": "c239d0fe-ed92-46dc-89ab-eeb00ccab300",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "73cc3e91-8870-4544-9632-b01bbf566c13",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000452-ca-phe-arabica-culi-200g_6b73b763-e18e-4570-a8c3-04131993e66d-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000452-ca-phe-arabica-culi-200g_6b73b763-e18e-4570-a8c3-04131993e66d-og.jpg",
+        "name": "Cà phê rang pha trộn Arabica Culi 200g",
+        "price": 80000,
+        "salePrice": 80000,
+        "seoName": "ca-phe-rang-pha-tron-arabica-culi-200g--s60000452",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "c239d0fe-ed92-46dc-89ab-eeb00ccab300",
+            "itemNo": "60000452",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000452-ca-phe-arabica-culi-200g_6b73b763-e18e-4570-a8c3-04131993e66d-og.jpg",
+            "name": "Cà phê rang pha trộn Arabica Culi 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang pha trộn Arabica Culi 200g",
+        "updatedDate": "2025-11-02T01:09:23.795Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a37",
+        "itemNo": "60000453",
+        "__v": 0,
+        "basicItemNo": "60000453",
+        "basicMatl": null,
+        "id": "b7154f16-b163-4ace-8c8f-4df1f1bd91a1",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "c975daf8-47f9-461a-8f1b-66f9de9eb0f8",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000453-ca-phe-arabica-culi-500g_750ca307-6695-4ea9-906e-45d767f6e8c5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000453-ca-phe-arabica-culi-500g_750ca307-6695-4ea9-906e-45d767f6e8c5-og.png",
+        "name": "Cà phê rang pha trộn Arabica Culi 500g",
+        "price": 180000,
+        "salePrice": 180000,
+        "seoName": "ca-phe-rang-pha-tron-arabica-culi-500g--s60000453",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "b7154f16-b163-4ace-8c8f-4df1f1bd91a1",
+            "itemNo": "60000453",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000453-ca-phe-arabica-culi-500g_750ca307-6695-4ea9-906e-45d767f6e8c5-og.png",
+            "name": "Cà phê rang pha trộn Arabica Culi 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang pha trộn Arabica Culi 500g",
+        "updatedDate": "2025-11-02T01:09:23.816Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a3a",
+        "itemNo": "60000370",
+        "__v": 0,
+        "basicItemNo": "60000370",
+        "basicMatl": null,
+        "id": "bdd0516b-d4e7-42e5-b103-c17ccf200707",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": "ZVCN",
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "56b3d26f-99d0-403b-86db-1f0c01c3e3f4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000370-60000369-tra-xanh-thai-nguyen_44dd052b-7ea6-497a-8584-0d67883f9e85-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000370-60000369-tra-xanh-thai-nguyen_44dd052b-7ea6-497a-8584-0d67883f9e85-og.png",
+        "name": "Trà xanh Thái Nguyên 500g",
+        "price": 135000,
+        "salePrice": 135000,
+        "seoName": "tra-xanh-thai-nguyen-500g--s60000370",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "bdd0516b-d4e7-42e5-b103-c17ccf200707",
+            "itemNo": "60000370",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000370-60000369-tra-xanh-thai-nguyen_44dd052b-7ea6-497a-8584-0d67883f9e85-og.png",
+            "name": "Trà xanh Thái Nguyên 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà xanh Thái Nguyên 500g",
+        "updatedDate": "2025-11-02T01:09:23.674Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a39",
+        "itemNo": "60000488",
+        "__v": 0,
+        "basicItemNo": "60000488",
+        "basicMatl": null,
+        "id": "3cb3e2f3-2c4f-42a9-824a-d5ce6c65cf24",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "76c51d6d-65d8-409b-a49f-714148a20952",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000488-ca-phe-culi-phuc-long-500g_e07d8d7c-b8db-4255-bb3c-7024918720a5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000488-ca-phe-culi-phuc-long-500g_e07d8d7c-b8db-4255-bb3c-7024918720a5-og.png",
+        "name": "Cà phê rang nguyên hạt Culi 500g",
+        "price": 160000,
+        "salePrice": 160000,
+        "seoName": "ca-phe-rang-nguyen-hat-culi-500g--s60000488",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "3cb3e2f3-2c4f-42a9-824a-d5ce6c65cf24",
+            "itemNo": "60000488",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000488-ca-phe-culi-phuc-long-500g_e07d8d7c-b8db-4255-bb3c-7024918720a5-og.png",
+            "name": "Cà phê rang nguyên hạt Culi 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt Culi 500g",
+        "updatedDate": "2025-11-02T01:09:23.847Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a3c",
+        "itemNo": "60000502",
+        "__v": 0,
+        "basicItemNo": "60000502",
+        "basicMatl": null,
+        "id": "e2543de3-9859-4033-9981-8155db9240d5",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "be07bfd8-d699-4ca3-96b2-5cff95052a98",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000502-ca-phe-king-khong-bo-phuc-long-200g_33cace06-1c6b-4ded-974b-fa37e7d508d3-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000502-ca-phe-king-khong-bo-phuc-long-200g_33cace06-1c6b-4ded-974b-fa37e7d508d3-og.png",
+        "name": "Cà phê rang nguyên hạt King 200g",
+        "price": 95000,
+        "salePrice": 95000,
+        "seoName": "ca-phe-rang-nguyen-hat-king-200g--s60000502",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "e2543de3-9859-4033-9981-8155db9240d5",
+            "itemNo": "60000502",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000502-ca-phe-king-khong-bo-phuc-long-200g_33cace06-1c6b-4ded-974b-fa37e7d508d3-og.png",
+            "name": "Cà phê rang nguyên hạt King 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt King 200g",
+        "updatedDate": "2025-11-02T01:09:23.860Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a40",
+        "itemNo": "60000528",
+        "__v": 0,
+        "basicItemNo": "60000528",
+        "basicMatl": null,
+        "id": "b95a0ad8-629b-402d-9a8a-e81a811bc71b",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "fed313ca-e3d6-487c-b2aa-3914c93258f3",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000528-ca-phe-moka-khong-bo-phuc-long-500g_300caccc-ffbe-4e12-879c-22b7488fb636-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000528-ca-phe-moka-khong-bo-phuc-long-500g_300caccc-ffbe-4e12-879c-22b7488fb636-og.png",
+        "name": "Cà phê rang nguyên hạt Moka 500g",
+        "price": 220000,
+        "salePrice": 220000,
+        "seoName": "ca-phe-rang-nguyen-hat-moka-500g--s60000528",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "b95a0ad8-629b-402d-9a8a-e81a811bc71b",
+            "itemNo": "60000528",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000528-ca-phe-moka-khong-bo-phuc-long-500g_300caccc-ffbe-4e12-879c-22b7488fb636-og.png",
+            "name": "Cà phê rang nguyên hạt Moka 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt Moka 500g",
+        "updatedDate": "2025-11-02T01:09:23.887Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a43",
+        "itemNo": "60000503",
+        "__v": 0,
+        "basicItemNo": "60000503",
+        "basicMatl": null,
+        "id": "8574dd95-4f63-451d-8de2-ae8d6bdfa111",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "07116730-4bcb-4626-9041-24af2f079217",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000503-ca-phe-king-khong-bo-phuc-long-500g_e1273a8d-3137-49b2-aeaf-2246800b1358-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000503-ca-phe-king-khong-bo-phuc-long-500g_e1273a8d-3137-49b2-aeaf-2246800b1358-og.png",
+        "name": "Cà phê rang nguyên hạt King 500g",
+        "price": 220000,
+        "salePrice": 220000,
+        "seoName": "ca-phe-rang-nguyen-hat-king-500g--s60000503",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "8574dd95-4f63-451d-8de2-ae8d6bdfa111",
+            "itemNo": "60000503",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000503-ca-phe-king-khong-bo-phuc-long-500g_e1273a8d-3137-49b2-aeaf-2246800b1358-og.png",
+            "name": "Cà phê rang nguyên hạt King 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt King 500g",
+        "updatedDate": "2025-11-02T01:09:23.873Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a44",
+        "itemNo": "60000529",
+        "__v": 0,
+        "basicItemNo": "60000529",
+        "basicMatl": null,
+        "id": "c1812a79-a839-4ae3-9608-102376a5ace5",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "51fa853c-b452-447a-ac95-a1e2c4197a3c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000529-ca-phe-moka-khong-bo-phuc-long-200g_51c9dc1a-1326-4b74-80e2-cd2449b7667a-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000529-ca-phe-moka-khong-bo-phuc-long-200g_51c9dc1a-1326-4b74-80e2-cd2449b7667a-og.png",
+        "name": "Cà phê rang nguyên hạt Moka 200g",
+        "price": 95000,
+        "salePrice": 95000,
+        "seoName": "ca-phe-rang-nguyen-hat-moka-200g--s60000529",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "c1812a79-a839-4ae3-9608-102376a5ace5",
+            "itemNo": "60000529",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000529-ca-phe-moka-khong-bo-phuc-long-200g_51c9dc1a-1326-4b74-80e2-cd2449b7667a-og.png",
+            "name": "Cà phê rang nguyên hạt Moka 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt Moka 200g",
+        "updatedDate": "2025-11-02T01:09:23.909Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a45",
+        "itemNo": "60000487",
+        "__v": 0,
+        "basicItemNo": "60000487",
+        "basicMatl": null,
+        "id": "9636b607-af73-48fe-95ad-9da7feae1a06",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "ab5d951d-19d0-4960-b2ab-28e0c2f51e7e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000487-ca-phe-culi-phuc-long-200g_f9d5b111-a643-4505-9d5f-8c28a49e86da-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000487-ca-phe-culi-phuc-long-200g_f9d5b111-a643-4505-9d5f-8c28a49e86da-og.png",
+        "name": "Cà phê rang nguyên hạt Culi 200g",
+        "price": 70000,
+        "salePrice": 70000,
+        "seoName": "ca-phe-rang-nguyen-hat-culi-200g--s60000487",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "9636b607-af73-48fe-95ad-9da7feae1a06",
+            "itemNo": "60000487",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000487-ca-phe-culi-phuc-long-200g_f9d5b111-a643-4505-9d5f-8c28a49e86da-og.png",
+            "name": "Cà phê rang nguyên hạt Culi 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang nguyên hạt Culi 200g",
+        "updatedDate": "2025-11-02T01:09:23.832Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a46",
+        "itemNo": "60000552",
+        "__v": 0,
+        "basicItemNo": "60000552",
+        "basicMatl": null,
+        "id": "e3857e1e-116a-4a4d-9cbd-a53f1643e232",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "b2f374c1-e5f2-4123-9c8a-e935b85901bb",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000552-ca-phe-robusta-culi-phuc-long-200g_9316e61b-4686-412b-a428-d722f6e29363-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000552-ca-phe-robusta-culi-phuc-long-200g_9316e61b-4686-412b-a428-d722f6e29363-og.png",
+        "name": "Cà phê rang pha trộn Robusta Culi 200g",
+        "price": 75000,
+        "salePrice": 75000,
+        "seoName": "ca-phe-rang-pha-tron-robusta-culi-200g--s60000552",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "e3857e1e-116a-4a4d-9cbd-a53f1643e232",
+            "itemNo": "60000552",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000552-ca-phe-robusta-culi-phuc-long-200g_9316e61b-4686-412b-a428-d722f6e29363-og.png",
+            "name": "Cà phê rang pha trộn Robusta Culi 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê rang pha trộn Robusta Culi 200g",
+        "updatedDate": "2025-11-02T01:09:23.926Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 3,
+    "pagingCounter": 21,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 2,
+    "next": 4
+  }
+}

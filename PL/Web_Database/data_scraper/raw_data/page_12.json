@@ -1,0 +1,671 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690686002969ebf6f2e2bd5f",
+        "itemNo": "65000135",
+        "__v": 0,
+        "basicItemNo": "65000135",
+        "basicMatl": "65000135",
+        "id": "cead1365-cb65-4ace-9aef-36f5d5f30067",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14404",
+        "mch4": "1440401",
+        "mch5": "144040101",
+        "mch6": "144040101",
+        "mediaItems": [
+          {
+            "id": "f7642cff-9ddc-4d6b-85ae-c3383a6d9a34",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000135-hong-tra-dac-cam_7659ba61-7640-45fe-b899-3c882cf7b64f-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000135-hong-tra-dac-cam_7659ba61-7640-45fe-b899-3c882cf7b64f-og.png",
+        "name": "Hồng Trà Đác Cam Đá Xay",
+        "optionals": [
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 70000,
+        "salePrice": 70000,
+        "seoName": "hong-tra-dac-cam-da-xay--s65000135",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "cead1365-cb65-4ace-9aef-36f5d5f30067",
+            "itemNo": "65000135",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000135-hong-tra-dac-cam_7659ba61-7640-45fe-b899-3c882cf7b64f-og.png",
+            "name": "Hồng Trà Đác Cam Đá Xay",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Hồng Trà Đác Cam Đá Xay",
+        "updatedDate": "2025-11-02T01:34:07.763Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd63",
+        "itemNo": "65000137",
+        "__v": 0,
+        "basicItemNo": "65000137",
+        "basicMatl": null,
+        "id": "e38abc32-3dd8-4d0b-83fe-ba60b05d9619",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "141",
+        "mch3": "14101",
+        "mch4": "1410101",
+        "mch5": "141010101",
+        "mch6": "141010101",
+        "mediaItems": [
+          {
+            "id": "bd5297c0-8647-4c25-b17c-db8f27596075",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_fa88d51c-3727-4f4e-8b9d-182148a6ceff-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_fa88d51c-3727-4f4e-8b9d-182148a6ceff-og.jpg",
+        "name": "Topping Đác Cam",
+        "price": 25000,
+        "salePrice": 25000,
+        "seoName": "topping-dac-cam--s65000137",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "e38abc32-3dd8-4d0b-83fe-ba60b05d9619",
+            "itemNo": "65000137",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_fa88d51c-3727-4f4e-8b9d-182148a6ceff-og.jpg",
+            "name": "Topping Đác Cam",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Topping Đác Cam",
+        "updatedDate": "2025-11-02T01:34:07.814Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd67",
+        "itemNo": "65000134",
+        "__v": 0,
+        "basicItemNo": "65000134",
+        "basicMatl": "65000134",
+        "id": "dfd9a287-8845-4c83-a875-3e2014a9f616",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "6f85bee6-5ed6-4839-8aa4-e950fec10b42",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+        "name": "Trà Lài Đác Thơm (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-lai-dac-thom-l--s65000134",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "b52d160a-a6fd-4c69-afd0-6e10d3cec767",
+            "itemNo": "65000133",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+            "name": "Trà Lài Đác Thơm (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -6000
+          },
+          {
+            "id": "dfd9a287-8845-4c83-a875-3e2014a9f616",
+            "itemNo": "65000134",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+            "name": "Trà Lài Đác Thơm (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Lài Đác Thơm (L)",
+        "updatedDate": "2025-11-02T01:34:07.730Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd68",
+        "itemNo": "65000136",
+        "__v": 0,
+        "basicItemNo": "65000136",
+        "basicMatl": null,
+        "id": "75dc3f4b-40b7-40d5-a359-15a1c845b1be",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "141",
+        "mch3": "14101",
+        "mch4": "1410101",
+        "mch5": "141010101",
+        "mch6": "141010101",
+        "mediaItems": [
+          {
+            "id": "1081b737-a7cd-4eba-a6fc-bfa6f0a858e7",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_503c147c-aafb-45a2-8862-bace4cc2eb0d-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_503c147c-aafb-45a2-8862-bace4cc2eb0d-og.jpg",
+        "name": "Topping Đác Thơm",
+        "price": 25000,
+        "salePrice": 25000,
+        "seoName": "topping-dac-thom--s65000136",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "75dc3f4b-40b7-40d5-a359-15a1c845b1be",
+            "itemNo": "65000136",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_503c147c-aafb-45a2-8862-bace4cc2eb0d-og.jpg",
+            "name": "Topping Đác Thơm",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Topping Đác Thơm",
+        "updatedDate": "2025-11-02T01:34:07.794Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd6a",
+        "itemNo": "65000170",
+        "__v": 0,
+        "basicItemNo": "65000055",
+        "basicMatl": "65000055",
+        "id": "b976417c-8089-4358-b8dd-dabd4a2ac936",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "6c545db7-88ea-413a-8183-db0218551bd7",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png"
+          },
+          {
+            "id": "16000798-d93e-4be4-a795-7a3c57fa5c4d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_0badde62-8c7b-40dd-a8dc-56c3341d4cc5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+        "name": "Cà Phê Đen Đá (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 39000,
+        "salePrice": 39000,
+        "seoName": "ca-phe-den-da-l--s65000170",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "1b50b753-c4c0-4cfb-82ca-6b24cfab578d",
+            "itemNo": "65000055",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+            "name": "Cà Phê Đen Đá (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": -9000
+          },
+          {
+            "id": "b976417c-8089-4358-b8dd-dabd4a2ac936",
+            "itemNo": "65000170",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+            "name": "Cà Phê Đen Đá (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà Phê Đen Đá (L)",
+        "updatedDate": "2025-11-02T01:34:07.835Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd6c",
+        "itemNo": "65000171",
+        "__v": 0,
+        "basicItemNo": "65000056",
+        "basicMatl": "65000056",
+        "id": "a7e64e78-5c02-46a2-b5bc-603e8d52f76b",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "0ed7fe84-0ed3-46c7-ae4e-a886422064cc",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_89451266-77df-49ef-9de4-054713d2fb72-og.png"
+          },
+          {
+            "id": "cc7a26e5-4cba-4db6-a369-64ca9ece4b17",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_89451266-77df-49ef-9de4-054713d2fb72-og.png",
+        "name": "Cà Phê Sữa Đá (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 45000,
+        "salePrice": 45000,
+        "seoName": "ca-phe-sua-da-l--s65000171",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "6795864b-14fa-4d1a-873d-47c6eed77498",
+            "itemNo": "65000056",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png",
+            "name": "Cà Phê Sữa Đá (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": -6000
+          },
+          {
+            "id": "a7e64e78-5c02-46a2-b5bc-603e8d52f76b",
+            "itemNo": "65000171",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_89451266-77df-49ef-9de4-054713d2fb72-og.png",
+            "name": "Cà Phê Sữa Đá (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà Phê Sữa Đá (L)",
+        "updatedDate": "2025-11-02T01:34:07.868Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd6e",
+        "itemNo": "65000174",
+        "__v": 0,
+        "basicItemNo": "65000174",
+        "basicMatl": "65000174",
+        "id": "96e55c35-7c20-4756-b710-2eaea4fc1c21",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "a7b5e8d7-3c5f-4d1a-a2ef-5354cef923d8",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+        "name": "Cà phê Latte (M)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "ca-phe-latte-m--s65000174",
+        "shortDesc": "",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "96e55c35-7c20-4756-b710-2eaea4fc1c21",
+            "itemNo": "65000174",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+            "name": "Cà phê Latte (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "b8e1c972-005e-4ca0-be65-433af1c5f7d1",
+            "itemNo": "65000183",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+            "name": "Cà phê Latte (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 10000
+          }
+        ],
+        "subName": "Cà phê Latte (M)",
+        "updatedDate": "2025-11-02T01:34:07.897Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd6f",
+        "itemNo": "65000183",
+        "__v": 0,
+        "basicItemNo": "65000174",
+        "basicMatl": "65000174",
+        "id": "b8e1c972-005e-4ca0-be65-433af1c5f7d1",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "a7b5e8d7-3c5f-4d1a-a2ef-5354cef923d8",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png"
+          },
+          {
+            "id": "c871b8a5-08c8-46dd-bd79-b69e5f5fb53b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_c0dc3409-62f9-49a6-a72b-014eb0a1f9eb-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+        "name": "Cà phê Latte (L)",
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "ca-phe-latte-l--s65000183",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "96e55c35-7c20-4756-b710-2eaea4fc1c21",
+            "itemNo": "65000174",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+            "name": "Cà phê Latte (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": -20000
+          },
+          {
+            "id": "b8e1c972-005e-4ca0-be65-433af1c5f7d1",
+            "itemNo": "65000183",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+            "name": "Cà phê Latte (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê Latte (L)",
+        "updatedDate": "2025-11-02T01:34:07.954Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd73",
+        "itemNo": "65000187",
+        "__v": 0,
+        "basicItemNo": "65000176",
+        "basicMatl": "65000176",
+        "id": "c1437aa3-6e58-45da-b291-d3c6cd532452",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "111",
+        "mch3": "11101",
+        "mch4": "1110102",
+        "mch5": "111010201",
+        "mch6": "111010201",
+        "mediaItems": [
+          {
+            "id": "aec74df6-2d87-47d7-99c9-f9feee38e9e0",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_55905766-ff9f-435b-aa3b-e14018c188a3-og.png"
+          },
+          {
+            "id": "1185b563-d8da-498e-97f8-ce073b3fd9d9",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_4e449f05-4868-48b3-b785-1f4e09b22fa3-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_55905766-ff9f-435b-aa3b-e14018c188a3-og.png",
+        "name": "Cà phê Cappuccino (M)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "ca-phe-cappuccino-m--s65000187",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "8d9ac120-d4c8-4e57-8c19-4afe24d6d180",
+            "itemNo": "65000176",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_55905766-ff9f-435b-aa3b-e14018c188a3-og.png",
+            "name": "Cà phê Cappuccino (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 10000
+          },
+          {
+            "id": "c1437aa3-6e58-45da-b291-d3c6cd532452",
+            "itemNo": "65000187",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_55905766-ff9f-435b-aa3b-e14018c188a3-og.png",
+            "name": "Cà phê Cappuccino (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cà phê Cappuccino (M)",
+        "updatedDate": "2025-11-02T01:34:07.976Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd75",
+        "itemNo": "65000282",
+        "__v": 0,
+        "basicItemNo": "65000282",
+        "basicMatl": "65000282",
+        "id": "818b16dc-b5a5-4b24-965e-0f2e63b401e2",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14402",
+        "mch4": "1440201",
+        "mch5": "144020101",
+        "mch6": "144020101",
+        "mediaItems": [
+          {
+            "id": "473af2cf-05a8-4809-8464-2ca349962cf6",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061053.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061053.png",
+        "name": "Trà Phúc Long (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Không",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 45000,
+        "salePrice": 45000,
+        "seoName": "tra-phuc-long-m--s65000282",
+        "shortDesc": "<p><br></p>",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "47bd0f9b-90ca-48e5-8b8f-0075484bf7f2",
+            "itemNo": "65000283",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000282-65000291-65000285-65000294-20230406104519.png",
+            "name": "Trà Phúc Long (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 5000
+          },
+          {
+            "id": "818b16dc-b5a5-4b24-965e-0f2e63b401e2",
+            "itemNo": "65000282",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061053.png",
+            "name": "Trà Phúc Long (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Phúc Long (M)",
+        "updatedDate": "2025-11-02T01:34:07.998Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 12,
+    "pagingCounter": 111,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 11,
+    "next": 13
+  }
+}

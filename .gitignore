@@ -1,0 +1,10 @@
+﻿venv/
+.venv/
+**/__pycache__/
+**/*.pyc
+node_modules/
+PL/Figma/webproject_doanh-html.zip
+PL/Web_Database/mongodb/logs/
+PL/uploads/
+.env
+*.log

@@ -1,0 +1,435 @@
+<!-- promotion.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion Management</title>
+    <link rel="stylesheet" href="../CSS/promotion.css">
+    <style>
+        /* Additional styles for modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        form label { display: block; margin: 10px 0 5px; }
+        form input, form textarea, form select { width: 100%; padding: 8px; margin-bottom: 10px; }
+        .action-icon { cursor: pointer; margin: 0 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="promotion-header">
+                    <h1>Promotion</h1>
+                    <button class="add-new-promotion" id="addPromotionBtn">Add New Promotion</button>
+                </div>
+                <div class="search-promotion">
+                    <input type="text" id="searchPromotion" placeholder="Search promotion name or code" class="search-input-small">
+                </div>
+                <div class="promotion-table-container">
+                    <table class="promotion-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Promotion</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Description</th>
+                                <th>Condition</th>
+                                <th>Sale</th>
+                                <th>Max Usage Limit</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="promotionTableBody">
+                            <!-- Dynamic rows -->
+                        </tbody>
+                    </table>
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination controls -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Edit/Add Modal -->
+    <div id="promotionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Edit Promotion</h2>
+            <form id="promotionForm">
+                <input type="hidden" id="originalCode">
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code" required>
+                
+                <label for="type">Type:</label>
+                <select id="type" name="type" required>
+                    <option value="percent">Percent</option>
+                    <option value="fixed">Fixed</option>
+                </select>
+                
+                <label for="value">Value:</label>
+                <input type="number" id="value" name="value" step="0.01" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+                
+                <label for="start_at">From Date:</label>
+                <input type="datetime-local" id="start_at" name="start_at" required>
+                
+                <label for="end_at">To Date:</label>
+                <input type="datetime-local" id="end_at" name="end_at" required>
+                
+                <label for="min_order_value">Min Order Value:</label>
+                <input type="number" id="min_order_value" name="min_order_value" step="0.01">
+                
+                <label for="usage_limit">Usage Limit:</label>
+                <input type="number" id="usage_limit" name="usage_limit">
+                
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="active">Active</option>
+                    <option value="expired">Expired</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+                
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeDetails">&times;</span>
+            <h2>Promotion Details</h2>
+            <div id="detailsContent">
+                <p>Used Count: <span id="usedCount"></span></p>
+                <p>Total Discount: <span id="totalDiscount"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const API_URL = 'http://localhost:8000/api';
+        let currentPage = 1;
+        let pageSize = 20;
+        let totalVouchers = 0;
+
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Modal elements
+        const modal = document.getElementById('promotionModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const promotionForm = document.getElementById('promotionForm');
+        const closeModal = document.getElementById('closeModal');
+        const addBtn = document.getElementById('addPromotionBtn');
+
+        const detailsModal = document.getElementById('detailsModal');
+        const closeDetails = document.getElementById('closeDetails');
+        const usedCount = document.getElementById('usedCount');
+        const totalDiscount = document.getElementById('totalDiscount');
+
+        // Close modals
+        closeModal.onclick = () => modal.style.display = 'none';
+        closeDetails.onclick = () => detailsModal.style.display = 'none';
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = 'none';
+            if (event.target == detailsModal) detailsModal.style.display = 'none';
+        };
+
+        // Open add modal
+        addBtn.addEventListener('click', () => {
+            promotionForm.reset();
+            document.getElementById('originalCode').value = '';
+            modalTitle.textContent = 'Add Promotion';
+            modal.style.display = 'block';
+        });
+
+        // Form submit
+        promotionForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(promotionForm);
+            const payload = Object.fromEntries(formData);
+            const originalCode = document.getElementById('originalCode').value;
+            let method = 'POST';
+            let url = `${API_URL}/vouchers`;
+            if (originalCode) {
+                method = 'PUT';
+                url += `/${originalCode}`;
+            }
+            try {
+                const res = await fetch(url, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!res.ok) throw new Error(await res.text());
+                modal.style.display = 'none';
+                fetchVouchers(currentPage);
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        });
+
+        // Fetch vouchers
+        async function fetchVouchers(page = 1) {
+            currentPage = page;
+            const url = `${API_URL}/vouchers?page=${page}&pageSize=${pageSize}`;
+            try {
+                const res = await fetch(url);
+                const { data, paging } = await res.json();
+                totalVouchers = paging.total;
+                populateTable(data);
+                updatePagination(paging);
+            } catch (err) {
+                alert('Error fetching promotions: ' + err.message);
+            }
+        }
+
+        // Populate table
+        function populateTable(vouchers) {
+            const tbody = document.getElementById('promotionTableBody');
+            tbody.innerHTML = '';
+            vouchers.forEach(v => {
+                const row = document.createElement('tr');
+                row.dataset.promotionCode = v.code;
+                const fromDate = new Date(v.start_at).toLocaleDateString();
+                const toDate = new Date(v.end_at).toLocaleDateString();
+                const sale = v.type === 'percent' ? `${v.value}%` : `$${v.value}`;
+                const condition = `Min order $${v.min_order_value.toFixed(2)}`;
+                row.innerHTML = `
+                    <td>${v.code}</td>
+                    <td>${v.description || v.code}</td>
+                    <td>${fromDate}</td>
+                    <td>${toDate}</td>
+                    <td>${v.description || ''}</td>
+                    <td>${condition}</td>
+                    <td>${sale}</td>
+                    <td>${v.usage_limit}</td>
+                    <td>
+                        <img src="../images/icons/edit.svg" alt="Edit" class="action-icon edit">
+                        <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            // Add event listeners
+            document.querySelectorAll('.edit').forEach(icon => {
+                icon.addEventListener('click', (e) => {
+                    const row = e.target.closest('tr');
+                    const code = row.dataset.promotionCode;
+                    openEditModal(code);
+                });
+            });
+
+            document.querySelectorAll('.delete').forEach(icon => {
+                icon.addEventListener('click', (e) => {
+                    const row = e.target.closest('tr');
+                    const code = row.dataset.promotionCode;
+                    deleteVoucher(code);
+                });
+            });
+
+            // Row click for details
+            document.querySelectorAll('tr[data-promotion-code]').forEach(row => {
+                row.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('action-icon')) {
+                        const code = row.dataset.promotionCode;
+                        showDetails(code);
+                    }
+                });
+            });
+        }
+
+        // Open edit modal
+        async function openEditModal(code) {
+            try {
+                const res = await fetch(`${API_URL}/vouchers/${code}`);
+                const v = await res.json();
+                document.getElementById('originalCode').value = code;
+                document.getElementById('code').value = v.code;
+                document.getElementById('type').value = v.type;
+                document.getElementById('value').value = v.value;
+                document.getElementById('description').value = v.description || '';
+                document.getElementById('start_at').value = new Date(v.start_at).toISOString().slice(0, 16);
+                document.getElementById('end_at').value = new Date(v.end_at).toISOString().slice(0, 16);
+                document.getElementById('min_order_value').value = v.min_order_value;
+                document.getElementById('usage_limit').value = v.usage_limit;
+                document.getElementById('status').value = v.status;
+                modalTitle.textContent = 'Edit Promotion';
+                modal.style.display = 'block';
+            } catch (err) {
+                alert('Error loading promotion: ' + err.message);
+            }
+        }
+
+        // Delete voucher
+        async function deleteVoucher(code) {
+            if (confirm('Are you sure you want to delete this promotion?')) {
+                try {
+                    const res = await fetch(`${API_URL}/vouchers/${code}`, { method: 'DELETE' });
+                    if (!res.ok) throw new Error(await res.text());
+                    fetchVouchers(currentPage);
+                } catch (err) {
+                    alert('Error deleting: ' + err.message);
+                }
+            }
+        }
+
+        // Show details
+        async function showDetails(code) {
+            try {
+                const res = await fetch(`${API_URL}/vouchers/${code}/stats`);
+                const stats = await res.json();
+                usedCount.textContent = stats.used_count;
+                totalDiscount.textContent = `$${stats.total_discount.toFixed(2)}`;
+                detailsModal.style.display = 'block';
+            } catch (err) {
+                alert('Error loading details: ' + err.message);
+            }
+        }
+
+        // Update pagination
+        function updatePagination(paging) {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = `Showing ${(paging.page - 1) * paging.pageSize + 1}-${Math.min(paging.page * paging.pageSize, paging.total)} of ${paging.total}`;
+            const prevBtn = document.createElement('button');
+            prevBtn.textContent = '<';
+            prevBtn.disabled = paging.page === 1;
+            prevBtn.onclick = () => fetchVouchers(paging.page - 1);
+            const nextBtn = document.createElement('button');
+            nextBtn.textContent = '>';
+            nextBtn.disabled = paging.page * paging.pageSize >= paging.total;
+            nextBtn.onclick = () => fetchVouchers(paging.page + 1);
+            pagination.appendChild(prevBtn);
+            pagination.appendChild(nextBtn);
+        }
+
+        // Search functionality
+        document.getElementById('searchPromotion').addEventListener('input', (e) => {
+            const search = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('#promotionTableBody tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(search) ? '' : 'none';
+            });
+        });
+
+        // Initial load
+        fetchVouchers();
+    </script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!-- orderlist.html (fixed: status update fallback + aligned buttons) -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Orders</title>
+    <link rel="stylesheet" href="../CSS/orderlist.css">
+    <style>
+        /* Modal base */
+        .modal { display: none; position: fixed; z-index: 1200; inset: 0; background: rgba(0,0,0,0.35); }
+        .modal-content { background:#fff; margin:6% auto; padding:18px; border-radius:10px; width:92%; max-width:900px; box-shadow:0 6px 30px rgba(0,0,0,0.12); }
+        .close { float:right; font-size:24px; cursor:pointer; color:#666; }
+        .close:hover { color:#000; }
+
+        form label { display:block; margin:8px 0 6px; font-weight:600; }
+        form input, form textarea, form select { width:100%; padding:8px 10px; margin-bottom:10px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; }
+
+        /* Table actions */
+        .order-table td .actions { display:flex; gap:8px; align-items:center; }
+        .order-table button { padding:4px 8px; border:none; border-radius:8px; cursor:pointer; font-size:13px; display:inline-flex; align-items:center; justify-content:center; line-height:1; height:36px; }
+        .edit-btn { background:#007bff;color:#fff }
+        .delete-btn { background:#dc3545;color:#fff }
+        .detail-btn { background:#6c757d;color:#fff }
+
+        /* Filters layout */
+        .filters { display:flex; flex-wrap:wrap; gap:12px; align-items:flex-end; margin-bottom:18px; padding:6px 0; }
+        .filter-group { display:flex; flex-direction:column; min-width:180px; }
+        .filter-actions { display:flex; gap:10px; align-items:center; margin-left:auto; }
+
+        /* Make action buttons consistent */
+        .filter-actions button { padding:8px 14px; font-weight:600; border-radius:8px; border:none; cursor:pointer; display:inline-flex; align-items:center; height:40px; }
+        #applyFilter { background:#3182ce; color:#fff }
+        #resetFilter { background:#e53e3e;color:#fff }
+        #addOrderBtn { background:#2f855a;color:#fff }
+
+        /* Product modal */
+        .product-list { display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; max-height:300px; overflow:auto; padding:8px; border:1px solid #eee; border-radius:6px; }
+        .product-item { display:flex; gap:8px; align-items:center; padding:6px; border-radius:6px; background:#fafafa; border:1px solid #f0f0f0; }
+        #productSearch { margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #ddd; width:100%; box-sizing:border-box; }
+
+        /* selected badges */
+        .selected-items { display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+        .badge { background:#edf2f7; padding:6px 10px; border-radius:999px; display:inline-flex; gap:8px; align-items:center; font-size:13px; border:1px solid #e2e8f0; }
+        .badge .remove { cursor:pointer; font-weight:700; color:#c53030; margin-left:6px; }
+
+        /* detail table */
+        .detail-table { width:100%; border-collapse: collapse; margin-top:10px; }
+        .detail-table th, .detail-table td { border:1px solid #eee; padding:8px; text-align:left; }
+
+        
+        /* small responsive tweak */
+        @media (max-width:760px) {
+            .product-list { grid-template-columns:1fr; }
+            .filter-group { min-width:140px; }
+            .filter-actions { width:100%; justify-content:flex-start; margin-left:0; gap:6px; }
+        }
+
+        /* ensure selects & inputs have same height as buttons for nicer alignment */
+        .filters input[type="date"], .filters select, .filters input[type="text"] {
+            height:40px; box-sizing:border-box; padding:8px 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <!-- Sidebar giữ nguyên -->
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" id="searchInput" placeholder="Search by order_no or user" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <h1>Order List</h1>
+
+                <!-- FILTERS: From/To date -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Filter By Date (From)</label>
+                        <input type="date" id="filterDateFrom">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Filter By Date (To)</label>
+                        <input type="date" id="filterDateTo">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Filter By Product ID(s)</label>
+                        <div>
+                            <button id="selectProductsBtn">Select Product IDs</button>
+                        </div>
+                        <div id="selectedProducts" class="selected-items"></div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Filter By Status</label>
+                        <select id="filterStatus">
+                            <option value="">All</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Processing">Processing</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Delivered">Delivered</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="applyFilter">Apply Filter</button>
+                        <button id="resetFilter">Reset Filter</button>
+                        <button id="addOrderBtn">Add Order</button>
+                    </div>
+                </div>
+
+                <section class="order-table">
+                    <table id="orderTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th><th>Name</th><th>Address</th><th>Date</th><th>Total</th><th>Status</th><th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="pagination" id="paginationInfo">Showing 0 of 0</div>
+                </section>
+
+                <!-- Product Selection Modal -->
+                <div id="productModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeProductModal()">&times;</span>
+                        <h2>Select Product IDs</h2>
+                        <input id="productSearch" placeholder="Tìm product id hoặc tên..." />
+                        <div id="productListContainer" class="product-list"></div>
+                        <div style="margin-top:8px;">
+                            <label>Or enter IDs manually (comma separated)</label>
+                            <input type="text" id="manualProductIds" placeholder="e.g. 608c..., 609d..." />
+                        </div>
+                        <div style="margin-top:12px; display:flex; justify-content:flex-end; gap:8px;">
+                            <button onclick="applyProductSelection()">Apply</button>
+                            <button onclick="closeProductModal()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Modal Add/Edit -->
+                <div id="orderModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeOrderModal()">&times;</span>
+                        <h2 id="orderModalTitle">Add Order</h2>
+                        <form id="orderForm">
+                            <input type="hidden" id="editOrderNo" />
+                            <label for="order_no">Order No (required):</label>
+                            <input type="text" id="order_no" required>
+                            <label for="userSelect">User (required):</label>
+                            <select id="userSelect" required><option value="">Select User</option></select>
+                            <label for="subtotal">Subtotal:</label><input type="number" id="subtotal" step="0.01">
+                            <label for="total_amount">Total Amount:</label><input type="number" id="total_amount" step="0.01">
+                            <label for="order_status">Status:</label>
+                            <select id="order_status">
+                                <option value="Pending">Pending</option>
+                                <option value="Processing">Processing</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                            <div style="text-align:right; margin-top:6px;">
+                                <button type="submit" style="padding:8px 14px; border-radius:8px;">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Detail Modal -->
+                <div id="detailModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeDetailModal()">&times;</span>
+                        <h2>Order Details</h2>
+                        <div id="detailContent">
+                            <p><strong>Order No:</strong> <span id="d_order_no"></span></p>
+                            <p><strong>User:</strong> <span id="d_user_name"></span></p>
+                            <p><strong>Address:</strong> <span id="d_address"></span></p>
+                            <p><strong>Date:</strong> <span id="d_date"></span></p>
+                            <p><strong>Status:</strong> <span id="d_status"></span></p>
+                            <p><strong>Total:</strong> <span id="d_total"></span></p>
+
+                            <h3>Items</h3>
+                            <table class="detail-table" id="d_items_table">
+                                <thead><tr><th>Product ID</th><th>Product Name</th><th>Quantity</th><th>Price</th></tr></thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+<script>
+const API_URL = 'http://localhost:8000/api';
+let allOrders = [], users = [], products = [], selectedProducts = [];
+
+/* Sidebar toggle */
+const toggleMenu = document.getElementById('toggleMenu');
+const sidebar = document.querySelector('.sidebar');
+if (toggleMenu && sidebar) toggleMenu.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+
+/* helpers */
+function formatAddress(addr) {
+    if (!addr) return 'Unknown';
+    if (typeof addr === 'string') return addr;
+    const parts = [];
+    if (addr.address_line) parts.push(addr.address_line);
+    if (addr.street) parts.push(addr.street);
+    if (addr.ward) parts.push(addr.ward);
+    if (addr.district) parts.push(addr.district);
+    if (addr.city) parts.push(addr.city);
+    if (addr.country) parts.push(addr.country);
+    if (parts.length === 0 && (addr.full_address || addr.formatted)) return addr.full_address || addr.formatted;
+    return parts.join(', ') || 'Unknown';
+}
+
+/* fetch users */
+async function fetchUsers() {
+    try {
+        const r = await fetch(`${API_URL}/users`);
+        if (!r.ok) throw new Error('Failed to fetch users');
+        const j = await r.json();
+        users = j.data ?? j;
+        const sel = document.getElementById('userSelect');
+        sel.innerHTML = '<option value="">Select User</option>';
+        users.forEach(u => {
+            const opt = document.createElement('option');
+            opt.value = u._id || u.id || '';
+            opt.textContent = u.full_name || u.name || u.email || opt.value;
+            sel.appendChild(opt);
+        });
+    } catch (e) { console.warn('fetchUsers', e.message); }
+}
+
+/* fetch products */
+async function fetchProducts() {
+    const container = document.getElementById('productListContainer');
+    if (!container) return;
+    container.innerHTML = 'Loading...';
+    try {
+        const r = await fetch(`${API_URL}/products`);
+        if (!r.ok) throw new Error('Failed to fetch products');
+        const j = await r.json();
+        products = j.data ?? j;
+        renderProductList('');
+    } catch (e) {
+        container.innerHTML = '<em>Error loading products. Use manual input.</em>';
+        console.warn('fetchProducts', e.message);
+    }
+}
+function renderProductList(filter) {
+    const container = document.getElementById('productListContainer');
+    container.innerHTML = '';
+    const list = (products || []).filter(p => {
+        const id = String(p._id || p.id || '');
+        const name = (p.name || p.title || '').toLowerCase();
+        const q = (filter || '').toLowerCase();
+        return id.includes(q) || name.includes(q) || q === '';
+    });
+    if (list.length === 0) { container.innerHTML = '<div style="padding:8px;"><em>No matches</em></div>'; return; }
+    list.forEach(p => {
+        const id = p._id || p.id || '';
+        const name = p.name || p.title || '';
+        const wrap = document.createElement('div'); wrap.className = 'product-item';
+        const cb = document.createElement('input'); cb.type='checkbox'; cb.value = id; cb.id = 'prod_'+id;
+        if (selectedProducts.includes(String(id))) cb.checked = true;
+        const lbl = document.createElement('label'); lbl.htmlFor = cb.id; lbl.textContent = `${id} — ${name}`;
+        wrap.appendChild(cb); wrap.appendChild(lbl);
+        container.appendChild(wrap);
+    });
+}
+document.addEventListener('input', (e) => { if (e.target && e.target.id === 'productSearch') renderProductList(e.target.value.trim()); });
+
+/* product modal open */
+document.getElementById('selectProductsBtn').addEventListener('click', async () => {
+    document.getElementById('productModal').style.display = 'block';
+    await fetchProducts();
+    document.getElementById('manualProductIds').value = selectedProducts.join(', ');
+});
+function closeProductModal() { document.getElementById('productModal').style.display = 'none'; }
+function applyProductSelection() {
+    const container = document.getElementById('productListContainer');
+    const checked = Array.from(container.querySelectorAll('input[type="checkbox"]:checked')).map(cb => String(cb.value));
+    const manual = (document.getElementById('manualProductIds').value || '').trim();
+    const manualArr = manual ? manual.split(',').map(s => s.trim()).filter(Boolean) : [];
+    selectedProducts = Array.from(new Set([...checked, ...manualArr]));
+    renderSelectedBadges();
+    closeProductModal();
+    applyFiltersAndRender();
+}
+function renderSelectedBadges() {
+    const container = document.getElementById('selectedProducts');
+    container.innerHTML = '';
+    selectedProducts.forEach(pid => {
+        const b = document.createElement('span'); b.className='badge';
+        b.innerHTML = `${pid} <span class="remove" onclick="removeSelected('${pid}')">&times;</span>`;
+        container.appendChild(b);
+    });
+}
+function removeSelected(pid) {
+    selectedProducts = selectedProducts.filter(p => p !== pid);
+    renderSelectedBadges();
+    applyFiltersAndRender();
+}
+
+/* fetch orders & enrich */
+async function fetchOrders() {
+    try {
+        const r = await fetch(`${API_URL}/orders`);
+        if (!r.ok) throw new Error('Failed to fetch orders');
+        const j = await r.json();
+        allOrders = j.data ?? j;
+        await enrichOrders(allOrders);
+        applyFiltersAndRender();
+    } catch (e) { alert('Error fetching orders: ' + e.message); }
+}
+async function enrichOrders(orders) {
+    for (const order of orders) {
+        order.user_name = 'Unknown';
+        if (order.user_id) {
+            try { const r = await fetch(`${API_URL}/users/id/${order.user_id}`); if (r.ok) { const uj = await r.json(); const u = uj.data ?? uj; order.user_name = u.full_name||u.name||u.email||'Unknown'; } } catch(e){}
+        } else if (order.user && (order.user.full_name || order.user.name)) order.user_name = order.user.full_name || order.user.name;
+
+        if (order.shipping_address) order.user_address = formatAddress(order.shipping_address);
+        else {
+            let fallback = null;
+            if (order.user && order.user.address) fallback = order.user.address;
+            else {
+                const u = users.find(x => (x._id || x.id) === order.user_id);
+                if (u && (u.address || u.shipping_address)) fallback = u.address || u.shipping_address;
+            }
+            order.user_address = formatAddress(fallback);
+        }
+
+        order.items = []; order.product_ids = []; order.total_quantity = 0;
+        try {
+            const r = await fetch(`${API_URL}/order_items?order_id=${order._id}`);
+            if (r.ok) {
+                const ij = await r.json();
+                const items = ij.data ?? ij;
+                const myItems = Array.isArray(items) ? items.filter(it => (it.order_id === order._id || it.order_id === order.order_no || it.order_id === order.id)) : [];
+                order.items = myItems;
+                order.product_ids = myItems.map(it => String(it.product_id));
+                order.total_quantity = myItems.reduce((s,it)=>s+(parseInt(it.quantity)||0),0);
+            }
+        } catch(e){}
+
+        try { order.formatted_date = order.created_at ? new Date(order.created_at).toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : ''; } catch(e){ order.formatted_date = ''; }
+    }
+}
+
+/* filters */
+function applyFiltersAndRender() {
+    let filtered = allOrders.slice();
+    const from = document.getElementById('filterDateFrom').value;
+    const to = document.getElementById('filterDateTo').value;
+    if (from) { const fromTime = new Date(from + 'T00:00:00').getTime(); filtered = filtered.filter(o => new Date(o.created_at).getTime() >= fromTime); }
+    if (to) { const toTime = new Date(to + 'T23:59:59').getTime(); filtered = filtered.filter(o => new Date(o.created_at).getTime() <= toTime); }
+    if (selectedProducts.length>0) filtered = filtered.filter(order => (order.product_ids && order.product_ids.length>0) && selectedProducts.some(pid => order.product_ids.includes(String(pid))));
+    const selStatus = document.getElementById('filterStatus').value;
+    if (selStatus) filtered = filtered.filter(o => String(o.order_status)===selStatus);
+    const search = (document.getElementById('searchInput').value||'').trim().toLowerCase();
+    if (search) filtered = filtered.filter(o => ((o.order_no||'').toLowerCase().includes(search) || (o.user_name||'').toLowerCase().includes(search)));
+    document.getElementById('paginationInfo').textContent = `Showing ${filtered.length} of ${allOrders.length}`;
+    renderTable(filtered);
+}
+
+/* render table with status select */
+function renderTable(orders) {
+    const tbody = document.querySelector('#orderTable tbody'); tbody.innerHTML = '';
+    const statusOptions = ['Pending','Processing','Shipped','Delivered','Cancelled'];
+    orders.forEach(order => {
+        const tr = document.createElement('tr');
+        const totalAmount = (order.total_amount != null) ? Number(order.total_amount).toFixed(2) : (order.total ? Number(order.total).toFixed(2) : '0.00');
+
+        const idVal = order._id ?? order.id ?? order.order_no ?? '';
+
+        const tdId = document.createElement('td'); tdId.textContent = order.order_no ?? order._id ?? '';
+        const tdName = document.createElement('td'); tdName.textContent = order.user_name || 'Unknown';
+        const tdAddr = document.createElement('td'); tdAddr.textContent = order.user_address || 'Unknown';
+        const tdDate = document.createElement('td'); tdDate.textContent = order.formatted_date || '';
+        const tdTotal = document.createElement('td'); tdTotal.textContent = totalAmount;
+
+        const statusSelect = document.createElement('select');
+        statusOptions.forEach(s => { const opt=document.createElement('option'); opt.value=s; opt.textContent=s; if(String(order.order_status)===s) opt.selected=true; statusSelect.appendChild(opt); });
+        statusSelect.addEventListener('change', () => changeOrderStatus(idVal, statusSelect.value));
+        const tdStatus = document.createElement('td'); tdStatus.appendChild(statusSelect);
+
+        const tdActions = document.createElement('td'); tdActions.className='actions';
+        const btnDetail = document.createElement('button'); btnDetail.className='detail-btn'; btnDetail.textContent='Detail'; btnDetail.addEventListener('click', ()=>viewDetails(idVal));
+        const btnEdit = document.createElement('button'); btnEdit.className='edit-btn'; btnEdit.textContent='Edit'; btnEdit.addEventListener('click', ()=>editOrder(idVal));
+        const btnDel = document.createElement('button'); btnDel.className='delete-btn'; btnDel.textContent='Delete'; btnDel.addEventListener('click', ()=>deleteOrder(idVal));
+        tdActions.appendChild(btnDetail); tdActions.appendChild(btnEdit); tdActions.appendChild(btnDel);
+
+        tr.appendChild(tdId); tr.appendChild(tdName); tr.appendChild(tdAddr); tr.appendChild(tdDate); tr.appendChild(tdTotal); tr.appendChild(tdStatus); tr.appendChild(tdActions);
+        tbody.appendChild(tr);
+    });
+}
+
+/* changeOrderStatus with fallback attempts */
+async function changeOrderStatus(orderIdentifier, newStatus) {
+    if (!orderIdentifier) return alert('Order id missing');
+    // find local order to build payload fallbacks
+    const order = allOrders.find(o => String(o._id) === String(orderIdentifier) || String(o.id) === String(orderIdentifier) || String(o.order_no) === String(orderIdentifier));
+    const payloadBase = {
+        order_status: newStatus,
+        subtotal: order?.subtotal ?? order?.sub_total ?? 0,
+        total_amount: order?.total_amount ?? order?.total ?? 0,
+        updated_at: new Date().toISOString()
+    };
+
+    // Build candidate endpoints and methods
+    const attempts = [];
+    if (order && order._id) attempts.push({ method:'PUT', url:`${API_URL}/orders/${order._id}`, body: payloadBase });
+    if (order && order.order_no) attempts.push({ method:'PUT', url:`${API_URL}/orders/${order.order_no}`, body: payloadBase });
+    // try PATCH as fallback
+    if (order && order._id) attempts.push({ method:'PATCH', url:`${API_URL}/orders/${order._id}`, body:{ order_status:newStatus } });
+    if (order && order.order_no) attempts.push({ method:'PATCH', url:`${API_URL}/orders/${order.order_no}`, body:{ order_status:newStatus } });
+    // last resort: use provided identifier directly
+    attempts.push({ method:'PUT', url:`${API_URL}/orders/${orderIdentifier}`, body: payloadBase });
+    attempts.push({ method:'PATCH', url:`${API_URL}/orders/${orderIdentifier}`, body:{ order_status:newStatus } });
+
+    let lastErr = null;
+    for (const a of attempts) {
+        try {
+            const res = await fetch(a.url, { method: a.method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(a.body) });
+            if (res.ok) {
+                // update local order status if found
+                if (order) order.order_status = newStatus;
+                // update UI detail modal if open
+                const d_status = document.getElementById('d_status');
+                if (d_status && document.getElementById('detailModal').style.display === 'block') d_status.textContent = newStatus;
+                console.log(`Status updated via ${a.method} ${a.url}`);
+                return;
+            } else {
+                // read text/json message
+                const txt = await res.text();
+                let parsed;
+                try { parsed = JSON.parse(txt); } catch(e){ parsed = txt; }
+                lastErr = { method: a.method, url: a.url, status: res.status, body: parsed };
+                // If 404 specifically "Order not found" continue to next attempt
+                if (res.status === 404) continue;
+                // If validation error (422/400), we might continue to other attempts — continue
+                continue;
+            }
+        } catch (e) {
+            lastErr = e;
+            continue;
+        }
+    }
+    // If reached here, none succeeded
+    console.error('All attempts failed updating status:', lastErr);
+    alert('Error updating status: ' + (lastErr && (lastErr.body || lastErr.message) ? JSON.stringify(lastErr.body ?? lastErr) : 'Unknown error'));
+    // re-sync UI
+    fetchOrders();
+}
+
+/* viewDetails, edit, delete, orderForm submit - kept similar to previous logic */
+function viewDetails(idVal) {
+    const order = allOrders.find(o => String(o._id)===String(idVal) || String(o.order_no)===String(idVal) || String(o.id)===String(idVal));
+    if (!order) return alert('Order not found');
+    document.getElementById('d_order_no').textContent = order.order_no ?? order._id ?? '';
+    document.getElementById('d_user_name').textContent = order.user_name || 'Unknown';
+    document.getElementById('d_address').textContent = order.user_address || 'Unknown';
+    document.getElementById('d_date').textContent = order.formatted_date || '';
+    document.getElementById('d_status').textContent = order.order_status || '';
+    document.getElementById('d_total').textContent = (order.total_amount!=null) ? Number(order.total_amount).toFixed(2) : (order.total ? Number(order.total).toFixed(2) : '0.00');
+    const tbody = document.querySelector('#d_items_table tbody'); tbody.innerHTML = '';
+    if (order.items && order.items.length>0) {
+        order.items.forEach(it=>{
+            const pid = it.product_id ?? it.productId ?? '';
+            const pname = it.product_name ?? it.name ?? (products.find(p => (p._id==pid||p.id==pid))?.name || '');
+            const qty = it.quantity ?? it.qty ?? 0;
+            const price = (it.price!=null) ? Number(it.price).toFixed(2) : '';
+            const tr=document.createElement('tr'); tr.innerHTML = `<td>${pid}</td><td>${pname}</td><td>${qty}</td><td>${price}</td>`;
+            tbody.appendChild(tr);
+        });
+    } else tbody.innerHTML = `<tr><td colspan="4"><em>No items found for this order</em></td></tr>`;
+    document.getElementById('detailModal').style.display = 'block';
+}
+function closeDetailModal(){ document.getElementById('detailModal').style.display = 'none'; }
+
+function editOrder(idVal) {
+    const order = allOrders.find(o => String(o._id)===String(idVal) || String(o.order_no)===String(idVal) || String(o.id)===String(idVal));
+    if (!order) return;
+    document.getElementById('editOrderNo').value = order.order_no ?? order._id ?? '';
+    document.getElementById('order_no').value = order.order_no ?? '';
+    document.getElementById('order_no').disabled = true;
+    document.getElementById('userSelect').value = order.user_id || '';
+    document.getElementById('subtotal').value = order.subtotal ?? '';
+    document.getElementById('total_amount').value = order.total_amount ?? order.total ?? '';
+    document.getElementById('order_status').value = order.order_status ?? 'Pending';
+    document.getElementById('orderModalTitle').textContent = 'Edit Order';
+    document.getElementById('orderModal').style.display = 'block';
+}
+async function deleteOrder(idVal) {
+    if (!confirm('Are you sure to delete this order?')) return;
+    try {
+        const r = await fetch(`${API_URL}/orders/${idVal}`, { method:'DELETE' });
+        if (!r.ok) throw new Error('Failed to delete');
+        await fetchOrders();
+    } catch(e) { alert('Error: ' + e.message); }
+}
+
+document.getElementById('orderForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const order_no = document.getElementById('order_no').value;
+    const editOrderNo = document.getElementById('editOrderNo').value;
+    const payload = {
+        order_no,
+        user_id: document.getElementById('userSelect').value,
+        subtotal: parseFloat(document.getElementById('subtotal').value) || 0,
+        total_amount: parseFloat(document.getElementById('total_amount').value) || 0,
+        order_status: document.getElementById('order_status').value
+    };
+    try {
+        let r;
+        if (editOrderNo) {
+            r = await fetch(`${API_URL}/orders/${editOrderNo}`, { method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        } else {
+            r = await fetch(`${API_URL}/orders`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        }
+        if (!r.ok) throw new Error(await r.text());
+        closeOrderModal(); fetchOrders();
+    } catch(err) { alert('Error: ' + err.message); }
+});
+function closeOrderModal(){ document.getElementById('orderModal').style.display = 'none'; }
+document.getElementById('addOrderBtn').addEventListener('click', ()=>{
+    document.getElementById('orderModalTitle').textContent = 'Add Order';
+    document.getElementById('editOrderNo').value = '';
+    document.getElementById('order_no').disabled = false;
+    document.getElementById('orderForm').reset();
+    document.getElementById('orderModal').style.display = 'block';
+});
+
+/* filters events */
+document.getElementById('applyFilter').addEventListener('click', applyFiltersAndRender);
+document.getElementById('resetFilter').addEventListener('click', ()=>{
+    document.getElementById('filterDateFrom').value='';
+    document.getElementById('filterDateTo').value='';
+    document.getElementById('filterStatus').value='';
+    selectedProducts=[]; renderSelectedBadges();
+    document.getElementById('manualProductIds').value='';
+    (document.getElementById('productListContainer')||{querySelectorAll:()=>[]}).querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.checked=false);
+    document.getElementById('searchInput').value='';
+    applyFiltersAndRender();
+});
+document.getElementById('searchInput').addEventListener('input', applyFiltersAndRender);
+document.getElementById('filterDateFrom').addEventListener('change', applyFiltersAndRender);
+document.getElementById('filterDateTo').addEventListener('change', applyFiltersAndRender);
+document.getElementById('filterStatus').addEventListener('change', applyFiltersAndRender);
+
+/* close modals clicking outside */
+window.addEventListener('click', (e) => {
+    ['productModal','orderModal','detailModal'].forEach(id => {
+        const m = document.getElementById(id);
+        if (m && e.target === m) m.style.display = 'none';
+    });
+});
+
+/* init */
+async function init(){
+    await fetchUsers();
+    await fetchProducts();
+    await fetchOrders();
+    renderSelectedBadges();
+}
+init();
+
+</script>
+</body>
+</html>

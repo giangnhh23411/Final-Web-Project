@@ -1,0 +1,2950 @@
+[
+  {
+    "sku": "60000019",
+    "name": "Trà đen Phúc Long 200g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 58000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà đen Phúc Long 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000019-tra-den-phuc-long_fbb9b294-785a-4a29-af2d-4c8fa4878e0c-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000019-tra-den-phuc-long_9f7eb07f-05d0-445a-879c-5b6a35b4f3f5-og.png"
+    ],
+    "raw_itemNo": "60000019",
+    "raw_id": "09ccec92-6c77-4a97-a777-d6ddaf854f97",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000021",
+    "name": "Trà đen Phúc Long 500g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 135000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà đen Phúc Long 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000021-tra-den-500g-phuc-long_52e73e0a-e09a-4e2c-8406-fc1dcb4da3e3-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000021-tra-den-500g-phuc-long_243d4494-9a81-4309-be9e-a4c7cfcc8003-og.png"
+    ],
+    "raw_itemNo": "60000021",
+    "raw_id": "2f2b0dc1-a902-4f35-a54a-04b4285a81ef",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000072",
+    "name": "Trà lài hộp giấy 150g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 75000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài hộp giấy 150g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000072-tra-lai-hop-giay_d078fcf5-b941-4b6b-b9f7-e38736346ec5-og.png"
+    ],
+    "raw_itemNo": "60000072",
+    "raw_id": "40b06916-0abf-42d7-9408-86fe29cf8b06",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000075",
+    "name": "Trà lài 15 - 200g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 105000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài 15 - 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_eabee765-a51b-4d38-9487-d784f56be6b3-og.jpg"
+    ],
+    "raw_itemNo": "60000075",
+    "raw_id": "e655d7ab-db73-495a-912b-9f1da2f84a29",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000076",
+    "name": "Trà lài 15 - 500g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 250000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài 15 - 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_e8e5c826-4b67-4a9f-b82d-003170f3bf3d-og.jpg"
+    ],
+    "raw_itemNo": "60000076",
+    "raw_id": "12145021-6c37-400e-9a5c-19046b741a8d",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000162",
+    "name": "Trà nõn tôm ủ lạnh túi tgiác CC 2gx12gói",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 135000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà nõn tôm ủ lạnh túi tgiác CC 2gx12gói",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000162-tra-non-tom-u-lanh-tui-tam-giac_53c6ea81-dc90-4e8d-b71b-a7c6403fde78-og.png"
+    ],
+    "raw_itemNo": "60000162",
+    "raw_id": "e55bc4b7-acba-4635-a9c5-6870da7f3202",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000103",
+    "name": "Trà lài ủ lạnh túi tgiac CC 2gx12 gói",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 114000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài ủ lạnh túi tgiac CC 2gx12 gói",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000103-tra-lai-u-lanh-tui-tam-giac_67d9ae74-5d48-451f-8f14-bd013eb0830e-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000103-tra-lai-u-lanh-tui-tam-giac_53bf1c1f-9a60-4fe1-bd3f-69b9e29e1ff5-og.png"
+    ],
+    "raw_itemNo": "60000103",
+    "raw_id": "0c1e5c80-0e63-4f95-a4f5-b460054933e9",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000093",
+    "name": "Trà lài túi tam giác (3g x 10 gói)",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 80000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài túi tam giác (3g x 10 gói)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000093-tra-lai-tui-tam-giac-phuc-long_6365beb0-02a0-451f-bd04-594942b4483c-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000093-tra-lai-tui-tam-giac-phuc-long_92a6d235-0bb1-4bbe-a8aa-26a08ed09a45-og.png"
+    ],
+    "raw_itemNo": "60000093",
+    "raw_id": "0eb1e354-08ef-46fe-8dae-580f07a4f093",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000079",
+    "name": "Trà lài đặc biệt (100g/ gói)",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 85000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài đặc biệt (100g/ gói)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000079-tra-lai-dac-biet_b92f0cc8-62c2-42c2-ac26-b5244fe91eaf-og.jpg"
+    ],
+    "raw_itemNo": "60000079",
+    "raw_id": "01a2686a-6cb5-4c6c-9a28-8a8e565f6e19",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000184",
+    "name": "Trà ô long 80-150g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 160000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long 80-150g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000184-tra-o-long-80-150g_950a7bee-fbbe-491f-896a-3cca5c68747b-og.png"
+    ],
+    "raw_itemNo": "60000184",
+    "raw_id": "0846aef4-135f-43c5-8c44-a1fa2ca65b5a",
+    "detected_packaged": true
+  },
+  {
+    "sku": "65000106",
+    "name": "Trà Sữa Matcha (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png"
+    ],
+    "raw_itemNo": "65000106",
+    "raw_id": "e981f4e7-bd5a-43d5-b7fa-8caaaea05ee0",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000107",
+    "name": "Trà Ô Long Dâu (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>MỚI - BST TEARAMISU</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033804.png"
+    ],
+    "raw_itemNo": "65000107",
+    "raw_id": "c0a98277-d05d-4e83-bbca-678ceec62474",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000459",
+    "name": "Matcha Latte Oatside Nguyên Vị (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Matcha Latte Oatside Nguyên Vị (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png"
+    ],
+    "raw_itemNo": "65000459",
+    "raw_id": "3156574a-0c71-417d-9223-7135ade374b7",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000460",
+    "name": "Matcha Dừa Thanh Yên (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Matcha Dừa Thanh Yên (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-yuzu-1-20250809071850.png"
+    ],
+    "raw_itemNo": "65000460",
+    "raw_id": "9a55aa4c-332a-4415-b05d-3a59f3bf26e7",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000461",
+    "name": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Matcha Dừa Đảo Phô Mai Mặn (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-coco-1-20250809072005.png"
+    ],
+    "raw_itemNo": "65000461",
+    "raw_id": "21fcec3d-0960-451c-ae5e-e5e2acac23b5",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000462",
+    "name": "Matcha Oatside Tuyết Lạnh (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Matcha Oatside Tuyết Lạnh (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-oat-1-20250809070820.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/08/matcha-da-xay-1-20250809072037.png"
+    ],
+    "raw_itemNo": "65000462",
+    "raw_id": "90e1f483-3f9a-494a-b9d8-f9525e65e017",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000474",
+    "name": "Bà Kẹ",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>Ăn Hỷ Nhà Kẹ</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-2-20251001015150.jpg"
+    ],
+    "raw_itemNo": "65000474",
+    "raw_id": "542c5662-55f2-474d-a1e8-96bf8c91f72a",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000475",
+    "name": "Ông Kẹ",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>Ăn Hỷ Nhà Kẹ</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/10/thumbnail-copy-20251001015114.jpg"
+    ],
+    "raw_itemNo": "65000475",
+    "raw_id": "e533cee0-d424-46f1-bda9-be550b27ef9a",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000113",
+    "name": "Trà Vải Lài (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Vải Lài (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000113-65000114-tra-vai-lai_f7d2efd5-5465-4598-a619-f9619a52720e-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png"
+    ],
+    "raw_itemNo": "65000113",
+    "raw_id": "e4a9c03f-62c8-4600-83e7-01bca28bf498",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000115",
+    "name": "Trà Vải Sen (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Vải Sen (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_2f7aa440-6aa0-447b-84a3-3186c360e124-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png"
+    ],
+    "raw_itemNo": "65000115",
+    "raw_id": "84db5ba4-08f8-4176-8a8f-d6dd7cfec532",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000114",
+    "name": "Trà Vải Lài (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png"
+    ],
+    "raw_itemNo": "65000114",
+    "raw_id": "74faa3dd-43e5-4e26-ae54-39433d33429f",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000120",
+    "name": "Trà Lucky Tea (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>Best Seller</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png"
+    ],
+    "raw_itemNo": "65000120",
+    "raw_id": "22b6a0c8-1f39-4cd0-8014-2bfdbee1ca0f",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000119",
+    "name": "Trà Lucky Tea (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lucky Tea (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250206030210.png"
+    ],
+    "raw_itemNo": "65000119",
+    "raw_id": "19229fa6-7532-41ea-a9f3-c0914b1c1e7e",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000116",
+    "name": "Trà Vải Sen (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png"
+    ],
+    "raw_itemNo": "65000116",
+    "raw_id": "8439d3a4-8cbf-458a-9527-705eb9a8d861",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000125",
+    "name": "Trà Nhãn Sen (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Nhãn Sen (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023053.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png"
+    ],
+    "raw_itemNo": "65000125",
+    "raw_id": "e77c799b-c7ee-4f07-89bc-3da47fa333f1",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000123",
+    "name": "Topping Nhãn (4 trái)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 20000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Topping Nhãn (4 trái)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_b8a8f6a4-d054-4ad6-94d5-923d03a1c62e-og.jpg"
+    ],
+    "raw_itemNo": "65000123",
+    "raw_id": "9ee35a0f-6306-4b3a-a5c1-8fc15ab0b50c",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000126",
+    "name": "Trà Nhãn Sen (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Nhãn Sen (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png"
+    ],
+    "raw_itemNo": "65000126",
+    "raw_id": "032750db-ff2a-4216-afb5-5107bebdd0cf",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000127",
+    "name": "Trà Nhãn Lài (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Nhãn Lài (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_5dec6551-d477-4d6a-bd63-6bc190ba7d10-og.png"
+    ],
+    "raw_itemNo": "65000127",
+    "raw_id": "d760e534-16c5-4bcb-ab2d-ad4268bbbaa5",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000128",
+    "name": "Trà Nhãn Lài (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Nhãn Lài (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png"
+    ],
+    "raw_itemNo": "65000128",
+    "raw_id": "46c58104-0a30-40a5-99a5-9bc4ae4a3d4d",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000133",
+    "name": "Trà Lài Đác Thơm (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Đác Thơm (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_68bb9eb4-58fa-4edf-b497-465372b4ca1c-og.png"
+    ],
+    "raw_itemNo": "65000133",
+    "raw_id": "b52d160a-a6fd-4c69-afd0-6e10d3cec767",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000135",
+    "name": "Hồng Trà Đác Cam Đá Xay",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 70000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Đác Cam Đá Xay",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000135-hong-tra-dac-cam_7659ba61-7640-45fe-b899-3c882cf7b64f-og.png"
+    ],
+    "raw_itemNo": "65000135",
+    "raw_id": "cead1365-cb65-4ace-9aef-36f5d5f30067",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000137",
+    "name": "Topping Đác Cam",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 25000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Topping Đác Cam",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_fa88d51c-3727-4f4e-8b9d-182148a6ceff-og.jpg"
+    ],
+    "raw_itemNo": "65000137",
+    "raw_id": "e38abc32-3dd8-4d0b-83fe-ba60b05d9619",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000134",
+    "name": "Trà Lài Đác Thơm (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Đác Thơm (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png"
+    ],
+    "raw_itemNo": "65000134",
+    "raw_id": "dfd9a287-8845-4c83-a875-3e2014a9f616",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000136",
+    "name": "Topping Đác Thơm",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 25000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Topping Đác Thơm",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_503c147c-aafb-45a2-8862-bace4cc2eb0d-og.jpg"
+    ],
+    "raw_itemNo": "65000136",
+    "raw_id": "75dc3f4b-40b7-40d5-a359-15a1c845b1be",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000170",
+    "name": "Cà Phê Đen Đá (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 39000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Đen Đá (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_0badde62-8c7b-40dd-a8dc-56c3341d4cc5-og.png"
+    ],
+    "raw_itemNo": "65000170",
+    "raw_id": "b976417c-8089-4358-b8dd-dabd4a2ac936",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000171",
+    "name": "Cà Phê Sữa Đá (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Sữa Đá (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_89451266-77df-49ef-9de4-054713d2fb72-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png"
+    ],
+    "raw_itemNo": "65000171",
+    "raw_id": "a7e64e78-5c02-46a2-b5bc-603e8d52f76b",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000174",
+    "name": "Cà phê Latte (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê Latte (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png"
+    ],
+    "raw_itemNo": "65000174",
+    "raw_id": "96e55c35-7c20-4756-b710-2eaea4fc1c21",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000183",
+    "name": "Cà phê Latte (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê Latte (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_05488e79-cc32-4828-a5a3-3171f13ac845-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap089-dmcap090-latte-latte_c0dc3409-62f9-49a6-a72b-014eb0a1f9eb-og.png"
+    ],
+    "raw_itemNo": "65000183",
+    "raw_id": "b8e1c972-005e-4ca0-be65-433af1c5f7d1",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000187",
+    "name": "Cà phê Cappuccino (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê Cappuccino (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_55905766-ff9f-435b-aa3b-e14018c188a3-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_4e449f05-4868-48b3-b785-1f4e09b22fa3-og.png"
+    ],
+    "raw_itemNo": "65000187",
+    "raw_id": "c1437aa3-6e58-45da-b291-d3c6cd532452",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000282",
+    "name": "Trà Phúc Long (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061053.png"
+    ],
+    "raw_itemNo": "65000282",
+    "raw_id": "818b16dc-b5a5-4b24-965e-0f2e63b401e2",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000285",
+    "name": "Trà Ô Long (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-nb-20250204065033.png"
+    ],
+    "raw_itemNo": "65000285",
+    "raw_id": "50a1bcd8-cdc2-4b88-a4e5-9a7ea1dc2a8f",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000283",
+    "name": "Trà Phúc Long (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Phúc Long (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000282-65000291-65000285-65000294-20230406104519.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061053.png"
+    ],
+    "raw_itemNo": "65000283",
+    "raw_id": "47bd0f9b-90ca-48e5-8b8f-0075484bf7f2",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000286",
+    "name": "Trà Ô Long (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-nb-20250204065052.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-nb-20250204065033.png"
+    ],
+    "raw_itemNo": "65000286",
+    "raw_id": "a19ef581-7e0b-4a9c-8ac2-1fe3c68a5d19",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000287",
+    "name": "Hồng Trà (Nóng)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà (Nóng)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-20250203055503.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061011.png"
+    ],
+    "raw_itemNo": "65000287",
+    "raw_id": "ed7ff90b-025d-4994-842a-dd49237a2a93",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000290",
+    "name": "Trà Lài (Nóng)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài (Nóng)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-20250203060247.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060501.png"
+    ],
+    "raw_itemNo": "65000290",
+    "raw_id": "67b98b0e-bb68-403a-996a-92e3424cafc2",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000176",
+    "name": "Cà phê Cappuccino (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê Cappuccino (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap093-dmcap094-cappuccino-vietnamo_55905766-ff9f-435b-aa3b-e14018c188a3-og.png"
+    ],
+    "raw_itemNo": "65000176",
+    "raw_id": "8d9ac120-d4c8-4e57-8c19-4afe24d6d180",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000288",
+    "name": "Hồng Trà (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061011.png"
+    ],
+    "raw_itemNo": "65000288",
+    "raw_id": "f9063a1c-9034-4753-b306-ca8a6940e9ee",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000291",
+    "name": "Trà Lài (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060501.png"
+    ],
+    "raw_itemNo": "65000291",
+    "raw_id": "eaaee223-4e89-4552-9a36-ae3593200624",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000289",
+    "name": "Hồng Trà (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000288-hong-tra-20230406104857.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203061011.png"
+    ],
+    "raw_itemNo": "65000289",
+    "raw_id": "74908aba-d460-4797-8c76-89a107bbfdf4",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000293",
+    "name": "Trà Sen (Nóng)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sen (Nóng)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060934.png"
+    ],
+    "raw_itemNo": "65000293",
+    "raw_id": "2592ed92-d4f5-4165-85bf-f64cfa32a591",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000292",
+    "name": "Trà Lài (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060501.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060436.png"
+    ],
+    "raw_itemNo": "65000292",
+    "raw_id": "d4e285d5-4e86-48d7-ade9-0d7b551bdc31",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000307",
+    "name": "Trà Sữa Nhãn Sen (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204065955.png"
+    ],
+    "raw_itemNo": "65000307",
+    "raw_id": "056ff5a4-9b34-49e4-9ec3-7b85c3062990",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000371",
+    "name": "Trà Lài Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062354.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062354-20241122071815.png"
+    ],
+    "raw_itemNo": "65000371",
+    "raw_id": "84ba5766-825e-4d2f-9752-a1ba4eaa87cb",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000313",
+    "name": "Topping thạch konjac",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 15000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Topping thạch konjac",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729485493206-20241021043848.png"
+    ],
+    "raw_itemNo": "65000313",
+    "raw_id": "5bd896b2-0850-4a2e-b1df-86177c735015",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000333",
+    "name": "Trà Sữa Ô Long Quế Hoa (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Ô Long Quế Hoa (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020029.png"
+    ],
+    "raw_itemNo": "65000333",
+    "raw_id": "4a58eb59-158e-4426-a27e-6dd18a349207",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000315",
+    "name": "Trà Ô Long Cam Đào Thạch Konjac(M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Cam Đào Thạch Konjac(M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/06/o-long-dao-cam-tach-nen-20230607070407.png"
+    ],
+    "raw_itemNo": "65000315",
+    "raw_id": "f35e7df0-77f1-48b9-8b6f-1302d16ffc90",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000366",
+    "name": "Trà Ô Long Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png"
+    ],
+    "raw_itemNo": "65000366",
+    "raw_id": "b1fa79fb-c29a-47f0-a85f-b16ee9df88a6",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000354",
+    "name": "Trà Lài Mãng Cầu Thạch Dừa Sợi (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Mãng Cầu Thạch Dừa Sợi (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-mang-cau-20250205072659.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/01/tra-lai-mang-cau-20240105045106.png"
+    ],
+    "raw_itemNo": "65000354",
+    "raw_id": "209b245c-13ac-4932-96ac-8cfef2725f97",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000336",
+    "name": "Trà Phúc Long Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Phúc Long Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/01/silky-1--20240104031840.png"
+    ],
+    "raw_itemNo": "65000336",
+    "raw_id": "2931af40-4577-489d-82ae-6a529219b01b",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000351",
+    "name": "Cà Phê Sữa Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Sữa Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/ca-phe-sua-kem-silky-20250205072857.png"
+    ],
+    "raw_itemNo": "65000351",
+    "raw_id": "7beae513-19c4-49f4-9aec-0240a0c1287f",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000428",
+    "name": "Trà Ô Long Quế Hoa (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Quế Hoa (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060846.png"
+    ],
+    "raw_itemNo": "65000428",
+    "raw_id": "05e7993c-8c5d-40f8-8776-682b52f25759",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000363",
+    "name": "Cà Phê Sữa Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Sữa Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/ca-phe-sua-kem-silky-20250205072823.png"
+    ],
+    "raw_itemNo": "65000363",
+    "raw_id": "5dc1e471-74bb-4c1f-bebe-b55600bed09b",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000372",
+    "name": "Trà Lài Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062354.png"
+    ],
+    "raw_itemNo": "65000372",
+    "raw_id": "52542c70-a56d-4dbf-b802-fe049ff805e7",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000369",
+    "name": "Hồng Trà Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png"
+    ],
+    "raw_itemNo": "65000369",
+    "raw_id": "fe77720d-b309-415e-ab86-be1dc6ed1ac4",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000389",
+    "name": "Trà Bá Tước Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062426-20241122071528.png"
+    ],
+    "raw_itemNo": "65000389",
+    "raw_id": "c941d7f3-c02d-4f82-a17d-e5cda598c0f6",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000447",
+    "name": "Hồng Trà Latte Nguyên Vị (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Latte Nguyên Vị (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/nv-20250305102437.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/nv-20250305102519.png"
+    ],
+    "raw_itemNo": "65000447",
+    "raw_id": "0a78a5f8-17ab-4923-a2d7-6d317af0dc8c",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000367",
+    "name": "Hồng Trà Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062323-20241122070551.png"
+    ],
+    "raw_itemNo": "65000367",
+    "raw_id": "e9381356-ef25-4378-9d08-3c2dc501a80d",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000337",
+    "name": "Trà Phúc Long Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Phúc Long Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/01/silky-1--20240104031840.png"
+    ],
+    "raw_itemNo": "65000337",
+    "raw_id": "6ad586b3-6e4a-4b28-8a23-369914a7662e",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000435",
+    "name": "Trà Ô Long Lài (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png"
+    ],
+    "raw_itemNo": "65000435",
+    "raw_id": "37ad99cb-61c3-41ba-91a7-568bcf6342c1",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000350",
+    "name": "Cà Phê Sữa Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Sữa Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729486510440-20241021045648-20241122070237.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/ca-phe-sua-kem-silky-20250205072857.png"
+    ],
+    "raw_itemNo": "65000350",
+    "raw_id": "5147ac0c-b835-4b8a-a46c-821e037d73e2",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000365",
+    "name": "Trà Ô Long Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059900124-20241016062513-20241122072441.png"
+    ],
+    "raw_itemNo": "65000365",
+    "raw_id": "4e822430-0cb7-4e45-b457-a5468c0300de",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000434",
+    "name": "Trà Ô Long Lài (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203060019.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png"
+    ],
+    "raw_itemNo": "65000434",
+    "raw_id": "42fcae6c-5f5c-4561-8ca5-4ed6913b6f78",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000390",
+    "name": "Trà Bá Tước Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062426-20241122071515.png"
+    ],
+    "raw_itemNo": "65000390",
+    "raw_id": "92339f99-d5d7-4e35-8c41-506528e6d962",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000343",
+    "name": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732-20250207022832.png"
+    ],
+    "raw_itemNo": "65000343",
+    "raw_id": "78c51e0b-23d7-4a1a-be22-9ca1fd3e0306",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000436",
+    "name": "Trà Ô Long Lài (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203055954.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png"
+    ],
+    "raw_itemNo": "65000436",
+    "raw_id": "a6664784-c1eb-4838-bceb-a79b2f40e2c1",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000361",
+    "name": "Trà Ô Long Quế Hoa Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Quế Hoa Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241021030405-20241122074418.png"
+    ],
+    "raw_itemNo": "65000361",
+    "raw_id": "48341ffb-8e5a-48f9-b6e6-73a48c876369",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000368",
+    "name": "Hồng Trà Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062323-20241122070445.png"
+    ],
+    "raw_itemNo": "65000368",
+    "raw_id": "b9ac063b-bb04-4550-89fc-e42d46e5a273",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000415",
+    "name": "Trà Ô Long Lài Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059900124-20241016062610-20241122073554.png"
+    ],
+    "raw_itemNo": "65000415",
+    "raw_id": "7a97265f-108f-416b-8bd3-afb29bee9845",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000382",
+    "name": "Trà Sữa Bá Tước (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Bá Tước (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/12/tra-sua-ba-tuoc-20241220071139.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png"
+    ],
+    "raw_itemNo": "65000382",
+    "raw_id": "76a1e724-27d3-4c93-9ac1-a30ca66f644e",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000385",
+    "name": "Trà Bá Tước Lựu Đỏ (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 60000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>BÁ TƯỚC HOÀNG GIA</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-ba-tuoc-luu-do-20250205072548.png"
+    ],
+    "raw_itemNo": "65000385",
+    "raw_id": "26d4cd53-e22f-4034-b7a8-5bdf5370fd3b",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000416",
+    "name": "Trà Ô Long Lài Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png"
+    ],
+    "raw_itemNo": "65000416",
+    "raw_id": "67baa5f7-5e6b-45bb-bbae-b2fc7477725e",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000414",
+    "name": "Trà Ô Long Lài Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059900124-20241016062610-20241122073603.png"
+    ],
+    "raw_itemNo": "65000414",
+    "raw_id": "e47092fb-9064-46e9-b054-41ed94a40987",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000431",
+    "name": "Trà Bá Tước (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060722.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-20250203055612.jpg"
+    ],
+    "raw_itemNo": "65000431",
+    "raw_id": "fbb091ab-54cb-4c8d-b6f3-d66b15e0c7ba",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000396",
+    "name": "Trà Ô Long Lài Bưởi (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(8, 28, 54);\">Pomêly - Ô Long Lài (MỚI)</span></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/05/02-20240507082736.png"
+    ],
+    "raw_itemNo": "65000396",
+    "raw_id": "4414b146-3720-45b4-93f1-0ccb7be916ab",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000433",
+    "name": "Trà Bá Tước (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060722.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-20250203055640.jpg"
+    ],
+    "raw_itemNo": "65000433",
+    "raw_id": "c7cf00f4-2278-4c22-90f2-d39df8170901",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000316",
+    "name": "Trà Ô Long Cam Đào Thạch Konjac(L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Cam Đào Thạch Konjac(L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/06/o-long-dao-cam-tach-nen-20230607070407.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2023/06/oolong-dao-cam-20230607024249.jpg"
+    ],
+    "raw_itemNo": "65000316",
+    "raw_id": "f31a324e-db12-4d11-9dc7-d34b176e92fa",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000294",
+    "name": "Trà Sen (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060934.png"
+    ],
+    "raw_itemNo": "65000294",
+    "raw_id": "17a69fdb-247a-41f3-8cf4-53cdf96474fd",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000388",
+    "name": "Trà Bá Tước Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png"
+    ],
+    "raw_itemNo": "65000388",
+    "raw_id": "822ab00d-7e6a-434f-87ab-0a82282f9b77",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000432",
+    "name": "Trà Bá Tước (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060722.png"
+    ],
+    "raw_itemNo": "65000432",
+    "raw_id": "6b74ce26-ae26-4067-99fd-ef0454e29f1a",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000450",
+    "name": "Hồng Trà Latte Mây (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Latte Mây (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/may-20250305102251.png"
+    ],
+    "raw_itemNo": "65000450",
+    "raw_id": "b2b34f04-a328-42a0-9305-1a2e18127c32",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000429",
+    "name": "Trà Ô Long Quế Hoa (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Quế Hoa (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060846.png"
+    ],
+    "raw_itemNo": "65000429",
+    "raw_id": "de9bd17b-645a-4581-a092-dbbdf9826fc0",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000448",
+    "name": "Hồng Trà Latte Nguyên Vị (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Latte Nguyên Vị (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/nv-20250305102437.png"
+    ],
+    "raw_itemNo": "65000448",
+    "raw_id": "a048e2ad-d488-4075-b015-85c2d140481e",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000370",
+    "name": "Trà Lài Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Lài Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062354.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062354-20241122071823.png"
+    ],
+    "raw_itemNo": "65000370",
+    "raw_id": "3827d9ef-d9ca-4bb9-b030-faa04151993c",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000335",
+    "name": "Trà Ô Long Quế Hoa Kem Silky (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Quế Hoa Kem Silky (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png"
+    ],
+    "raw_itemNo": "65000335",
+    "raw_id": "5243cbe8-649f-4f26-b55c-3b3002b70022",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000297",
+    "name": "Trà Sữa Lài (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000094-65000102-tra-sua-phuc-long--20230406103801.png"
+    ],
+    "raw_itemNo": "65000297",
+    "raw_id": "8cfd0873-7a6f-424a-90f3-bb11ea73d0ce",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000298",
+    "name": "Trà Sữa Lài (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Lài (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000094-65000102-tra-sua-phuc-long--20230406103801.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000094-65000102-tra-sua-phuc-long--20230406103910.png"
+    ],
+    "raw_itemNo": "65000298",
+    "raw_id": "fa368c64-27a5-4b95-8003-94a0cbd39065",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000308",
+    "name": "Trà Sữa Nhãn Sen (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Nhãn Sen (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000307-tra-sua-nhan-sen-20230413021857.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204065955.png"
+    ],
+    "raw_itemNo": "65000308",
+    "raw_id": "7b1a9e7d-4778-4ea9-a251-0c2b2a780e02",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000344",
+    "name": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732.png"
+    ],
+    "raw_itemNo": "65000344",
+    "raw_id": "5e6546e4-2606-442b-ac16-8811ff7aa042",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000393",
+    "name": "Trà Sữa Ô Long Lài Thạch Konjac (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(8, 28, 54);\">Pomêly - Ô Long Lài</span></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020117.png"
+    ],
+    "raw_itemNo": "65000393",
+    "raw_id": "94a3906d-9ddd-41d4-94dc-620b678e3ada",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000384",
+    "name": "Trà Bá Tước Lựu Đỏ (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Bá Tước Lựu Đỏ (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-ba-tuoc-luu-do-20250205072548.png"
+    ],
+    "raw_itemNo": "65000384",
+    "raw_id": "f20be69e-f057-4af8-8141-dbc02794ac61",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000355",
+    "name": "Trà Lài Mãng Cầu Thạch Dừa Sợi (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>Best Seller</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-mang-cau-20250205072659.png"
+    ],
+    "raw_itemNo": "65000355",
+    "raw_id": "c6c38064-0442-42da-aac4-fd41639e5b40",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000295",
+    "name": "Trà Sen (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sen (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060646.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060934.png"
+    ],
+    "raw_itemNo": "65000295",
+    "raw_id": "f56d62fb-6d8d-4d74-905b-1ba17c7006a4",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000430",
+    "name": "Trà Ô Long Quế Hoa (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Quế Hoa (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-que-hoa-20250203055746.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060846.png"
+    ],
+    "raw_itemNo": "65000430",
+    "raw_id": "25e1ef98-8560-4089-86db-c00a2613fabf",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000383",
+    "name": "Trà Sữa Bá Tước (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>BÁ TƯỚC HOÀNG GIA</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png"
+    ],
+    "raw_itemNo": "65000383",
+    "raw_id": "1a2ecf1e-f39d-44b3-aeeb-c0ccc64ae4b5",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000397",
+    "name": "Trà Ô Long Lài Bưởi (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Lài Bưởi (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/12/tra-o-long-que-hoa-20241220071050.jpg",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/05/02-20240507082736.png"
+    ],
+    "raw_itemNo": "65000397",
+    "raw_id": "d7ee46f1-1136-494b-8db0-d0c19a73e84c",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000449",
+    "name": "Hồng Trà Latte Mây (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Latte Mây (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/may-20250305102332.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/may-20250305102251.png"
+    ],
+    "raw_itemNo": "65000449",
+    "raw_id": "0b2aa9a1-d351-4ce0-a4c7-c2012df6c7c6",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000392",
+    "name": "Trà Sữa Ô Long Lài Thạch Konjac (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><span style=\"color: rgb(8, 28, 54); background-color: rgb(255, 255, 255);\">Pomêly - Ô Long Lài (MỚI)</span></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020117.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729485346306-20241021043707.png"
+    ],
+    "raw_itemNo": "65000392",
+    "raw_id": "6d0d8504-0cdb-4638-b827-97bec86d8613",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000334",
+    "name": "Trà Ô Long Quế Hoa Kem Silky (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Quế Hoa Kem Silky (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241021030405-20241122074311.png"
+    ],
+    "raw_itemNo": "65000334",
+    "raw_id": "89a4266f-b4dc-4ed2-8655-629bd88b4f29",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000347",
+    "name": "Topping Thạch Dừa Sợi",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 15000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Topping Thạch Dừa Sợi",
+    "images": [],
+    "raw_itemNo": "65000347",
+    "raw_id": "9b8ac65b-09f5-42b1-904d-d269259ca86e",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000364",
+    "name": "Trà Ô Long Kem Silky (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Kem Silky (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059900124-20241016062513-20241122072427.png"
+    ],
+    "raw_itemNo": "65000364",
+    "raw_id": "bffa5e9f-4f68-4132-af9c-05a4864e8505",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000171",
+    "name": "Trà ô long cao cấp 100g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 142000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long cao cấp 100g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000171-tra-o-long-hop-oval-phuc-long_4e0436ec-4622-4acd-9834-0ac531c974dc-og.png"
+    ],
+    "raw_itemNo": "60000171",
+    "raw_id": "9f0c09ec-d64c-4300-b47f-e6b9d6fc419c",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000210",
+    "name": "Trà ô long 80g (Lon thiếc vuông)",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 380000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long 80g (Lon thiếc vuông)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000210-tra-o-long-thuong-hang_ebbc10d6-e2f9-45bb-8662-8dcc9f3d161d-og.png"
+    ],
+    "raw_itemNo": "60000210",
+    "raw_id": "47e807e7-9bb7-46cf-89e4-207e61f8c0c6",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000197",
+    "name": "Trà ô long túi tam giác 3g x10 gói",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 90000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long túi tam giác 3g x10 gói",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000197-tra-o-long-tui-tam-giac-phuc-long_8fd9c73b-3c53-44f7-a11e-458a91509838-og.png"
+    ],
+    "raw_itemNo": "60000197",
+    "raw_id": "ae7760cd-b8dc-4203-a189-b090d08d0ec8",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000177",
+    "name": "Trà ô long 80 - 100g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 130000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long 80 - 100g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000177-tra-oolong-80-100g_b9c023fd-1f01-407d-b4f7-203d0bf066d7-og.png"
+    ],
+    "raw_itemNo": "60000177",
+    "raw_id": "77b00a5d-023e-424d-b8bb-2280a6dc96dc",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000211",
+    "name": "Trà ô long 96g (12gx8 gói)(Lon vuông)",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 436000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long 96g (12gx8 gói)(Lon vuông)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000211-tra-o-long-thuong-hang_3b9c7bbe-5d23-43e9-a117-81577bc522a9-og.png"
+    ],
+    "raw_itemNo": "60000211",
+    "raw_id": "0ecdc3fb-ffa9-4ece-8c8c-8d0bcd0f161c",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000349",
+    "name": "Trà xanh 15 - 500g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 150000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh 15 - 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000347-60000349-tra-xanh-15-_204c4f29-9921-4ccc-972d-679ba5a03f3c-og.jpg"
+    ],
+    "raw_itemNo": "60000349",
+    "raw_id": "d225a0c4-e944-40ba-8305-f313fdf6d325",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000255",
+    "name": "Trà hương sen túi tam giác 3g x 10 gói",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 80000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương sen túi tam giác 3g x 10 gói",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000255-tra-sen-tui-tam-giac-phuc-long_c93b9dca-f2e7-4c1a-86fa-80287c0fd75e-og.png"
+    ],
+    "raw_itemNo": "60000255",
+    "raw_id": "f549f4e4-a5eb-4adc-ad4b-72bac0b38efb",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000355",
+    "name": "Trà xanh túi tam giác 3g x 10 gói",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 80000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh túi tam giác 3g x 10 gói",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000355-tra-xanh-tui-tam-giac-phuc-long_eccbc10e-9101-4dc9-94b3-b6713e087a6b-og.png"
+    ],
+    "raw_itemNo": "60000355",
+    "raw_id": "6638f89c-a587-43ad-94b8-b3e2388cd496",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000369",
+    "name": "Trà xanh Thái Nguyên 200g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh Thái Nguyên 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000370-60000369-tra-xanh-thai-nguyen_1ef7e968-c0ab-4328-878a-576d401c1d2e-og.png"
+    ],
+    "raw_itemNo": "60000369",
+    "raw_id": "df71aaf6-0958-4368-8249-a2f77cf5e4ff",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000239",
+    "name": "Trà hương sen đặc biệt 100g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 85000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương sen đặc biệt 100g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000239-60000240-60000241-tra-sen-dac-biet_286ccb67-7dd7-417d-932f-09c27624682f-og.jpg"
+    ],
+    "raw_itemNo": "60000239",
+    "raw_id": "a1aaea19-666f-434a-8285-8a952772dd18",
+    "detected_packaged": true
+  },
+  {
+    "sku": "65000381",
+    "name": "Trà Sữa Bá Tước (H)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Bá Tước (H)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png"
+    ],
+    "raw_itemNo": "65000381",
+    "raw_id": "1feddd84-9ffe-4004-a56b-5597e70e22fe",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000332",
+    "name": "Trà Sữa Ô Long Quế Hoa (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Ô Long Quế Hoa (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020029.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729479568221-20241021025945.png"
+    ],
+    "raw_itemNo": "65000332",
+    "raw_id": "16b606ba-7a37-457d-a1d9-80122941075a",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000452",
+    "name": "Cà phê rang pha trộn Arabica Culi 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 80000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang pha trộn Arabica Culi 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000452-ca-phe-arabica-culi-200g_6b73b763-e18e-4570-a8c3-04131993e66d-og.jpg"
+    ],
+    "raw_itemNo": "60000452",
+    "raw_id": "c239d0fe-ed92-46dc-89ab-eeb00ccab300",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000453",
+    "name": "Cà phê rang pha trộn Arabica Culi 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 180000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang pha trộn Arabica Culi 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000453-ca-phe-arabica-culi-500g_750ca307-6695-4ea9-906e-45d767f6e8c5-og.png"
+    ],
+    "raw_itemNo": "60000453",
+    "raw_id": "b7154f16-b163-4ace-8c8f-4df1f1bd91a1",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000370",
+    "name": "Trà xanh Thái Nguyên 500g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 135000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh Thái Nguyên 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000370-60000369-tra-xanh-thai-nguyen_44dd052b-7ea6-497a-8584-0d67883f9e85-og.png"
+    ],
+    "raw_itemNo": "60000370",
+    "raw_id": "bdd0516b-d4e7-42e5-b103-c17ccf200707",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000488",
+    "name": "Cà phê rang nguyên hạt Culi 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 160000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt Culi 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000488-ca-phe-culi-phuc-long-500g_e07d8d7c-b8db-4255-bb3c-7024918720a5-og.png"
+    ],
+    "raw_itemNo": "60000488",
+    "raw_id": "3cb3e2f3-2c4f-42a9-824a-d5ce6c65cf24",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000502",
+    "name": "Cà phê rang nguyên hạt King 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 95000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt King 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000502-ca-phe-king-khong-bo-phuc-long-200g_33cace06-1c6b-4ded-974b-fa37e7d508d3-og.png"
+    ],
+    "raw_itemNo": "60000502",
+    "raw_id": "e2543de3-9859-4033-9981-8155db9240d5",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000528",
+    "name": "Cà phê rang nguyên hạt Moka 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 220000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt Moka 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000528-ca-phe-moka-khong-bo-phuc-long-500g_300caccc-ffbe-4e12-879c-22b7488fb636-og.png"
+    ],
+    "raw_itemNo": "60000528",
+    "raw_id": "b95a0ad8-629b-402d-9a8a-e81a811bc71b",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000503",
+    "name": "Cà phê rang nguyên hạt King 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 220000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt King 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000503-ca-phe-king-khong-bo-phuc-long-500g_e1273a8d-3137-49b2-aeaf-2246800b1358-og.png"
+    ],
+    "raw_itemNo": "60000503",
+    "raw_id": "8574dd95-4f63-451d-8de2-ae8d6bdfa111",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000529",
+    "name": "Cà phê rang nguyên hạt Moka 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 95000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt Moka 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000529-ca-phe-moka-khong-bo-phuc-long-200g_51c9dc1a-1326-4b74-80e2-cd2449b7667a-og.png"
+    ],
+    "raw_itemNo": "60000529",
+    "raw_id": "c1812a79-a839-4ae3-9608-102376a5ace5",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000487",
+    "name": "Cà phê rang nguyên hạt Culi 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 70000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt Culi 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000487-ca-phe-culi-phuc-long-200g_f9d5b111-a643-4505-9d5f-8c28a49e86da-og.png"
+    ],
+    "raw_itemNo": "60000487",
+    "raw_id": "9636b607-af73-48fe-95ad-9da7feae1a06",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000552",
+    "name": "Cà phê rang pha trộn Robusta Culi 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 75000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang pha trộn Robusta Culi 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000552-ca-phe-robusta-culi-phuc-long-200g_9316e61b-4686-412b-a428-d722f6e29363-og.png"
+    ],
+    "raw_itemNo": "60000552",
+    "raw_id": "e3857e1e-116a-4a4d-9cbd-a53f1643e232",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000557",
+    "name": "Cà phê rang nguyên hạt Robusta 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 80000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt Robusta 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000557-ca-phe-robusta-khong-bo-200g_06846b85-540b-491b-b6f4-362c9a4161b0-og.png"
+    ],
+    "raw_itemNo": "60000557",
+    "raw_id": "f061bbfa-25c1-4da4-b2b1-1be272a6794f",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000553",
+    "name": "Cà phê rang pha trộn Robusta Culi 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 175000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang pha trộn Robusta Culi 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000553-ca-phe-robusta-culi-phuc-long-500g_e7fed8fb-c0b7-4461-80a1-df8060fd965c-og.png"
+    ],
+    "raw_itemNo": "60000553",
+    "raw_id": "35cc93e9-fcaf-4acf-aa08-90928ac45b66",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000556",
+    "name": "Cà phê rang nguyên hạt Robusta 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 180000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang nguyên hạt Robusta 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000556-ca-phe-robusta-khong-bo-500g_79381b3b-9189-4483-a78f-6449ac6d73a8-og.png"
+    ],
+    "raw_itemNo": "60000556",
+    "raw_id": "049c1ca3-4252-4f0c-9ea3-e988ca605715",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000577",
+    "name": "Cà phê rang ng hạt Royal Special 200g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 95000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang ng hạt Royal Special 200g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000577-ca-phe-royal-khong-bo-phuc-long-200g_e30d7dbd-ec17-47f1-b2b4-bbe4bcf7459d-og.png"
+    ],
+    "raw_itemNo": "60000577",
+    "raw_id": "1f86f0d3-8b1d-4f19-a7b3-3bf34c5a9726",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000639",
+    "name": "Bánh croissant choco 45g",
+    "category_id": "6906ce5a1440315f50ee4be0",
+    "price": 22000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Bánh croissant choco 45g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000639-butter-chocolate-croissant-45g_08fa60a8-dcbc-4e71-aabc-95c0370b9352-og.png"
+    ],
+    "raw_itemNo": "60000639",
+    "raw_id": "7e5d19a4-cd2e-499e-8656-d6af3866c7a1",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000641",
+    "name": "Bánh Flan Phúc Long",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 20000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Bánh Flan Phúc Long",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/10/flan-20241004031750.png"
+    ],
+    "raw_itemNo": "60000641",
+    "raw_id": "88fec114-2a38-4bd0-9b3d-8670c8945167",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000578",
+    "name": "Cà phê rang ng hạt Royal Special 500g",
+    "category_id": "6906ce5a1440315f50ee4bdf",
+    "price": 220000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà phê rang ng hạt Royal Special 500g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000578-ca-phe-royal-khong-bo-phuc-long-500g_d333b600-3aa7-4947-b7ba-450458b384d0-og.png"
+    ],
+    "raw_itemNo": "60000578",
+    "raw_id": "13d19365-011f-4ad2-9a7d-ce17b09ff5ad",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000644",
+    "name": "Panna Cotta Chanh Dây 120g",
+    "category_id": "6906ce5a1440315f50ee4be0",
+    "price": 35000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Panna Cotta Chanh Dây 120g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000644-passion-panna-cotta_225037c1-1c48-40f1-bab1-f26d54a6ce6b-og.png"
+    ],
+    "raw_itemNo": "60000644",
+    "raw_id": "6441b7fe-e207-4c90-a3b5-23a63b4e4d17",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000648",
+    "name": "Bánh croissant 60g",
+    "category_id": "6906ce5a1440315f50ee4be0",
+    "price": 25000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Bánh croissant 60g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/03/68000021-pure-butter-croissant-banh-sung-bo-60g-20230328024455.png"
+    ],
+    "raw_itemNo": "60000648",
+    "raw_id": "6262dca3-55aa-4238-bd4e-475b8f3f367c",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000643",
+    "name": "Bánh Tiramisu",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 38000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Bánh Tiramisu",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000643-tiramisu-mini_b87000d1-71a7-4652-9c41-6565acf281f7-og.png"
+    ],
+    "raw_itemNo": "60000643",
+    "raw_id": "c500f909-ab7e-470e-868d-f51aea210e0a",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000650",
+    "name": "Bánh mì Phúc Long 170g",
+    "category_id": "6906ce5a1440315f50ee4be0",
+    "price": 38000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Bánh mì Phúc Long 170g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/60000650-banh-mi-phuc-long-m-_69ceeba5-e7f9-4fad-8393-25d66a47a878-og.png"
+    ],
+    "raw_itemNo": "60000650",
+    "raw_id": "9a5296c9-fe01-486a-8dd0-fa75c1cf0d38",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000778",
+    "name": "Trà hương sen Thái Nguyên 100g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương sen Thái Nguyên 100g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000297-20230517030841.png"
+    ],
+    "raw_itemNo": "60000778",
+    "raw_id": "2b1205d9-a2d6-452d-a8bc-bf7374f395ab",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000777",
+    "name": "Trà lài Thái nguyên 100g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài Thái nguyên 100g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000147-20230517031935.png"
+    ],
+    "raw_itemNo": "60000777",
+    "raw_id": "e5859469-6dbb-4bd0-b399-96e14d396a25",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000779",
+    "name": "Trà xanh Thái Nguyên 100g",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 35000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh Thái Nguyên 100g",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000368-20230517034224.png"
+    ],
+    "raw_itemNo": "60000779",
+    "raw_id": "271237fd-f9bb-4395-9a4b-b7287cbccdcd",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000820",
+    "name": "Trà hồng trà túi lọc 2g x 25gói x 20 hộp",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 37000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hồng trà túi lọc 2g x 25gói x 20 hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_hong_tra-20241104082520.png"
+    ],
+    "raw_itemNo": "60000820",
+    "raw_id": "2498e0e0-784c-490c-a384-067727c4c850",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000824",
+    "name": "Trà hương lài túi lọc 2gx25góix20 hộp",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 37000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương lài túi lọc 2gx25góix20 hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_lai-20241104092339.png"
+    ],
+    "raw_itemNo": "60000824",
+    "raw_id": "44fa23aa-36e9-438b-afaf-bcfc3da07df9",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000823",
+    "name": "Trà lài 100G x 15 lon (lon giấy)",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 75000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà lài 100G x 15 lon (lon giấy)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000092-20230517032840.png"
+    ],
+    "raw_itemNo": "60000823",
+    "raw_id": "d7402382-7ad5-4a73-9780-a8bf5381cbbc",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000825",
+    "name": "Trà ô long túi lọc 2gx 25góix20 hộp",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 38000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà ô long túi lọc 2gx 25góix20 hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_olong-20241104102427.png"
+    ],
+    "raw_itemNo": "60000825",
+    "raw_id": "32f66ad0-ed98-42c7-b388-79bf3f2bc886",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000828",
+    "name": "Trà hương sen mới (lon giấy) 100gx15 lon",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 58000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương sen mới (lon giấy) 100gx15 lon",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000235-20230517033014.png"
+    ],
+    "raw_itemNo": "60000828",
+    "raw_id": "f48f9ff3-fc65-4d85-b3d1-cc4c5992e40c",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000831",
+    "name": "Trà hương sen túi lọc 2gx25góix20hộp",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 38000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương sen túi lọc 2gx25góix20hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_sen-20241104102100.png"
+    ],
+    "raw_itemNo": "60000831",
+    "raw_id": "4ef63ba7-c190-427e-aef2-b41e1261aa40",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000832",
+    "name": "Trà hương vải túi lọc 2gx 25góix20hộp",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương vải túi lọc 2gx 25góix20hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_vai-20241104101059.png"
+    ],
+    "raw_itemNo": "60000832",
+    "raw_id": "1e011ef5-2697-431f-b5ed-905e10902b4c",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000829",
+    "name": "Trà hương sen (hộp giấy) 150g x 15hộp",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 75000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương sen (hộp giấy) 150g x 15hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000236-20230517032709.jpg"
+    ],
+    "raw_itemNo": "60000829",
+    "raw_id": "84e2bfc2-88c2-4cef-8df3-47d961fd9a11",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000835",
+    "name": "Trà xanh CC lon giấy 100G x  15lon",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh CC lon giấy 100G x  15lon",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000354-20230517031714.png"
+    ],
+    "raw_itemNo": "60000835",
+    "raw_id": "1487f3dd-fb77-4289-923a-0c575cdc12b3",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000833",
+    "name": "Trà xanh mới L1 lon giấy 100g x  15lon",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 45000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh mới L1 lon giấy 100g x  15lon",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000342-20230517031426.png"
+    ],
+    "raw_itemNo": "60000833",
+    "raw_id": "5dec9ffd-dbdc-4af5-b543-d085f001e072",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000836",
+    "name": "Trà xanh (túi lọc) 2g x 25gói x 20hộp",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 30000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh (túi lọc) 2g x 25gói x 20hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2024/11/tra_tui_loc_50g_packaging_website_photo_vertical_xanh-20241105033215.png"
+    ],
+    "raw_itemNo": "60000836",
+    "raw_id": "598424c5-a6da-446d-8633-37bedb90cb50",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60000834",
+    "name": "Trà xanh (hộp giấy) 150g x 15hộp",
+    "category_id": "6906ce5a1440315f50ee4bde",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà xanh (hộp giấy) 150g x 15hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000343-20230517034108.png"
+    ],
+    "raw_itemNo": "60000834",
+    "raw_id": "84554abd-f942-4a9a-a764-9f7075504d7a",
+    "detected_packaged": true
+  },
+  {
+    "sku": "60001034",
+    "name": "Bánh Chuối Hạt Dinh Dưỡng",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 39000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Bánh Chuối Hạt Dinh Dưỡng",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/03/chuoi-20250305103953.png"
+    ],
+    "raw_itemNo": "60001034",
+    "raw_id": "ebe27116-8167-4a8a-ade1-05c58d836190",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000853",
+    "name": "Trà Hoa Hồng (Túi Lọc)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 36000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Hoa Hồng (Túi Lọc)",
+    "images": [],
+    "raw_itemNo": "60000853",
+    "raw_id": "3cdc9eaa-d821-404b-9c50-5035861e28d2",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60000837",
+    "name": "Trà hương đào túi lọc 2gx25góix20 hộp",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà hương đào túi lọc 2gx25góix20 hộp",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/05/60000013-20230517033319.png"
+    ],
+    "raw_itemNo": "60000837",
+    "raw_id": "558dbf70-d1d8-4be6-89dc-6fdcb6c5cc13",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000011",
+    "name": "Trà Sữa Socola (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000011-tra-sua-socola-20230407020111.png"
+    ],
+    "raw_itemNo": "65000011",
+    "raw_id": "a6e51a05-9e09-47c0-bd25-9a7c991d4fa0",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60001054",
+    "name": "Bánh Tôm Càng Phô Mai Hảo Vị",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 149000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>KV Bình Dương: đồng giá 80k</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/tomphomai-20250714055202.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045702.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045702.png"
+    ],
+    "raw_itemNo": "60001054",
+    "raw_id": "0afce646-4c98-4e61-b7ae-321280c91e64",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000003",
+    "name": "Cappuccino Đá Xay",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cappuccino Đá Xay",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000003-ca-phe-cappuccino-da-xay_47179b90-3960-4478-84c4-1f74b3fa1248-og.png"
+    ],
+    "raw_itemNo": "65000003",
+    "raw_id": "8473b078-b0fd-4d7d-bc56-28befc09caf3",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60001052",
+    "name": "Bánh Matcha Đậu Đỏ",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 149000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>KV Bình Dương: đồng giá 80k</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/matcha-min-1--20250714055626.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045509.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045509.png"
+    ],
+    "raw_itemNo": "60001052",
+    "raw_id": "91bada8c-04d1-4067-af2f-74129b2219c4",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60001050",
+    "name": "Bánh Ô Long Quế Hoa Thượng Hạng",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 139000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>KV Bình Dương: đồng giá 80k</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/tra-oolong-que-hoa-20250714055037.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045534.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045535.png"
+    ],
+    "raw_itemNo": "60001050",
+    "raw_id": "b3a4588a-8c5e-4da0-835e-b1e7da296d89",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000056",
+    "name": "Cà Phê Sữa Đá (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 39000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Sữa Đá (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png"
+    ],
+    "raw_itemNo": "65000056",
+    "raw_id": "6795864b-14fa-4d1a-873d-47c6eed77498",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000070",
+    "name": "Chanh Đá Xay",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Chanh Đá Xay",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000070-sinh-to-chanh_f87c3f0f-c707-40d6-aa16-2b5fa3a90400-og.png"
+    ],
+    "raw_itemNo": "65000070",
+    "raw_id": "20777386-3a29-47eb-8436-158e91737fbc",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60001051",
+    "name": "Bánh Tiramisu Cà Phê Phô Mai",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 139000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>KV Bình Dương: đồng giá 80k</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/tiramisu-20250714055414.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045640.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045639.png"
+    ],
+    "raw_itemNo": "60001051",
+    "raw_id": "00cad533-4d10-4474-be29-831354248ff6",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000047",
+    "name": "Oreo Kem Đá Xay",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>Must-try</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/oreo-20250212021326.png"
+    ],
+    "raw_itemNo": "65000047",
+    "raw_id": "5daca753-b124-4995-88ae-24f08cd00f9a",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000055",
+    "name": "Cà Phê Đen Đá (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 35000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Cà Phê Đen Đá (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png"
+    ],
+    "raw_itemNo": "65000055",
+    "raw_id": "1b50b753-c4c0-4cfb-82ca-6b24cfab578d",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000076",
+    "name": "Trà Sữa Matcha (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Matcha (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000076-latte-tra-xanh-2-_665f832a-2ad7-41f2-981c-9f456b4d21e7-og.png"
+    ],
+    "raw_itemNo": "65000076",
+    "raw_id": "7e1bfa2f-2ce0-41a4-b59c-345ae659af71",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000073",
+    "name": "Sữa Chua Xoài Đác Thơm",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 70000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Sữa Chua Xoài Đác Thơm",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000073-sua-chua-xoai-dac-thom-phuc-long_26595644-4b5d-4d95-a3ff-d0ccf06d6f1f-og.png"
+    ],
+    "raw_itemNo": "65000073",
+    "raw_id": "9ad4a0bb-4da8-4d00-983d-9935f67ba00d",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000036",
+    "name": "Trà Sữa Socola (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Socola (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000011-tra-sua-socola-20230407020111.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000011-tra-sua-socola-20230407020128.png"
+    ],
+    "raw_itemNo": "65000036",
+    "raw_id": "c1292ca4-e6ce-4568-b425-e39b83768886",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000072",
+    "name": "Sữa Chua Phúc Bồn Tử Đác Cam",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 70000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Sữa Chua Phúc Bồn Tử Đác Cam",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000072-sua-chua-phuc-bon-tu-dac-cam-phuc-long_23955f73-a6c0-4cca-b79c-b6342df26caf-og.png"
+    ],
+    "raw_itemNo": "65000072",
+    "raw_id": "2d479191-935f-4658-a430-2c23ff42cdfa",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000078",
+    "name": "Topping Vải (4 trái)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 20000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Topping Vải (4 trái)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_4e98211e-73f5-40c4-b6c0-242df5303500-og.jpg"
+    ],
+    "raw_itemNo": "65000078",
+    "raw_id": "8196b071-b30c-4790-a175-173909c4f646",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000082",
+    "name": "Hồng Trà Sữa (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 50000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Sữa (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_30c9a4d2-957e-4152-b377-33b68f4da0c5-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_4820fd79-1db6-453f-bcaf-bff87d99066c-og.png"
+    ],
+    "raw_itemNo": "65000082",
+    "raw_id": "51065d48-a836-4c5c-8704-df7980c39d43",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000086",
+    "name": "Hồng Trà Đào Sữa Thạch Konjac (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Đào Sữa Thạch Konjac (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_e1d1ff51-2c3f-4870-a3d5-9a1388c4d63f-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_5868a16e-2ff7-4428-a202-ed879f512333-og.png"
+    ],
+    "raw_itemNo": "65000086",
+    "raw_id": "21bbf4c2-c02d-48d9-841d-097017e73c4d",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000080",
+    "name": "Hồng Trà Chanh (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 40000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Chanh (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250205072009.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250206025940.png"
+    ],
+    "raw_itemNo": "65000080",
+    "raw_id": "c088ccea-3e23-4939-91f5-57641d6bbdfe",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000087",
+    "name": "Trà Sữa Ô Long (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Ô Long (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_b2aa9ed3-4cc8-43e2-932b-802878bf314d-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_8239c886-78ba-465d-9093-5d1f3fff8e61-og.png"
+    ],
+    "raw_itemNo": "65000087",
+    "raw_id": "6b36c911-52d4-4d59-b87f-cadc3e3d5985",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000089",
+    "name": "Trà Ô Long Dâu (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Ô Long Dâu (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033744.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-dau-20250206033804.png"
+    ],
+    "raw_itemNo": "65000089",
+    "raw_id": "f73e9948-5435-4d17-a875-81d33b3c80d3",
+    "detected_packaged": false
+  },
+  {
+    "sku": "60001053",
+    "name": "Bánh Thập Cẩm Lạp Xưởng Sốt Nấm Truffle",
+    "category_id": "6906ce5a1440315f50ee4bdc",
+    "price": 159000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>KV Bình Dương: đồng giá 80k</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045607.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045607.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/07/thapcamvinamtruffle-1--20250714055754.png"
+    ],
+    "raw_itemNo": "60001053",
+    "raw_id": "2f2f1a43-15f8-44a9-8e3b-eecf7091fe48",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000094",
+    "name": "Trà Sữa Phúc Long (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Phúc Long (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_71e576ea-c184-4b35-94e9-935b07b37d5e-og.png"
+    ],
+    "raw_itemNo": "65000094",
+    "raw_id": "83d9ebe6-0405-4770-82aa-183adc4cf531",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000100",
+    "name": "Hồng Trà Đào (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png"
+    ],
+    "raw_itemNo": "65000100",
+    "raw_id": "ed98d5f1-d1bf-45df-a26b-4320fa5e44f8",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000085",
+    "name": "Hồng Trà Đào (M)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Đào (M)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250206030110.png",
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-dao-20250205072158.png"
+    ],
+    "raw_itemNo": "65000085",
+    "raw_id": "1a0b18cd-ebc2-4c2b-b800-a022421dec97",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000101",
+    "name": "Trà Sữa Ô Long (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Trà Sữa Ô Long (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000087-65000101-tra-o-long-sua_b2aa9ed3-4cc8-43e2-932b-802878bf314d-og.png"
+    ],
+    "raw_itemNo": "65000101",
+    "raw_id": "33afeec5-2fea-43cf-8c09-be3f09dd3446",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000102",
+    "name": "Trà Sữa Phúc Long (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 59000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p>Best Seller</p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png"
+    ],
+    "raw_itemNo": "65000102",
+    "raw_id": "ce37bda5-c8da-4e4b-a40b-3d7fd86225c1",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000075",
+    "name": "Đá xay Matcha",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 69000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "<p><br></p>",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/matcha-da-xay-20250205064621.png"
+    ],
+    "raw_itemNo": "65000075",
+    "raw_id": "04f86e3f-96da-4d4e-b4ec-8d60df6fd321",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000099",
+    "name": "Hồng Trà Sữa (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 55000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Sữa (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000082-65000099-hong-tra-sua_30c9a4d2-957e-4152-b377-33b68f4da0c5-og.png"
+    ],
+    "raw_itemNo": "65000099",
+    "raw_id": "1e351481-4385-467b-b131-88417f0dde58",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000104",
+    "name": "Đào (3 miếng)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 20000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Đào (3 miếng)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_3dd1ee3f-2665-4cd2-b8b0-41af829bc3c0-og.jpg"
+    ],
+    "raw_itemNo": "65000104",
+    "raw_id": "acccadee-b374-4dde-bd0c-d615eb9b3218",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000105",
+    "name": "Hồng Trà Chanh (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 49000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Chanh (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2025/02/hong-tra-chanh-20250205072009.png"
+    ],
+    "raw_itemNo": "65000105",
+    "raw_id": "8f99270b-d5f2-4a33-a1e3-083a13f0ff45",
+    "detected_packaged": false
+  },
+  {
+    "sku": "65000103",
+    "name": "Hồng Trà Đào Sữa Thạch Konjac (L)",
+    "category_id": "6906ce5a1440315f50ee4bdd",
+    "price": 65000.0,
+    "stock_quantity": 0,
+    "is_active": true,
+    "description": "Hồng Trà Đào Sữa Thạch Konjac (L)",
+    "images": [
+      "https://s3-hcmc02.higiocloud.vn/images/2022/65000086-65000103-tra-dao-sua_e1d1ff51-2c3f-4870-a3d5-9a1388c4d63f-og.png"
+    ],
+    "raw_itemNo": "65000103",
+    "raw_id": "e43187d0-e7f0-4074-8195-62674cda96b5",
+    "detected_packaged": false
+  }
+]

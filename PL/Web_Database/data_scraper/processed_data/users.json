@@ -1,0 +1,232 @@
+[
+  {
+    "email": "doanhnlb23411@st.uel.edu.vn",
+    "password_hash": "hashed_password_1",
+    "full_name": "Nguyễn Lê Bảo Doanh",
+    "status": "active",
+    "role": "admin",
+    "avatar_url": "images/avatar/6907314c0cf9c0351ba8f970.jpg",
+    "created_at": "2025-11-01T08:00:00Z",
+    "updated_at": "2025-11-01T08:00:00Z"
+  },
+  {
+    "email": "giangnhh23411@st.uel.edu.vn",
+    "password_hash": "hashed_password_2",
+    "full_name": "Nguyễn Hoàng Hương Giang",
+    "status": "active",
+    "role": "admin",
+    "avatar_url": "images/avatar/6907314c0cf9c0351ba8f971.jpg",
+    "created_at": "2025-11-01T08:05:00Z",
+    "updated_at": "2025-11-01T08:05:00Z"
+  },
+  {
+    "email": "khaidt23411@st.uel.edu.vn",
+    "password_hash": "hashed_password_3",
+    "full_name": "Đào Thế Khải",
+    "status": "active",
+    "role": "admin",
+    "avatar_url": "images/avatar/6907314c0cf9c0351ba8f972.jpg",
+    "created_at": "2025-11-01T08:10:00Z",
+    "updated_at": "2025-11-01T08:10:00Z"
+  },
+  {
+    "email": "chubaduy@st.uel.edu.vn",
+    "password_hash": "chubaduy",
+    "full_name": "Chú Ba Duy",
+    "status": "active",
+    "role": "admin",
+    "avatar_url": "https://www.facebook.com/photo/?fbid=1396876962438038&set=a.462332752559135",
+    "created_at": "2025-11-01T08:00:00Z",
+    "updated_at": "2025-11-01T08:00:00Z"
+  },
+  {
+    "email": "maitrithuc@st.uel.edu.vn",
+    "password_hash": "maitrithuc",
+    "full_name": "Mai Trí Thức",
+    "status": "active",
+    "role": "admin",
+    "avatar_url": "images/avatar/690733d10cf9c0351ba8f985.jpg",
+    "created_at": "2025-11-01T08:05:00Z",
+    "updated_at": "2025-11-01T08:05:00Z"
+  },
+  {
+    "email": "chiphien@st.uel.edu.vn",
+    "password_hash": "chiphien",
+    "full_name": "Khuyến Dương",
+    "status": "active",
+    "role": "admin",
+    "avatar_url": "images/avatar/690733d10cf9c0351ba8f986.jpg",
+    "created_at": "2025-11-01T08:10:00Z",
+    "updated_at": "2025-11-01T08:10:00Z"
+  },
+  {
+    "email": "customer1@example.com",
+    "password_hash": "hashed_password_4",
+    "full_name": "Pham Thi Lan",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T08:15:00Z",
+    "updated_at": "2025-11-01T08:15:00Z"
+  },
+  {
+    "email": "customer2@example.com",
+    "password_hash": "hashed_password_5",
+    "full_name": "Hoang Anh Tuan",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=4",
+    "created_at": "2025-11-01T08:20:00Z",
+    "updated_at": "2025-11-01T08:20:00Z"
+  },
+  {
+    "email": "customer3@example.com",
+    "password_hash": "hashed_password_6",
+    "full_name": "Nguyen Thanh Binh",
+    "status": "unverified",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T08:25:00Z",
+    "updated_at": "2025-11-01T08:25:00Z"
+  },
+  {
+    "email": "customer4@example.com",
+    "password_hash": "hashed_password_7",
+    "full_name": "Tran Quoc Huy",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=5",
+    "created_at": "2025-11-01T08:30:00Z",
+    "updated_at": "2025-11-01T08:30:00Z"
+  },
+  {
+    "email": "customer5@example.com",
+    "password_hash": "hashed_password_8",
+    "full_name": "Do Thi Mai",
+    "status": "disabled",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T08:35:00Z",
+    "updated_at": "2025-11-01T08:35:00Z"
+  },
+  {
+    "email": "customer6@example.com",
+    "password_hash": "hashed_password_9",
+    "full_name": "Nguyen Van Tien",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=6",
+    "created_at": "2025-11-01T08:40:00Z",
+    "updated_at": "2025-11-01T08:40:00Z"
+  },
+  {
+    "email": "customer7@example.com",
+    "password_hash": "hashed_password_10",
+    "full_name": "Bui Minh Chau",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=7",
+    "created_at": "2025-11-01T08:45:00Z",
+    "updated_at": "2025-11-01T08:45:00Z"
+  },
+  {
+    "email": "customer8@example.com",
+    "password_hash": "hashed_password_11",
+    "full_name": "Le Thi Hong",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T08:50:00Z",
+    "updated_at": "2025-11-01T08:50:00Z"
+  },
+  {
+    "email": "customer9@example.com",
+    "password_hash": "hashed_password_12",
+    "full_name": "Nguyen Duc Hieu",
+    "status": "unverified",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=8",
+    "created_at": "2025-11-01T08:55:00Z",
+    "updated_at": "2025-11-01T08:55:00Z"
+  },
+  {
+    "email": "customer10@example.com",
+    "password_hash": "hashed_password_13",
+    "full_name": "Tran Bao Han",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T09:00:00Z",
+    "updated_at": "2025-11-01T09:00:00Z"
+  },
+  {
+    "email": "customer11@example.com",
+    "password_hash": "hashed_password_14",
+    "full_name": "Pham Kien Trung",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=9",
+    "created_at": "2025-11-01T09:05:00Z",
+    "updated_at": "2025-11-01T09:05:00Z"
+  },
+  {
+    "email": "doanhnl",
+    "password_hash": "hashed_password_15",
+    "full_name": "Nguyen Hong Anh",
+    "status": "disabled",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T09:10:00Z",
+    "updated_at": "2025-11-01T09:10:00Z"
+  },
+  {
+    "email": "customer13@example.com",
+    "password_hash": "hashed_password_16",
+    "full_name": "Vu Thi Thao",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=10",
+    "created_at": "2025-11-01T09:15:00Z",
+    "updated_at": "2025-11-01T09:15:00Z"
+  },
+  {
+    "email": "customer14@example.com",
+    "password_hash": "hashed_password_17",
+    "full_name": "Le Quoc Dat",
+    "status": "unverified",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T09:20:00Z",
+    "updated_at": "2025-11-01T09:20:00Z"
+  },
+  {
+    "email": "customer15@example.com",
+    "password_hash": "hashed_password_18",
+    "full_name": "Nguyen Thi Kim",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=11",
+    "created_at": "2025-11-01T09:25:00Z",
+    "updated_at": "2025-11-01T09:25:00Z"
+  },
+  {
+    "email": "customer16@example.com",
+    "password_hash": "hashed_password_19",
+    "full_name": "Bui Van Hai",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://example.com/default-avatar.png",
+    "created_at": "2025-11-01T09:30:00Z",
+    "updated_at": "2025-11-01T09:30:00Z"
+  },
+  {
+    "email": "customer17@example.com",
+    "password_hash": "hashed_password_20",
+    "full_name": "Pham Hoang Y",
+    "status": "active",
+    "role": "customer",
+    "avatar_url": "https://i.pravatar.cc/150?img=12",
+    "created_at": "2025-11-01T09:35:00Z",
+    "updated_at": "2025-11-01T09:35:00Z"
+  }
+]

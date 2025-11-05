@@ -1,0 +1,17 @@
+python-dotenv
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn
+certifi
+pymongo
+pyaml
+dill
+selenium 
+beautifulsoup4 
+python-slugify
+fastapi
+pydantic
+motor
+bson

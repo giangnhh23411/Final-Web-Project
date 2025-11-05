@@ -1,0 +1,135 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690686002969ebf6f2e2be10",
+        "itemNo": "65000381",
+        "__v": 0,
+        "basicItemNo": "65000383",
+        "basicMatl": "65000383",
+        "id": "1feddd84-9ffe-4004-a56b-5597e70e22fe",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "92edd16a-de54-42c0-ba54-507af79cfca2",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png",
+        "name": "Trà Sữa Bá Tước (H)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "tra-sua-ba-tuoc-h--s65000381",
+        "size": "H",
+        "sizes": [
+          {
+            "id": "1a2ecf1e-f39d-44b3-aeeb-c0ccc64ae4b5",
+            "itemNo": "65000383",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png",
+            "name": "Trà Sữa Bá Tước (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "1feddd84-9ffe-4004-a56b-5597e70e22fe",
+            "itemNo": "65000381",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png",
+            "name": "Trà Sữa Bá Tước (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 0
+          },
+          {
+            "id": "76a1e724-27d3-4c93-9ac1-a30ca66f644e",
+            "itemNo": "65000382",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/12/tra-sua-ba-tuoc-20241220071139.jpg",
+            "name": "Trà Sữa Bá Tước (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -5000
+          }
+        ],
+        "subName": "Trà Sữa Bá Tước (H)",
+        "updatedDate": "2025-11-02T01:34:09.393Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2be11",
+        "itemNo": "65000332",
+        "__v": 0,
+        "basicItemNo": "65000333",
+        "basicMatl": "65000333",
+        "id": "16b606ba-7a37-457d-a1d9-80122941075a",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "a8e5ab85-6fe7-4800-bc0e-729432e9f6e4",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020029.png"
+          },
+          {
+            "id": "bbdef2d7-c268-414a-86c4-ab151c0a8808",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729479568221-20241021025945.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020029.png",
+        "name": "Trà Sữa Ô Long Quế Hoa (M)",
+        "price": 50000,
+        "salePrice": 50000,
+        "seoName": "tra-sua-o-long-que-hoa-m--s65000332",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "16b606ba-7a37-457d-a1d9-80122941075a",
+            "itemNo": "65000332",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020029.png",
+            "name": "Trà Sữa Ô Long Quế Hoa (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "4a58eb59-158e-4426-a27e-6dd18a349207",
+            "itemNo": "65000333",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205020029.png",
+            "name": "Trà Sữa Ô Long Quế Hoa (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 5000
+          }
+        ],
+        "subName": "Trà Sữa Ô Long Quế Hoa (M)",
+        "updatedDate": "2025-11-02T01:34:08.637Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 20,
+    "pagingCounter": 191,
+    "hasPrevPage": true,
+    "hasNextPage": false,
+    "prev": 19,
+    "next": null
+  }
+}

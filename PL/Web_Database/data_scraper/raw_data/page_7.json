@@ -1,0 +1,669 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02a96",
+        "itemNo": "60001054",
+        "__v": 0,
+        "basicItemNo": "60001054",
+        "basicMatl": null,
+        "bonusDetail": {
+          "isCombo": false,
+          "offerType": "ZB14",
+          "qtyCombo": null,
+          "totalPriceCombo": null,
+          "comboItems": []
+        },
+        "id": "0afce646-4c98-4e61-b7ae-321280c91e64",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110102",
+        "mch5": "211010201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "56fae6e5-bae9-4738-ac14-71917bdef743",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tomphomai-20250714055202.png"
+          },
+          {
+            "id": "876c7aa2-5759-4a93-af28-afce89a0944a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045702.png"
+          },
+          {
+            "id": "afcd5e2e-b093-4c92-bab3-06f9e64c2c59",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045702.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tomphomai-20250714055202.png",
+        "name": "Bánh Tôm Càng Phô Mai Hảo Vị",
+        "price": 149000,
+        "salePrice": 149000,
+        "seoName": "banh-tom-cang-pho-mai-hao-vi--s60001054",
+        "shortDesc": "<p>KV Bình Dương: đồng giá 80k</p>",
+        "size": null,
+        "sizes": [
+          {
+            "id": "0afce646-4c98-4e61-b7ae-321280c91e64",
+            "itemNo": "60001054",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tomphomai-20250714055202.png",
+            "name": "Bánh Tôm Càng Phô Mai Hảo Vị",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": " Bánh Tôm Càng Phô Mai Hảo Vị",
+        "updatedDate": "2025-11-02T01:09:24.764Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a98",
+        "itemNo": "65000003",
+        "__v": 0,
+        "basicItemNo": "65000003",
+        "basicMatl": "65000003",
+        "id": "8473b078-b0fd-4d7d-bc56-28befc09caf3",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "143",
+        "mch3": "14301",
+        "mch4": "1430101",
+        "mch5": "143010101",
+        "mch6": "143010101",
+        "mediaItems": [
+          {
+            "id": "ab755373-745b-4782-84c4-f7def92a142e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000003-ca-phe-cappuccino-da-xay_47179b90-3960-4478-84c4-1f74b3fa1248-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000003-ca-phe-cappuccino-da-xay_47179b90-3960-4478-84c4-1f74b3fa1248-og.png",
+        "name": "Cappuccino Đá Xay",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "cappuccino-da-xay--s65000003",
+        "shortDesc": "",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "8473b078-b0fd-4d7d-bc56-28befc09caf3",
+            "itemNo": "65000003",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000003-ca-phe-cappuccino-da-xay_47179b90-3960-4478-84c4-1f74b3fa1248-og.png",
+            "name": "Cappuccino Đá Xay",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Cappuccino Đá Xay",
+        "updatedDate": "2025-11-02T01:09:24.788Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a99",
+        "itemNo": "60001052",
+        "__v": 0,
+        "basicItemNo": "60001052",
+        "basicMatl": null,
+        "bonusDetail": {
+          "isCombo": false,
+          "offerType": "ZB14",
+          "qtyCombo": null,
+          "totalPriceCombo": null,
+          "comboItems": []
+        },
+        "id": "91bada8c-04d1-4067-af2f-74129b2219c4",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110102",
+        "mch5": "211010201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "e5248a37-d247-431d-8839-064037884137",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/matcha-min-1--20250714055626.png"
+          },
+          {
+            "id": "2ba97ed9-6aac-4e67-b85e-5462925810b3",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045509.png"
+          },
+          {
+            "id": "15b42e54-6792-4bb9-971d-e2af528d5a4c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045509.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/matcha-min-1--20250714055626.png",
+        "name": "Bánh Matcha Đậu Đỏ",
+        "price": 149000,
+        "salePrice": 149000,
+        "seoName": "banh-matcha-dau-do--s60001052",
+        "shortDesc": "<p>KV Bình Dương: đồng giá 80k</p>",
+        "size": null,
+        "sizes": [
+          {
+            "id": "91bada8c-04d1-4067-af2f-74129b2219c4",
+            "itemNo": "60001052",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/matcha-min-1--20250714055626.png",
+            "name": "Bánh Matcha Đậu Đỏ",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": " Bánh Matcha  Đậu Đỏ",
+        "updatedDate": "2025-11-02T01:09:24.714Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a9a",
+        "itemNo": "60001050",
+        "__v": 0,
+        "basicItemNo": "60001050",
+        "basicMatl": null,
+        "bonusDetail": {
+          "isCombo": false,
+          "offerType": "ZB14",
+          "qtyCombo": null,
+          "totalPriceCombo": null,
+          "comboItems": []
+        },
+        "id": "b3a4588a-8c5e-4da0-835e-b1e7da296d89",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110102",
+        "mch5": "211010201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "caad5a17-7cbd-4c9c-abfa-12a76f600c0a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tra-oolong-que-hoa-20250714055037.png"
+          },
+          {
+            "id": "971298e4-2303-46f4-9725-a2ce3217584b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045534.png"
+          },
+          {
+            "id": "fa810f12-89b6-493a-89f3-3e6048352243",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045535.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tra-oolong-que-hoa-20250714055037.png",
+        "name": "Bánh Ô Long Quế Hoa Thượng Hạng",
+        "price": 139000,
+        "salePrice": 139000,
+        "seoName": "banh-o-long-que-hoa-thuong-hang--s60001050",
+        "shortDesc": "<p>KV Bình Dương: đồng giá 80k</p>",
+        "size": null,
+        "sizes": [
+          {
+            "id": "b3a4588a-8c5e-4da0-835e-b1e7da296d89",
+            "itemNo": "60001050",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tra-oolong-que-hoa-20250714055037.png",
+            "name": "Bánh Ô Long Quế Hoa Thượng Hạng",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": " Bánh Ô Long Quế Hoa Thượng Hạng",
+        "updatedDate": "2025-11-02T01:09:24.652Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a9f",
+        "itemNo": "65000056",
+        "__v": 0,
+        "basicItemNo": "65000056",
+        "basicMatl": "65000056",
+        "id": "6795864b-14fa-4d1a-873d-47c6eed77498",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "143",
+        "mch3": "14302",
+        "mch4": "1430202",
+        "mch5": "143020201",
+        "mch6": "143020201",
+        "mediaItems": [
+          {
+            "id": "cc7a26e5-4cba-4db6-a369-64ca9ece4b17",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png",
+        "name": "Cà Phê Sữa Đá (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 39000,
+        "salePrice": 39000,
+        "seoName": "ca-phe-sua-da-m--s65000056",
+        "shortDesc": "",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "6795864b-14fa-4d1a-873d-47c6eed77498",
+            "itemNo": "65000056",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_3795a527-1b5b-4aaa-9d92-0d82385e4406-og.png",
+            "name": "Cà Phê Sữa Đá (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "a7e64e78-5c02-46a2-b5bc-603e8d52f76b",
+            "itemNo": "65000171",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap082-dmcap084-phin-sua-da_89451266-77df-49ef-9de4-054713d2fb72-og.png",
+            "name": "Cà Phê Sữa Đá (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 6000
+          }
+        ],
+        "subName": "Cà Phê Sữa Đá (M)",
+        "updatedDate": "2025-11-02T01:09:24.956Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02aa0",
+        "itemNo": "65000070",
+        "__v": 0,
+        "basicItemNo": "65000070",
+        "basicMatl": "65000070",
+        "id": "20777386-3a29-47eb-8436-158e91737fbc",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "142",
+        "mch3": "14202",
+        "mch4": "1420201",
+        "mch5": "142020101",
+        "mch6": "142020101",
+        "mediaItems": [
+          {
+            "id": "8131949f-e698-4019-b8af-43603e93f8ec",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000070-sinh-to-chanh_f87c3f0f-c707-40d6-aa16-2b5fa3a90400-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000070-sinh-to-chanh_f87c3f0f-c707-40d6-aa16-2b5fa3a90400-og.png",
+        "name": "Chanh Đá Xay",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "chanh-da-xay--s65000070",
+        "shortDesc": "",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "20777386-3a29-47eb-8436-158e91737fbc",
+            "itemNo": "65000070",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000070-sinh-to-chanh_f87c3f0f-c707-40d6-aa16-2b5fa3a90400-og.png",
+            "name": "Chanh Đá Xay",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Chanh Đá Xay",
+        "updatedDate": "2025-11-02T01:09:24.990Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02aa3",
+        "itemNo": "60001051",
+        "__v": 0,
+        "basicItemNo": "60001051",
+        "basicMatl": null,
+        "bonusDetail": {
+          "isCombo": false,
+          "offerType": "ZB14",
+          "qtyCombo": null,
+          "totalPriceCombo": null,
+          "comboItems": []
+        },
+        "id": "00cad533-4d10-4474-be29-831354248ff6",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "211",
+        "mch3": "21101",
+        "mch4": "2110102",
+        "mch5": "211010201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "6928d952-37bc-41c1-bd43-c8e5049f030e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tiramisu-20250714055414.png"
+          },
+          {
+            "id": "05100e51-714c-4235-b2bb-86421889e4d5",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/hg-20250715045640.png"
+          },
+          {
+            "id": "9b1ad4c1-2017-4a1c-80c0-60ba951db6fd",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/ht-20250715045639.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tiramisu-20250714055414.png",
+        "name": "Bánh Tiramisu Cà Phê Phô Mai",
+        "price": 139000,
+        "salePrice": 139000,
+        "seoName": "banh-tiramisu-ca-phe-pho-mai--s60001051",
+        "shortDesc": "<p>KV Bình Dương: đồng giá 80k</p>",
+        "size": null,
+        "sizes": [
+          {
+            "id": "00cad533-4d10-4474-be29-831354248ff6",
+            "itemNo": "60001051",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/07/tiramisu-20250714055414.png",
+            "name": "Bánh Tiramisu Cà Phê Phô Mai",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": " Bánh Tiramisu Cà Phê Phô Mai",
+        "updatedDate": "2025-11-02T01:09:24.687Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02aa4",
+        "itemNo": "65000047",
+        "__v": 0,
+        "basicItemNo": "65000047",
+        "basicMatl": "65000047",
+        "id": "5daca753-b124-4995-88ae-24f08cd00f9a",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "143",
+        "mch3": "14301",
+        "mch4": "1430101",
+        "mch5": "143010101",
+        "mch6": "143010101",
+        "mediaItems": [
+          {
+            "id": "e27b15a7-06e6-47c3-903f-d2fe92abccf0",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/oreo-20250212021326.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/oreo-20250212021326.png",
+        "name": "Oreo Kem Đá Xay",
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "oreo-kem-da-xay--s65000047",
+        "shortDesc": "<p>Must-try</p>",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "5daca753-b124-4995-88ae-24f08cd00f9a",
+            "itemNo": "65000047",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/oreo-20250212021326.png",
+            "name": "Oreo Kem Đá Xay",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Oreo Kem Đá Xay",
+        "updatedDate": "2025-11-02T01:09:24.885Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02aa5",
+        "itemNo": "65000055",
+        "__v": 0,
+        "basicItemNo": "65000055",
+        "basicMatl": "65000055",
+        "id": "1b50b753-c4c0-4cfb-82ca-6b24cfab578d",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "143",
+        "mch3": "14302",
+        "mch4": "1430202",
+        "mch5": "143020201",
+        "mch6": "143020201",
+        "mediaItems": [
+          {
+            "id": "6c545db7-88ea-413a-8183-db0218551bd7",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+        "name": "Cà Phê Đen Đá (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 35000,
+        "salePrice": 35000,
+        "seoName": "ca-phe-den-da-m--s65000055",
+        "shortDesc": "",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "1b50b753-c4c0-4cfb-82ca-6b24cfab578d",
+            "itemNo": "65000055",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+            "name": "Cà Phê Đen Đá (M)",
+            "baseSize": true,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "b976417c-8089-4358-b8dd-dabd4a2ac936",
+            "itemNo": "65000170",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/dmcap081-dmcap083-phin-den-da_d852660d-1e23-46bd-a1af-117247dc77f0-og.png",
+            "name": "Cà Phê Đen Đá (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 4000
+          }
+        ],
+        "subName": "Cà Phê Đen Đá (M)",
+        "updatedDate": "2025-11-02T01:09:24.923Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02aaa",
+        "itemNo": "65000076",
+        "__v": 0,
+        "basicItemNo": "65000106",
+        "basicMatl": "65000106",
+        "id": "7e1bfa2f-2ce0-41a4-b59c-345ae659af71",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "dee1afd2-ebf5-4137-b0f2-edd1eec0712f",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png"
+          },
+          {
+            "id": "236b0d9d-fa73-4906-9a96-b4b9b9d6a1b3",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000076-latte-tra-xanh-2-_665f832a-2ad7-41f2-981c-9f456b4d21e7-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+        "name": "Trà Sữa Matcha (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-sua-matcha-m--s65000076",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "7e1bfa2f-2ce0-41a4-b59c-345ae659af71",
+            "itemNo": "65000076",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+            "name": "Trà Sữa Matcha (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "e981f4e7-bd5a-43d5-b7fa-8caaaea05ee0",
+            "itemNo": "65000106",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250205025548.png",
+            "name": "Trà Sữa Matcha (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -4000
+          }
+        ],
+        "subName": "Trà Sữa Matcha (M)",
+        "updatedDate": "2025-11-02T01:09:25.102Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 7,
+    "pagingCounter": 61,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 6,
+    "next": 8
+  }
+}

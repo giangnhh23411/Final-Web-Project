@@ -1,0 +1,217 @@
+/* inbox.css */
+/* Include base styles from dashboard.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 150px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    align-items: center;
+}
+
+.sidebar-item {
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar-item.menu {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 15px 0;
+margin-bottom: 20px;
+}
+.sidebar.collapsed .sidebar-item.menu {
+margin: 0;
+padding: 15px 0;
+}
+
+.sidebar-item a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.sidebar-item a:visited {
+    color: inherit;
+}
+
+.sidebar-item .icon {
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar-item .label {
+    white-space: nowrap;
+}
+
+.sidebar.collapsed .sidebar-item {
+    padding: 0;
+}
+
+.sidebar.collapsed .sidebar-item a {
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.sidebar.collapsed .sidebar-item .label {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-item:hover .label {
+    display: block;
+    position: absolute;
+    left: 60px;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.sidebar-item:hover {
+    background-color: #f0f4ff;
+}
+
+.sidebar-item.active {
+    color: #4a90e2;
+    border-left: 4px solid #4a90e2;
+}
+
+.sidebar-item.active a {
+    color: #4a90e2;
+}
+
+.sidebar.collapsed .sidebar-item.active {
+    border-left: none;
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile span {
+    margin-right: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.message-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fd;
+    font-weight: normal;
+    color: #666;
+}
+
+.unread {
+    font-weight: bold;
+    background-color: #f0f4ff;
+}
+
+.status.unread {
+    background-color: #E3F2FD;
+    color: #2196F3;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.status.read {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+    padding: 4px 8px;
+    border-radius: 4px;
+}

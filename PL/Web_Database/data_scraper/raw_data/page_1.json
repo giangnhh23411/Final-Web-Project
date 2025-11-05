@@ -1,0 +1,469 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690682682969ebf6f2e02a09",
+        "itemNo": "60000019",
+        "__v": 0,
+        "basicItemNo": "60000019",
+        "basicMatl": null,
+        "id": "09ccec92-6c77-4a97-a777-d6ddaf854f97",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": "ZVCO",
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "0405f77d-c9e6-4106-a0ae-6a819ba0eb0b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000019-tra-den-phuc-long_fbb9b294-785a-4a29-af2d-4c8fa4878e0c-og.png"
+          },
+          {
+            "id": "b75b74b3-cb14-4acd-a840-71d674ab1676",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000019-tra-den-phuc-long_9f7eb07f-05d0-445a-879c-5b6a35b4f3f5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000019-tra-den-phuc-long_fbb9b294-785a-4a29-af2d-4c8fa4878e0c-og.png",
+        "name": "Trà đen Phúc Long 200g",
+        "price": 58000,
+        "salePrice": 58000,
+        "seoName": "tra-den-phuc-long-200g--s60000019",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "09ccec92-6c77-4a97-a777-d6ddaf854f97",
+            "itemNo": "60000019",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000019-tra-den-phuc-long_fbb9b294-785a-4a29-af2d-4c8fa4878e0c-og.png",
+            "name": "Trà đen Phúc Long 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà đen Phúc Long 200g",
+        "updatedDate": "2025-11-02T01:09:19.419Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a0a",
+        "itemNo": "60000021",
+        "__v": 0,
+        "basicItemNo": "60000021",
+        "basicMatl": null,
+        "id": "2f2b0dc1-a902-4f35-a54a-04b4285a81ef",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": "ZVCO",
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "bd5f01b4-bd13-4f35-b0ab-3e424c3bc193",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000021-tra-den-500g-phuc-long_52e73e0a-e09a-4e2c-8406-fc1dcb4da3e3-og.png"
+          },
+          {
+            "id": "255f970f-b4b6-4a10-aae2-64e9361496d3",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000021-tra-den-500g-phuc-long_243d4494-9a81-4309-be9e-a4c7cfcc8003-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000021-tra-den-500g-phuc-long_52e73e0a-e09a-4e2c-8406-fc1dcb4da3e3-og.png",
+        "name": "Trà đen Phúc Long 500g",
+        "price": 135000,
+        "salePrice": 135000,
+        "seoName": "tra-den-phuc-long-500g--s60000021",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "2f2b0dc1-a902-4f35-a54a-04b4285a81ef",
+            "itemNo": "60000021",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000021-tra-den-500g-phuc-long_52e73e0a-e09a-4e2c-8406-fc1dcb4da3e3-og.png",
+            "name": "Trà đen Phúc Long 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà đen Phúc Long 500g",
+        "updatedDate": "2025-11-02T01:09:19.442Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a0b",
+        "itemNo": "60000072",
+        "__v": 0,
+        "basicItemNo": "60000072",
+        "basicMatl": null,
+        "id": "40b06916-0abf-42d7-9408-86fe29cf8b06",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "8db02efc-c6a7-4f31-a6e2-f1209cba1202",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000072-tra-lai-hop-giay_d078fcf5-b941-4b6b-b9f7-e38736346ec5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000072-tra-lai-hop-giay_d078fcf5-b941-4b6b-b9f7-e38736346ec5-og.png",
+        "name": "Trà lài hộp giấy 150g",
+        "price": 75000,
+        "salePrice": 75000,
+        "seoName": "tra-lai-hop-giay-150g--s60000072",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "40b06916-0abf-42d7-9408-86fe29cf8b06",
+            "itemNo": "60000072",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000072-tra-lai-hop-giay_d078fcf5-b941-4b6b-b9f7-e38736346ec5-og.png",
+            "name": "Trà lài hộp giấy 150g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài hộp giấy 150g",
+        "updatedDate": "2025-11-02T01:09:19.474Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a10",
+        "itemNo": "60000075",
+        "__v": 0,
+        "basicItemNo": "60000075",
+        "basicMatl": null,
+        "id": "e655d7ab-db73-495a-912b-9f1da2f84a29",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "ad971753-fe1e-4191-9344-0468c92e856a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_eabee765-a51b-4d38-9487-d784f56be6b3-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_eabee765-a51b-4d38-9487-d784f56be6b3-og.jpg",
+        "name": "Trà lài 15 - 200g",
+        "price": 105000,
+        "salePrice": 105000,
+        "seoName": "tra-lai-15-200g--s60000075",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "e655d7ab-db73-495a-912b-9f1da2f84a29",
+            "itemNo": "60000075",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_eabee765-a51b-4d38-9487-d784f56be6b3-og.jpg",
+            "name": "Trà lài 15 - 200g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài 15 - 200g",
+        "updatedDate": "2025-11-02T01:09:19.503Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a13",
+        "itemNo": "60000076",
+        "__v": 0,
+        "basicItemNo": "60000076",
+        "basicMatl": null,
+        "id": "12145021-6c37-400e-9a5c-19046b741a8d",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "285f1570-18a6-4807-852b-43e933a4ad6e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_e8e5c826-4b67-4a9f-b82d-003170f3bf3d-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_e8e5c826-4b67-4a9f-b82d-003170f3bf3d-og.jpg",
+        "name": "Trà lài 15 - 500g",
+        "price": 250000,
+        "salePrice": 250000,
+        "seoName": "tra-lai-15-500g--s60000076",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "12145021-6c37-400e-9a5c-19046b741a8d",
+            "itemNo": "60000076",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000075-60000076-tra-lai-15_e8e5c826-4b67-4a9f-b82d-003170f3bf3d-og.jpg",
+            "name": "Trà lài 15 - 500g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài 15 - 500g",
+        "updatedDate": "2025-11-02T01:09:19.524Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a15",
+        "itemNo": "60000162",
+        "__v": 0,
+        "basicItemNo": "60000162",
+        "basicMatl": null,
+        "id": "e55bc4b7-acba-4635-a9c5-6870da7f3202",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "e649051b-a9db-4ba7-afb0-aa2cfb11be4a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000162-tra-non-tom-u-lanh-tui-tam-giac_53c6ea81-dc90-4e8d-b71b-a7c6403fde78-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000162-tra-non-tom-u-lanh-tui-tam-giac_53c6ea81-dc90-4e8d-b71b-a7c6403fde78-og.png",
+        "name": "Trà nõn tôm ủ lạnh túi tgiác CC 2gx12gói",
+        "price": 135000,
+        "salePrice": 135000,
+        "seoName": "tra-non-tom-u-lanh-tui-tgiac-cc-2gx12goi--s60000162",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "e55bc4b7-acba-4635-a9c5-6870da7f3202",
+            "itemNo": "60000162",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000162-tra-non-tom-u-lanh-tui-tam-giac_53c6ea81-dc90-4e8d-b71b-a7c6403fde78-og.png",
+            "name": "Trà nõn tôm ủ lạnh túi tgiác CC 2gx12gói",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà nõn tôm ủ lạnh túi tgiác CC 2gx12gói",
+        "updatedDate": "2025-11-02T01:09:19.609Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a16",
+        "itemNo": "60000103",
+        "__v": 0,
+        "basicItemNo": "60000103",
+        "basicMatl": null,
+        "id": "0c1e5c80-0e63-4f95-a4f5-b460054933e9",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": "ZVCN",
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "8aaafab2-b68e-45d7-a3e8-dd7c0c45b354",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000103-tra-lai-u-lanh-tui-tam-giac_67d9ae74-5d48-451f-8f14-bd013eb0830e-og.png"
+          },
+          {
+            "id": "f6f4974e-b928-48c7-83cb-2e1fa4cb7daa",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000103-tra-lai-u-lanh-tui-tam-giac_53bf1c1f-9a60-4fe1-bd3f-69b9e29e1ff5-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000103-tra-lai-u-lanh-tui-tam-giac_67d9ae74-5d48-451f-8f14-bd013eb0830e-og.png",
+        "name": "Trà lài ủ lạnh túi tgiac CC 2gx12 gói",
+        "price": 114000,
+        "salePrice": 114000,
+        "seoName": "tra-lai-u-lanh-tui-tgiac-cc-2gx12-goi--s60000103",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "0c1e5c80-0e63-4f95-a4f5-b460054933e9",
+            "itemNo": "60000103",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000103-tra-lai-u-lanh-tui-tam-giac_67d9ae74-5d48-451f-8f14-bd013eb0830e-og.png",
+            "name": "Trà lài ủ lạnh túi tgiac CC 2gx12 gói",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài ủ lạnh túi tgiac CC 2gx12 gói",
+        "updatedDate": "2025-11-02T01:09:19.588Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a17",
+        "itemNo": "60000093",
+        "__v": 0,
+        "basicItemNo": "60000093",
+        "basicMatl": null,
+        "id": "0eb1e354-08ef-46fe-8dae-580f07a4f093",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": "ZVCN",
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "0a37944e-865f-4419-97f7-7548e0bb54fd",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000093-tra-lai-tui-tam-giac-phuc-long_6365beb0-02a0-451f-bd04-594942b4483c-og.png"
+          },
+          {
+            "id": "160b9bc4-2460-4b6a-baed-55385259222d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000093-tra-lai-tui-tam-giac-phuc-long_92a6d235-0bb1-4bbe-a8aa-26a08ed09a45-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000093-tra-lai-tui-tam-giac-phuc-long_6365beb0-02a0-451f-bd04-594942b4483c-og.png",
+        "name": "Trà lài túi tam giác (3g x 10 gói)",
+        "price": 80000,
+        "salePrice": 80000,
+        "seoName": "tra-lai-tui-tam-giac-3g-x-10-goi--s60000093",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "0eb1e354-08ef-46fe-8dae-580f07a4f093",
+            "itemNo": "60000093",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000093-tra-lai-tui-tam-giac-phuc-long_6365beb0-02a0-451f-bd04-594942b4483c-og.png",
+            "name": "Trà lài túi tam giác (3g x 10 gói)",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài túi tam giác (3g x 10 gói)",
+        "updatedDate": "2025-11-02T01:09:19.566Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a19",
+        "itemNo": "60000079",
+        "__v": 0,
+        "basicItemNo": "60000079",
+        "basicMatl": null,
+        "id": "01a2686a-6cb5-4c6c-9a28-8a8e565f6e19",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "27dcc516-fcdf-456d-90ab-7875108faaaf",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000079-tra-lai-dac-biet_b92f0cc8-62c2-42c2-ac26-b5244fe91eaf-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000079-tra-lai-dac-biet_b92f0cc8-62c2-42c2-ac26-b5244fe91eaf-og.jpg",
+        "name": "Trà lài đặc biệt (100g/ gói)",
+        "price": 85000,
+        "salePrice": 85000,
+        "seoName": "tra-lai-dac-biet-100g-goi--s60000079",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "01a2686a-6cb5-4c6c-9a28-8a8e565f6e19",
+            "itemNo": "60000079",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000079-tra-lai-dac-biet_b92f0cc8-62c2-42c2-ac26-b5244fe91eaf-og.jpg",
+            "name": "Trà lài đặc biệt (100g/ gói)",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà lài đặc biệt (100g/ gói)",
+        "updatedDate": "2025-11-02T01:09:19.545Z"
+      },
+      {
+        "_id": "690682682969ebf6f2e02a1c",
+        "itemNo": "60000184",
+        "__v": 0,
+        "basicItemNo": "60000184",
+        "basicMatl": null,
+        "id": "0846aef4-135f-43c5-8c44-a1fa2ca65b5a",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14401",
+        "mch4": "1440101",
+        "mch5": "144010101",
+        "mch6": "144010101",
+        "mediaItems": [
+          {
+            "id": "441d118a-6fe9-4633-934f-07a4b33d047c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000184-tra-o-long-80-150g_950a7bee-fbbe-491f-896a-3cca5c68747b-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000184-tra-o-long-80-150g_950a7bee-fbbe-491f-896a-3cca5c68747b-og.png",
+        "name": "Trà ô long 80-150g",
+        "price": 160000,
+        "salePrice": 160000,
+        "seoName": "tra-o-long-80-150g--s60000184",
+        "shortDesc": null,
+        "size": null,
+        "sizes": [
+          {
+            "id": "0846aef4-135f-43c5-8c44-a1fa2ca65b5a",
+            "itemNo": "60000184",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/60000184-tra-o-long-80-150g_950a7bee-fbbe-491f-896a-3cca5c68747b-og.png",
+            "name": "Trà ô long 80-150g",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà ô long 80-150g",
+        "updatedDate": "2025-11-02T01:09:19.687Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 1,
+    "pagingCounter": 1,
+    "hasPrevPage": false,
+    "hasNextPage": true,
+    "prev": null,
+    "next": 2
+  }
+}

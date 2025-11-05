@@ -1,0 +1,3107 @@
+.order-filteredby-product-container1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.order-filteredby-product-order-filteredby-product {
+  width: 100%;
+  height: 1070px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.order-filteredby-product-main-bg-color {
+  top: 0px;
+  left: 0px;
+  width: 1441px;
+  height: 1070px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-main-bg {
+  top: 0px;
+  left: 0px;
+  width: 1441px;
+  height: 1070px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text10 {
+  top: 1020px;
+  left: 115px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  opacity: 0.60;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-indicator {
+  top: 1014px;
+  left: 1324px;
+  width: 86px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(250, 251, 252, 1);
+}
+ 
+.order-filteredby-product-ickeyboardarrowleft24px1 {
+  top: 3.47998046875px;
+  left: 10px;
+  width: 24px;
+  height: 23.040000915527344px;
+  display: flex;
+  opacity: 0.60;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-path10 {
+  top: 5.760019302368164px;
+  left: 8px;
+  width: 7px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-ickeyboardarrowleft24px2 {
+  top: 3.47998046875px;
+  left: 77px;
+  width: 24px;
+  height: 23.040000915527344px;
+  display: flex;
+  opacity: 0.90;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-path11 {
+  top: 5.760019302368164px;
+  left: -8px;
+  width: 7px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-line1 {
+  top: 0px;
+  left: 43px;
+  width: 1px;
+  height: 30px;
+  opacity: 0.70;
+  position: absolute;
+}
+ 
+.order-filteredby-product-filter1 {
+  top: 167px;
+  left: 115px;
+  width: 852px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(248, 249, 250, 1);
+}
+ 
+.order-filteredby-product-reset-filter {
+  top: 27px;
+  left: 711px;
+  width: 98px;
+  height: 19px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-icreplay24px {
+  top: 1px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-path12 {
+  top: 0.75px;
+  left: 3px;
+  width: 12px;
+  height: 15px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text11 {
+  left: 26px;
+  color: rgba(234, 2, 52, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-t-ype {
+  top: 0px;
+  left: 360px;
+  width: 147px;
+  height: 70px;
+  display: flex;
+  opacity: 0.40;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-line3 {
+  top: 0px;
+  left: 146px;
+  width: 1px;
+  height: 70px;
+  opacity: 0.69;
+  position: absolute;
+}
+ 
+.order-filteredby-product-ickeyboardarrowdown48px1 {
+  top: 23.125px;
+  left: 98px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-path13 {
+  top: 8.585000038146973px;
+  left: 6px;
+  width: 12px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text12 {
+  top: 26px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-status {
+  top: 0px;
+  left: 531px;
+  width: 156px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-line4 {
+  top: 0px;
+  left: 155px;
+  width: 1px;
+  height: 70px;
+  opacity: 0.69;
+  position: absolute;
+}
+ 
+.order-filteredby-product-ickeyboardarrowdown48px2 {
+  top: 23.125px;
+  left: 107px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-path14 {
+  top: 8.585000038146973px;
+  left: 6px;
+  width: 12px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text13 {
+  top: 26px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-date {
+  top: 0px;
+  left: 198px;
+  width: 138px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-line5 {
+  top: 0px;
+  left: 137px;
+  width: 1px;
+  height: 70px;
+  opacity: 0.69;
+  position: absolute;
+}
+ 
+.order-filteredby-product-ickeyboardarrowdown48px3 {
+  top: 23.125px;
+  left: 99px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-path15 {
+  top: 8.585000038146973px;
+  left: 6px;
+  width: 12px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text14 {
+  top: 26px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-filter2 {
+  top: 0px;
+  left: 93px;
+  width: 81px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-line6 {
+  top: 0px;
+  left: 80px;
+  width: 1px;
+  height: 70px;
+  opacity: 0.69;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text15 {
+  top: 26px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-filtericon {
+  top: 0px;
+  left: 24.25px;
+  width: 44.75px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-line7 {
+  top: 0px;
+  left: 43.75px;
+  width: 1px;
+  height: 70px;
+  opacity: 0.69;
+  position: absolute;
+}
+ 
+.order-filteredby-product-filter3 {
+  top: 23.75px;
+  left: 0px;
+  width: 19.5px;
+  height: 22.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-oval1 {
+  top: 0px;
+  left: 0px;
+  width: 19px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path16 {
+  top: 4.5px;
+  left: 0px;
+  width: 19px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text16 {
+  top: 100px;
+  left: 115px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-navigation-top-bar21 {
+  top: 0px;
+  left: 84px;
+  width: 1356px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-navigation-top-bar22 {
+  top: 0px;
+  left: 0px;
+  width: 1356px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.order-filteredby-product-profile {
+  top: 13px;
+  left: 1144px;
+  width: 169px;
+  height: 44px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-more {
+  top: 13px;
+  left: 151px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-border {
+  top: 0px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  box-sizing: content-box;
+}
+ 
+.order-filteredby-product-chevrondown {
+  top: 7px;
+  left: 6px;
+  width: 6px;
+  height: 4px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-shape1 {
+  top: 0px;
+  left: 0px;
+  width: 6px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text17 {
+  top: 3px;
+  left: 64px;
+  color: rgba(64, 64, 64, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text18 {
+  top: 25px;
+  left: 64px;
+  color: rgba(86, 86, 86, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-man438081960720 {
+  top: 0px;
+  left: 0px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-mask {
+  top: 0px;
+  left: 0px;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-allefvinicius343875unsplash {
+  top: -4px;
+  left: -2px;
+  width: 50px;
+  height: 52px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-noti {
+  top: 18px;
+  left: 1078px;
+  width: 30px;
+  height: 31.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-icon1 {
+  top: 6px;
+  left: 0px;
+  width: 24px;
+  height: 25.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-combined-shape {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-rectangle23 {
+  top: 19.5px;
+  left: 9px;
+  width: 6px;
+  height: 6px;
+  opacity: 0.30;
+  position: absolute;
+  border-radius: 2.25px;
+}
+ 
+.order-filteredby-product-oval2 {
+  top: 0px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.17;
+  position: absolute;
+}
+ 
+.order-filteredby-product-oval3 {
+  top: 1px;
+  left: 13px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-search1 {
+  top: 26px;
+  left: 47.5494384765625px;
+  width: 71.4501953125px;
+  height: 19px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-text19 {
+  left: 27.4505615234375px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  opacity: 0.50;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-search2 {
+  top: 0.548926591873169px;
+  left: 0px;
+  width: 15.006153106689453px;
+  height: 15.006617546081543px;
+  display: flex;
+  opacity: 0.50;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-oval4 {
+  top: 4.201284408569336px;
+  left: 0.000018775463104248047px;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path17 {
+  top: 10.840703010559082px;
+  left: 10.840784072875977px;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-side-bar {
+  top: 0px;
+  left: 0px;
+  width: 85px;
+  height: 1070px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-side-nvbg {
+  top: 0px;
+  left: 0px;
+  width: 84px;
+  height: 1070px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-logout {
+  top: 763px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.70;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-power {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-path18 {
+  top: 1px;
+  left: 11px;
+  width: 2px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path19 {
+  top: 2.9979429244995117px;
+  left: 1.9990344047546387px;
+  width: 20px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-ui-elements {
+  top: 569px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementicon-u-ielement1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementicon-u-ielement2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-shape2 {
+  top: 2px;
+  left: 13.670000076293945px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path20 {
+  top: 1.9945428371429443px;
+  left: 2.055803060531616px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-settings {
+  top: 681px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementiconsettings1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementiconsettings2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-rectangle1 {
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.00;
+  position: absolute;
+}
+ 
+.order-filteredby-product-oval5 {
+  top: 10.5px;
+  left: 10.5px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-shape3 {
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-invoice {
+  top: 513px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementiconinvoice1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementiconinvoice2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-shape4 {
+  top: 5px;
+  left: 2px;
+  width: 20px;
+  height: 14px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-contact {
+  top: 457px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementiconcontact1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementiconcontact2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-path21 {
+  top: 3px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path22 {
+  top: 7px;
+  left: 14px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path23 {
+  top: 13.009267807006836px;
+  left: 2px;
+  width: 20px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-to-do {
+  top: 625px;
+  left: 31px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementicontodo {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-order-lists {
+  top: 401px;
+  left: 31px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementiconorderlist1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementiconorderlist2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-rectangle2 {
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.00;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path24 {
+  top: 2.9624931812286377px;
+  left: 2.994819402694702px;
+  width: 18px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path25 {
+  top: 9.880000114440918px;
+  left: 3.0331032276153564px;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path26 {
+  top: 14.420000076293945px;
+  left: 3.025554895401001px;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-inbox {
+  top: 345px;
+  left: 31px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementiconchat1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementiconchat2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-shape5 {
+  top: 1.9778519868850708px;
+  left: 1.974938988685608px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-favorites {
+  top: 289px;
+  left: 31px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementicon-favourites1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementicon-favourites2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-path27 {
+  top: 4.000471591949463px;
+  left: 1.9986628293991089px;
+  width: 20px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-products {
+  top: 233px;
+  left: 31px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  opacity: 0.30;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementiconproduct1 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementiconproduct2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-path28 {
+  top: 8.359999656677246px;
+  left: 3px;
+  width: 8px;
+  height: 13px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path29 {
+  top: 3.000236749649048px;
+  left: 3.490000009536743px;
+  width: 17px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path30 {
+  top: 8.359999656677246px;
+  left: 12.75px;
+  width: 8px;
+  height: 13px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-dashboard {
+  top: 163px;
+  left: 0px;
+  width: 55px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-elementicondashboard1 {
+  top: 14px;
+  left: 31px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-elementicondashboard2 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+ 
+.order-filteredby-product-path31 {
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path32 {
+  top: 3px;
+  left: 13px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path33 {
+  top: 13px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-path34 {
+  top: 13px;
+  left: 13px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-active {
+  top: 0px;
+  left: 0px;
+  width: 4px;
+  height: 52px;
+  position: absolute;
+  border-radius: 1px;
+}
+ 
+.order-filteredby-product-menu {
+  top: 23px;
+  left: 30px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-shape6 {
+  top: 6px;
+  left: 4px;
+  width: 16px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-separator {
+  top: 0px;
+  left: 84px;
+  width: 1px;
+  height: 1070px;
+  position: absolute;
+}
+ 
+.order-filteredby-product-order-list {
+  top: 275px;
+  left: 121px;
+  width: 1312.6153564453125px;
+  height: 733px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-bg {
+  top: 6px;
+  left: 0px;
+  width: 1313px;
+  height: 727px;
+  position: absolute;
+  border-color: rgba(184, 184, 184, 1);
+  border-style: solid;
+  border-width: 0.30000001192092896px;
+  border-radius: 14px;
+}
+ 
+.order-filteredby-product-frame1 {
+  top: 65px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 186px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-completed1 {
+  top: 8px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-completed2 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 182, 155, 1);
+}
+ 
+.order-filteredby-product-text20 {
+  top: 6px;
+  left: 16.205127716064453px;
+  color: rgba(0, 182, 155, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text21 {
+  top: 12px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line21 {
+  top: 59px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text22 {
+  top: 11px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 92px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text23 {
+  top: 12px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 185px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text24 {
+  top: 11px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 84px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text25 {
+  top: 7px;
+  left: 692.7691040039062px;
+  color: rgba(32, 34, 36, 1);
+  width: 113px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame2 {
+  top: 149px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-processing1 {
+  top: 5.6843418860808015e-14px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-processing2 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(98, 37, 238, 1);
+}
+ 
+.order-filteredby-product-text26 {
+  top: 6px;
+  left: 16.205127716064453px;
+  color: rgba(98, 37, 238, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text27 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line22 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text28 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 59px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text29 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 185px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text30 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 86px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text31 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 121px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame3 {
+  top: 225px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-rejected1 {
+  top: 1.1368683772161603e-13px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-rejected2 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(238, 56, 37, 1);
+}
+ 
+.order-filteredby-product-text32 {
+  top: 6px;
+  left: 23.294872283935547px;
+  color: rgba(239, 56, 38, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text33 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line23 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text34 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 97px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text35 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 185px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text36 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 85px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text37 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 80px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame4 {
+  top: 301px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-completed3 {
+  top: 1.1368683772161603e-13px;
+  left: 1115.115234375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-completed4 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 182, 155, 1);
+}
+ 
+.order-filteredby-product-text38 {
+  top: 6px;
+  left: 16.205127716064453px;
+  color: rgba(0, 182, 155, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text39 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line24 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text40 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 97px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text41 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 220px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text42 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 83px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text43 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 87px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame5 {
+  top: 377px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-processing3 {
+  top: 1.1368683772161603e-13px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-processing4 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(98, 37, 238, 1);
+}
+ 
+.order-filteredby-product-text44 {
+  top: 6px;
+  left: 16.205127716064453px;
+  color: rgba(98, 37, 238, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text45 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line25 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text46 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 87px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text47 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 220px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text48 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 75px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text49 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 73px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame6 {
+  top: 453px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-completed5 {
+  top: 2.2737367544323206e-13px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-completed6 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 182, 155, 1);
+}
+ 
+.order-filteredby-product-text50 {
+  top: 6px;
+  left: 16.205127716064453px;
+  color: rgba(0, 182, 155, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text51 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line26 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text52 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 53px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text53 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 220px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text54 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 86px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text55 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 90px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame7 {
+  top: 529px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-processing5 {
+  top: 2.2737367544323206e-13px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-processing6 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(98, 37, 238, 1);
+}
+ 
+.order-filteredby-product-text56 {
+  top: 6px;
+  left: 16.205127716064453px;
+  color: rgba(98, 37, 238, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text57 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line27 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text58 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 87px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text59 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 236px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text60 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 84px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text61 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 72px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame81 {
+  top: 605px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 52px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-on-hold1 {
+  top: 2.2737367544323206e-13px;
+  left: 1113.089599609375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-on-hold2 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 167, 85, 1);
+}
+ 
+.order-filteredby-product-text62 {
+  top: 6px;
+  left: 24.30769157409668px;
+  color: rgba(255, 167, 85, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text63 {
+  top: 4px;
+  left: 32.41010665893555px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-line28 {
+  top: 51px;
+  left: 0px;
+  width: 1313px;
+  height: 1px;
+  opacity: 0.60;
+  position: absolute;
+}
+ 
+.order-filteredby-product-text64 {
+  top: 3px;
+  left: 103.30754089355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 60px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text65 {
+  top: 4px;
+  left: 246.115234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 236px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text66 {
+  top: 3px;
+  left: 532.7434692382812px;
+  color: rgba(32, 34, 36, 1);
+  width: 83px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text67 {
+  top: 4px;
+  left: 694.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 100px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-frame82 {
+  top: 681px;
+  left: 32.41010665893555px;
+  width: 1174.871826171875px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-label-in-transit1 {
+  top: 2.2737367544323206e-13px;
+  left: 1080.679443359375px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-label-in-transit2 {
+  top: 0px;
+  left: 0px;
+  width: 94.19230651855469px;
+  height: 27px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(186, 41, 255, 1);
+}
+ 
+.order-filteredby-product-text68 {
+  top: 6px;
+  left: 20.256410598754883px;
+  color: rgba(186, 41, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text69 {
+  top: 4px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text70 {
+  top: 3px;
+  left: 70.89738464355469px;
+  color: rgba(32, 34, 36, 1);
+  width: 86px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text71 {
+  top: 4px;
+  left: 213.705078125px;
+  color: rgba(32, 34, 36, 1);
+  width: 236px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text72 {
+  top: 4px;
+  left: 502.3589172363281px;
+  color: rgba(32, 34, 36, 1);
+  width: 80px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text73 {
+  top: 4px;
+  left: 662.3845825195312px;
+  color: rgba(32, 34, 36, 1);
+  width: 85px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-id-status {
+  top: 0px;
+  left: 0px;
+  width: 1312.6153564453125px;
+  height: 49px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(252, 252, 252, 1);
+}
+ 
+.order-filteredby-product-text74 {
+  top: 15px;
+  left: 31.39728546142578px;
+  color: rgba(32, 34, 36, 1);
+  width: 15px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text75 {
+  top: 15px;
+  left: 122.55113220214844px;
+  color: rgba(32, 34, 36, 1);
+  width: 43px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text76 {
+  top: 15px;
+  left: 303.84600830078125px;
+  color: rgba(32, 34, 36, 1);
+  width: 70px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text77 {
+  top: 15px;
+  left: 557.0511474609375px;
+  color: rgba(32, 34, 36, 1);
+  width: 37px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text78 {
+  top: 15px;
+  left: 688.7177734375px;
+  color: rgba(32, 34, 36, 1);
+  width: 71px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text79 {
+  top: 15px;
+  left: 852.7947387695312px;
+  color: rgba(32, 34, 36, 1);
+  width: 75px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text80 {
+  top: 15px;
+  left: 999.6536865234375px;
+  color: rgba(32, 34, 36, 1);
+  width: 47px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text81 {
+  top: 15px;
+  left: 1131.3203125px;
+  color: rgba(32, 34, 36, 1);
+  width: 55px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text82 {
+  top: 15px;
+  left: 1131.3203125px;
+  color: rgba(32, 34, 36, 1);
+  width: 55px;
+  height: auto;
+  opacity: 0.90;
+  position: absolute;
+  font-size: 14px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-popup {
+  top: 226px;
+  left: 367px;
+  width: 521px;
+  height: 358px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.order-filteredby-product-line29 {
+  top: 230px;
+  left: 0px;
+  width: 521px;
+  height: 1px;
+  opacity: 0.50;
+  position: absolute;
+}
+ 
+.order-filteredby-product-button-apply-now1 {
+  top: 298px;
+  left: 196px;
+  width: 129px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.order-filteredby-product-button-apply-now2 {
+  top: 0px;
+  left: 0px;
+  width: 129px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-shadow {
+  top: 31px;
+  left: 42px;
+  width: 45px;
+  height: 5px;
+  opacity: 0.48;
+  position: absolute;
+  border-radius: 2px;
+}
+ 
+.order-filteredby-product-rectangle3 {
+  top: 0px;
+  left: 0px;
+  width: 129px;
+  height: 34px;
+  position: absolute;
+  border-radius: 6px;
+}
+ 
+.order-filteredby-product-text83 {
+  top: 9px;
+  left: 33px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: right;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text84 {
+  top: 247px;
+  left: 24px;
+  color: rgba(67, 67, 67, 1);
+  height: auto;
+  opacity: 0.83;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-details {
+  top: 72px;
+  left: 24px;
+  width: 473px;
+  height: 84px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-health {
+  top: 0px;
+  left: 0px;
+  width: 147px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-text85 {
+  top: 8px;
+  left: 16px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-book-stationary {
+  top: 0px;
+  left: 163px;
+  width: 147px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-text86 {
+  top: 8px;
+  left: 16px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-services-industry {
+  top: 0px;
+  left: 326px;
+  width: 147px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-text87 {
+  top: 8px;
+  left: 13px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-fashion-beauty {
+  top: 50px;
+  left: 0px;
+  width: 147px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-text88 {
+  top: 8px;
+  left: 18px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-home-living {
+  top: 50px;
+  left: 163px;
+  width: 147px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.order-filteredby-product-text89 {
+  top: 8px;
+  left: 27px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-text90 {
+  top: 24px;
+  left: 24px;
+  color: rgba(32, 34, 36, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.order-filteredby-product-link {
+  display: contents;
+}
+ 
+.order-filteredby-product-container2 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.order-filteredby-product-icon2 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.order-filteredby-product-text91 {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}

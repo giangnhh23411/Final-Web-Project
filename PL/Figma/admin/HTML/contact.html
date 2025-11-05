@@ -1,0 +1,517 @@
+<!-- contact.html (full) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="../CSS/contact.css">
+  <style>
+    /* Layout & helpers */
+    .contact-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:12px; }
+    .contact-card { background:#fff; padding:12px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:8px; position:relative; }
+    .contact-photo { width:84px; height:84px; border-radius:50%; background-size:cover; background-position:center; background-color:#eef2f7; }
+    .contact-name { font-weight:700; margin:0; text-align:center; }
+    .contact-email { margin:0; font-size:13px; color:#666; word-break:break-all; text-align:center; }
+    .message-btn { margin-top:8px; padding:8px 12px; border-radius:8px; border:none; background:#3182ce; color:#fff; cursor:pointer }
+    .add-new-contact { padding:8px 12px; border-radius:8px; border:none; background:#2f855a; color:#fff; cursor:pointer; }
+    .search-input { padding:8px 12px; border-radius:8px; border:1px solid #ddd; width:260px; box-sizing:border-box; }
+    .view-toggle { display:flex; gap:8px; align-items:center; }
+    .view-toggle button { padding:8px 10px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; cursor:pointer; }
+    .view-toggle button.active { background:#3182ce; color:#fff; border-color:#3182ce; }
+
+    /* card action mini buttons */
+    .card-actions { display:flex; gap:6px; margin-top:6px; }
+    .btn-sm { padding:6px 8px; border-radius:6px; border:none; cursor:pointer; font-size:13px; }
+    .btn-edit { background:#f6ad55; color:#fff; }
+    .btn-delete { background:#e53e3e; color:#fff; }
+
+    /* modal */
+    .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.35); z-index:1200; }
+    .modal-content { background:#fff; margin:5% auto; padding:18px; border-radius:10px; width:92%; max-width:540px; box-shadow:0 6px 30px rgba(0,0,0,0.12); position:relative;}
+    .modal .close { position:absolute; right:12px; top:8px; font-size:22px; cursor:pointer; color:#444; }
+    .form-row { display:flex; flex-direction:column; margin-bottom:10px; }
+    .form-row label { font-weight:600; margin-bottom:6px; }
+    .form-row input, .form-row select, .form-row textarea { padding:8px 10px; border:1px solid #ddd; border-radius:6px; }
+    .detail-row { margin-bottom:8px; }
+    .muted { color:#666; font-size:13px; }
+    #avatar_preview { width:100px; height:100px; border-radius:50%; margin-top:6px; display:none; }
+
+    @media (max-width:640px) {
+      .search-input { width:160px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+    <div class="main-content">
+      <header>
+        <div style="display:flex; gap:12px; align-items:center;">
+          <input id="globalSearch" type="text" placeholder="Search by name / email / phone" class="search-input">
+          <div class="view-toggle" role="tablist" aria-label="View mode">
+            <button id="viewAll" data-role="" class="active">All</button>
+            <button id="viewAdmins" data-role="admin">Admins</button>
+            <button id="viewCustomers" data-role="customer">Customers</button>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <div style="width:20px; height:20px; margin:10px;">
+            <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+          </div>
+          <div class="user-profile">
+            <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+            <span><b>Doanh Nguyen</b></span>
+            <span>Admin</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <p class="breadcrumb">Contact to Manager / Colleague</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px;">
+          <h1>Contact</h1>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button id="refreshBtn" style="padding:8px 12px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; cursor:pointer;">Refresh</button>
+            <button id="addContactBtn" class="add-new-contact">Add New Contact</button>
+          </div>
+        </div>
+
+        <div id="contactsContainer" class="contact-grid" aria-live="polite"></div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Detail Modal -->
+  <div id="detailModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" id="detailClose">&times;</span>
+      <h2 id="d_name">Full Name</h2>
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <div style="flex:0 0 110px;">
+          <div id="d_avatar" class="contact-photo" style="width:100px;height:100px;"></div>
+        </div>
+        <div style="flex:1;">
+          <p class="detail-row"><strong>Email:</strong> <span id="d_email" class="muted"></span></p>
+          <p class="detail-row"><strong>Phone:</strong> <span id="d_phone" class="muted"></span></p>
+          <p class="detail-row"><strong>Role:</strong> <span id="d_role" class="muted"></span></p>
+          <p class="detail-row"><strong>Status:</strong> <span id="d_status" class="muted"></span></p>
+          <p class="detail-row"><strong>Created:</strong> <span id="d_created" class="muted"></span></p>
+          <p class="detail-row"><strong>Updated:</strong> <span id="d_updated" class="muted"></span></p>
+          <div style="margin-top:10px; display:flex; gap:8px;">
+            <button id="detailEditBtn" class="btn-sm btn-edit">Edit</button>
+            <button id="detailDeleteBtn" class="btn-sm btn-delete">Delete</button>
+            <button id="detailCloseBtn" class="btn-sm" style="background:#edf2f7">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add / Edit Modal -->
+  <div id="editModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" id="editClose">&times;</span>
+      <h2 id="editTitle">Add / Edit User</h2>
+      <form id="editForm">
+        <input type="hidden" id="origEmail" value="">
+        <div class="form-row">
+          <label for="full_name">Full name</label>
+          <input id="full_name" name="full_name" required>
+        </div>
+        <div class="form-row">
+          <label for="new_email">Email</label>
+          <input id="new_email" name="new_email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="Optional">
+        </div>
+        <div class="form-row">
+          <label for="avatar">Avatar (PNG/JPG)</label>
+          <input type="file" id="avatar" name="avatar" accept="image/png,image/jpeg">
+          <img id="avatar_preview" alt="Preview" style="display:none;">
+          <small class="muted">Nếu không upload, sử dụng ảnh mặc định.</small>
+        </div>
+        <div class="form-row">
+          <label for="role">Role</label>
+          <select id="role" name="role">
+            <option value="customer">Customer</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div class="form-row" id="passwordRow">
+          <label for="password">Password (for new users)</label>
+          <input id="password" name="password" type="password" placeholder="Set initial password (optional)">
+          <small class="muted">If left empty, backend should handle password/invite. Backend must hash password server-side.</small>
+        </div>
+        <div style="text-align:right; margin-top:8px;">
+          <button type="submit" style="padding:8px 14px; border-radius:8px;">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script>
+/* Frontend logic for contact page */
+const API_URL = 'http://localhost:8000/api'; // chỉnh nếu cần
+let users = [];
+let activeRoleFilter = ''; // '' | 'admin' | 'customer'
+
+/* DOM refs */
+const contactsContainer = document.getElementById('contactsContainer');
+const searchInput = document.getElementById('globalSearch');
+const refreshBtn = document.getElementById('refreshBtn');
+const addContactBtn = document.getElementById('addContactBtn');
+
+const viewAll = document.getElementById('viewAll');
+const viewAdmins = document.getElementById('viewAdmins');
+const viewCustomers = document.getElementById('viewCustomers');
+
+const detailModal = document.getElementById('detailModal');
+const detailClose = document.getElementById('detailClose');
+const detailCloseBtn = document.getElementById('detailCloseBtn');
+const detailEditBtn = document.getElementById('detailEditBtn');
+const detailDeleteBtn = document.getElementById('detailDeleteBtn');
+
+const d_name = document.getElementById('d_name');
+const d_email = document.getElementById('d_email');
+const d_phone = document.getElementById('d_phone');
+const d_role = document.getElementById('d_role');
+const d_status = document.getElementById('d_status');
+const d_avatar = document.getElementById('d_avatar');
+const d_created = document.getElementById('d_created');
+const d_updated = document.getElementById('d_updated');
+
+const editModal = document.getElementById('editModal');
+const editClose = document.getElementById('editClose');
+const editTitle = document.getElementById('editTitle');
+const editForm = document.getElementById('editForm');
+
+const origEmailInput = document.getElementById('origEmail');
+const avatarInput = document.getElementById('avatar');
+const avatarPreview = document.getElementById('avatar_preview');
+
+let currentDetailUser = null;
+
+/* Helpers */
+function escapeHtml(s){ if (!s) return ''; return String(s).replace(/[&<>"']/g, (m)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function fmtDate(d){ if(!d) return ''; try { return new Date(d).toLocaleString(); } catch(e){return d;} }
+
+/* === UPDATED avatarFor: return path to images/avatar (folder sibling to html) ===
+   - Assumes DB stores avatar_url as filename only (e.g. "6908f0cc8563a9748dc50c73.png")
+   - If avatar_url contains a path, we strip to filename.
+   - Fallback to ../images/pics/placeholder.png when no avatar.
+*/
+function avatarFor(u){
+  if(u && u.avatar_url){
+    let fn = String(u.avatar_url || '').trim();
+    if(!fn) return '../images/pics/placeholder.png';
+    // if avatar_url includes full path (e.g. "/Figma/.../id.png"), use basename
+    if(fn.indexOf('/') !== -1){
+      const parts = fn.split('/');
+      fn = parts[parts.length - 1];
+    }
+    // if it's a data URL, return it directly
+    if(fn.startsWith('data:')) return fn;
+    // return relative path to images/avatar sibling to this html folder
+    return `../images/avatar/${encodeURIComponent(fn)}`;
+  }
+  return '../images/pics/placeholder.png';
+}
+
+/* Preview avatar when selected */
+avatarInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      avatarPreview.src = ev.target.result;
+      avatarPreview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  } else {
+    avatarPreview.style.display = 'none';
+  }
+});
+
+/* Fetch users */
+async function fetchUsers(page=1, pageSize=500){
+  try{
+    const res = await fetch(`${API_URL}/users?page=${page}&pageSize=${pageSize}`);
+    if(!res.ok) throw new Error('Failed to fetch users');
+    const j = await res.json();
+    users = j.data ?? j;
+    renderUsersFiltered();
+  }catch(e){
+    console.error('fetchUsers', e);
+    contactsContainer.innerHTML = `<div style="grid-column:1/-1; color:#c53030">Error loading users</div>`;
+  }
+}
+
+/* Render with current filters */
+function renderUsersFiltered(){
+  const q = (searchInput.value || '').trim().toLowerCase();
+  let list = Array.isArray(users) ? users.slice() : [];
+  if(activeRoleFilter) list = list.filter(u => String(u.role || '').toLowerCase() === activeRoleFilter);
+  if(q){
+    list = list.filter(u => {
+      const name = (u.full_name||'').toLowerCase();
+      const phone = (u.phone||'').toLowerCase();
+      const email = (u.email||'').toLowerCase();
+      return name.includes(q) || phone.includes(q) || email.includes(q);
+    });
+  }
+  renderUsers(list);
+}
+
+/* Render cards */
+function renderUsers(list){
+  contactsContainer.innerHTML = '';
+  if(!Array.isArray(list) || list.length === 0){
+    contactsContainer.innerHTML = '<div style="grid-column:1/-1;"><em>No contacts</em></div>';
+    return;
+  }
+  list.forEach(u=>{
+    const card = document.createElement('div');
+    card.className = 'contact-card';
+    card.dataset.email = u.email || '';
+    card.innerHTML = `
+      <div class="contact-photo" style="background-image:url('${escapeHtml(avatarFor(u))}');"></div>
+      <p class="contact-name">${escapeHtml(u.full_name || '(No name)')}</p>
+      <p class="contact-email">${escapeHtml(u.email || '')}${u.phone ? '<br/><small class="muted">'+escapeHtml(u.phone)+'</small>' : ''}${u.role ? '<br/><small class="muted">Role: '+escapeHtml(u.role)+'</small>' : ''}</p>
+      <div class="card-actions">
+        <button class="btn-sm btn-edit" title="Edit">Edit</button>
+        <button class="btn-sm btn-delete" title="Delete">Delete</button>
+      </div>
+      <button class="message-btn" style="margin-top:8px;" data-contact="${encodeURIComponent(u.email||'')}">Message</button>
+    `;
+    // open detail when clicking anywhere except the small action buttons or message
+    card.addEventListener('click', (e)=>{
+      const cls = e.target.className || '';
+      if(cls.includes('btn-edit') || cls.includes('btn-delete') || cls.includes('message-btn')) return;
+      openDetailModal(u);
+    });
+    // edit button
+    card.querySelector('.btn-edit').addEventListener('click', (ev)=>{
+      ev.stopPropagation();
+      openEditModal(u);
+    });
+    // delete button
+    card.querySelector('.btn-delete').addEventListener('click', async (ev)=>{
+      ev.stopPropagation();
+      if(!confirm(`Delete user ${u.email}? This action cannot be undone.`)) return;
+      try{
+        const r = await fetch(`${API_URL}/users/${encodeURIComponent(u.email)}`, { method:'DELETE' });
+        if(!r.ok) {
+          const t = await r.text();
+          throw new Error(t || 'Delete failed');
+        }
+        alert('Deleted');
+        fetchUsers();
+      }catch(err){
+        console.error(err);
+        alert('Error deleting: ' + (err.message || 'Unknown'));
+      }
+    });
+    // message button
+    card.querySelector('.message-btn').addEventListener('click', (ev)=>{
+      ev.stopPropagation();
+      const em = ev.currentTarget.dataset.contact;
+      window.location.href = `inbox.html?contact=${em}`;
+    });
+
+    contactsContainer.appendChild(card);
+  });
+}
+
+/* Detail modal */
+function openDetailModal(u){
+  currentDetailUser = u;
+  d_name.textContent = u.full_name || '(No name)';
+  d_email.textContent = u.email || '';
+  d_phone.textContent = u.phone || '';
+  d_role.textContent = u.role || '';
+  d_status.textContent = u.status || '';
+  d_avatar.style.backgroundImage = `url('${escapeHtml(avatarFor(u))}')`;
+  d_created.textContent = fmtDate(u.created_at);
+  d_updated.textContent = fmtDate(u.updated_at);
+  detailModal.style.display = 'block';
+}
+detailClose.addEventListener('click', ()=> detailModal.style.display = 'none');
+detailCloseBtn.addEventListener('click', ()=> detailModal.style.display = 'none');
+
+detailEditBtn.addEventListener('click', ()=>{
+  if(!currentDetailUser) return;
+  detailModal.style.display = 'none';
+  openEditModal(currentDetailUser);
+});
+detailDeleteBtn.addEventListener('click', async ()=>{
+  if(!currentDetailUser) return;
+  if(!confirm(`Delete user ${currentDetailUser.email}?`)) return;
+  try{
+    const r = await fetch(`${API_URL}/users/${encodeURIComponent(currentDetailUser.email)}`, { method:'DELETE' });
+    if(!r.ok){ const t = await r.text(); throw new Error(t||'Delete failed'); }
+    alert('Deleted');
+    detailModal.style.display = 'none';
+    fetchUsers();
+  }catch(err){ console.error(err); alert('Error deleting: '+(err.message||'Unknown')); }
+});
+
+/* Edit / Add modal */
+addContactBtn.addEventListener('click', ()=>{
+  editTitle.textContent = 'Add New User';
+  origEmailInput.value = '';
+  editForm.reset();
+  document.getElementById('role').value = 'customer';
+  document.getElementById('passwordRow').style.display = 'block';
+  avatarPreview.style.display = 'none';
+  editModal.style.display = 'block';
+});
+editClose.addEventListener('click', ()=> editModal.style.display = 'none');
+
+function openEditModal(u){
+  editTitle.textContent = 'Edit User';
+  origEmailInput.value = u.email || '';
+  document.getElementById('full_name').value = u.full_name || '';
+  document.getElementById('new_email').value = u.email || '';
+  document.getElementById('phone').value = u.phone || '';
+  document.getElementById('role').value = u.role || 'customer';
+  document.getElementById('passwordRow').style.display = 'none'; // editing: don't change password unless explicit feature
+  avatarPreview.src = avatarFor(u);
+  avatarPreview.style.display = 'block';
+  editModal.style.display = 'block';
+}
+
+/* Submit add/edit */
+editForm.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const origEmail = origEmailInput.value;
+  const formData = new FormData(editForm);
+  
+  if (!origEmail) {
+    // For add (create): Rename 'new_email' to 'email' to match backend
+    const emailValue = formData.get('new_email');
+    if (emailValue) {
+      formData.set('email', emailValue);
+      formData.delete('new_email');
+    }
+  }
+  
+  try{
+    let res;
+    if(origEmail){
+      // update existing
+      res = await fetch(`${API_URL}/users/${encodeURIComponent(origEmail)}`, {
+        method: 'PUT',
+        body: formData
+      });
+      if(!res.ok){ const t = await res.text(); throw new Error(t||'Update failed'); }
+      alert('User updated');
+    }else{
+      // create new
+      res = await fetch(`${API_URL}/users`, {
+        method: 'POST',
+        body: formData
+      });
+      if(!res.ok){ const t = await res.text(); throw new Error(t||'Create failed'); }
+      alert('User created');
+    }
+    editModal.style.display = 'none';
+    fetchUsers();
+  }catch(err){
+    console.error(err);
+    alert('Error: ' + (err.message || 'Unknown'));
+  }
+});
+
+/* View buttons */
+function setActiveViewButton(button){
+  [viewAll, viewAdmins, viewCustomers].forEach(b => b.classList.remove('active'));
+  button.classList.add('active');
+}
+viewAll.addEventListener('click', ()=>{ activeRoleFilter = ''; setActiveViewButton(viewAll); renderUsersFiltered(); });
+viewAdmins.addEventListener('click', ()=>{ activeRoleFilter = 'admin'; setActiveViewButton(viewAdmins); renderUsersFiltered(); });
+viewCustomers.addEventListener('click', ()=>{ activeRoleFilter = 'customer'; setActiveViewButton(viewCustomers); renderUsersFiltered(); });
+
+/* search, refresh */
+searchInput.addEventListener('input', renderUsersFiltered);
+refreshBtn.addEventListener('click', ()=> fetchUsers());
+
+/* global clicks to close modals on outside click */
+window.addEventListener('click', (e)=>{
+  if(e.target === detailModal) detailModal.style.display = 'none';
+  if(e.target === editModal) editModal.style.display = 'none';
+});
+
+/* init */
+fetchUsers();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,647 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690686002969ebf6f2e2bdc9",
+        "itemNo": "65000365",
+        "__v": 0,
+        "basicItemNo": "65000366",
+        "basicMatl": "65000366",
+        "id": "4e822430-0cb7-4e45-b457-a5468c0300de",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "32512742-1e41-45be-a5e7-0999a89bfcbf",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png"
+          },
+          {
+            "id": "5bf4a673-96ce-4874-84d3-acdc96287d4e",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059900124-20241016062513-20241122072441.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png",
+        "name": "Trà Ô Long Kem Silky (M)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "tra-o-long-kem-silky-m--s65000365",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "4e822430-0cb7-4e45-b457-a5468c0300de",
+            "itemNo": "65000365",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png",
+            "name": "Trà Ô Long Kem Silky (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "b1fa79fb-c29a-47f0-a85f-b16ee9df88a6",
+            "itemNo": "65000366",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png",
+            "name": "Trà Ô Long Kem Silky (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 4000
+          },
+          {
+            "id": "bffa5e9f-4f68-4132-af9c-05a4864e8505",
+            "itemNo": "65000364",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062513.png",
+            "name": "Trà Ô Long Kem Silky (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 4000
+          }
+        ],
+        "subName": "Trà Ô Long Kem Silky (M)",
+        "updatedDate": "2025-11-02T01:34:09.130Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdca",
+        "itemNo": "65000434",
+        "__v": 0,
+        "basicItemNo": "65000435",
+        "basicMatl": "65000435",
+        "id": "42fcae6c-5f5c-4561-8ca5-4ed6913b6f78",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "f601c0a4-c7ef-44fd-86df-6e82663ad524",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203060019.jpg"
+          },
+          {
+            "id": "aeaf4cb6-067d-4f84-91e8-5021f0f33f0d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203060019.jpg",
+        "name": "Trà Ô Long Lài (H)",
+        "price": 50000,
+        "salePrice": 50000,
+        "seoName": "tra-o-long-lai-h--s65000434",
+        "size": "H",
+        "sizes": [
+          {
+            "id": "37ad99cb-61c3-41ba-91a7-568bcf6342c1",
+            "itemNo": "65000435",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png",
+            "name": "Trà Ô Long Lài (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "42fcae6c-5f5c-4561-8ca5-4ed6913b6f78",
+            "itemNo": "65000434",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203060019.jpg",
+            "name": "Trà Ô Long Lài (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 0
+          },
+          {
+            "id": "a6664784-c1eb-4838-bceb-a79b2f40e2c1",
+            "itemNo": "65000436",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203055954.jpg",
+            "name": "Trà Ô Long Lài (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -5000
+          }
+        ],
+        "subName": "Trà Ô Long Lài (H)",
+        "updatedDate": "2025-11-02T01:34:10.241Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdcd",
+        "itemNo": "65000390",
+        "__v": 0,
+        "basicItemNo": "65000388",
+        "basicMatl": "65000388",
+        "id": "92339f99-d5d7-4e35-8c41-506528e6d962",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "07995bc3-0513-4ad7-a06a-744980e03f82",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png"
+          },
+          {
+            "id": "67ecd395-db38-4082-85e5-0f793387a17c",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062426-20241122071515.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png",
+        "name": "Trà Bá Tước Kem Silky (L)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "tra-ba-tuoc-kem-silky-l--s65000390",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "822ab00d-7e6a-434f-87ab-0a82282f9b77",
+            "itemNo": "65000388",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png",
+            "name": "Trà Bá Tước Kem Silky (H)",
+            "baseSize": true,
+            "size": "H",
+            "addSalePrice": 0
+          },
+          {
+            "id": "92339f99-d5d7-4e35-8c41-506528e6d962",
+            "itemNo": "65000390",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png",
+            "name": "Trà Bá Tước Kem Silky (L)",
+            "baseSize": false,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "c941d7f3-c02d-4f82-a17d-e5cda598c0f6",
+            "itemNo": "65000389",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062426.png",
+            "name": "Trà Bá Tước Kem Silky (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -5000
+          }
+        ],
+        "subName": "Trà Bá Tước Kem Silky (L)",
+        "updatedDate": "2025-11-02T01:34:09.596Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdce",
+        "itemNo": "65000343",
+        "__v": 0,
+        "basicItemNo": "65000344",
+        "basicMatl": "65000344",
+        "id": "78c51e0b-23d7-4a1a-be22-9ca1fd3e0306",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "3bcecda1-5672-4ab7-a581-84638de2855a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732.png"
+          },
+          {
+            "id": "a3bfef14-a0f3-4275-b39a-e15ff5026d50",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732-20250207022832.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732.png",
+        "name": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (M)",
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-lai-phuc-bon-tu-thach-dua-soi-m--s65000343",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "5e6546e4-2606-442b-ac16-8811ff7aa042",
+            "itemNo": "65000344",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732.png",
+            "name": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 4000
+          },
+          {
+            "id": "78c51e0b-23d7-4a1a-be22-9ca1fd3e0306",
+            "itemNo": "65000343",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-lai-phuc-bon-tu-thach-dua-soi-20250205072732.png",
+            "name": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Lài Phúc Bồn Tử Thạch Dừa Sợi (M)",
+        "updatedDate": "2025-11-02T01:34:08.826Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdd1",
+        "itemNo": "65000436",
+        "__v": 0,
+        "basicItemNo": "65000435",
+        "basicMatl": "65000435",
+        "id": "a6664784-c1eb-4838-bceb-a79b2f40e2c1",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "f5624c0d-15b3-4693-be53-1ba954c1dc13",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203055954.jpg"
+          },
+          {
+            "id": "aeaf4cb6-067d-4f84-91e8-5021f0f33f0d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203055954.jpg",
+        "name": "Trà Ô Long Lài (M)",
+        "price": 45000,
+        "salePrice": 45000,
+        "seoName": "tra-o-long-lai-m--s65000436",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "37ad99cb-61c3-41ba-91a7-568bcf6342c1",
+            "itemNo": "65000435",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738562663055-20250203060802.png",
+            "name": "Trà Ô Long Lài (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 5000
+          },
+          {
+            "id": "42fcae6c-5f5c-4561-8ca5-4ed6913b6f78",
+            "itemNo": "65000434",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203060019.jpg",
+            "name": "Trà Ô Long Lài (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 5000
+          },
+          {
+            "id": "a6664784-c1eb-4838-bceb-a79b2f40e2c1",
+            "itemNo": "65000436",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-o-long-lai-20250203055954.jpg",
+            "name": "Trà Ô Long Lài (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Ô Long Lài (M)",
+        "updatedDate": "2025-11-02T01:34:10.313Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdd4",
+        "itemNo": "65000361",
+        "__v": 0,
+        "basicItemNo": "65000335",
+        "basicMatl": "65000335",
+        "id": "48341ffb-8e5a-48f9-b6e6-73a48c876369",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "1c4d9bd0-d80c-4320-85d3-4639486533f7",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png"
+          },
+          {
+            "id": "c28679e0-e156-457c-81be-9ced97fdb03a",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241021030405-20241122074418.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png",
+        "name": "Trà Ô Long Quế Hoa Kem Silky (H)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "tra-o-long-que-hoa-kem-silky-h--s65000361",
+        "size": "H",
+        "sizes": [
+          {
+            "id": "48341ffb-8e5a-48f9-b6e6-73a48c876369",
+            "itemNo": "65000361",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png",
+            "name": "Trà Ô Long Quế Hoa Kem Silky (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 0
+          },
+          {
+            "id": "5243cbe8-649f-4f26-b55c-3b3002b70022",
+            "itemNo": "65000335",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png",
+            "name": "Trà Ô Long Quế Hoa Kem Silky (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "89a4266f-b4dc-4ed2-8655-629bd88b4f29",
+            "itemNo": "65000334",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241021030405.png",
+            "name": "Trà Ô Long Quế Hoa Kem Silky (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -5000
+          }
+        ],
+        "subName": "Trà Ô Long Quế Hoa Kem Silky (H)",
+        "updatedDate": "2025-11-02T01:34:09.042Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdd6",
+        "itemNo": "65000368",
+        "__v": 0,
+        "basicItemNo": "65000369",
+        "basicMatl": "65000369",
+        "id": "b9ac063b-bb04-4550-89fc-e42d46e5a273",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "471a335d-2996-4d7f-a023-75badd7c7f16",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png"
+          },
+          {
+            "id": "89f5374f-6da0-4f34-b757-da4feca24c20",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059762025-20241016062323-20241122070445.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png",
+        "name": "Hồng Trà Kem Silky (M)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "hong-tra-kem-silky-m--s65000368",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "b9ac063b-bb04-4550-89fc-e42d46e5a273",
+            "itemNo": "65000368",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png",
+            "name": "Hồng Trà Kem Silky (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "e9381356-ef25-4378-9d08-3c2dc501a80d",
+            "itemNo": "65000367",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png",
+            "name": "Hồng Trà Kem Silky (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 4000
+          },
+          {
+            "id": "fe77720d-b309-415e-ab86-be1dc6ed1ac4",
+            "itemNo": "65000369",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059762025-20241016062323.png",
+            "name": "Hồng Trà Kem Silky (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 4000
+          }
+        ],
+        "subName": "Hồng Trà Kem Silky (M)",
+        "updatedDate": "2025-11-02T01:34:09.228Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bdd8",
+        "itemNo": "65000415",
+        "__v": 0,
+        "basicItemNo": "65000416",
+        "basicMatl": "65000416",
+        "id": "7a97265f-108f-416b-8bd3-afb29bee9845",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "28295c78-d6ed-4aa4-8058-654d392a62e2",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png"
+          },
+          {
+            "id": "cc826b9d-fe62-45f4-ba73-52f4ca0d291d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/11/remove-bg-ai_1729059900124-20241016062610-20241122073554.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png",
+        "name": "Trà Ô Long Lài Kem Silky (M)",
+        "price": 55000,
+        "salePrice": 55000,
+        "seoName": "tra-o-long-lai-kem-silky-m--s65000415",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "67baa5f7-5e6b-45bb-bbae-b2fc7477725e",
+            "itemNo": "65000416",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png",
+            "name": "Trà Ô Long Lài Kem Silky (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 4000
+          },
+          {
+            "id": "7a97265f-108f-416b-8bd3-afb29bee9845",
+            "itemNo": "65000415",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png",
+            "name": "Trà Ô Long Lài Kem Silky (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "e47092fb-9064-46e9-b054-41ed94a40987",
+            "itemNo": "65000414",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/10/remove-bg-ai_1729059900124-20241016062610.png",
+            "name": "Trà Ô Long Lài Kem Silky (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 4000
+          }
+        ],
+        "subName": "Trà Ô Long Lài Kem Silky (M)",
+        "updatedDate": "2025-11-02T01:34:09.782Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bddd",
+        "itemNo": "65000382",
+        "__v": 0,
+        "basicItemNo": "65000383",
+        "basicMatl": "65000383",
+        "id": "76a1e724-27d3-4c93-9ac1-a30ca66f644e",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "5adcb966-957e-4f45-bcb2-31d7a072089d",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/12/tra-sua-ba-tuoc-20241220071139.jpg"
+          },
+          {
+            "id": "92edd16a-de54-42c0-ba54-507af79cfca2",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/12/tra-sua-ba-tuoc-20241220071139.jpg",
+        "name": "Trà Sữa Bá Tước (M)",
+        "price": 50000,
+        "salePrice": 50000,
+        "seoName": "tra-sua-ba-tuoc-m--s65000382",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "1a2ecf1e-f39d-44b3-aeeb-c0ccc64ae4b5",
+            "itemNo": "65000383",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png",
+            "name": "Trà Sữa Bá Tước (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 5000
+          },
+          {
+            "id": "1feddd84-9ffe-4004-a56b-5597e70e22fe",
+            "itemNo": "65000381",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/remove-bg-ai_1738652175268-20250204070515.png",
+            "name": "Trà Sữa Bá Tước (H)",
+            "baseSize": false,
+            "size": "H",
+            "addSalePrice": 5000
+          },
+          {
+            "id": "76a1e724-27d3-4c93-9ac1-a30ca66f644e",
+            "itemNo": "65000382",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2024/12/tra-sua-ba-tuoc-20241220071139.jpg",
+            "name": "Trà Sữa Bá Tước (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Sữa Bá Tước (M)",
+        "updatedDate": "2025-11-02T01:34:09.415Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bde3",
+        "itemNo": "65000385",
+        "__v": 0,
+        "basicItemNo": "65000385",
+        "basicMatl": "65000385",
+        "id": "26d4cd53-e22f-4034-b7a8-5bdf5370fd3b",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "",
+        "mediaItems": [
+          {
+            "id": "e2c4bb7d-5ee9-446f-8efa-8d373aea1718",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-ba-tuoc-luu-do-20250205072548.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-ba-tuoc-luu-do-20250205072548.png",
+        "name": "Trà Bá Tước Lựu Đỏ (L)",
+        "price": 60000,
+        "salePrice": 60000,
+        "seoName": "tra-ba-tuoc-luu-do-l--s65000385",
+        "shortDesc": "<p>BÁ TƯỚC HOÀNG GIA</p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "26d4cd53-e22f-4034-b7a8-5bdf5370fd3b",
+            "itemNo": "65000385",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-ba-tuoc-luu-do-20250205072548.png",
+            "name": "Trà Bá Tước Lựu Đỏ (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "f20be69e-f057-4af8-8141-dbc02794ac61",
+            "itemNo": "65000384",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-ba-tuoc-luu-do-20250205072548.png",
+            "name": "Trà Bá Tước Lựu Đỏ (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -5000
+          }
+        ],
+        "subName": "Trà Bá Tước Lựu Đỏ (L)",
+        "updatedDate": "2025-11-02T01:34:09.502Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 16,
+    "pagingCounter": 151,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 15,
+    "next": 17
+  }
+}

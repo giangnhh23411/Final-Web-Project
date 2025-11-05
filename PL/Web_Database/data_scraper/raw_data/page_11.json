@@ -1,0 +1,781 @@
+{
+  "data": {
+    "name": "",
+    "description": "",
+    "items": [
+      {
+        "_id": "690686002969ebf6f2e2bd48",
+        "itemNo": "65000114",
+        "__v": 0,
+        "basicItemNo": "65000114",
+        "basicMatl": "65000114",
+        "id": "74faa3dd-43e5-4e26-ae54-39433d33429f",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "b0f7dead-d5e8-4455-9a41-d4b226f11f24",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png",
+        "name": "Trà Vải Lài (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-vai-lai-l--s65000114",
+        "shortDesc": "<p><br></p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "74faa3dd-43e5-4e26-ae54-39433d33429f",
+            "itemNo": "65000114",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/tra-vai-lai-20250205072059.png",
+            "name": "Trà Vải Lài (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "e4a9c03f-62c8-4600-83e7-01bca28bf498",
+            "itemNo": "65000113",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000113-65000114-tra-vai-lai_f7d2efd5-5465-4598-a619-f9619a52720e-og.png",
+            "name": "Trà Vải Lài (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -16000
+          }
+        ],
+        "subName": "Trà Vải Lài (L)",
+        "updatedDate": "2025-11-02T01:34:07.287Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd4d",
+        "itemNo": "65000120",
+        "__v": 0,
+        "basicItemNo": "65000120",
+        "basicMatl": "65000120",
+        "id": "22b6a0c8-1f39-4cd0-8014-2bfdbee1ca0f",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "72d8ca39-3977-4214-8032-0bc4ab03774f",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+        "name": "Trà Lucky Tea (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 69000,
+        "salePrice": 69000,
+        "seoName": "tra-lucky-tea-l--s65000120",
+        "shortDesc": "<p>Best Seller</p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "19229fa6-7532-41ea-a9f3-c0914b1c1e7e",
+            "itemNo": "65000119",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+            "name": "Trà Lucky Tea (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -10000
+          },
+          {
+            "id": "22b6a0c8-1f39-4cd0-8014-2bfdbee1ca0f",
+            "itemNo": "65000120",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+            "name": "Trà Lucky Tea (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Lucky Tea (L)",
+        "updatedDate": "2025-11-02T01:34:07.507Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd4e",
+        "itemNo": "65000119",
+        "__v": 0,
+        "basicItemNo": "65000120",
+        "basicMatl": "65000120",
+        "id": "19229fa6-7532-41ea-a9f3-c0914b1c1e7e",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "72d8ca39-3977-4214-8032-0bc4ab03774f",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png"
+          },
+          {
+            "id": "68075afd-c925-4c0b-b2d8-9ad5469d6d53",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250206030210.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+        "name": "Trà Lucky Tea (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-lucky-tea-m--s65000119",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "19229fa6-7532-41ea-a9f3-c0914b1c1e7e",
+            "itemNo": "65000119",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+            "name": "Trà Lucky Tea (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "22b6a0c8-1f39-4cd0-8014-2bfdbee1ca0f",
+            "itemNo": "65000120",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2025/02/lucky-tea-20250205072302.png",
+            "name": "Trà Lucky Tea (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Lucky Tea (M)",
+        "updatedDate": "2025-11-02T01:34:07.469Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd50",
+        "itemNo": "65000116",
+        "__v": 0,
+        "basicItemNo": "65000116",
+        "basicMatl": "65000116",
+        "id": "8439d3a4-8cbf-458a-9527-705eb9a8d861",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "2c543f0d-a560-468c-9f43-9e28beede583",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png",
+        "name": "Trà Vải Sen (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-vai-sen-l--s65000116",
+        "shortDesc": "<p><br></p>",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "8439d3a4-8cbf-458a-9527-705eb9a8d861",
+            "itemNo": "65000116",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_d5880da5-93f1-47ab-b8f5-cbc2c88c43f2-og.png",
+            "name": "Trà Vải Sen (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "84db5ba4-08f8-4176-8a8f-d6dd7cfec532",
+            "itemNo": "65000115",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000115-65000116-tra-vai-sen_2f7aa440-6aa0-447b-84a3-3186c360e124-og.png",
+            "name": "Trà Vải Sen (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -6000
+          }
+        ],
+        "subName": "Trà Vải Sen (L)",
+        "updatedDate": "2025-11-02T01:34:07.433Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd52",
+        "itemNo": "65000125",
+        "__v": 0,
+        "basicItemNo": "65000126",
+        "basicMatl": "65000126",
+        "id": "e77c799b-c7ee-4f07-89bc-3da47fa333f1",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "1d58b8ce-ef62-4d53-a719-e18deb34e6f6",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023053.png"
+          },
+          {
+            "id": "cdb5d829-b9e6-4a47-8284-67a3de78539b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023053.png",
+        "name": "Trà Nhãn Sen (M)",
+        "optionals": [
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-nhan-sen-m--s65000125",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "032750db-ff2a-4216-afb5-5107bebdd0cf",
+            "itemNo": "65000126",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png",
+            "name": "Trà Nhãn Sen (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -4000
+          },
+          {
+            "id": "e77c799b-c7ee-4f07-89bc-3da47fa333f1",
+            "itemNo": "65000125",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023053.png",
+            "name": "Trà Nhãn Sen (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Nhãn Sen (M)",
+        "updatedDate": "2025-11-02T01:34:07.583Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd53",
+        "itemNo": "65000123",
+        "__v": 0,
+        "basicItemNo": "65000123",
+        "basicMatl": null,
+        "id": "9ee35a0f-6306-4b3a-a5c1-8fc15ab0b50c",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "141",
+        "mch3": "14101",
+        "mch4": "1410101",
+        "mch5": "141010101",
+        "mch6": "141010101",
+        "mediaItems": [
+          {
+            "id": "4d327d7c-ce54-41d6-a8f6-ea2bfec324dd",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_b8a8f6a4-d054-4ad6-94d5-923d03a1c62e-og.jpg"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_b8a8f6a4-d054-4ad6-94d5-923d03a1c62e-og.jpg",
+        "name": "Topping Nhãn (4 trái)",
+        "price": 20000,
+        "salePrice": 20000,
+        "seoName": "topping-nhan-4-trai--s65000123",
+        "shortDesc": "",
+        "size": null,
+        "sizes": [
+          {
+            "id": "9ee35a0f-6306-4b3a-a5c1-8fc15ab0b50c",
+            "itemNo": "65000123",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000028_kem-tuoi_b8a8f6a4-d054-4ad6-94d5-923d03a1c62e-og.jpg",
+            "name": "Topping Nhãn (4 trái)",
+            "baseSize": false,
+            "size": null,
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Topping Nhãn (4 trái)",
+        "updatedDate": "2025-11-02T01:34:07.555Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd56",
+        "itemNo": "65000126",
+        "__v": 0,
+        "basicItemNo": "65000126",
+        "basicMatl": "65000126",
+        "id": "032750db-ff2a-4216-afb5-5107bebdd0cf",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "cdb5d829-b9e6-4a47-8284-67a3de78539b",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png",
+        "name": "Trà Nhãn Sen (L)",
+        "optionals": [
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-nhan-sen-l--s65000126",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "032750db-ff2a-4216-afb5-5107bebdd0cf",
+            "itemNo": "65000126",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023131.png",
+            "name": "Trà Nhãn Sen (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "e77c799b-c7ee-4f07-89bc-3da47fa333f1",
+            "itemNo": "65000125",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2023/04/65000125-tra-nhan-sen-20230413023053.png",
+            "name": "Trà Nhãn Sen (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -16000
+          }
+        ],
+        "subName": "Trà Nhãn Sen (L)",
+        "updatedDate": "2025-11-02T01:34:07.611Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd59",
+        "itemNo": "65000127",
+        "__v": 0,
+        "basicItemNo": "65000128",
+        "basicMatl": "65000128",
+        "id": "d760e534-16c5-4bcb-ab2d-ad4268bbbaa5",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "597b8b01-af9f-42f4-875e-39a7521dbb16",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png"
+          },
+          {
+            "id": "6a7298b8-0141-4788-8069-a09bdc0c83ae",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_5dec6551-d477-4d6a-bd63-6bc190ba7d10-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+        "name": "Trà Nhãn Lài (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-nhan-lai-m--s65000127",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "46c58104-0a30-40a5-99a5-9bc4ae4a3d4d",
+            "itemNo": "65000128",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+            "name": "Trà Nhãn Lài (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -4000
+          },
+          {
+            "id": "d760e534-16c5-4bcb-ab2d-ad4268bbbaa5",
+            "itemNo": "65000127",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+            "name": "Trà Nhãn Lài (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          }
+        ],
+        "subName": "Trà Nhãn Lài (M)",
+        "updatedDate": "2025-11-02T01:34:07.646Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd5a",
+        "itemNo": "65000128",
+        "__v": 0,
+        "basicItemNo": "65000128",
+        "basicMatl": "65000128",
+        "id": "46c58104-0a30-40a5-99a5-9bc4ae4a3d4d",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440301",
+        "mch5": "144030101",
+        "mch6": "144030101",
+        "mediaItems": [
+          {
+            "id": "597b8b01-af9f-42f4-875e-39a7521dbb16",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+        "name": "Trà Nhãn Lài (L)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều",
+              "Không"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 65000,
+        "salePrice": 65000,
+        "seoName": "tra-nhan-lai-l--s65000128",
+        "shortDesc": "",
+        "size": "L",
+        "sizes": [
+          {
+            "id": "46c58104-0a30-40a5-99a5-9bc4ae4a3d4d",
+            "itemNo": "65000128",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+            "name": "Trà Nhãn Lài (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": 0
+          },
+          {
+            "id": "d760e534-16c5-4bcb-ab2d-ad4268bbbaa5",
+            "itemNo": "65000127",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000127-65000128-tra-nhan-lai_2fe90bd0-65fb-4bb3-8f74-44a92e067926-og.png",
+            "name": "Trà Nhãn Lài (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": -16000
+          }
+        ],
+        "subName": "Trà Nhãn Lài (L)",
+        "updatedDate": "2025-11-02T01:34:07.673Z"
+      },
+      {
+        "_id": "690686002969ebf6f2e2bd5e",
+        "itemNo": "65000133",
+        "__v": 0,
+        "basicItemNo": "65000134",
+        "basicMatl": "65000134",
+        "id": "b52d160a-a6fd-4c69-afd0-6e10d3cec767",
+        "itemGroup": null,
+        "itemGroupNo": null,
+        "itemType": null,
+        "mch2": "144",
+        "mch3": "14403",
+        "mch4": "1440302",
+        "mch5": "144030201",
+        "mch6": "144030201",
+        "mediaItems": [
+          {
+            "id": "6f85bee6-5ed6-4839-8aa4-e950fec10b42",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png"
+          },
+          {
+            "id": "a22c1e31-d494-4026-afff-bebb399816bd",
+            "type": "image",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_68bb9eb4-58fa-4edf-b497-465372b4ca1c-og.png"
+          }
+        ],
+        "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+        "name": "Trà Lài Đác Thơm (M)",
+        "optionals": [
+          {
+            "id": "c547e077-f833-4632-ad7f-e61b6dda761b",
+            "label": "Ngọt",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "2c27f72c-7ac3-4c61-a8e8-cfff0a654558",
+            "label": "Trà",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          },
+          {
+            "id": "4dee9eaa-d41e-4ce5-a985-38a05220fc47",
+            "label": "Đá",
+            "values": [
+              "Ít",
+              "Bình thường",
+              "Nhiều"
+            ],
+            "defaultValue": "Bình thường",
+            "displayType": "Radio_Button"
+          }
+        ],
+        "price": 59000,
+        "salePrice": 59000,
+        "seoName": "tra-lai-dac-thom-m--s65000133",
+        "size": "M",
+        "sizes": [
+          {
+            "id": "b52d160a-a6fd-4c69-afd0-6e10d3cec767",
+            "itemNo": "65000133",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+            "name": "Trà Lài Đác Thơm (M)",
+            "baseSize": false,
+            "size": "M",
+            "addSalePrice": 0
+          },
+          {
+            "id": "dfd9a287-8845-4c83-a875-3e2014a9f616",
+            "itemNo": "65000134",
+            "mediaUrl": "https://s3-hcmc02.higiocloud.vn/images/2022/65000133-65000134-tra-lai-dac-thom_72db1c57-d4b1-4889-95bf-840fea1341b6-og.png",
+            "name": "Trà Lài Đác Thơm (L)",
+            "baseSize": true,
+            "size": "L",
+            "addSalePrice": -4000
+          }
+        ],
+        "subName": "Trà Lài Đác Thơm (M)",
+        "updatedDate": "2025-11-02T01:34:07.705Z"
+      }
+    ]
+  },
+  "paging": {
+    "totalCount": 192,
+    "pageSize": 10,
+    "totalPages": 20,
+    "pageNumber": 11,
+    "pagingCounter": 101,
+    "hasPrevPage": true,
+    "hasNextPage": true,
+    "prev": 10,
+    "next": 12
+  }
+}
