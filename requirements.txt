@@ -1,0 +1,11 @@
+python-dotenv
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn
+certifi
+pymongo
+pyaml
+dill
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Phuc Long - About Us</title>
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="../Assets/CSS/external.css" />
+  <!-- CSS header/footer dùng chung -->
+  <link rel="stylesheet" href="../Assets/Components/header-footer.css" />
+
+  <!-- Override tinh chỉnh UI cho about page -->
+  <style>
+    /* Tối ưu vision section với ảnh mới */
+    .vision-image img {
+      border-color: var(--accent-pink); /* Phù hợp theme */
+    }
+    .timeline-card img {
+      min-width: 100%; /* Responsive tốt hơn */
+      max-width: 100%;
+    }
+
+    /* Tối ưu testimonial avatars với ảnh customer */
+    .avatar-circle img {
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    /* Responsive chung */
+    @media (max-width: 768px) {
+      .vision-flex { gap: 16px; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header inject -->
+  <div id="site-header"></div>
+
+  <!-- HERO / BREADCRUMB -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title">About Us</h1>
+      <div class="breadcrumb">
+        Home . Pages . <span>About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION SECTION -->
+  <section class="vision-section">
+    <div class="vision-inner">
+
+      <div class="vision-flex">
+        <div class="vision-image">
+          <img src="../Assets/images/about/Group 73.png" alt="Phuc Long Vision" loading="lazy" />
+        </div>
+
+        <div class="vision-text">
+          <h2 class="vision-heading">VISION</h2>
+          <p class="vision-desc">
+            With a strong desire for continuous expansion and sustainable growth,
+            Phuc Long strives to become a leading Vietnamese enterprise in the production
+            and export of premium tea and coffee.
+          </p>
+          <p class="vision-desc">
+            Phuc Long aims to build an internationally recognized Vietnamese brand,
+            where quality and authentic Vietnamese flavors are reflected in every product,
+            steadily affirming its position in the global market.
+          </p>
+
+          <a class="vision-btn" href="contact-us.html">Contact us</a>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <img src="../Assets/images/about/aboutPL.jpg" alt="Timeline milestones" loading="lazy" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section">
+    <div class="features-inner">
+      <h2 class="section-title"> Our Features </h2>
+
+      <div class="features-grid">
+
+        <!-- Feature 1 -->
+        <div class="feature-card highlight">
+          <div class="feat-icon">🚚</div>
+          <div class="feat-title">Free Delivery</div>
+          <div class="feat-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Massa purus gravida.
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card highlight">
+          <div class="feat-icon">💰</div>
+          <div class="feat-title">100% Cash Back</div>
+          <div class="feat-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Massa purus gravida.
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card highlight">
+          <div class="feat-icon">🏅</div>
+          <div class="feat-title">Quality Product</div>
+          <div class="feat-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Massa purus gravida.
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feat-icon">🎧</div>
+          <div class="feat-title">24/7 Support</div>
+          <div class="feat-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Massa purus gravida.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SECTION - Sử dụng Customer1,2,3 -->
+  <section class="testimonial-section">
+    <div class="testimonial-inner">
+
+      <h2 class="section-title">Our Client Say!</h2>
+
+      <div class="testimonial-avatars">
+        <div class="avatar-circle">
+          <img src="../Assets/images/about/Customer2.jpg" alt="Client 1" loading="lazy" />
+        </div>
+        <div class="avatar-circle">
+          <img src="../Assets/images/about/Customer1.jpg" alt="Client 2" loading="lazy" />
+        </div>
+        <div class="avatar-circle">
+          <img src="../Assets/images/about/Customer3.avif" alt="Client 3" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="client-name">Selina Gomez</div>
+
+      <p class="client-quote">
+        “Phuc Long milk tea offers a rich, authentic tea aroma with a perfectly balanced
+        creamy layer. The sweetness is subtle, making it smooth and refreshing to drink.
+        The pearls are soft yet chewy, blending harmoniously with the slightly bitter tea
+        flavor. Every sip feels fresh and satisfying.”
+      </p>
+
+      <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer inject -->
+  <div id="site-footer"></div>
+
+  <!-- Import header/footer -->
+  <script
+    src="../Assets/Components/layout.js"
+    defer
+    data-header="../Assets/Components/header.html"
+    data-footer="../Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
+</body>
+</html>

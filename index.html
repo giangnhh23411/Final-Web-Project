@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Phuc Long - Homepage</title>
+  <base href="/" />
+  <style>
+    :root{
+      --brand-purple-dark:#2b0054;--brand-purple:#4b008c;--brand-purple-light:#efe9ff;
+      --brand-text-dark:#1a1a3a;--brand-text-mid:#5a5a7a;--accent-pink:#ff1f8a;
+      --bg-page:#ffffff;--bg-section-alt:#f4f3ff;--border-card:#eeeeff;
+      --footer-bg:#f3f3ff;--footer-bottom-bg:#e7e7ff;--radius-card:6px;
+      --shadow-card:0 8px 20px rgba(0,0,0,0.06);--max-width-page:1280px;
+      --font-main:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;-webkit-font-smoothing:antialiased}
+    body{margin:0;font-family:var(--font-main);background:var(--bg-page);color:var(--brand-text-dark);line-height:1.4}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    /* TOP CONTACT BAR (định dạng phần trong header.html) */
+    .top-contact-bar{background:var(--brand-purple-dark);color:#fff;font-size:12px;line-height:1}
+    .top-contact-inner{max-width:var(--max-width-page);margin:0 auto;padding:6px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;color:#fff}
+    .contact-left,.contact-right{display:flex;flex-wrap:wrap;align-items:center;gap:16px;color:#fff}
+    .contact-item{color:#fff;display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .search-bar{display:flex;align-items:center;background:#fff;border-radius:2px;overflow:hidden;border:1px solid #ccc;height:24px}
+    .search-bar input{border:0;height:24px;padding:0 8px;font-size:12px;outline:none}
+    .search-bar button{background:var(--accent-pink);color:#fff;border:0;height:24px;width:24px;font-size:12px;cursor:pointer;line-height:1}
+
+    /* MAIN NAV */
+    .main-nav-wrapper{border-bottom:1px solid #d9d9f9;background:#fff}
+    .main-nav-inner{max-width:var(--max-width-page);margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+    .brand-area{font-size:18px;font-weight:600;color:var(--brand-text-dark);white-space:nowrap}
+    .nav-links{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--brand-text-dark)}
+    .nav-links a{color:var(--brand-text-dark);position:relative}
+    .nav-links a.active{color:var(--accent-pink)}
+    .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--accent-pink);border-radius:1px}
+
+    /* === BANNER 1 (Hero) — nhỏ lại ~1/2, nền tím ôm ảnh === */
+    .hero{
+      background-color:var(--brand-purple-dark);
+      background-image:url("Assets/images/Banner%201.jpg");
+      background-repeat:no-repeat;background-position:center;background-size:contain;
+      height:clamp(200px,28vw,380px);padding:8px 0;
+    }
+    /* === BANNER 2 (Combo) === */
+    .combo-banner{
+      background-color:var(--brand-purple-dark);
+      background-image:url("Assets/images/Banner%202.jpg");
+      background-repeat:no-repeat;background-position:center;background-size:contain;
+      height:clamp(160px,24vw,320px);
+    }
+    /* === NEWSLETTER LEFT (ChienGameSanQua) === */
+    .newsletter-left{
+      background-color:var(--brand-purple-dark);
+      background-image:url("Assets/images/ChienGameSanQua.jpg");
+      background-repeat:no-repeat;background-position:center;background-size:contain;
+      height:clamp(140px,22vw,260px);border-radius:var(--radius-card);
+      box-shadow:var(--shadow-card);border:1px solid var(--border-card);
+    }
+
+    /* BEST SELLERS */
+    .section-best-sellers{max-width:var(--max-width-page);margin:32px auto 16px;padding:0 16px}
+    .carousel-header{text-align:center;font-size:18px;font-weight:600;color:var(--brand-text-dark);text-transform:uppercase;margin-bottom:24px}
+    .carousel{position:relative;display:flex;align-items:center}
+    .carousel-window{overflow:hidden;width:100%}
+    .carousel-track{display:flex;flex-wrap:nowrap;gap:16px;scroll-behavior:smooth}
+    .product-card{flex:0 0 200px;background:#fff;border-radius:var(--radius-card);box-shadow:var(--shadow-card);border:1px solid var(--border-card);padding:16px;text-align:center;font-size:13px;line-height:1.4}
+    .product-img{display:flex;align-items:center;justify-content:center;height:140px;margin-bottom:12px;position:relative}
+    .product-img img{max-height:140px;object-fit:contain}
+    .product-name{font-size:13px;font-weight:600;color:#d10071;margin-bottom:6px}
+    .product-size{font-size:12px;color:#1a1a3a;line-height:1.3}
+    .product-price{font-size:12px;font-weight:500;color:#1a1a3a;margin-top:4px}
+    .carousel-arrow{background:#fff;color:var(--accent-pink);font-size:20px;font-weight:600;width:32px;height:32px;border-radius:4px;border:2px solid var(--accent-pink);box-shadow:var(--shadow-card);cursor:pointer;user-select:none;line-height:28px;text-align:center}
+    .carousel-arrow.left{margin-right:8px}.carousel-arrow.right{margin-left:8px}
+
+    /* COLLECTION */
+    .collection-wrapper{background:var(--bg-section-alt);border-top:1px solid #dedcff;border-bottom:1px solid #dedcff;margin-top:32px}
+    .collection-inner{max-width:var(--max-width-page);margin:0 auto;padding:32px 16px;display:grid;gap:24px;align-items:center}
+    @media(min-width:768px){.collection-inner{grid-template-columns:1fr 1fr}}
+    .collection-image-card{background:#fff;border-radius:var(--radius-card);box-shadow:var(--shadow-card);border:1px solid var(--border-card);padding:16px;max-width:320px}
+    .collection-image-card img{width:100%;height:auto;object-fit:cover}
+    .collection-copy h3{font-size:20px;font-weight:700;color:var(--brand-purple-dark);margin:0 0 8px;line-height:1.3;text-transform:uppercase}
+    .collection-copy h3 span{display:block}
+    .collection-copy .bullets{font-size:13px;color:var(--brand-text-mid);line-height:1.5;margin-top:16px}
+    .collection-copy .bullets p{margin:0 0 8px}
+    .collection-copy .cta-btn{display:inline-block;background:var(--accent-pink);color:#fff;border-radius:2px;padding:8px 16px;font-size:13px;font-weight:600;margin-top:16px}
+
+    /* DISCOUNT */
+    .discount-section{max-width:var(--max-width-page);margin:0 auto;padding:32px 16px 48px}
+    .discount-header{text-align:center;margin-bottom:24px}
+    .discount-header h2{margin:0;font-size:20px;line-height:1.4;font-weight:600;color:var(--brand-text-dark)}
+    .discount-tabs{margin-top:8px;font-size:13px;color:var(--accent-pink);display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    .discount-tabs a{color:var(--accent-pink);text-decoration:none}
+    .discount-body{display:grid;gap:24px;align-items:start}
+    @media(min-width:768px){.discount-body{grid-template-columns:1fr 1fr}}
+    .discount-text{font-size:14px;color:var(--brand-text-dark);max-width:480px}
+    .discount-text .percent{color:var(--brand-purple-dark);font-size:18px;font-weight:600;margin-bottom:8px}
+    .discount-text .product-title{color:var(--accent-pink);font-weight:600;font-size:15px;margin-bottom:12px}
+    .discount-text p.desc{font-size:13px;line-height:1.5;color:var(--brand-text-mid);margin:0 0 12px}
+    .checklist{display:flex;flex-wrap:wrap;font-size:13px;color:var(--brand-text-dark);line-height:1.4;margin:0 -8px 16px;padding:0;list-style:none}
+    .checklist li{width:50%;padding:4px 8px}
+    .checklist li::before{content:"✓ ";color:var(--accent-pink);font-weight:600}
+    .btn-shop-now{display:inline-block;background:var(--accent-pink);color:#fff;border-radius:2px;padding:8px 16px;font-size:13px;font-weight:600;text-decoration:none}
+    .discount-visual{position:relative;text-align:center}
+    .discount-circle-bg{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:200px;height:200px;background:#ffeef6;border-radius:50%;z-index:0}
+    .discount-image-wrapper{position:relative;z-index:1;max-width:220px;margin:0 auto}
+    .discount-image-wrapper img{width:100%;height:auto;object-fit:contain}
+
+    /* NEWSLETTER CTA */
+    .newsletter-banner{background:var(--bg-section-alt);border-top:1px solid #dedcff;border-bottom:1px solid #dedcff}
+    .newsletter-inner{max-width:var(--max-width-page);margin:0 auto;padding:24px 16px;display:grid;align-items:center;gap:24px}
+    @media(min-width:768px){.newsletter-inner{grid-template-columns:2fr 1fr}}
+
+    /* BLOG */
+    .blog-section{max-width:var(--max-width-page);margin:32px auto 48px;padding:0 16px}
+    .blog-header{text-align:center;margin-bottom:24px}
+    .blog-header h2{margin:0;font-size:20px;font-weight:600;line-height:1.4;color:var(--brand-purple-dark)}
+    .blog-cards{display:grid;gap:16px}
+    @media(min-width:768px){.blog-cards{grid-template-columns:repeat(3,1fr)}}
+    .blog-card{background:#fff;border-radius:var(--radius-card);box-shadow:var(--shadow-card);border:1px solid var(--border-card);overflow:hidden;display:flex;flex-direction:column}
+    .blog-image img{width:100%;height:160px;object-fit:cover;display:block}
+    .blog-content{padding:16px;font-size:13px;color:var(--brand-text-mid);line-height:1.4;flex:1}
+    .blog-meta{font-size:11px;color:var(--brand-text-mid);display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px}
+    .blog-title{font-size:13px;font-weight:600;color:var(--brand-text-dark);line-height:1.4;margin-bottom:8px}
+    .blog-desc{font-size:12px;color:var(--brand-text-mid);line-height:1.4;margin-bottom:8px}
+    .blog-readmore{font-size:12px;font-weight:600;color:var(--accent-pink);text-decoration:none}
+
+    /* FOOTER */
+    footer{background:var(--footer-bg);border-top:1px solid #dedcff;color:var(--brand-text-dark);font-size:13px;line-height:1.5}
+    .footer-top{max-width:var(--max-width-page);margin:0 auto;padding:32px 16px;display:grid;gap:24px}
+    @media(min-width:768px){.footer-top{grid-template-columns:1.2fr 1fr 1fr 1fr}}
+    .footer-col h4{font-size:14px;font-weight:600;color:var(--brand-text-dark);margin:0 0 12px}
+    .footer-newsletter{max-width:260px}
+    .newsletter-input-row{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+    .newsletter-input-row input{flex:1;height:32px;border-radius:2px;border:1px solid #ccc;font-size:12px;padding:0 8px;outline:none}
+    .newsletter-input-row button{background:var(--accent-pink);border:none;color:#fff;height:32px;padding:0 12px;border-radius:2px;font-size:12px;font-weight:600;cursor:pointer}
+    .footer-address{font-size:12px;color:var(--brand-text-mid);line-height:1.4}
+    .footer-links a{display:block;font-size:12px;color:var(--brand-text-mid);line-height:1.6;text-decoration:none;margin-bottom:4px}
+    .footer-links a:hover{color:var(--accent-pink)}
+    .footer-bottom{background:var(--footer-bottom-bg);border-top:1px solid #dedcff;font-size:12px;color:var(--brand-text-mid)}
+    .footer-bottom-inner{max-width:var(--max-width-page);margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+    .footer-social{display:flex;align-items:center;gap:8px}
+    .social-circle{width:24px;height:24px;border-radius:50%;background:var(--brand-purple-dark);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+
+    /* PRODUCT ICONS */
+    .product-icons{position:absolute;top:8px;right:8px;display:flex;gap:5px;opacity:0;transition:opacity .3s ease}
+    .product-card:hover .product-icons{opacity:1}
+    .cart-icon-btn,.heart-icon-btn{background:rgba(255,255,255,.9);border:none;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;transition:all .3s ease;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+    .cart-icon-btn:hover{background:var(--accent-pink);color:#fff;transform:scale(1.1)}
+    .heart-icon-btn:hover{background:#ff6b6b;color:#fff;transform:scale(1.1)}
+
+    /* CART BADGE */
+    .cart-link{position:relative}
+    .cart-badge{position:absolute;top:-5px;right:-5px;background:var(--accent-pink);color:#fff;border-radius:50%;width:20px;height:20px;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:bold}
+
+    /* RESPONSIVE */
+    @media(max-width:480px){
+      .checklist li{width:100%}
+      .newsletter-inner{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr}
+    }
+
+    /* ===== STORE LOCATOR ===== */
+    .store-locator{max-width:var(--max-width-page);margin:32px auto;padding:0 16px}
+    .sl-grid{display:grid;gap:16px}
+    @media(min-width:992px){.sl-grid{grid-template-columns:1.4fr 1fr}}
+    #sl-map{width:100%;height:420px;border:1px solid #dedcff;border-radius:8px}
+    .sl-panel{border:1px solid #dedcff;border-radius:8px;padding:12px}
+    .sl-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+    .sl-toolbar input,.sl-toolbar select{height:34px;padding:0 10px;border:1px solid #ddd;border-radius:6px;font-size:13px}
+    .sl-toolbar button{height:34px;padding:0 12px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+    .sl-toolbar button.primary{background:#fb2e86;color:#fff;border-color:#fb2e86}
+    #sl-list{display:flex;flex-direction:column;gap:10px;max-height:420px;overflow:auto}
+    .sl-item{display:grid;grid-template-columns:40px 1fr;gap:10px;padding:10px;border:1px solid #eee;border-radius:8px;background:#fff}
+    .sl-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#efe9ff;color:#4b008c;font-weight:700}
+    .sl-meta{font-size:12px;color:var(--brand-text-mid);line-height:1.5}
+    .sl-status{color:#6b7280}
+    .sl-status.open{color:#16a34a}
+    .sl-distance{margin-left:8px;color:#0d9488}
+    .sl-btn{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:6px;background:#f3f4f6}
+    .sl-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  </style>
+</head>
+<body>
+  <!-- Header được load động -->
+  <div id="header-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero"><div class="hero-inner"></div></section>
+
+  <!-- BEST SELLERS 1 -->
+  <section class="section-best-sellers">
+    <div class="carousel-header">BEST SELLERS – TRÀ THƠM CHẤT LƯỢNG</div>
+    <div class="carousel" data-carousel="1">
+      <button class="carousel-arrow left" data-dir="left">‹</button>
+      <div class="carousel-window">
+        <div class="carousel-track">
+          <!-- SP1 -->
+          <div class="product-card" onclick="goToProductDetail('hong-tra-dao','Hồng trà đào',60000,'Assets/images/Trà thơm đậm vị/HongTraDao.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà thơm đậm vị/HongTraDao.png" alt="Hồng trà đào" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao','Hồng trà đào',60000,'Assets/images/Trà thơm đậm vị/HongTraDao.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Hồng trà đào</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">60.000 - 69.000₫</div>
+          </div>
+          <!-- SP2 -->
+          <div class="product-card" onclick="goToProductDetail('tra-ba-tuoc-luu-do','Trà bá tước lựu đỏ',60000,'Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-ba-tuoc-luu-do','Trà bá tước lựu đỏ',60000,'Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà bá tước lựu đỏ</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">60.000 - 69.000₫</div>
+          </div>
+          <!-- SP3 -->
+          <div class="product-card" onclick="goToProductDetail('tra-lai-dac-thom','Trà lài đác thơm',59000,'Assets/images/Trà thơm đậm vị/TraLaiDacThom.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà thơm đậm vị/TraLaiDacThom.png" alt="Trà lài đác thơm" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-dac-thom','Trà lài đác thơm',59000,'Assets/images/Trà thơm đậm vị/TraLaiDacThom.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà lài đác thơm</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">59.000 - 65.000₫</div>
+          </div>
+          <!-- SP4 -->
+          <div class="product-card" onclick="goToProductDetail('tra-lai-mang-cau-thach-dua','Trà lài mãng cầu thạch dừa',60000,'Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png" alt="Trà lài mãng cầu thạch dừa" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-mang-cau-thach-dua','Trà lài mãng cầu thạch dừa',60000,'Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà lài mãng cầu thạch dừa</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">60.000 - 69.000₫</div>
+          </div>
+          <!-- SP5 -->
+          <div class="product-card" onclick="goToProductDetail('tra-lucky-tea','Trà Lucky Tea',59000,'Assets/images/Trà thơm đậm vị/TraLuckyTea.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà thơm đậm vị/TraLuckyTea.png" alt="Trà Lucky Tea" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lucky-tea','Trà Lucky Tea',59000,'Assets/images/Trà thơm đậm vị/TraLuckyTea.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà Lucky Tea</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">59.000 - 69.000₫</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow right" data-dir="right">›</button>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS 2 -->
+  <section class="section-best-sellers">
+    <div class="carousel-header">BEST SELLERS – TRÀ SỮA ĐẬM VỊ</div>
+    <div class="carousel" data-carousel="2">
+      <button class="carousel-arrow left" data-dir="left">‹</button>
+      <div class="carousel-window">
+        <div class="carousel-track">
+          <div class="product-card" onclick="goToProductDetail('tra-sua-matcha','Trà sữa matcha',49000,'Assets/images/Trà sữa đậm vị/TraSuaMatcha.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà sữa đậm vị/TraSuaMatcha.png" alt="Trà sữa matcha" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-matcha','Trà sữa matcha',49000,'Assets/images/Trà sữa đậm vị/TraSuaMatcha.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà sữa matcha</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">49.000 - 65.000₫</div>
+          </div>
+
+          <div class="product-card" onclick="goToProductDetail('hong-tra-dao-sua-thach-konjac','Hồng trà đào sữa thạch Konjac',54000,'Assets/images/Trà sữa đậm vị/HongTraDaoSuaThachKonjac.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà sữa đậm vị/HongTraDaoSuaThachKonjac.png" alt="Hồng trà đào sữa thạch Konjac" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao-sua-thach-konjac','Hồng trà đào sữa thạch Konjac',54000,'Assets/images/Trà sữa đậm vị/HongTraDaoSuaThachKonjac.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Hồng trà đào sữa thạch Konjac</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">54.000 - 65.000₫</div>
+          </div>
+
+          <div class="product-card" onclick="goToProductDetail('hong-tra-sua','Hồng trà sữa',45000,'Assets/images/Trà sữa đậm vị/HongTraSua.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà sữa đậm vị/HongTraSua.png" alt="Hồng trà sữa" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-sua','Hồng trà sữa',45000,'Assets/images/Trà sữa đậm vị/HongTraSua.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Hồng trà sữa</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">45.000 - 55.000₫</div>
+          </div>
+
+          <div class="product-card" onclick="goToProductDetail('tra-sua-ba-tuoc','Trà sữa bá tước',50000,'Assets/images/Trà sữa đậm vị/TraSuaBaTuoc.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà sữa đậm vị/TraSuaBaTuoc.png" alt="Trà sữa bá tước" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-ba-tuoc','Trà sữa bá tước',50000,'Assets/images/Trà sữa đậm vị/TraSuaBaTuoc.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà sữa bá tước</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">50.000 - 55.000₫</div>
+          </div>
+
+          <div class="product-card" onclick="goToProductDetail('tra-sua-lai','Trà sữa lài',55000,'Assets/images/Trà sữa đậm vị/TraSuaLai.png')" style="cursor:pointer;">
+            <div class="product-img">
+              <img src="Assets/images/Trà sữa đậm vị/TraSuaLai.png" alt="Trà sữa lài" />
+              <div class="product-icons">
+                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-lai','Trà sữa lài',55000,'Assets/images/Trà sữa đậm vị/TraSuaLai.png')">🛒</button>
+                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+              </div>
+            </div>
+            <div class="product-name">Trà sữa lài</div>
+            <div class="product-size">Size: M - L</div>
+            <div class="product-price">55.000 - 59.000₫</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow right" data-dir="right">›</button>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection-wrapper">
+    <div class="collection-inner">
+      <div class="collection-image-card">
+        <img src="Assets/images/Đám cưới kẹ.jpg" alt="Bộ sưu tập Đám cưới kẹ" />
+      </div>
+      <div class="collection-copy">
+        <h3><span>BỘ SƯU TẬP</span><span>ĐÁM CUỐI KẸ</span></h3>
+        <div class="bullets">
+          <p>BST phiên bản Halloween – đồ uống & bánh ngọt phong cách gothic.</p>
+          <p>Hợp tác Phúc Long × ShopeeFood; combo "Ăn Hỷ Nhà Kẹ" chỉ 89K (giá gốc 114K).</p>
+          <p>Áp dụng tại cửa hàng Phúc Long chọn lọc & đặt qua ShopeeFood; số lượng và thời gian có hạn.</p>
+        </div>
+        <a class="cta-btn" href="#">XEM NGAY</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBO BANNER -->
+  <section class="combo-banner"></section>
+
+  <!-- DISCOUNT -->
+  <section class="discount-section">
+    <div class="discount-header">
+      <h2>Discount Item</h2>
+      <div class="discount-tabs">
+        <a href="#">Milk Tea •</a><a href="#">Fruit Tea</a><a href="#">Bakery Collections</a>
+      </div>
+    </div>
+    <div class="discount-body">
+      <div class="discount-text">
+        <div class="percent">20% Discount</div>
+        <div class="product-title">Trà sữa Phúc Long</div>
+        <p class="desc">Experience the perfect harmony of bold tea flavor and smooth creamy milk — a timeless signature of Phuc Long. Brewed from premium tea leaves, our milk tea delivers an authentic aroma and balanced sweetness that refreshes every sip.</p>
+        <ul class="checklist">
+          <li>Made from hand-picked tea leaves</li>
+          <li>Creamy yet light milk flavor</li>
+          <li>Perfect balance of sweetness</li>
+          <li>Served fresh daily</li>
+        </ul>
+        <a class="btn-shop-now" href="#">Shop Now</a>
+      </div>
+      <div class="discount-visual">
+        <div class="discount-circle-bg"></div>
+        <div class="discount-image-wrapper">
+          <img src="Assets/images/Trà sữa đậm vị/TraSuaPL.png" alt="Trà sữa Phúc Long" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="newsletter-banner">
+    <div class="newsletter-inner">
+      <div class="newsletter-left"></div>
+      <div class="newsletter-right">
+        <h3>Get Latest Update By Subscribe Our Newsletter</h3>
+        <a class="btn-shop-now" href="#">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog-section">
+    <div class="blog-header"><h2>Latest Blog</h2></div>
+    <div class="blog-cards">
+      <!-- Blog 1 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="Assets/images/blog1-in.jpg" alt="Boogey Wedding – Halloween Collection | Phuc Long" />
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <div>✦ Phuc Long Team</div>
+            <div>📅 25 October, 2025</div>
+          </div>
+          <div class="blog-title">Boogey Wedding – Halloween Collection</div>
+          <div class="blog-desc">
+            Step into Phuc Long’s spooky season with “Boogey Wedding” — a limited Halloween
+            collection featuring gothic-style beverages and sweet treats, now available
+            at select stores and ShopeeFood combos.
+          </div>
+          <a class="blog-readmore" href="ClientSite/blog1.html">Read More</a>
+        </div>
+      </article>
+      <!-- Blog 2 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="Assets/images/blog2-in.jpg" alt="Game On Top – 100% Prizes | Phuc Long" />
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <div>✦ Phuc Long Team</div>
+            <div>📅 10 October, 2025</div>
+          </div>
+          <div class="blog-title">Game On Top – 100% Prizes</div>
+          <div class="blog-desc">
+            Join Phuc Long’s mini-game “Game On Top” and win instantly — 100% chance of prizes.
+            Play, share, climb the leaderboard, and redeem drink vouchers throughout the campaign.
+          </div>
+          <a class="blog-readmore" href="ClientSite/blog2.html">Read More</a>
+        </div>
+      </article>
+      <!-- Blog 3 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="Assets/images/blog3-in.jpg" alt="Mad for Tea – 100% Prizes | Phuc Long" />
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <div>✦ Phuc Long Team</div>
+            <div>📅 24 June, 2025</div>
+          </div>
+          <div class="blog-title">Mad for Tea – 100% Prizes</div>
+          <div class="blog-desc">
+            Open the mini-game, complete tasks, and hunt for 100,000 free cups of tea — 100% win rate.
+            Play daily, invite friends, and claim exclusive Phuc Long rewards.
+          </div>
+          <a class="blog-readmore" href="ClientSite/blog3.html">Read More</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STORE LOCATOR (MAP) -->
+  <section class="store-locator" id="store-locator">
+    <h2 style="text-align:center;margin:0 0 16px">Danh sách cửa hàng Phúc Long</h2>
+
+    <div class="sl-toolbar">
+      <input id="sl-q" type="search" placeholder="Tìm tên/địa chỉ cửa hàng…" style="flex:1;min-width:200px">
+      <select id="sl-province" style="min-width:160px">
+        <option value="">Tỉnh thành</option>
+      </select>
+      <select id="sl-district" style="min-width:160px">
+        <option value="">Quận/huyện</option>
+      </select>
+      <select id="sl-ward" style="min-width:160px">
+        <option value="">Phường/xã</option>
+      </select>
+      <button id="sl-locate" title="Lấy vị trí của bạn">📍 Vị trí của tôi</button>
+      <button id="sl-sort" data-active="0" title="Sắp theo khoảng cách">↕ Sắp xếp</button>
+      <button id="sl-clear" title="Xóa lọc">✖ Xóa</button>
+    </div>
+
+    <div class="sl-grid">
+      <div id="sl-map"></div>
+      <div class="sl-panel">
+        <div class="sl-header">
+          <strong>Danh sách cửa hàng</strong>
+          <span><b id="sl-count">0</b> cửa hàng</span>
+        </div>
+        <div id="sl-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer được load động -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Load header/footer động với đường dẫn ĐÚNG tại root
+    async function loadComponent(url, placeholderId){
+      try{
+        const res = await fetch(url,{cache:"no-cache"});
+        if(!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+        const html = await res.text();
+        document.getElementById(placeholderId).innerHTML = html;
+      }catch(err){
+        console.error(`Load component failed: ${url}`, err);
+        document.getElementById(placeholderId).innerHTML =
+          `<p style="text-align:center;color:red;">Lỗi tải ${url}. Vui lòng kiểm tra file tồn tại.</p>`;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async ()=>{
+      await loadComponent('Assets/Components/header.html','header-placeholder');
+      await loadComponent('Assets/Components/footer.html','footer-placeholder');
+      initPage();
+    });
+
+    /* === CART MANAGER === */
+    class CartManager{
+      constructor(){ this.cart=this.loadCart(); this.updateCartIcon(); }
+      saveCart(){
+        localStorage.setItem('phuclong_cart', JSON.stringify(this.cart));
+        const currentUser = JSON.parse(localStorage.getItem('phuclong_current_user')||'null');
+        if(currentUser){
+          localStorage.setItem(`phuclong_cart_${currentUser.id}`, JSON.stringify(this.cart));
+        }
+        this.updateCartIcon();
+      }
+      loadCart(){ const saved=localStorage.getItem('phuclong_cart'); return saved?JSON.parse(saved):[]; }
+      addToCart(product){
+        const ex=this.cart.find(i=>i.id===product.id);
+        if(ex){ ex.quantity+=1; } else { this.cart.push({...product, quantity:1}); }
+        this.saveCart(); this.showSuccessMessage(product.name);
+      }
+      removeFromCart(id){ this.cart=this.cart.filter(i=>i.id!==id); this.saveCart(); }
+      updateQuantity(id,q){ const it=this.cart.find(i=>i.id===id); if(it){ if(q<=0)this.removeFromCart(id); else{ it.quantity=q; this.saveCart(); } } }
+      getTotalItems(){ return this.cart.reduce((t,i)=>t+i.quantity,0); }
+      getTotalPrice(){ return this.cart.reduce((t,i)=>t+i.price*i.quantity,0); }
+      updateCartIcon(){
+        const icons=document.querySelectorAll('.cart-icon, .cart-link');
+        const total=this.getTotalItems();
+        icons.forEach(icon=>{
+          const ex=icon.querySelector('.cart-badge'); if(ex) ex.remove();
+          if(total>0){
+            const b=document.createElement('span'); b.className='cart-badge'; b.textContent=total;
+            icon.style.position='relative'; icon.appendChild(b);
+          }
+        });
+      }
+      showConfirmDialog(product){
+        const old=document.querySelector('.cart-confirm-modal'); if(old) document.body.removeChild(old);
+        const modal=document.createElement('div'); modal.className='cart-confirm-modal';
+        modal.style.cssText=`position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10000`;
+        modal.innerHTML=`
+          <div class="modal-content" style="background:#fff;padding:30px;border-radius:8px;text-align:center;max-width:400px;width:90%;box-shadow:0 4px 20px rgba(0,0,0,.3);">
+            <h3 style="color:#0d0e43;margin-bottom:20px;font-size:20px;">Thêm vào giỏ hàng</h3>
+            <div style="margin-bottom:20px;">
+              <img src="${product.image}" alt="${product.name}" style="width:80px;height:80px;object-fit:contain;border-radius:8px;background:#f8f9fa;padding:8px;margin-bottom:15px;">
+              <p style="color:#666;font-size:16px;">Bạn có muốn thêm <strong>"${product.name}"</strong> vào giỏ hàng không?</p>
+            </div>
+            <div style="display:flex;gap:15px;justify-content:center;">
+              <button class="btn-cancel" style="background:#f8f9fa;color:#666;border:1px solid #ddd;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Không</button>
+              <button class="btn-confirm" style="background:#fb2e86;color:#fff;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Có</button>
+            </div>
+          </div>`;
+        document.body.appendChild(modal);
+        modal.querySelector('.btn-cancel').addEventListener('click',()=>document.body.removeChild(modal));
+        modal.querySelector('.btn-confirm').addEventListener('click',()=>{ this.addToCart(product); document.body.removeChild(modal); });
+        modal.addEventListener('click',(e)=>{ if(e.target===modal) document.body.removeChild(modal); });
+      }
+      showSuccessMessage(name){
+        const n=document.createElement('div'); n.style.cssText=`position:fixed;top:20px;right:20px;background:#28a745;color:#fff;padding:15px 20px;border-radius:4px;z-index:10001;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.2)`; n.textContent=`Đã thêm "${name}" vào giỏ hàng!`; document.body.appendChild(n);
+        setTimeout(()=>{ if(document.body.contains(n)) document.body.removeChild(n); },3000);
+      }
+      goToCart(){ window.location.href='ClientSite/shopping-cart.html'; }
+    }
+    const cartManager=new CartManager();
+
+    function addToCart(id,name,price,image){
+      const isLoggedIn = localStorage.getItem('phuclong_user_logged_in')==='true';
+      if(!isLoggedIn){ showLoginDialog(); return; }
+      cartManager.showConfirmDialog({id,name,price:parseFloat(price),image});
+    }
+
+    /* === Auth lightweight for demo === */
+    function showLoginDialog(){
+      const modal=document.createElement('div'); modal.className='login-modal';
+      modal.style.cssText=`position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10000`;
+      modal.innerHTML=`
+        <div class="modal-content" style="background:#fff;padding:30px;border-radius:8px;text-align:center;max-width:450px;width:90%;box-shadow:0 4px 20px rgba(0,0,0,.3);">
+          <h3 style="color:#0d0e43;margin-bottom:20px;font-size:20px;">Đăng nhập</h3>
+          <form id="loginForm" style="text-align:left;">
+            <div style="margin-bottom:15px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Tài khoản:</label>
+              <input type="text" id="loginUsername" placeholder="Nhập tài khoản" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required>
+            </div>
+            <div style="margin-bottom:20px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Mật khẩu:</label>
+              <input type="password" id="loginPassword" placeholder="Nhập mật khẩu" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:center;margin-bottom:15px;">
+              <button type="button" class="btn-cancel" style="background:#f8f9fa;color:#666;border:1px solid #ddd;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Hủy</button>
+              <button type="submit" class="btn-login" style="background:#fb2e86;color:#fff;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Đăng nhập</button>
+            </div>
+            <div style="text-align:center;">
+              <button type="button" class="btn-register" style="background:none;border:none;color:#fb2e86;cursor:pointer;text-decoration:underline;font-size:14px;">Chưa có tài khoản? Đăng ký ngay</button>
+            </div>
+          </form>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.querySelector('.btn-cancel').addEventListener('click',()=>document.body.removeChild(modal));
+      modal.querySelector('.btn-register').addEventListener('click',()=>{ document.body.removeChild(modal); showRegisterDialog(); });
+      modal.querySelector('#loginForm').addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const u=document.getElementById('loginUsername').value;
+        const p=document.getElementById('loginPassword').value;
+        if(loginUser(u,p)){ document.body.removeChild(modal); showSuccessMessage('Đăng nhập thành công!'); }
+        else{ showErrorMessage('Tài khoản hoặc mật khẩu không đúng!'); }
+      });
+      modal.addEventListener('click',(e)=>{ if(e.target===modal) document.body.removeChild(modal); });
+    }
+    function showRegisterDialog(){
+      const modal=document.createElement('div'); modal.className='register-modal';
+      modal.style.cssText=`position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10000`;
+      modal.innerHTML=`
+        <div class="modal-content" style="background:#fff;padding:30px;border-radius:8px;text-align:center;max-width:500px;width:90%;box-shadow:0 4px 20px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto;">
+          <h3 style="color:#0d0e43;margin-bottom:20px;font-size:20px;">Đăng ký tài khoản</h3>
+          <form id="registerForm" style="text-align:left;">
+            <div style="margin-bottom:15px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Họ tên:</label><input type="text" id="registerName" placeholder="Nhập họ tên" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required></div>
+            <div style="margin-bottom:15px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Tài khoản:</label><input type="text" id="registerUsername" placeholder="Nhập tài khoản" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required></div>
+            <div style="margin-bottom:15px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Email:</label><input type="email" id="registerEmail" placeholder="Nhập email" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required></div>
+            <div style="margin-bottom:15px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Số điện thoại:</label><input type="tel" id="registerPhone" placeholder="Nhập số điện thoại" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required></div>
+            <div style="margin-bottom:15px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Mật khẩu:</label><input type="password" id="registerPassword" placeholder="Nhập mật khẩu" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required></div>
+            <div style="margin-bottom:20px;"><label style="display:block;margin-bottom:5px;font-weight:600;color:#333;">Xác nhận mật khẩu:</label><input type="password" id="registerConfirmPassword" placeholder="Nhập lại mật khẩu" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;" required></div>
+            <div style="display:flex;gap:10px;justify-content:center;margin-bottom:15px;">
+              <button type="button" class="btn-cancel" style="background:#f8f9fa;color:#666;border:1px solid #ddd;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Hủy</button>
+              <button type="submit" class="btn-register" style="background:#fb2e86;color:#fff;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Đăng ký</button>
+            </div>
+            <div style="text-align:center;">
+              <button type="button" class="btn-login" style="background:none;border:none;color:#fb2e86;cursor:pointer;text-decoration:underline;font-size:14px;">Đã có tài khoản? Đăng nhập</button>
+            </div>
+          </form>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.querySelector('.btn-cancel').addEventListener('click',()=>document.body.removeChild(modal));
+      modal.querySelector('.btn-login').addEventListener('click',()=>{ document.body.removeChild(modal); showLoginDialog(); });
+      modal.querySelector('#registerForm').addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const name=document.getElementById('registerName').value;
+        const username=document.getElementById('registerUsername').value;
+        const email=document.getElementById('registerEmail').value;
+        const phone=document.getElementById('registerPhone').value;
+        const password=document.getElementById('registerPassword').value;
+        const confirm=document.getElementById('registerConfirmPassword').value;
+        if(password!==confirm){ showErrorMessage('Mật khẩu xác nhận không khớp!'); return; }
+        if(registerUser(name,username,email,phone,password)){
+          document.body.removeChild(modal);
+          showSuccessMessage('Đăng ký thành công! Vui lòng đăng nhập.');
+          setTimeout(()=>showLoginDialog(),800);
+        }else{ showErrorMessage('Tài khoản đã tồn tại!'); }
+      });
+      modal.addEventListener('click',(e)=>{ if(e.target===modal) document.body.removeChild(modal); });
+    }
+    function showSuccessMessage(m){
+      const n=document.createElement('div'); n.style.cssText=`position:fixed;top:20px;right:20px;background:#28a745;color:#fff;padding:15px 20px;border-radius:4px;z-index:10001;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.2)`; n.textContent=m; document.body.appendChild(n);
+      setTimeout(()=>{ if(document.body.contains(n)) document.body.removeChild(n); },3000);
+    }
+    function showErrorMessage(m){
+      const n=document.createElement('div'); n.style.cssText=`position:fixed;top:20px;right:20px;background:#dc3545;color:#fff;padding:15px 20px;border-radius:4px;z-index:10001;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.2)`; n.textContent=m; document.body.appendChild(n);
+      setTimeout(()=>{ if(document.body.contains(n)) document.body.removeChild(n); },3000);
+    }
+    function goToCart(){ cartManager.goToCart(); }
+
+    // Simple local auth demo
+    function registerUser(name,username,email,phone,password){
+      const users=JSON.parse(localStorage.getItem('phuclong_users')||'[]');
+      if(users.find(u=>u.username===username)) return false;
+      const newUser={id:Date.now(),name,username,email,phone,password,createdAt:new Date().toISOString()};
+      users.push(newUser); localStorage.setItem('phuclong_users',JSON.stringify(users)); return true;
+    }
+    function loginUser(username,password){
+      const users=JSON.parse(localStorage.getItem('phuclong_users')||'[]');
+      const user=users.find(u=>u.username===username && u.password===password);
+      if(user){
+        localStorage.setItem('phuclong_user_logged_in','true');
+        localStorage.setItem('phuclong_current_user',JSON.stringify({id:user.id,name:user.name,username:user.username,email:user.email,phone:user.phone}));
+        const userCart=JSON.parse(localStorage.getItem(`phuclong_cart_${user.id}`)||'[]');
+        localStorage.setItem('phuclong_cart',JSON.stringify(userCart));
+        return true;
+      }
+      return false;
+    }
+    function logoutUser(){
+      const currentUser=JSON.parse(localStorage.getItem('phuclong_current_user')||'null');
+      const currentCart=JSON.parse(localStorage.getItem('phuclong_cart')||'[]');
+      if(currentUser && currentCart.length>0){
+        localStorage.setItem(`phuclong_cart_${currentUser.id}`,JSON.stringify(currentCart));
+      }
+      localStorage.removeItem('phuclong_user_logged_in');
+      localStorage.removeItem('phuclong_current_user');
+      localStorage.removeItem('phuclong_cart');
+    }
+    function toggleLogin(){
+      const isLoggedIn=localStorage.getItem('phuclong_user_logged_in')==='true';
+      if(isLoggedIn){ showLogoutConfirmDialog(); } else { showLoginDialog(); }
+    }
+    function showLogoutConfirmDialog(){
+      const modal=document.createElement('div'); modal.style.cssText=`position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10000`;
+      modal.innerHTML=`
+        <div class="modal-content" style="background:#fff;padding:30px;border-radius:8px;text-align:center;max-width:400px;width:90%;box-shadow:0 4px 20px rgba(0,0,0,.3);">
+          <h3 style="color:#0d0e43;margin-bottom:20px;font-size:20px;">Xác nhận đăng xuất</h3>
+          <p style="color:#666;margin-bottom:20px;">Bạn có chắc chắn muốn đăng xuất không?</p>
+          <div style="display:flex;gap:15px;justify-content:center;">
+            <button class="btn-cancel" style="background:#f8f9fa;color:#666;border:1px solid #ddd;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Hủy</button>
+            <button class="btn-confirm-logout" style="background:#dc3545;color:#fff;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-weight:600;">Đăng xuất</button>
+          </div>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.querySelector('.btn-cancel').addEventListener('click',()=>document.body.removeChild(modal));
+      modal.querySelector('.btn-confirm-logout').addEventListener('click',()=>{
+        logoutUser();
+        const loginStatus=document.getElementById('loginStatus'); if(loginStatus) loginStatus.textContent='Login';
+        showSuccessMessage('Đã đăng xuất!'); cartManager.updateCartIcon(); document.body.removeChild(modal);
+      });
+      modal.addEventListener('click',(e)=>{ if(e.target===modal) document.body.removeChild(modal); });
+    }
+    function updateLoginStatus(){
+      const isLoggedIn=localStorage.getItem('phuclong_user_logged_in')==='true';
+      const loginStatus=document.getElementById('loginStatus');
+      if(loginStatus) loginStatus.textContent = isLoggedIn ? 'Logout' : 'Login';
+    }
+
+    /* INIT after header/footer loaded */
+    function initPage(){
+      cartManager.updateCartIcon();
+      updateLoginStatus();
+
+      // carousel behaviour
+      document.querySelectorAll(".carousel").forEach((carouselEl)=>{
+        const track=carouselEl.querySelector(".carousel-track");
+        const windowEl=carouselEl.querySelector(".carousel-window");
+        const leftBtn=carouselEl.querySelector(".carousel-arrow.left");
+        const rightBtn=carouselEl.querySelector(".carousel-arrow.right");
+        const getStep=()=>{
+          const card=track.querySelector(".product-card");
+          if(!card) return 220;
+          const style=window.getComputedStyle(card);
+          const cardWidth=card.getBoundingClientRect().width;
+          const marginRight=parseFloat(style.marginRight)||0;
+          return cardWidth + marginRight + 16;
+        };
+        leftBtn.addEventListener("click",()=>windowEl.scrollBy({left:-getStep(),behavior:"smooth"}));
+        rightBtn.addEventListener("click",()=>windowEl.scrollBy({left:getStep(),behavior:"smooth"}));
+        windowEl.style.scrollBehavior="smooth";
+        windowEl.style.overflowX="auto";
+        windowEl.style.scrollSnapType="x mandatory";
+        track.querySelectorAll(".product-card").forEach(card=>{ card.style.scrollSnapAlign="start"; });
+      });
+      console.log('Home page loaded with dynamic header/footer');
+    }
+
+    function goToProductDetail(id,name,price,image){
+      const productData={id,name,price,image};
+      localStorage.setItem('phuclong_current_product', JSON.stringify(productData));
+      window.location.href='product details.html';
+    }
+  </script>
+
+  <!-- JS của store-locator -->
+  <script src="Assets/JS/map.js"></script>
+
+  <!-- Google Maps (thay API key của bạn) -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=marker&callback=initLocatorMap"></script>
+</body>
+</html>
