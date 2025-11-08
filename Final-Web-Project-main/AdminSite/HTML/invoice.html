@@ -1,0 +1,271 @@
+<!-- invoice.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="../CSS/invoice.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="favorites.html">
+                    <img src="../images/icons/favorite.svg" class="icon" alt="Favorite"/>
+                    <span class="label">Favorites</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Invoice</h1>
+                <div class="invoice-container">
+                    <div class="invoice-info">
+                        <div class="info-section">
+                            <strong>Invoice From :</strong>
+                            <p>Giang Nguyen</p>
+                            <p>9694 Krajcik Locks 635</p>
+                        </div>
+                        <div class="info-section">
+                            <strong>Invoice To :</strong>
+                            <p>Doanh Nguyen</p>
+                            <p>Brooklyn</p>
+                        </div>
+                        <div class="info-section">
+                            <strong>Invoice Date : 12 Nov 2019</strong>
+                            <strong>Due Date : 25 Dec 2019</strong>
+                        </div>
+                    </div>
+                    <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Serial No.</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Base Cost</th>
+                                <th>Total Cost</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td contenteditable="true">Trà Lài Thơm</td>
+                                <td contenteditable="true">2</td>
+                                <td contenteditable="true">$20</td>
+                                <td>$40</td>
+                                <td>
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td contenteditable="true">Trà Vai</td>
+                                <td contenteditable="true">2</td>
+                                <td contenteditable="true">$50</td>
+                                <td>$100</td>
+                                <td>
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td contenteditable="true">Hồng Trà 50a</td>
+                                <td contenteditable="true">5</td>
+                                <td contenteditable="true">$100</td>
+                                <td>$500</td>
+                                <td>
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td contenteditable="true">Trà Đào</td>
+                                <td contenteditable="true">4</td>
+                                <td contenteditable="true">$1000</td>
+                                <td>$4000</td>
+                                <td>
+                                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">Total</td>
+                                <td id="total-cost">$4680</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="invoice-actions">
+                        <button id="add-item">Add Item</button>
+                        <button id="print-invoice">Print / Download PDF</button>
+                        <button id="mark-paid">Mark as Paid</button>
+                        <button class="send-btn">Send</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Invoice functionality
+        const tableBody = document.querySelector('.invoice-table tbody');
+        const totalCostElement = document.getElementById('total-cost');
+
+        // Function to calculate total
+        function calculateTotal() {
+            let total = 0;
+            tableBody.querySelectorAll('tr').forEach(row => {
+                const qty = parseFloat(row.cells[2].textContent) || 0;
+                const base = parseFloat(row.cells[3].textContent.replace('$', '')) || 0;
+                const itemTotal = qty * base;
+                row.cells[4].textContent = `$${itemTotal}`;
+                total += itemTotal;
+            });
+            totalCostElement.textContent = `$${total}`;
+        }
+
+        // Edit cells and recalculate
+        tableBody.addEventListener('input', (e) => {
+            if (e.target.contentEditable === 'true') {
+                calculateTotal();
+            }
+        });
+
+        // Delete row
+        tableBody.addEventListener('click', (e) => {
+            if (e.target.classList.contains('delete')) {
+                e.target.closest('tr').remove();
+                // Renumber serial nos
+                tableBody.querySelectorAll('tr').forEach((row, index) => {
+                    row.cells[0].textContent = index + 1;
+                });
+                calculateTotal();
+            }
+        });
+
+        // Add new item
+        document.getElementById('add-item').addEventListener('click', () => {
+            const rowCount = tableBody.rows.length + 1;
+            const newRow = tableBody.insertRow();
+            newRow.innerHTML = `
+                <td>${rowCount}</td>
+                <td contenteditable="true">New Item</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">$0</td>
+                <td>$0</td>
+                <td>
+                    <img src="../images/icons/delete.svg" alt="Delete" class="action-icon delete">
+                </td>
+            `;
+            calculateTotal();
+        });
+
+        // Print/Download PDF (demo: open print dialog)
+        document.getElementById('print-invoice').addEventListener('click', () => {
+            window.print(); // Or integrate with jsPDF for real PDF
+        });
+
+        // Mark as Paid (demo: alert)
+        document.getElementById('mark-paid').addEventListener('click', () => {
+            alert('Invoice marked as paid!');
+            // Could add status badge or something
+        });
+
+        // Send (demo: alert)
+        document.querySelector('.send-btn').addEventListener('click', () => {
+            alert('Invoice sent!');
+            // Could integrate with email API
+        });
+
+        // Initial calculate
+        calculateTotal();
+    </script>
+</body>
+</html>

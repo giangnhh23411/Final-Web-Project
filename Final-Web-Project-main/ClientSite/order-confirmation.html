@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Phuc Long</title>
+    <link rel="stylesheet" href="/Assets/Components/header-footer.css">
+    <link rel="stylesheet" href="/Assets/CSS/order-confirmation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;500;600;700&family=Alata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header - Dynamic -->
+    <div id="site-header"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Order Confirmation Icon -->
+            <div class="order-confirmation-icon">
+                <div class="icon-background">
+                    <img src="../Assets/images/order-confirmation/Vector 16.png" alt="Purple Background" class="purple-bg">
+                </div>
+                <div class="icon-circle">
+                    <img src="../Assets/images/order-confirmation/Ellipse 70.png" alt="White Circle" class="white-circle">
+                </div>
+                <div class="icon-checkmark">
+                    <img src="../Assets/images/order-confirmation/Vector 15.png" alt="Pink Checkmark" class="pink-checkmark">
+                </div>
+            </div>
+
+            <!-- Confirmation Message -->
+            <div class="confirmation-message">
+                <h1>Your Order Is Completed!</h1>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="continue-shopping-btn" onclick="window.location.href='/ClientSite/shop-grid.html'">Continue Shopping</button>
+                <a href="#" class="view-order-link" id="view-order-link">View Order</a>
+            </div>
+            
+            <script>
+                // Lấy order_no từ localStorage và link đến order-details
+                document.addEventListener('DOMContentLoaded', function() {
+                    const viewOrderLink = document.getElementById('view-order-link');
+                    const currentOrder = JSON.parse(localStorage.getItem('phuclong_current_order') || 'null');
+                    
+                    if (currentOrder && currentOrder.order_no) {
+                        viewOrderLink.href = `/ClientSite/order-details.html?order_no=${encodeURIComponent(currentOrder.order_no)}`;
+                    } else {
+                        // Fallback: link đến my-orders nếu không có order_no
+                        viewOrderLink.href = '/ClientSite/my-orders.html';
+                    }
+                });
+            </script>
+        </div>
+    </main>
+
+    <!-- Footer - Dynamic -->
+    <div id="site-footer"></div>
+    
+    <script src="/Assets/Components/layout.js" defer></script>
+</body>
+</html>

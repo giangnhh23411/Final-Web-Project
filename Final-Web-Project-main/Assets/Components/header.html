@@ -1,0 +1,447 @@
+<!-- ========= PHUC LONG: SHARED HEADER ========= -->
+<link rel="stylesheet" href="/Assets/Components/header-footer.css" />
+
+<!-- TOP CONTACT BAR -->
+<div class="top-contact-bar">
+  <div class="top-contact-inner">
+    <div class="contact-left">
+      <div class="contact-item">
+        ✉ <a href="mailto:sales@phuclong.masangroup.com">sales@phuclong.masangroup.com</a>
+      </div>
+      <div class="contact-item">☎ <a href="tel:18006779">1800 6779</a></div>
+    </div>
+
+    <div class="contact-right">
+      <!-- Language -->
+      <details class="dd">
+        <summary class="dd-summary">ENG ▾</summary>
+        <ul class="dd-menu">
+          <li><a href="#" lang="vi">VIE – Tiếng Việt</a></li>
+          <li><a href="#" lang="fr">FRA – Français</a></li>
+          <li><a href="#" lang="zh">中文 – Chinese</a></li>
+        </ul>
+      </details>
+
+      <!-- Currency -->
+      <details class="dd">
+        <summary class="dd-summary">VND ▾</summary>
+        <ul class="dd-menu">
+          <li><a href="#">VND – ₫</a></li>
+          <li><a href="#">USD – $</a></li>
+        </ul>
+      </details>
+
+      <div class="hdr-user-section" id="hdr-user-section">
+        <!-- Login link (hiển thị khi chưa đăng nhập) -->
+        <a class="hdr-link" href="/ClientSite/my-account.html" id="login-link">
+          <img class="icon-18" src="/Assets/Components/images/login.png" alt="Login" />
+          Login
+        </a>
+        <!-- User info (hiển thị khi đã đăng nhập) -->
+        <div class="hdr-user-info" id="user-info" style="display: none;">
+          <details class="user-dropdown">
+            <summary class="user-dropdown-summary">
+              <span class="hdr-greeting">Hello, <span id="user-name">User</span></span>
+              <span class="dropdown-arrow">▾</span>
+            </summary>
+            <ul class="user-dropdown-menu">
+              <li><a href="/ClientSite/my-orders.html">My Orders</a></li>
+              <li><a href="/ClientSite/my-account.html">My Account</a></li>
+              <li><a href="/ClientSite/settings.html">Settings</a></li>
+              <li class="user-dropdown-divider"></li>
+              <li><button class="user-dropdown-logout" id="logout-btn">Logout</button></li>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <a class="hdr-link" href="/ClientSite/my-account.html">
+        <img class="icon-18" src="/Assets/Components/images/heart.png" alt="Wishlist" />
+        Wishlist
+      </a>
+      <a class="hdr-icon-btn" href="/ClientSite/shopping-cart.html" aria-label="Cart">
+        <img class="icon-20" src="/Assets/Components/images/cart.png" alt="Cart" />
+      </a>
+
+      <!-- Search -->
+      <div class="hdr-search-wrapper">
+        <form class="hdr-search" role="search" id="search-form">
+          <input 
+            type="search" 
+            id="search-input" 
+            placeholder="Tìm sản phẩm..." 
+            aria-label="Search" 
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Search">
+            <img class="icon-18" src="/Assets/Components/images/find.png" alt="Search" />
+          </button>
+        </form>
+        <!-- Autocomplete dropdown -->
+        <ul class="search-suggestions" id="search-suggestions"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN NAV -->
+<header class="main-nav-wrapper">
+  <div class="main-nav-inner">
+    <a href="/" class="brand-logo" aria-label="Phuc Long homepage">
+      <img class="brand-logo-img" src="/Assets/images/LogoPhucLong.png" alt="Phuc Long Logo" />
+      <span class="brand-text">Phuc Long</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="/ClientSite/about.html">About</a>
+      <!-- Products Dropdown -->
+      <div class="nav-dropdown">
+        <a href="/ClientSite/shop-grid.html" class="nav-dropdown-link">Products</a>
+        <details class="nav-dropdown-details">
+          <summary class="nav-dropdown-summary">
+            <span class="dropdown-arrow">▾</span>
+          </summary>
+          <ul class="nav-dropdown-menu" id="products-categories-menu">
+            <li><a href="/ClientSite/shop-grid.html">Tất cả sản phẩm</a></li>
+            <!-- Categories will be loaded dynamically -->
+          </ul>
+        </details>
+      </div>
+      
+      <script>
+        // Load categories from products API and populate dropdown
+        async function loadCategories() {
+          try {
+            const response = await fetch('/api/products/categories');
+            const result = await response.json();
+            const categories = result.data || [];
+            
+            const menu = document.getElementById('products-categories-menu');
+            if (menu) {
+              // Clear existing items except "Tất cả sản phẩm"
+              const allProductsLink = menu.querySelector('li:first-child');
+              menu.innerHTML = '';
+              if (allProductsLink) {
+                menu.appendChild(allProductsLink);
+              }
+              
+              // Add categories từ products
+              if (categories.length > 0) {
+                categories.forEach(category => {
+                  const li = document.createElement('li');
+                  const a = document.createElement('a');
+                  a.href = `/ClientSite/shop-grid.html?category_slug=${category.slug}`;
+                  a.textContent = category.name;
+                  li.appendChild(a);
+                  menu.appendChild(li);
+                });
+              }
+            }
+          } catch (error) {
+            console.error('Error loading categories:', error);
+          }
+        }
+        
+        // Realtime Search với debounce
+        let searchTimer;
+        let searchCache = {};
+        
+        async function performSearch(query) {
+          if (!query || query.trim().length < 1) {
+            hideSuggestions();
+            return;
+          }
+          
+          const trimmedQuery = query.trim().toLowerCase();
+          
+          // Check cache
+          if (searchCache[trimmedQuery]) {
+            displaySuggestions(searchCache[trimmedQuery]);
+            return;
+          }
+          
+          try {
+            const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&limit=10`);
+            const result = await response.json();
+            const products = result.data || [];
+            
+            // Cache result
+            searchCache[trimmedQuery] = products;
+            
+            displaySuggestions(products);
+          } catch (error) {
+            console.error('Error searching products:', error);
+            hideSuggestions();
+          }
+        }
+        
+        function displaySuggestions(products) {
+          const suggestionsEl = document.getElementById('search-suggestions');
+          if (!suggestionsEl) return;
+          
+          if (products.length === 0) {
+            suggestionsEl.innerHTML = '<li class="search-suggestions-empty">Không tìm thấy sản phẩm</li>';
+            suggestionsEl.classList.add('show');
+            return;
+          }
+          
+          suggestionsEl.innerHTML = '';
+          products.forEach(product => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.className = 'search-suggestion-item';
+            a.href = `/ClientSite/product-details.html?sku=${product.sku || product._id}`;
+            
+            const img = (product.images && product.images.length > 0) 
+              ? product.images[0] 
+              : '/Assets/images/LogoPhucLong.png';
+            
+            const price = product.price ? product.price.toLocaleString('vi-VN') + '₫' : 'N/A';
+            
+            a.innerHTML = `
+              <img src="${img}" alt="${product.name || 'Product'}" loading="lazy" />
+              <div class="search-suggestion-info">
+                <div class="search-suggestion-name">${product.name || 'N/A'}</div>
+                <div class="search-suggestion-price">${price}</div>
+              </div>
+            `;
+            
+            li.appendChild(a);
+            suggestionsEl.appendChild(li);
+          });
+          
+          suggestionsEl.classList.add('show');
+        }
+        
+        function hideSuggestions() {
+          const suggestionsEl = document.getElementById('search-suggestions');
+          if (suggestionsEl) {
+            suggestionsEl.classList.remove('show');
+          }
+        }
+        
+        function initSearch() {
+          const searchInput = document.getElementById('search-input');
+          const searchForm = document.getElementById('search-form');
+          
+          if (!searchInput || !searchForm) return;
+          
+          // Realtime search với debounce 300ms
+          searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimer);
+            const query = e.target.value;
+            
+            if (!query || query.trim().length < 1) {
+              hideSuggestions();
+              return;
+            }
+            
+            searchTimer = setTimeout(() => {
+              performSearch(query);
+            }, 300);
+          });
+          
+          // Submit form - redirect to shop-grid with search query
+          searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+              window.location.href = `/ClientSite/shop-grid.html?q=${encodeURIComponent(query)}`;
+            }
+          });
+          
+          // Hide suggestions when clicking outside
+          document.addEventListener('click', (e) => {
+            const wrapper = document.querySelector('.hdr-search-wrapper');
+            if (wrapper && !wrapper.contains(e.target)) {
+              hideSuggestions();
+            }
+          });
+          
+          // Hide suggestions on Escape key
+          searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              hideSuggestions();
+            }
+          });
+        }
+        
+        // Cập nhật UI đăng nhập
+        function updateLoginUI() {
+          const loginLink = document.getElementById('login-link');
+          const userInfo = document.getElementById('user-info');
+          const userName = document.getElementById('user-name');
+          const logoutBtn = document.getElementById('logout-btn');
+          
+          if (!loginLink || !userInfo || !userName || !logoutBtn) return;
+          
+          // Kiểm tra trạng thái đăng nhập
+          const isLoggedIn = localStorage.getItem('phuclong_user_logged_in') === 'true';
+          const currentUser = JSON.parse(localStorage.getItem('phuclong_current_user') || 'null');
+          
+          if (isLoggedIn && currentUser) {
+            // Đã đăng nhập - hiển thị user info
+            loginLink.style.display = 'none';
+            userInfo.style.display = 'flex';
+            userName.textContent = currentUser.name || currentUser.email || 'User';
+          } else {
+            // Chưa đăng nhập - hiển thị login link
+            loginLink.style.display = 'flex';
+            userInfo.style.display = 'none';
+          }
+        }
+        
+        // Logout với custom modal
+        function showLogoutModal() {
+          // Tạo modal
+          const existingModal = document.querySelector('.logout-modal');
+          if (existingModal) existingModal.remove();
+          
+          const modal = document.createElement('div');
+          modal.className = 'logout-modal';
+          modal.style.cssText = `
+            position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5);
+            display: flex; align-items: center; justify-content: center; z-index: 10000;
+            animation: fadeIn 0.2s ease;
+          `;
+          
+          modal.innerHTML = `
+            <div class="logout-modal-content" style="
+              background: #fff; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+              padding: 24px; max-width: 400px; width: 90vw;
+              animation: slideUp 0.3s ease;
+            ">
+              <h3 style="margin: 0 0 12px; color: #0b0c3b; font-size: 18px; font-weight: 700;">
+                Xác nhận đăng xuất
+              </h3>
+              <p style="margin: 0 0 20px; color: #5a5a7a; font-size: 14px; line-height: 1.5;">
+                Bạn có chắc chắn muốn đăng xuất khỏi tài khoản?
+              </p>
+              <div style="display: flex; gap: 12px; justify-content: flex-end;">
+                <button id="logout-cancel" style="
+                  background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px;
+                  padding: 10px 20px; cursor: pointer; font-weight: 600; font-size: 14px;
+                  color: #374151; transition: all 0.2s;
+                ">Hủy</button>
+                <button id="logout-confirm" style="
+                  background: #dc3545; border: none; border-radius: 8px;
+                  padding: 10px 20px; cursor: pointer; font-weight: 600; font-size: 14px;
+                  color: #fff; transition: all 0.2s;
+                ">Đăng xuất</button>
+              </div>
+            </div>
+          `;
+          
+          // Thêm CSS animation nếu chưa có
+          if (!document.getElementById('logout-modal-styles')) {
+            const style = document.createElement('style');
+            style.id = 'logout-modal-styles';
+            style.textContent = `
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              @keyframes slideUp {
+                from { transform: translateY(20px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+              }
+              .logout-modal-content button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+              }
+              .logout-modal-content #logout-confirm:hover {
+                background: #c82333 !important;
+              }
+              .logout-modal-content #logout-cancel:hover {
+                background: #e5e7eb !important;
+              }
+            `;
+            document.head.appendChild(style);
+          }
+          
+          document.body.appendChild(modal);
+          
+          // Event listeners
+          modal.querySelector('#logout-cancel').addEventListener('click', () => {
+            modal.remove();
+          });
+          
+          modal.querySelector('#logout-confirm').addEventListener('click', () => {
+            // Gọi logout function từ login.js
+            if (window.PLAuth && window.PLAuth.logout) {
+              window.PLAuth.logout();
+            } else {
+              // Fallback nếu không có PLAuth
+              localStorage.removeItem('phuclong_user_logged_in');
+              localStorage.removeItem('phuclong_current_user');
+            }
+            
+            modal.remove();
+            
+            // Cập nhật UI
+            updateLoginUI();
+            
+            // Reload trang hoặc redirect
+            window.location.reload();
+          });
+          
+          // Close khi click outside
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+              modal.remove();
+            }
+          });
+          
+          // Close khi nhấn Escape
+          const handleEscape = (e) => {
+            if (e.key === 'Escape') {
+              modal.remove();
+              document.removeEventListener('keydown', handleEscape);
+            }
+          };
+          document.addEventListener('keydown', handleEscape);
+        }
+        
+        // Logout handler
+        function handleLogout() {
+          showLogoutModal();
+        }
+        
+        // Khởi tạo logout button
+        function initLogout() {
+          const logoutBtn = document.getElementById('logout-btn');
+          if (logoutBtn) {
+            logoutBtn.addEventListener('click', handleLogout);
+          }
+        }
+        
+        // Chạy khi header được inject
+        if (document.readyState === 'loading') {
+          document.addEventListener('phuclong:hf-loaded', () => {
+            loadCategories();
+            initSearch();
+            updateLoginUI();
+            initLogout();
+          });
+        } else {
+          setTimeout(() => {
+            loadCategories();
+            initSearch();
+            updateLoginUI();
+            initLogout();
+          }, 200);
+        }
+        
+        // Cập nhật UI khi có thay đổi trong localStorage (từ trang khác)
+        window.addEventListener('storage', (e) => {
+          if (e.key === 'phuclong_user_logged_in' || e.key === 'phuclong_current_user') {
+            updateLoginUI();
+          }
+        });
+      </script>
+      <a href="/ClientSite/shop-list.html">Shop</a>
+      <a href="/ClientSite/blog-page.html">Blog</a>
+      <a href="/ClientSite/faq.html">FAQ</a>
+      <a href="/ClientSite/contact-us.html">Contact</a>
+    </nav>
+  </div>
+</header>

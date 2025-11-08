@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Phuc Long - FAQ</title>
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="/Assets/CSS/external.css" />
+  <!-- CSS header/footer dùng chung -->
+  <link rel="stylesheet" href="/Assets/Components/header-footer.css" />
+
+  <!-- FAQ-specific styles to match screenshot -->
+  <style>
+    /* FAQ Section */
+    .faq-section {
+      max-width: var(--max-width-page);
+      margin: 32px auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+    }
+    .faq-inner { /* Not needed, use direct children */ }
+
+    /* Left: FAQ List */
+    .faq-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .faq-heading {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--brand-text-dark);
+      margin: 0 0 20px;
+      line-height: 1.3;
+    }
+    .faq-item {
+      border: 1px solid var(--bg-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.2s ease;
+    }
+    .faq-item:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .faq-question {
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--brand-text-dark);
+      cursor: pointer;
+      background: #fafaff;
+      border-bottom: 1px solid var(--bg-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--accent-pink);
+      transition: transform 0.2s ease;
+    }
+    .faq-question.active::after { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      font-size: 14px;
+      color: var(--brand-text-mid);
+      line-height: 1.5;
+      background: #fff;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-answer.active {
+      max-height: 200px; /* Adjust based on content */
+      padding: 16px 20px;
+    }
+
+    /* Right: Ask Form */
+    .faq-form-card {
+      background: #fff;
+      border: 1px solid var(--bg-border);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      height: fit-content;
+    }
+    .form-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--brand-text-dark);
+      margin: 0 0 20px;
+      text-align: center;
+    }
+    .ask-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent-pink);
+    }
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .btn-send {
+      background: var(--accent-pink);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      align-self: flex-start;
+    }
+    .btn-send:hover { background: #e0187a; }
+
+    /* Responsive: Stack on mobile */
+    @media (max-width: 768px) {
+      .faq-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .faq-form-card { order: -1; } /* Form first on mobile */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header inject -->
+  <div id="site-header"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title">FAQ</h1>
+      <div class="breadcrumb">
+        Home . Pages . <span>Faq</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT SECTION -->
+  <section class="faq-section">
+
+    <!-- LEFT COLUMN: FAQ LIST -->
+    <div class="faq-left">
+      <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">Are Phuc Long products suitable for people on a diet?</div>
+        <div class="faq-answer">
+          Some types of tea and coffee can be customized with different levels of
+          sugar and milk according to your taste, making them suitable for people
+          who are dieting or looking to reduce calorie intake.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Does Phuc Long have a membership or rewards program?</div>
+        <div class="faq-answer">
+          Yes! You can register for a Phuc Long Rewards account to earn reward
+          points, receive birthday offers, and enjoy exclusive vouchers every
+          month.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What is the average delivery time?</div>
+        <div class="faq-answer">
+          Depending on the area, the average delivery time is usually 20–30
+          minutes. During peak hours, delivery times may vary slightly, but we
+          always strive to deliver your order as quickly as possible.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Where can I order Phuc Long drinks online?</div>
+        <div class="faq-answer">
+          You can place an order directly through ShopeeFood, GrabFood,
+          Baemin, or via Phuc Long Coffee &amp; Tea’s official website for fast and
+          convenient delivery.
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: ASK FORM -->
+    <aside class="faq-form-card">
+      <h3 class="form-title">Ask a Question</h3>
+
+      <form class="ask-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name*" required />
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="Subject*" required />
+        </div>
+
+        <div class="form-group">
+          <textarea placeholder="Type Your Message*" required></textarea>
+        </div>
+
+        <button class="btn-send" type="submit">Send Mail</button>
+      </form>
+    </aside>
+
+  </section>
+
+  <!-- Footer inject -->
+  <div id="site-footer"></div>
+
+  <!-- Import header/footer & FAQ Accordion JS -->
+  <script
+    src="../Assets/Components/layout.js"
+    defer
+    data-header="../Assets/Components/header.html"
+    data-footer="../Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
+  <script>
+    // Simple FAQ Accordion
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.querySelectorAll('.faq-question');
+      questions.forEach(q => {
+        q.addEventListener('click', () => {
+          const item = q.parentElement;
+          const answer = item.querySelector('.faq-answer');
+          const isActive = item.classList.contains('active');
+
+          // Close all others
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-question').classList.remove('active');
+            i.querySelector('.faq-answer').classList.remove('active');
+          });
+
+          // Toggle current
+          if (!isActive) {
+            item.classList.add('active');
+            q.classList.add('active');
+            answer.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

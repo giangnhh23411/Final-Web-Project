@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Phuc Long - Shop List</title>
+
+  <link rel="stylesheet" href="/Assets/CSS/external.css" />
+  <link rel="stylesheet" href="/Assets/Components/header-footer.css" />
+</head>
+<body>
+
+  <!-- Header inject -->
+  <div id="site-header"></div>
+
+  <!-- PAGE HERO / BREADCRUMB -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title">Shop List</h1>
+      <div class="breadcrumb">
+        Home . Pages . <span>Shop List</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP CONTROLS (filter line) -->
+  <section class="shop-controls">
+    <div class="shop-controls-inner">
+      <div class="shop-controls-left">
+        <div class="shop-headline">Ecommerce Accesories &amp; Fashion item</div>
+        <div class="shop-results">About 9.620 results (0.62 seconds)</div>
+      </div>
+
+      <div class="shop-controls-right">
+        <div class="control-group">
+          <label for="per-page">Per Page:</label>
+          <select id="per-page">
+            <option>12</option>
+            <option>24</option>
+            <option>48</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="sort-by">Sort By:</label>
+          <select id="sort-by">
+            <option>Best Match</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label>View:</label>
+          <div class="view-icons">
+            <button class="view-btn" title="grid view">▦</button>
+            <button class="view-btn active" title="list view">☰</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <input class="filter-search" type="text" placeholder="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT LIST VIEW -->
+  <section class="product-list-section">
+    <div class="product-list-wrapper">
+
+      <!-- ROW 1 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="/Assets/images/Blog1.png" alt="Accumsan tincidunt" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">Accumsan tincidunt</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span title="Giỏ hàng">🛒</span>
+              <span title="Thêm wishlist">♡</span>
+              <span title="So sánh">↺</span>
+              <span title="Xem chi tiết">👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROW 2 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="/Assets/images/Blog2.png" alt="In nulla" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">In nulla</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span>🛒</span>
+              <span>♡</span>
+              <span>↺</span>
+              <span>👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROW 3 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="/Assets/images/Blog3.png" alt="Vel sem" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">Vel sem</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span>🛒</span>
+              <span>♡</span>
+              <span>↺</span>
+              <span>👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROW 4 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="../images/Blog/blog1.jpg" alt="Porttitor cum" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">Porttitor cum</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span>🛒</span>
+              <span>♡</span>
+              <span>↺</span>
+              <span>👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROW 5 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="/Assets/images/Blog2.png" alt="Nunc in" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">Nunc in</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span>🛒</span>
+              <span>♡</span>
+              <span>↺</span>
+              <span>👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROW 6 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="/Assets/images/Blog3.png" alt="Vitae facilisis" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">Vitae facilisis</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span>🛒</span>
+              <span>♡</span>
+              <span>↺</span>
+              <span>👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROW 7 -->
+      <article class="product-row">
+        <div class="product-row-image">
+          <img src="../images/Blog/blog1.jpg" alt="Curabitur lectus" />
+        </div>
+
+        <div class="product-row-info">
+          <div class="row-top">
+            <div class="row-title">Curabitur lectus</div>
+
+            <div class="row-meta-line">
+              <div class="row-price">
+                <span class="price-current">$260</span>
+                <span class="price-old">$520</span>
+              </div>
+              <div class="row-stars">
+                ★★★★★
+              </div>
+              <div class="row-colors">
+                <span class="dot purple"></span>
+                <span class="dot yellow"></span>
+                <span class="dot pink"></span>
+              </div>
+            </div>
+
+            <div class="row-desc">
+              Orem <b>@plum</b> dolor sit amet, consectetur adipiscing elit.
+              Magna in est adipiscing in phasellus non in justo.
+            </div>
+
+            <div class="row-icons">
+              <span>🛒</span>
+              <span>♡</span>
+              <span>↺</span>
+              <span>👁</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-inner">
+
+        <!-- Col 1 -->
+        <div class="footer-col footer-newsletter">
+          <h4>Phuc Long</h4>
+
+          <div class="newsletter-input-row">
+            <input type="email" placeholder="Enter Email Address" />
+            <button>Sign Up</button>
+          </div>
+
+          <div class="footer-address">
+            <div class="footer-col-title">Contact Info</div>
+            <div class="footer-col-text">
+              Floor 7, Room 702, Central Plaza Building, No. 17<br/>
+              Le Duan street, Ben Nghe ward, district 1, Ho Chi Minh city.
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#">Bakery</a></li>
+            <li><a href="#">Mooncake</a></li>
+            <li><a href="#">Halloween Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Discount</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Orders History</a></li>
+            <li><a href="#">Order Tracking</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Browse the Shop</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <div class="footer-copy">©phuclong.com - All Rights Reserved</div>
+
+        <div class="footer-social">
+          <a class="social-circle" href="#" aria-label="Facebook">f</a>
+          <a class="social-circle" href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nạp header/footer -->
+  <script
+    src="/Assets/Components/layout.js"
+    defer
+    data-header="/Assets/Components/header.html"
+    data-footer="/Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
+</body>
+</html>

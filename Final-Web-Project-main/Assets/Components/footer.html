@@ -1,0 +1,95 @@
+<!-- ========= PHUC LONG: SHARED FOOTER ========= -->
+<link rel="stylesheet" href="/Assets/Components/header-footer.css" />
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-inner">
+
+      <!-- COL 1: BRAND + CONTACT -->
+      <div class="footer-col footer-newsletter">
+        <h4>Phuc Long</h4>
+
+        <div class="newsletter-input-row">
+          <input type="email" placeholder="Enter Email Address" />
+          <button>Sign Up</button>
+        </div>
+
+        <div class="footer-address">
+          <div class="footer-col-title"><strong>Contact Info</strong></div>
+          <div class="footer-col-text">
+            Floor 7, Room 702, Central Plaza Building, No. 17<br />
+            Le Duan Street, Ben Nghe Ward, District 1, Ho Chi Minh City<br />
+            ✉ sales@phuclong.masangroup.com · ☎ 1800 6779
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 2: PRODUCTS -->
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul class="footer-links">
+          <li><a href="/ClientSite/shop-list.html">Drinks</a></li>
+          <li><a href="/ClientSite/shop-grid.html">Bakery</a></li>
+          <li><a href="/ClientSite/shop-list.html#mooncake">Mooncake</a></li>
+          <li><a href="/ClientSite/blog-page.html">Halloween Collections</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: CUSTOMER CARE -->
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul class="footer-links">
+          <li><a href="/ClientSite/my-account.html">My Account</a></li>
+          <li><a href="/ClientSite/faq.html#returns">Returns</a></li>
+          <li><a href="/ClientSite/order-details.html">Orders History</a></li>
+          <li><a href="/ClientSite/order-confirmation.html">Order Tracking</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: PAGES -->
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul class="footer-links">
+          <li><a href="/ClientSite/blog-page.html">Blog</a></li>
+          <li><a href="/ClientSite/shop-grid.html">Browse the Shop</a></li>
+          <li><a href="/ClientSite/contact-us.html">Contact Us</a></li>
+          <li><a href="/ClientSite/terms-services.html">Terms & Services</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer-inner -->
+  </div><!-- /.footer-top -->
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <div class="footer-copy">
+        © <span id="year"></span> phuclong.com — All Rights Reserved
+      </div>
+
+      <div class="footer-social">
+        <a class="social-circle"
+           href="https://www.facebook.com/phuclongcoffeeandtea"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Facebook - Phuc Long">
+          <img src="/Assets/images/LogoFacebook.png" alt="Facebook" />
+        </a>
+
+        <a class="social-circle"
+           href="https://www.instagram.com/phuclongcoffeeandtea/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram - Phuc Long">
+          <img src="/Assets/images/LogoInstagram.png" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Auto year
+  document.addEventListener("DOMContentLoaded", () => {
+    const year = document.getElementById("year");
+    if (year) year.textContent = new Date().getFullYear();
+  });
+</script>

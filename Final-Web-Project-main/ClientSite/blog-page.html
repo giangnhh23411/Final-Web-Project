@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Phuc Long - Blog Page</title>
+
+  <!-- CSS trang + header/footer -->
+  <link rel="stylesheet" href="/Assets/CSS/blog-page.css" />
+  <link rel="stylesheet" href="/Assets/Components/header-footer.css" />
+
+  <style>
+    /* === BLOG LIST === */
+    .blog-post{
+      display:flex;align-items:flex-start;gap:20px;margin-bottom:32px;
+      padding-bottom:24px;border-bottom:1px solid #f0f0f0;
+    }
+    .blog-post .post-image{
+      flex:0 0 220px;height:160px;display:flex;align-items:center;justify-content:center;
+      background:#faf8ff;border-radius:12px;overflow:hidden;border:1px solid #eceafa;
+      box-shadow:0 8px 20px rgba(22,0,80,.05);
+    }
+    .blog-post .post-image img{
+      height:100%;width:auto;object-fit:cover;display:block;
+      image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;
+      transition:transform .25s ease, box-shadow .25s ease;background:#fff;
+    }
+    .blog-post .post-image:hover img{ transform:scale(1.05); box-shadow:0 8px 16px rgba(0,0,0,.1); }
+
+    .blog-post .post-content{ flex:1;display:flex;flex-direction:column; }
+    .post-meta-row{ gap:10px;margin:0 0 8px;align-items:center;display:flex;flex-wrap:wrap; }
+    .post-meta-tag,.post-meta-date{
+      background:#f6f4ff;border:1px solid #e7e4ff;color:#3a2e7a;
+      font-weight:600;font-size:11px;line-height:20px;padding:4px 12px;border-radius:999px;
+    }
+    .post-title{ font-size:18px;line-height:1.4;margin:0 0 8px;color:#0b0c3b; }
+    .post-title a{ color:inherit;text-decoration:none; }
+    .post-title a:hover{ color:#4b008c; }
+    .post-excerpt{ max-width:100%;font-size:13px;color:var(--brand-text-mid);margin:0 0 12px;line-height:1.5; }
+    .read-more{ align-self:flex-start;font-size:12px;color:#4b008c;text-decoration:none;font-weight:500; }
+    .read-more:hover{ color:#7b2cbf; }
+    .read-more .plus{ margin-left:4px; }
+
+    /* === PAGINATION (giữ style “như cũ”) === */
+    .pagination-row { display:flex;justify-content:center;align-items:center;margin-top:40px;gap:12px; }
+    .page-btn {
+      display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+      background:linear-gradient(145deg,#f9f8ff,#eceaff);border:1px solid #e0dcff;color:#4b008c;font-weight:600;font-size:14px;
+      text-decoration:none;box-shadow:0 2px 4px rgba(75,0,140,0.05);transition:all .25s ease;
+    }
+    .page-btn:hover { background:linear-gradient(145deg,#ede7ff,#f9f6ff);transform:translateY(-2px);box-shadow:0 4px 8px rgba(75,0,140,0.15); }
+    .page-btn.active { background:linear-gradient(145deg,#4b008c,#7b2cbf);color:#fff;border-color:#4b008c;box-shadow:0 4px 8px rgba(75,0,140,0.2); }
+
+    /* === SIDEBAR === */
+    .sidebar-block{ margin-bottom:24px; }
+    .sidebar-title{ font-size:16px;margin-bottom:12px;color:#0b0c3b; }
+    .sidebar-search{ display:flex;gap:8px; }
+    .sidebar-search input{ flex:1;height:36px;border:1px solid #e0e0f5;border-radius:6px;padding:0 10px; }
+    .sidebar-search button{ height:36px;padding:0 12px;border:1px solid #e0e0f5;border-radius:6px;background:#fff;cursor:pointer; }
+    .cat-list{ list-style:none;margin:0;padding:0; }
+    .cat-list li{ margin:8px 0; }
+    .cat-list a{ text-decoration:none;color:#333; }
+    .recent-item{ display:flex;gap:10px;margin-bottom:12px; }
+    .recent-thumb{ width:64px;height:48px;border:1px solid #eceafa;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#faf8ff; }
+    .recent-thumb img{ width:100%;height:100%;object-fit:cover; }
+    .recent-text{ display:block;font-size:14px;color:#0b0c3b;text-decoration:none;margin-bottom:4px; }
+    .recent-text:hover{ color:#4b008c; }
+    .recent-date{ font-size:12px;color:#666; }
+
+    .follow-row{ display:flex;align-items:center;gap:12px;margin-top:8px; }
+    .follow-row a img{ width:28px;height:28px;border-radius:50%;display:block;transition:transform .2s ease; }
+    .follow-row a img:hover{ transform:scale(1.1); }
+
+    /* === RESPONSIVE === */
+    @media (max-width:768px){
+      .blog-post{ flex-direction:column;gap:16px; }
+      .blog-post .post-image{ flex:none;height:200px;width:100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header inject -->
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title">Blog Page</h1>
+      <div class="breadcrumb">Home . Pages . <span>Blog Page</span></div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="page-content">
+    <div class="content-inner">
+
+      <!-- LEFT: BLOG LIST -->
+      <section class="blog-list" id="blogList">
+        <!-- POST 1 -->
+        <article class="blog-post" data-title="boogey wedding – save the date" data-tags="promotion halloween">
+          <a class="post-image" href="/ClientSite/blog1.html">
+            <img src="/Assets/images/Blog1.png" alt="Boogey Wedding – Save the Date" loading="lazy" />
+          </a>
+          <div class="post-content">
+            <div class="post-meta-row">
+              <span class="post-meta-tag">Promotion</span>
+              <span class="post-meta-date">Oct 01 2025</span>
+            </div>
+            <h2 class="post-title">
+              <a href="/ClientSite/blog1.html">Boogey Wedding – Save the Date</a>
+            </h2>
+            <p class="post-excerpt">
+              Halloween’s power couple has arrived at Phuc Long. Bold Black Tea–Hibiscus–Red Plum blends, and a limited combo from 89K.
+            </p>
+            <a class="read-more" href="/ClientSite/blog1.html">Read More <span class="plus">+</span></a>
+          </div>
+        </article>
+
+        <!-- POST 2 -->
+        <article class="blog-post" data-title="game on top – 100% prizes" data-tags="mini-game">
+          <a class="post-image" href="/ClientSite/blog2.html">
+            <img src="/Assets/images/Blog2.png" alt="Game On Top – 100% Prizes" loading="lazy" />
+          </a>
+          <div class="post-content">
+            <div class="post-meta-row">
+              <span class="post-meta-tag">Mini-game</span>
+              <span class="post-meta-date">Oct 10 2025</span>
+            </div>
+            <h2 class="post-title">
+              <a href="/ClientSite/blog2.html">Game On Top – 100% Prizes</a>
+            </h2>
+            <p class="post-excerpt">
+              Play the mini-game, win instantly, and climb the leaderboard. Guaranteed 100% prizes during the campaign period.
+            </p>
+            <a class="read-more" href="/ClientSite/blog2.html">Read More <span class="plus">+</span></a>
+          </div>
+        </article>
+
+        <!-- POST 3 -->
+        <article class="blog-post" data-title="mad for tea – 100% prizes" data-tags="mini-game seasonal">
+          <a class="post-image" href="/ClientSite/blog3.html">
+            <img src="/Assets/images/Blog3.png" alt="Mad for Tea – 100% Prizes" loading="lazy" />
+          </a>
+          <div class="post-content">
+            <div class="post-meta-row">
+              <span class="post-meta-tag">Mini-game</span>
+              <span class="post-meta-date">Jun 24 2025</span>
+            </div>
+            <h2 class="post-title">
+              <a href="/ClientSite/blog3.html">Mad for Tea – 100% Prizes</a>
+            </h2>
+            <p class="post-excerpt">
+              Open the “Mad for Tea” game, complete tasks to earn plays, and hunt for 100,000 free cups. Coupons valid through Jul 31, 2025.
+            </p>
+            <a class="read-more" href="/ClientSite/blog3.html">Read More <span class="plus">+</span></a>
+          </div>
+        </article>
+
+        <!-- PAGINATION -->
+        <div class="pagination-row">
+          <a class="page-btn active" href="#">1</a>
+          <a class="page-btn" href="#">2</a>
+          <a class="page-btn" href="#">3</a>
+          <a class="page-btn" href="#">4</a>
+        </div>
+      </section>
+
+      <!-- RIGHT: SIDEBAR -->
+      <aside class="sidebar">
+        <!-- SEARCH (reusable) -->
+        <section class="sidebar-block">
+          <h3 class="sidebar-title">Search</h3>
+          <form class="sidebar-search js-search-form" data-scope="blog">
+            <input
+              id="blogSearchInput"
+              class="js-search-input"
+              type="text"
+              placeholder="Search for posts" />
+            <button type="submit">🔍</button>
+          </form>
+          <div id="blogSearchResults" class="js-search-results" style="margin-top:8px;color:#5a5a7a;"></div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="sidebar-block">
+          <h3 class="sidebar-title">Categories</h3>
+          <ul class="cat-list">
+            <li><a href="#">Promotions <span>(3)</span></a></li>
+            <li><a href="#">Mini-game <span>(2)</span></a></li>
+            <li><a href="#">Seasonal <span>(1)</span></a></li>
+          </ul>
+        </section>
+
+        <!-- RECENT POSTS -->
+        <section class="sidebar-block">
+          <h3 class="sidebar-title">Recent Post</h3>
+
+          <div class="recent-item">
+            <div class="recent-thumb">
+              <a href="/ClientSite/blog1.html"><img src="/Assets/images/Blog1.png" alt="Boogey Wedding thumb" /></a>
+            </div>
+            <div class="recent-info">
+              <a class="recent-text" href="/ClientSite/blog1.html">Boogey Wedding</a>
+              <div class="recent-date">Oct 01 2025</div>
+            </div>
+          </div>
+
+          <div class="recent-item">
+            <div class="recent-thumb">
+              <a href="/ClientSite/blog2.html"><img src="/Assets/images/Blog2.png" alt="Game On Top thumb" /></a>
+            </div>
+            <div class="recent-info">
+              <a class="recent-text" href="/ClientSite/blog2.html">Game On Top</a>
+              <div class="recent-date">Oct 10 2025</div>
+            </div>
+          </div>
+
+          <div class="recent-item">
+            <div class="recent-thumb">
+              <a href="/ClientSite/blog3.html"><img src="/Assets/images/Blog3.png" alt="Mad for Tea thumb" /></a>
+            </div>
+            <div class="recent-info">
+              <a class="recent-text" href="/ClientSite/blog3.html">Mad Tea</a>
+              <div class="recent-date">Jun 24 2025</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOLLOW -->
+        <section class="sidebar-block">
+          <h3 class="sidebar-title">Follow</h3>
+          <div class="follow-row">
+            <a href="https://www.facebook.com/phuclongcoffeeandtea" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Phuc Long">
+              <img src="/Assets/images/LogoFacebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/phuclongcoffeeandtea/" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Phuc Long">
+              <img src="/Assets/images/LogoInstagram.png" alt="Instagram" />
+            </a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer inject -->
+  <div id="site-footer"></div>
+
+  <!-- Loader header/footer -->
+  <script
+    src="/Assets/Components/layout.js"
+    defer
+    data-header="/Assets/Components/header.html"
+    data-footer="/Assets/Components/footer.html"
+    data-header-target="#site-header"
+    data-footer-target="#site-footer"
+  ></script>
+
+  <!-- Search dùng chung -->
+  <script src="/Assets/JS/search.js" defer></script>
+</body>
+</html>

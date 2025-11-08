@@ -1,0 +1,197 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../CSS/products.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item menu" id="toggleMenu">
+                <img src="../images/icons/menu.svg" class="icon"/>
+            </div>
+            <div class="sidebar-item">
+               <a href="dashboard.html">
+                   <img src="../images/icons/dashboard.svg" class="icon" alt="Dashboard"/>
+                   <span class="label">Dashboard</span>
+               </a>
+            </div>
+            <div class="sidebar-item active">
+                <a href="products.html">
+                    <img src="../images/icons/product.svg" class="icon" alt="Products"/>
+                    <span class="label">Products</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="favorites.html">
+                    <img src="../images/icons/favorite.svg" class="icon" alt="Favorite"/>
+                    <span class="label">Favorites</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="inbox.html">
+                    <img src="../images/icons/inbox.svg" class="icon" alt="Inbox"/>
+                    <span class="label">Inbox</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="orderlist.html">
+                    <img src="../images/icons/orderlist.svg" class="icon" alt="OrderList"/>
+                    <span class="label">Order List</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="contact.html">
+                    <img src="../images/icons/contact.svg" class="icon" alt="Contact"/>
+                    <span class="label">Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="invoice.html">
+                    <img src="../images/icons/invoice.svg" class="icon" alt="Invoice"/>
+                    <span class="label">Invoice</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="blog.html">
+                    <img src="../images/icons/blog.svg" class="icon" alt="Blog"/>
+                    <span class="label">Blog</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="promotion.html">
+                    <img src="../images/icons/promotion.svg" class="icon" alt="Promotion"/>
+                    <span class="label">Promotion</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="setting.html">
+                    <img src="../images/icons/setting.svg" class="icon" alt="Setting"/>
+                    <span class="label">Setting</span>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="logout.html">
+                    <img src="../images/icons/logout.svg" class="icon" alt="LogOut"/>
+                    <span class="label">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="nav-left">
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <div class="nav-right">
+                    <div style="width:20px; height:20px; margin:10px;">
+                        <img src="../images/icons/bell.svg" alt="Bell" class="icon" />
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/pics/Doanh.jpg" alt="User Avatar">
+                        <span><b>Doanh Nguyen</b></span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <h1>Product</h1>
+                <div class="view-toggle">
+                    <button id="gridViewBtn" class="active">Grid View</button>
+                    <button id="tableViewBtn">Table View</button>
+                </div>
+                <section class="banner">
+                    <h2>September 12-22</h2>
+                    <h3>Enjoy free home delivery in this summer</h3>
+                    <p>Designer Dress - Pick from trendy Designer Dress.</p>
+                    <button class="get-started">Get Started</button>
+                </section>
+                <section id="gridView" class="product-grid">
+                    <div class="product-card">
+                        <img src="product1.png" alt="Trà Phúc Long Lòng">
+                        <h4>Trà Phúc Long Lòng</h4>
+                        <p>$12.00</p>
+                        <a href="#" class="edit-link">Edit Product</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="product2.png" alt="Trà Vải Lì">
+                        <h4>Trà Vải Lì</h4>
+                        <p>$45.39</p>
+                        <a href="#" class="edit-link">Edit Product</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="product3.png" alt="Trà Lì Dừa Thơm">
+                        <h4>Trà Lì Dừa Thơm</h4>
+                        <p>$43.30</p>
+                        <a href="#" class="edit-link">Edit Product</a>
+                    </div>
+                    <!-- Add more products as needed -->
+                </section>
+                <section id="tableView" class="product-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="product1.png" alt="Trà Phúc Long Lòng" class="table-img"></td>
+                                <td>Trà Phúc Long Lòng</td>
+                                <td>$12.00</td>
+                                <td><a href="#" class="edit-link">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="product2.png" alt="Trà Vải Lì" class="table-img"></td>
+                                <td>Trà Vải Lì</td>
+                                <td>$45.39</td>
+                                <td><a href="#" class="edit-link">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="product3.png" alt="Trà Lì Dừa Thơm" class="table-img"></td>
+                                <td>Trà Lì Dừa Thơm</td>
+                                <td>$43.30</td>
+                                <td><a href="#" class="edit-link">Edit</a></td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar
+        const toggleMenu = document.getElementById('toggleMenu');
+        const sidebar = document.querySelector('.sidebar');
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Toggle view
+        const gridViewBtn = document.getElementById('gridViewBtn');
+        const tableViewBtn = document.getElementById('tableViewBtn');
+        const gridView = document.getElementById('gridView');
+        const tableView = document.getElementById('tableView');
+
+        gridViewBtn.addEventListener('click', () => {
+            gridView.style.display = 'grid';
+            tableView.style.display = 'none';
+            gridViewBtn.classList.add('active');
+            tableViewBtn.classList.remove('active');
+        });
+
+        tableViewBtn.addEventListener('click', () => {
+            gridView.style.display = 'none';
+            tableView.style.display = 'block';
+            tableViewBtn.classList.add('active');
+            gridViewBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

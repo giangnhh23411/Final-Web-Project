@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Phuc Long</title>
+    <link rel="stylesheet" href="/Assets/Components/header-footer.css">
+    <link rel="stylesheet" href="/Assets/CSS/shopping-cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section - Dynamic -->
+        <div id="site-header"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="cart-container">
+                <!-- Left Column - Product List -->
+                <div class="cart-left">
+                    <div class="cart-table">
+                        <div class="table-header">
+                            <div class="col-checkbox">
+                                <input type="checkbox" id="selectAll" class="select-all-checkbox">
+                            </div>
+                            <div class="col-product">Product</div>
+                            <div class="col-price">Price</div>
+                            <div class="col-quantity">Quantity</div>
+                            <div class="col-total">Total</div>
+                            <div class="col-action">Action</div>
+                        </div>
+                        
+                        <!-- Product Items - Dynamic Content -->
+                        <div class="product-list" id="productList">
+                            <!-- Cart items will be loaded here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <button class="update-cart-btn" onclick="loadCartData()">Update Cart</button>
+                        <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                    </div>
+                </div>
+
+                <!-- Right Column - Cart Summary -->
+                <div class="cart-right">
+                    <div class="cart-summary">
+                        <h3>Cart Totals</h3>
+                        <div class="summary-row">
+                            <span>Subtotals:</span>
+                            <span id="subtotal">₫0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Totals:</span>
+                            <span id="total">₫0</span>
+                        </div>
+                        <div class="shipping-info">
+                            <span class="checkmark">✓</span>
+                            <span>Shipping & taxes calculated at checkout</span>
+                        </div>
+                        <button class="checkout-btn" id="checkout-btn" onclick="handleCheckout()">Proceed To Checkout</button>
+                        <div class="calculate-shipping">
+                            <h4>Calculate Shopping</h4>
+                        </div>
+                    </div>
+
+                    <!-- Chat Icon -->
+                    <div class="chat-icon-container">
+                        <div class="chat-icon-btn" onclick="toggleChat()">
+                            <span class="chat-icon">💬</span>
+                            <span class="notification-dot">1</span>
+                        </div>
+                    </div>
+
+                    <!-- Chat Widget (Hidden by default) -->
+                    <div class="chat-widget" id="chatWidget" style="display: none;">
+                        <div class="chat-header">
+                            <h4>Chat</h4>
+                            <button class="close-chat-btn" onclick="toggleChat()">×</button>
+                        </div>
+                        <div class="chat-content">
+                            <div class="chat-sidebar">
+                                <div class="pinned-conversations">
+                                    <h5>📌 Pinned Conversations</h5>
+                                    <div class="conversation-item">
+                                        <span>Jane Carr</span>
+                                        <span class="notification">1</span>
+                                    </div>
+                                    <div class="conversation-item">
+                                        <span>Angel Lubin</span>
+                                    </div>
+                                    <div class="conversation-item">
+                                        <span>Kaiya Levin</span>
+                                        <span class="notification">1</span>
+                                    </div>
+                                    <div class="conversation-item">
+                                        <span>Phillip Aminoff</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-main">
+                                <div class="chat-message">
+                                    <div class="message-bubble">Hey!</div>
+                                </div>
+                                <div class="chat-input">
+                                    <button class="attach-btn">+</button>
+                                    <input type="text" placeholder="Message">
+                                    <button class="mic-btn">🎤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section - Dynamic -->
+        <div id="site-footer"></div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chatWidget = document.getElementById('chatWidget');
+            if (chatWidget.style.display === 'none') {
+                chatWidget.style.display = 'block';
+            } else {
+                chatWidget.style.display = 'none';
+            }
+        }
+
+        // Close chat when clicking outside
+        document.addEventListener('click', function(event) {
+            const chatWidget = document.getElementById('chatWidget');
+            const chatIconBtn = document.querySelector('.chat-icon-btn');
+            
+            if (!chatWidget.contains(event.target) && !chatIconBtn.contains(event.target)) {
+                chatWidget.style.display = 'none';
+            }
+        });
+
+        // Load cart data from localStorage when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear any existing sample data first
+            clearSampleData();
+            // Then load real cart data
+            loadCartData();
+        });
+
+        function clearSampleData() {
+            // Remove any hardcoded sample data
+            const productContainer = document.querySelector('#productList');
+            if (productContainer) {
+                productContainer.innerHTML = '';
+            }
+        }
+    </script>
+    <!-- Load shared header and footer - MUST be loaded first -->
+    <script src="/Assets/Components/layout.js" defer></script>
+    <script src="../Assets/JS/cart-manager.js"></script>
+    <script>
+        // Lấy user_id và session_id
+        function getCartIdentifiers() {
+            const currentUser = JSON.parse(localStorage.getItem('phuclong_current_user') || 'null');
+            const sessionId = localStorage.getItem('phuclong_session_id') || null;
+            
+            return {
+                user_id: currentUser ? (currentUser.id || currentUser._id) : null,
+                session_id: sessionId
+            };
+        }
+        
+        // Fetch cart từ API
+        async function fetchCartFromAPI() {
+            try {
+                const { user_id, session_id } = getCartIdentifiers();
+                let apiUrl = '/api/carts?';
+                
+                if (user_id) {
+                    apiUrl += `user_id=${encodeURIComponent(user_id)}`;
+                } else if (session_id) {
+                    apiUrl += `session_id=${encodeURIComponent(session_id)}`;
+                }
+                
+                const response = await fetch(apiUrl);
+                const result = await response.json();
+                
+                if (result.data) {
+                    // Lưu session_id nếu có
+                    if (result.data.session_id && !session_id) {
+                        localStorage.setItem('phuclong_session_id', result.data.session_id);
+                    }
+                    
+                    return result.data.items || [];
+                }
+                
+                return [];
+            } catch (error) {
+                console.error('Error fetching cart:', error);
+                // Fallback: dùng LocalStorage
+                return JSON.parse(localStorage.getItem('phuclong_cart') || '[]');
+            }
+        }
+        
+        async function loadCartData() {
+            console.log('Loading cart data from API...');
+            const productContainer = document.querySelector('#productList');
+            
+            if (!productContainer) {
+                console.error('Product container not found!');
+                return;
+            }
+            
+            // Fetch cart từ API
+            cartItems = await fetchCartFromAPI();
+            console.log('Cart items from API:', cartItems);
+            
+            // Cập nhật LocalStorage để sync
+            const localCart = cartItems.map(item => ({
+                id: item.product_id || item.id,
+                name: item.name,
+                price: item.price,
+                image: item.image || '',
+                quantity: item.quantity || 1
+            }));
+            localStorage.setItem('phuclong_cart', JSON.stringify(localCart));
+            
+            if (cartItems.length === 0) {
+                productContainer.innerHTML = `
+                    <div class="empty-cart" style="
+                        text-align: center;
+                        padding: 60px 20px;
+                        background-color: #f8f9fa;
+                        border-radius: 8px;
+                        margin: 20px 0;
+                    ">
+                        <h3 style="color: #333; margin-bottom: 15px; font-size: 24px;">Giỏ hàng trống</h3>
+                        <p style="color: #666; margin-bottom: 20px; font-size: 16px;">Bạn chưa có sản phẩm nào trong giỏ hàng.</p>
+                        <a href="/" style="
+                            background-color: #fb2e86;
+                            color: white;
+                            padding: 12px 24px;
+                            text-decoration: none;
+                            border-radius: 4px;
+                            font-weight: 600;
+                            display: inline-block;
+                        ">Tiếp tục mua sắm</a>
+                    </div>
+                `;
+                updateCartSummary([]);
+                return;
+            }
+
+            let html = '';
+            cartItems.forEach((item, index) => {
+                const productId = item.product_id || item.id;
+                const imagePath = item.image || '';
+                
+                // Xử lý image path: nếu đã là full URL (http/https) thì dùng trực tiếp
+                let imageSrc = '';
+                if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+                    imageSrc = imagePath;
+                } else if (imagePath.startsWith('/')) {
+                    imageSrc = imagePath;
+                } else if (imagePath) {
+                    imageSrc = `/Assets/images/${imagePath}`;
+                } else {
+                    imageSrc = '/Assets/images/LogoPhucLong.png'; // Default image
+                }
+                
+                html += `
+                    <div class="product-item" data-product-id="${productId}">
+                        <div class="product-checkbox">
+                            <input type="checkbox" class="product-checkbox-input" checked data-product-id="${productId}">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-image">
+                                <img src="${imageSrc}" alt="${item.name}" onerror="this.src='/Assets/images/LogoPhucLong.png'">
+                            </div>
+                            <div class="product-info">
+                                <h3>${item.name}</h3>
+                            </div>
+                        </div>
+                        <div class="product-price">₫${(item.price || 0).toLocaleString('vi-VN')}</div>
+                        <div class="product-quantity">
+                            <button class="qty-btn minus" onclick="updateQuantityAPI('${productId}', ${(item.quantity || 1) - 1})">-</button>
+                            <input type="number" value="${item.quantity || 1}" min="1" onchange="updateQuantityAPI('${productId}', parseInt(this.value))">
+                            <button class="qty-btn plus" onclick="updateQuantityAPI('${productId}', ${(item.quantity || 1) + 1})">+</button>
+                        </div>
+                        <div class="product-total">₫${((item.price || 0) * (item.quantity || 1)).toLocaleString('vi-VN')}</div>
+                        <div class="product-actions">
+                            <button class="delete-btn" onclick="removeFromCartAPI('${productId}')">Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            productContainer.innerHTML = html;
+            
+            // Thêm event listeners cho checkboxes
+            const checkboxes = productContainer.querySelectorAll('.product-checkbox-input');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateCartSummaryFromCheckboxes);
+            });
+            
+            updateCartSummaryFromCheckboxes();
+            console.log('Cart data loaded successfully');
+        }
+        
+        // Cập nhật cart summary dựa trên các checkbox được tick
+        function updateCartSummaryFromCheckboxes() {
+            const productContainer = document.querySelector('#productList');
+            if (!productContainer) return;
+            
+            const checkedItems = [];
+            const checkboxes = productContainer.querySelectorAll('.product-checkbox-input');
+            
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    const productItem = checkbox.closest('.product-item');
+                    const productId = checkbox.getAttribute('data-product-id');
+                    
+                    // Tìm item trong cartItems
+                    const item = cartItems.find(i => (i.product_id || i.id) === productId);
+                    if (item) {
+                        checkedItems.push(item);
+                    }
+                }
+            });
+            
+            updateCartSummary(checkedItems);
+            updateCheckoutButton(checkedItems.length > 0);
+        }
+        
+        // Cập nhật trạng thái nút checkout
+        function updateCheckoutButton(hasSelectedItems) {
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            if (!checkoutBtn) return;
+            
+            if (hasSelectedItems) {
+                checkoutBtn.disabled = false;
+                checkoutBtn.style.opacity = '1';
+                checkoutBtn.style.cursor = 'pointer';
+                checkoutBtn.style.backgroundColor = ''; // Dùng màu mặc định từ CSS
+            } else {
+                checkoutBtn.disabled = true;
+                checkoutBtn.style.opacity = '0.5';
+                checkoutBtn.style.cursor = 'not-allowed';
+                checkoutBtn.style.backgroundColor = '#ccc'; // Màu xám
+            }
+        }
+
+        // Update quantity via API
+        async function updateQuantityAPI(productId, quantity) {
+            try {
+                const { user_id, session_id } = getCartIdentifiers();
+                const sessionId = session_id || localStorage.getItem('phuclong_session_id');
+                
+                const formData = new FormData();
+                formData.append('product_id', productId);
+                formData.append('quantity', String(Math.max(0, quantity)));
+                if (user_id) {
+                    formData.append('user_id', user_id);
+                }
+                if (sessionId) {
+                    formData.append('session_id', sessionId);
+                }
+                
+                const response = await fetch('/api/carts/item', {
+                    method: 'PUT',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    await loadCartData();
+                    // Cập nhật lại summary sau khi thay đổi quantity
+                    updateCartSummaryFromCheckboxes();
+                } else {
+                    const result = await response.json();
+                    alert(result.detail || 'Lỗi khi cập nhật số lượng');
+                }
+            } catch (error) {
+                console.error('Error updating quantity:', error);
+                alert('Lỗi khi cập nhật số lượng');
+            }
+        }
+
+        // Remove item via API
+        async function removeFromCartAPI(productId) {
+            try {
+                const { user_id, session_id } = getCartIdentifiers();
+                const sessionId = session_id || localStorage.getItem('phuclong_session_id');
+                
+                let apiUrl = `/api/carts/item?product_id=${encodeURIComponent(productId)}`;
+                if (user_id) {
+                    apiUrl += `&user_id=${encodeURIComponent(user_id)}`;
+                }
+                if (sessionId) {
+                    apiUrl += `&session_id=${encodeURIComponent(sessionId)}`;
+                }
+                
+                const response = await fetch(apiUrl, {
+                    method: 'DELETE'
+                });
+                
+                if (response.ok) {
+                    await loadCartData();
+                } else {
+                    const result = await response.json();
+                    alert(result.detail || 'Lỗi khi xóa sản phẩm');
+                }
+            } catch (error) {
+                console.error('Error removing item:', error);
+                alert('Lỗi khi xóa sản phẩm');
+            }
+        }
+
+        function updateCartSummary(cartItems) {
+            // Tính tổng chỉ từ các items được truyền vào (đã được filter bởi checkbox)
+            const subtotal = cartItems.reduce((total, item) => total + ((item.price || 0) * (item.quantity || 1)), 0);
+            const total = subtotal; // No shipping for now
+            
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total');
+            if (subtotalEl) subtotalEl.textContent = `₫${subtotal.toLocaleString('vi-VN')}`;
+            if (totalEl) totalEl.textContent = `₫${total.toLocaleString('vi-VN')}`;
+        }
+
+        async function clearCart() {
+            if (confirm('Bạn có chắc chắn muốn xóa tất cả sản phẩm trong giỏ hàng?')) {
+                try {
+                    const { user_id, session_id } = getCartIdentifiers();
+                    const sessionId = session_id || localStorage.getItem('phuclong_session_id');
+                    
+                    let apiUrl = '/api/carts?';
+                    if (user_id) {
+                        apiUrl += `user_id=${encodeURIComponent(user_id)}`;
+                    } else if (sessionId) {
+                        apiUrl += `session_id=${encodeURIComponent(sessionId)}`;
+                    }
+                    
+                    const response = await fetch(apiUrl, {
+                        method: 'DELETE'
+                    });
+                    
+                    if (response.ok) {
+                        localStorage.removeItem('phuclong_cart');
+                        await loadCartData();
+                        alert('Đã xóa tất cả sản phẩm trong giỏ hàng!');
+                    } else {
+                        const result = await response.json();
+                        alert(result.detail || 'Lỗi khi xóa giỏ hàng');
+                    }
+                } catch (error) {
+                    console.error('Error clearing cart:', error);
+                    localStorage.removeItem('phuclong_cart');
+                    await loadCartData();
+                    alert('Đã xóa tất cả sản phẩm trong giỏ hàng!');
+                }
+            }
+        }
+
+        function goToHome() {
+            window.location.href = '../Home/home.html';
+        }
+        
+        // Xử lý checkout - chỉ checkout các sản phẩm được tick
+        function handleCheckout() {
+            const productContainer = document.querySelector('#productList');
+            if (!productContainer) return;
+            
+            const checkedItems = [];
+            const checkboxes = productContainer.querySelectorAll('.product-checkbox-input:checked');
+            
+            checkboxes.forEach(checkbox => {
+                const productId = checkbox.getAttribute('data-product-id');
+                const item = cartItems.find(i => (i.product_id || i.id) === productId);
+                if (item) {
+                    checkedItems.push(item);
+                }
+            });
+            
+            if (checkedItems.length === 0) {
+                alert('Vui lòng chọn ít nhất một sản phẩm để thanh toán!');
+                return;
+            }
+            
+            // Lưu selected items vào localStorage để checkout page sử dụng
+            localStorage.setItem('phuclong_checkout_items', JSON.stringify(checkedItems));
+            
+            // Chuyển đến trang checkout
+            window.location.href = '/ClientSite/checkout-shipping.html';
+        }
+
+        // Debug function to check localStorage
+        function debugCart() {
+            console.log('=== CART DEBUG ===');
+            console.log('localStorage phuclong_cart:', localStorage.getItem('phuclong_cart'));
+            console.log('Parsed cart:', JSON.parse(localStorage.getItem('phuclong_cart') || '[]'));
+            console.log('==================');
+        }
+
+        // Make debug function global
+        window.debugCart = debugCart;
+    </script>
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Phuc Long</title>
+    <link rel="stylesheet" href="/Assets/Components/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple: #4b008c;
+            --accent-pink: #fb2e86;
+            --text: #0b0c3b;
+            --muted: #5a5a7a;
+            --border: #ece9ff;
+            --bg-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .page-hero {
+            background: linear-gradient(180deg, #f4f2ff 0%, #fbfaff 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 16px;
+        }
+        
+        .page-hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            margin: 0 0 6px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        
+        .breadcrumb {
+            color: #7a78a6;
+            font-size: 13px;
+        }
+        
+        .breadcrumb a {
+            color: var(--brand-purple);
+            text-decoration: none;
+        }
+        
+        .breadcrumb span {
+            color: var(--brand-purple);
+            font-weight: 600;
+        }
+        
+        .payment-container {
+            max-width: 1280px;
+            margin: 40px auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        
+        .payment-section {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 24px;
+            color: var(--text);
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .payment-method {
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .payment-method:hover {
+            border-color: var(--brand-purple);
+            background: #f8f9fa;
+        }
+        
+        .payment-method.selected {
+            border-color: var(--brand-purple);
+            background: #f4f2ff;
+        }
+        
+        .payment-method input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .payment-method-label {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .payment-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: var(--bg-light);
+        }
+        
+        .payment-icon.cash {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .payment-icon.momo {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .payment-icon.vnpay {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .payment-info {
+            flex: 1;
+        }
+        
+        .payment-name {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        
+        .payment-desc {
+            font-size: 14px;
+            color: var(--muted);
+        }
+        
+        .order-summary {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 20px;
+        }
+        
+        .summary-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 24px;
+            color: var(--text);
+        }
+        
+        .order-items {
+            margin-bottom: 24px;
+        }
+        
+        .order-item {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        
+        .order-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            background: var(--bg-light);
+        }
+        
+        .order-item-info {
+            flex: 1;
+        }
+        
+        .order-item-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        
+        .order-item-details {
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        .order-item-price {
+            font-weight: 600;
+            color: var(--accent-pink);
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .summary-row:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text);
+        }
+        
+        .summary-label {
+            color: var(--muted);
+        }
+        
+        .summary-value {
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .btn-complete-payment {
+            width: 100%;
+            background: var(--accent-pink);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: background 0.3s ease;
+        }
+        
+        .btn-complete-payment:hover {
+            background: #e0167a;
+        }
+        
+        .btn-complete-payment:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        /* QR Code Display */
+        .qr-code-section {
+            margin-top: 24px;
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+            display: none;
+        }
+        
+        .qr-code-section.show {
+            display: block;
+        }
+        
+        .qr-code-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        
+        .qr-code-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            margin: 0 auto 16px;
+            display: block;
+        }
+        
+        .qr-code-instruction {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 968px) {
+            .payment-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-summary {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="site-header"></div>
+    
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <h1 class="page-title">Thanh Toán</h1>
+            <div class="breadcrumb">
+                <a href="/">Home</a> . 
+                <a href="/ClientSite/shopping-cart.html">Cart</a> . 
+                <a href="/ClientSite/checkout-shipping.html">Shipping</a> . 
+                <span>Payment</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="payment-container">
+        <!-- Payment Methods -->
+        <div class="payment-section">
+            <h2 class="section-title">Chọn Phương Thức Thanh Toán</h2>
+            
+            <div class="payment-methods">
+                <!-- Cash Payment -->
+                <label class="payment-method" id="payment-cash">
+                    <input type="radio" name="payment-method" value="cash" checked>
+                    <div class="payment-method-label">
+                        <div class="payment-icon cash">💵</div>
+                        <div class="payment-info">
+                            <div class="payment-name">Thanh Toán Tiền Mặt</div>
+                            <div class="payment-desc">Thanh toán khi nhận hàng (COD)</div>
+                        </div>
+                    </div>
+                </label>
+                
+                <!-- Momo Payment -->
+                <label class="payment-method" id="payment-momo">
+                    <input type="radio" name="payment-method" value="momo">
+                    <div class="payment-method-label">
+                        <div class="payment-icon momo">M</div>
+                        <div class="payment-info">
+                            <div class="payment-name">Ví MoMo</div>
+                            <div class="payment-desc">Thanh toán qua ứng dụng MoMo</div>
+                        </div>
+                    </div>
+                </label>
+                
+                <!-- VNPay Payment -->
+                <label class="payment-method" id="payment-vnpay">
+                    <input type="radio" name="payment-method" value="vnpay">
+                    <div class="payment-method-label">
+                        <div class="payment-icon vnpay">VN</div>
+                        <div class="payment-info">
+                            <div class="payment-name">VNPay</div>
+                            <div class="payment-desc">Thanh toán qua cổng VNPay</div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            
+            <!-- QR Code Section -->
+            <div class="qr-code-section" id="qr-code-section">
+                <div class="qr-code-title" id="qr-code-title">Quét mã QR để thanh toán</div>
+                <img src="/Assets/images/QR.jpg" alt="QR Code" class="qr-code-image" id="qr-code-image">
+                <div class="qr-code-instruction" id="qr-code-instruction">
+                    Vui lòng mở ứng dụng và quét mã QR để hoàn tất thanh toán.
+                </div>
+            </div>
+            
+            <button class="btn-complete-payment" id="btn-complete-payment" onclick="handleCompletePayment()">
+                Hoàn Tất Thanh Toán
+            </button>
+        </div>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3 class="summary-title">Tóm Tắt Đơn Hàng</h3>
+            
+            <div class="order-items" id="order-items">
+                <!-- Items will be loaded dynamically -->
+            </div>
+            
+            <div class="summary-row">
+                <span class="summary-label">Tạm tính:</span>
+                <span class="summary-value" id="subtotal">₫0</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Phí vận chuyển:</span>
+                <span class="summary-value" id="shipping">₫0</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Tổng cộng:</span>
+                <span class="summary-value" id="total">₫0</span>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    
+    <!-- Load shared header and footer -->
+    <script src="/Assets/Components/layout.js" defer></script>
+    
+    <script>
+        // Load order items từ localStorage
+        function loadOrderItems() {
+            const checkoutItems = JSON.parse(localStorage.getItem('phuclong_checkout_items') || '[]');
+            const orderItemsEl = document.getElementById('order-items');
+            
+            if (checkoutItems.length === 0) {
+                orderItemsEl.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 20px;">Không có sản phẩm nào</p>';
+                return;
+            }
+            
+            let html = '';
+            let subtotal = 0;
+            
+            checkoutItems.forEach(item => {
+                const price = item.price || 0;
+                const quantity = item.quantity || 1;
+                const total = price * quantity;
+                subtotal += total;
+                
+                // Xử lý image path
+                let imageSrc = '';
+                const imagePath = item.image || '';
+                if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+                    imageSrc = imagePath;
+                } else if (imagePath.startsWith('/')) {
+                    imageSrc = imagePath;
+                } else if (imagePath) {
+                    imageSrc = `/Assets/images/${imagePath}`;
+                } else {
+                    imageSrc = '/Assets/images/LogoPhucLong.png';
+                }
+                
+                html += `
+                    <div class="order-item">
+                        <img src="${imageSrc}" alt="${item.name}" class="order-item-image" onerror="this.src='/Assets/images/LogoPhucLong.png'">
+                        <div class="order-item-info">
+                            <div class="order-item-name">${item.name}</div>
+                            <div class="order-item-details">Số lượng: ${quantity}</div>
+                        </div>
+                        <div class="order-item-price">₫${total.toLocaleString('vi-VN')}</div>
+                    </div>
+                `;
+            });
+            
+            orderItemsEl.innerHTML = html;
+            
+            // Cập nhật totals
+            const shipping = 30000; // Phí vận chuyển mặc định
+            const total = subtotal + shipping;
+            
+            document.getElementById('subtotal').textContent = `₫${subtotal.toLocaleString('vi-VN')}`;
+            document.getElementById('shipping').textContent = `₫${shipping.toLocaleString('vi-VN')}`;
+            document.getElementById('total').textContent = `₫${total.toLocaleString('vi-VN')}`;
+        }
+        
+        // Xử lý chọn payment method
+        const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+        const qrCodeSection = document.getElementById('qr-code-section');
+        const qrCodeTitle = document.getElementById('qr-code-title');
+        const qrCodeInstruction = document.getElementById('qr-code-instruction');
+        
+        paymentMethods.forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove selected class từ tất cả
+                document.querySelectorAll('.payment-method').forEach(method => {
+                    method.classList.remove('selected');
+                });
+                
+                // Add selected class cho method được chọn
+                const selectedMethod = this.closest('.payment-method');
+                if (selectedMethod) {
+                    selectedMethod.classList.add('selected');
+                }
+                
+                // Hiển thị QR code nếu chọn MoMo hoặc VNPay
+                const paymentValue = this.value;
+                if (paymentValue === 'momo' || paymentValue === 'vnpay') {
+                    qrCodeSection.classList.add('show');
+                    if (paymentValue === 'momo') {
+                        qrCodeTitle.textContent = 'Quét mã QR MoMo để thanh toán';
+                        qrCodeInstruction.textContent = 'Vui lòng mở ứng dụng MoMo và quét mã QR để hoàn tất thanh toán.';
+                    } else if (paymentValue === 'vnpay') {
+                        qrCodeTitle.textContent = 'Quét mã QR VNPay để thanh toán';
+                        qrCodeInstruction.textContent = 'Vui lòng mở ứng dụng VNPay và quét mã QR để hoàn tất thanh toán.';
+                    }
+                } else {
+                    qrCodeSection.classList.remove('show');
+                }
+            });
+        });
+        
+        // Set initial selected
+        document.getElementById('payment-cash').classList.add('selected');
+        
+        // Tạo order_no
+        function generateOrderNo() {
+            const timestamp = Date.now();
+            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+            return `PL${timestamp}${random}`;
+        }
+        
+        // Xử lý hoàn tất thanh toán
+        async function handleCompletePayment() {
+            const selectedMethod = document.querySelector('input[name="payment-method"]:checked');
+            if (!selectedMethod) {
+                alert('Vui lòng chọn phương thức thanh toán!');
+                return;
+            }
+            
+            const paymentMethod = selectedMethod.value;
+            const checkoutItems = JSON.parse(localStorage.getItem('phuclong_checkout_items') || '[]');
+            
+            if (checkoutItems.length === 0) {
+                alert('Không có sản phẩm nào để thanh toán!');
+                window.location.href = '/ClientSite/shopping-cart.html';
+                return;
+            }
+            
+            // Lấy user info
+            const currentUser = JSON.parse(localStorage.getItem('phuclong_current_user') || 'null');
+            const userId = currentUser ? (currentUser.id || currentUser._id) : null;
+            
+            if (!userId) {
+                alert('Vui lòng đăng nhập để thanh toán!');
+                window.location.href = '/ClientSite/my-account.html';
+                return;
+            }
+            
+            // Disable button
+            const btn = document.getElementById('btn-complete-payment');
+            btn.disabled = true;
+            btn.textContent = 'Đang xử lý...';
+            
+            try {
+                // Tính toán totals
+                const subtotal = checkoutItems.reduce((sum, item) => sum + ((item.price || 0) * (item.quantity || 1)), 0);
+                const shipping = 30000;
+                const total = subtotal + shipping;
+                
+                // Lấy shipping info
+                const shippingInfo = JSON.parse(localStorage.getItem('phuclong_shipping_info') || '{}');
+                const shippingAddress = [
+                    shippingInfo.address || '',
+                    shippingInfo.city || '',
+                    shippingInfo.postal_code || ''
+                ].filter(Boolean).join(', ') || 'Chưa có địa chỉ';
+                
+                // Convert items sang format API yêu cầu
+                const orderItems = checkoutItems.map(item => ({
+                    product_name: item.name || '',
+                    unit_price: item.price || 0,
+                    quantity: item.quantity || 1,
+                    line_total: (item.price || 0) * (item.quantity || 1)
+                }));
+                
+                // Tạo order_no
+                const orderNo = generateOrderNo();
+                
+                // Xác định order_status dựa trên payment method
+                let orderStatus = 'Pending';
+                if (paymentMethod === 'momo' || paymentMethod === 'vnpay') {
+                    // Với online payment, sẽ update sau khi payment thành công
+                    orderStatus = 'Pending';
+                } else {
+                    // COD
+                    orderStatus = 'Pending';
+                }
+                
+                // Tạo order data theo cấu trúc API
+                const orderData = {
+                    order_no: orderNo,
+                    user_id: userId,
+                    items: orderItems,
+                    subtotal: subtotal,
+                    total_amount: total,
+                    shipping_address: shippingAddress,
+                    payment_method: paymentMethod,
+                    shipping_fee: shipping,
+                    order_status: orderStatus
+                };
+                
+                // Gọi API để tạo order
+                const response = await fetch('/api/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(orderData)
+                });
+                
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(result.detail || 'Lỗi khi tạo đơn hàng');
+                }
+                
+                // Lưu order info vào localStorage để order-confirmation sử dụng
+                localStorage.setItem('phuclong_current_order', JSON.stringify({
+                    order_no: orderNo,
+                    order_id: result._id || result.id,
+                    items: checkoutItems,
+                    payment_method: paymentMethod,
+                    subtotal: subtotal,
+                    shipping: shipping,
+                    total: total,
+                    shipping_address: shippingAddress,
+                    order_status: orderStatus
+                }));
+                
+                // Xử lý payment theo method
+                if (paymentMethod === 'cash') {
+                    // COD - chuyển thẳng đến confirmation
+                    window.location.href = '/ClientSite/order-confirmation.html';
+                } else if (paymentMethod === 'momo') {
+                    // MoMo - redirect to payment gateway (simulate)
+                    alert('Đang chuyển hướng đến cổng thanh toán MoMo...');
+                    // TODO: Integrate với MoMo payment gateway
+                    setTimeout(() => {
+                        // Simulate successful payment - update order status
+                        updateOrderStatus(orderNo, 'Processing');
+                        window.location.href = '/ClientSite/order-confirmation.html';
+                    }, 1000);
+                } else if (paymentMethod === 'vnpay') {
+                    // VNPay - redirect to payment gateway (simulate)
+                    alert('Đang chuyển hướng đến cổng thanh toán VNPay...');
+                    // TODO: Integrate với VNPay payment gateway
+                    setTimeout(() => {
+                        // Simulate successful payment - update order status
+                        updateOrderStatus(orderNo, 'Processing');
+                        window.location.href = '/ClientSite/order-confirmation.html';
+                    }, 1000);
+                }
+            } catch (error) {
+                console.error('Error processing payment:', error);
+                alert('Có lỗi xảy ra khi xử lý thanh toán: ' + error.message);
+                btn.disabled = false;
+                btn.textContent = 'Hoàn Tất Thanh Toán';
+            }
+        }
+        
+        // Cập nhật order status
+        async function updateOrderStatus(orderNo, status) {
+            try {
+                const response = await fetch(`/api/orders/${orderNo}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        order_status: status
+                    })
+                });
+                
+                if (!response.ok) {
+                    console.error('Failed to update order status');
+                }
+            } catch (error) {
+                console.error('Error updating order status:', error);
+            }
+        }
+        
+        // Load order items khi trang load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadOrderItems();
+        });
+    </script>
+    
+    <!-- Footer - Dynamic -->
+    <div id="site-footer"></div>
+    
+    <script src="/Assets/Components/layout.js" defer></script>
+</body>
+</html>
+

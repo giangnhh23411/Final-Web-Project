@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout/Shipping - Phuc Long</title>
+    <link rel="stylesheet" href="/Assets/Components/header-footer.css">
+    <link rel="stylesheet" href="/Assets/CSS/checkout-shipping.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section - Dynamic -->
+        <div id="site-header"></div>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+            <img src="../Assets/images/checkout-shipping/1280x400-banner-web-20251010111718 1.png" alt="Game Promotion Banner" class="banner-image">
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <span class="breadcrumb-item">PHUC LONG</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Cart</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item active">Information</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Shipping</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Payment</span>
+                </div>
+
+                <div class="checkout-container">
+                    <!-- Left Column - Contact & Shipping Form -->
+                    <div class="checkout-left">
+                        <!-- Contact Information -->
+                        <div class="form-section">
+                            <h3 class="section-title">Contact Information</h3>
+                            <div class="form-group">
+                                <input type="text" id="contact-email" name="contact-email" placeholder="Email or mobile phone number" class="form-input" required>
+                                <span class="error-message" id="error-contact-email"></span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter">
+                                <label for="newsletter">Keep me up to date on news and excluive offers</label>
+                            </div>
+                            <div class="login-link">
+                                <a href="#">Already have an account? Log in</a>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h3 class="section-title">Shipping Address</h3>
+                            <div class="form-row">
+                                <input type="text" id="first-name" name="first-name" placeholder="First name" class="form-input" required>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last name" class="form-input" required>
+                            </div>
+                            <span class="error-message" id="error-name"></span>
+                            <div class="form-group">
+                                <input type="text" id="address" name="address" placeholder="Address" class="form-input" required>
+                                <span class="error-message" id="error-address"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="apartment" name="apartment" placeholder="Apartment, suite, etc. (optional)" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="city" name="city" placeholder="City" class="form-input" required>
+                                <span class="error-message" id="error-city"></span>
+                            </div>
+                            <div class="form-row">
+                                <select id="country" name="country" class="form-input" required>
+                                    <option value="">Select Country</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                </select>
+                                <input type="text" id="postal-code" name="postal-code" placeholder="Postal Code" class="form-input" required>
+                            </div>
+                            <span class="error-message" id="error-location"></span>
+                        </div>
+
+                        <button class="continue-btn" onclick="handleContinueToPayment()">Continue Shipping</button>
+                    </div>
+
+                    <!-- Right Column - Order Summary -->
+                    <div class="checkout-right">
+                        <div class="order-summary">
+                            <h3 class="summary-title">Order Summary</h3>
+                            
+                            <!-- Product Items -->
+                            <div class="product-items" id="order-summary-items">
+                                <!-- Sẽ được load động từ localStorage -->
+                            </div>
+
+                            <!-- Summary Totals -->
+                            <div class="summary-totals">
+                                <div class="total-row">
+                                    <span>Subtotals:</span>
+                                    <span id="order-subtotal">0₫</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Totals:</span>
+                                    <span id="order-total">0₫</span>
+                                </div>
+                                <p class="shipping-note">Shipping & taxes calculated at checkout</p>
+                            </div>
+
+                            <button class="checkout-btn">Proceed To Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section - Dynamic -->
+        <div id="site-footer"></div>
+    </div>
+    
+    <script src="/Assets/Components/layout.js" defer></script>
+    <script>
+        // Load order summary từ localStorage
+        function loadOrderSummary() {
+            const checkoutItems = JSON.parse(localStorage.getItem('phuclong_checkout_items') || '[]');
+            const itemsContainer = document.getElementById('order-summary-items');
+            const subtotalEl = document.getElementById('order-subtotal');
+            const totalEl = document.getElementById('order-total');
+            
+            if (checkoutItems.length === 0) {
+                itemsContainer.innerHTML = '<p style="text-align: center; color: #999; padding: 20px;">Không có sản phẩm nào</p>';
+                subtotalEl.textContent = '0₫';
+                totalEl.textContent = '0₫';
+                return;
+            }
+            
+            // Render items
+            itemsContainer.innerHTML = checkoutItems.map(item => {
+                const imagePath = item.image || '/Assets/images/LogoPhucLong.png';
+                let imageSrc = imagePath;
+                if (!imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
+                    if (imagePath.startsWith('/')) {
+                        imageSrc = imagePath;
+                    } else {
+                        imageSrc = '/Assets/images/' + imagePath;
+                    }
+                }
+                
+                const itemTotal = (item.price || 0) * (item.quantity || 1);
+                return `
+                    <div class="product-item">
+                        <img src="${imageSrc}" alt="${item.name || 'Product'}" class="product-image" onerror="this.src='/Assets/images/LogoPhucLong.png'">
+                        <div class="product-details">
+                            <h4>${item.name || 'Sản phẩm'}</h4>
+                            <p>Quantity: ${item.quantity || 1}</p>
+                        </div>
+                        <div class="product-price">${formatPrice(itemTotal)}</div>
+                    </div>
+                `;
+            }).join('');
+            
+            // Tính totals
+            const subtotal = checkoutItems.reduce((sum, item) => sum + ((item.price || 0) * (item.quantity || 1)), 0);
+            const shipping = 30000; // Fixed shipping cost
+            const total = subtotal + shipping;
+            
+            subtotalEl.textContent = formatPrice(subtotal);
+            totalEl.textContent = formatPrice(total);
+        }
+        
+        // Format price
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            }).format(price);
+        }
+        
+        // Validate form
+        function validateForm() {
+            let isValid = true;
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            document.querySelectorAll('.form-input').forEach(el => el.style.borderColor = '');
+            
+            // Validate contact email/phone
+            const contactEmail = document.getElementById('contact-email').value.trim();
+            if (!contactEmail) {
+                showError('contact-email', 'Vui lòng nhập email hoặc số điện thoại');
+                isValid = false;
+            } else if (!isValidEmail(contactEmail) && !isValidPhone(contactEmail)) {
+                showError('contact-email', 'Vui lòng nhập email hoặc số điện thoại hợp lệ');
+                isValid = false;
+            }
+            
+            // Validate first name
+            const firstName = document.getElementById('first-name').value.trim();
+            if (!firstName) {
+                showError('first-name', 'Vui lòng nhập tên');
+                isValid = false;
+            }
+            
+            // Validate last name
+            const lastName = document.getElementById('last-name').value.trim();
+            if (!lastName) {
+                showError('last-name', 'Vui lòng nhập họ');
+                isValid = false;
+            }
+            
+            // Validate address
+            const address = document.getElementById('address').value.trim();
+            if (!address) {
+                showError('address', 'Vui lòng nhập địa chỉ');
+                isValid = false;
+            }
+            
+            // Validate city
+            const city = document.getElementById('city').value.trim();
+            if (!city) {
+                showError('city', 'Vui lòng nhập thành phố');
+                isValid = false;
+            }
+            
+            // Validate country
+            const country = document.getElementById('country').value;
+            if (!country) {
+                showError('country', 'Vui lòng chọn quốc gia');
+                isValid = false;
+            }
+            
+            // Validate postal code
+            const postalCode = document.getElementById('postal-code').value.trim();
+            if (!postalCode) {
+                showError('postal-code', 'Vui lòng nhập mã bưu điện');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        // Show error message
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorId = 'error-' + fieldId;
+            let errorEl = document.getElementById(errorId);
+            
+            if (!errorEl) {
+                // Tìm error element gần nhất
+                if (fieldId === 'first-name' || fieldId === 'last-name') {
+                    errorEl = document.getElementById('error-name');
+                } else if (fieldId === 'country' || fieldId === 'postal-code') {
+                    errorEl = document.getElementById('error-location');
+                } else {
+                    errorEl = document.getElementById('error-' + fieldId);
+                }
+            }
+            
+            if (errorEl) {
+                errorEl.textContent = message;
+            }
+            
+            if (field) {
+                field.style.borderColor = '#fb2e86';
+            }
+        }
+        
+        // Validate email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Validate phone (Vietnamese phone format)
+        function isValidPhone(phone) {
+            const phoneRegex = /^(\+84|0)[0-9]{9,10}$/;
+            return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+        
+        // Xử lý chuyển đến trang payment
+        function handleContinueToPayment() {
+            // Validate form
+            if (!validateForm()) {
+                alert('Vui lòng điền đầy đủ thông tin!');
+                return;
+            }
+            
+            // Lấy thông tin shipping từ form
+            const email = document.getElementById('contact-email').value.trim();
+            const firstName = document.getElementById('first-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const apartment = document.getElementById('apartment').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const country = document.getElementById('country').value;
+            const postalCode = document.getElementById('postal-code').value.trim();
+            
+            // Lưu shipping info vào localStorage
+            const shippingInfo = {
+                email: email,
+                first_name: firstName,
+                last_name: lastName,
+                address: address,
+                apartment: apartment,
+                city: city,
+                country: country,
+                postal_code: postalCode
+            };
+            localStorage.setItem('phuclong_shipping_info', JSON.stringify(shippingInfo));
+            
+            // Chuyển đến trang payment
+            window.location.href = '/ClientSite/payment.html';
+        }
+        
+        // Load order summary khi trang load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadOrderSummary();
+        });
+    </script>
+</body>
+</html>
