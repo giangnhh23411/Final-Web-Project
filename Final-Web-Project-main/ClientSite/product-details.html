@@ -7,6 +7,27 @@
 
   <link rel="stylesheet" href="/Assets/CSS/product-details.css" />
   <link rel="stylesheet" href="/Assets/Components/header-footer.css" />
+  <style>
+    /* Voucher Dropdown Styles */
+    .voucher-dropdown summary {
+      list-style: none;
+    }
+    .voucher-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+    .voucher-dropdown summary::marker {
+      display: none;
+    }
+    /* Chỉ rotate mũi tên, không rotate toàn bộ summary */
+    .voucher-dropdown[open] summary .arrow-icon {
+      transform: rotate(180deg);
+      transition: transform 0.3s;
+    }
+    .voucher-dropdown summary .arrow-icon {
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
 
@@ -45,9 +66,57 @@
           <!-- Price display (size selector đã ẩn) -->
           <div class="product-price-display" id="product-price-display" style="margin: 20px 0; font-size: 24px; font-weight: bold; color: #fb2e86;">
             <span id="display-price">Đang tải...</span>
+            <span id="discounted-price" style="display: none; color: #28a745; margin-left: 10px;"></span>
+            <span id="voucher-applied-badge" style="display: none; margin-left: 10px; padding: 4px 8px; background: #28a745; color: white; border-radius: 4px; font-size: 12px; font-weight: normal;">
+              🎟️ Đã áp dụng voucher: <span id="applied-voucher-code-display"></span>
+              <button onclick="removeAppliedVoucher()" style="
+                margin-left: 8px;
+                background: rgba(255,255,255,0.3);
+                color: white;
+                border: 1px solid white;
+                padding: 2px 6px;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 11px;
+              ">✕</button>
+            </span>
           </div>
           <input type="hidden" id="selected-size" value="">
           <input type="hidden" id="selected-price" value="">
+
+          <!-- Voucher Section - Dropdown -->
+          <details class="voucher-dropdown" id="voucher-dropdown" style="margin: 20px 0; display: none;">
+            <summary style="
+              padding: 12px 16px;
+              background: #f8f9fa;
+              border: 1px solid #ddd;
+              border-radius: 8px;
+              cursor: pointer;
+              font-weight: 600;
+              color: #333;
+              list-style: none;
+              user-select: none;
+            ">
+              <span style="display: flex; align-items: center; justify-content: space-between;">
+                <span>🎟️ Voucher khả dụng (<span id="voucher-count">0</span>)</span>
+                <span class="arrow-icon" style="font-size: 12px; color: #666;">▼</span>
+              </span>
+            </summary>
+            <div id="voucher-list" style="
+              margin-top: 10px;
+              padding: 15px;
+              background: white;
+              border: 1px solid #ddd;
+              border-radius: 8px;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              max-height: 300px;
+              overflow-y: auto;
+            ">
+              <!-- Vouchers will be loaded here -->
+            </div>
+          </details>
 
           <!-- short description -->
           <div class="short-desc" id="product-description">
@@ -311,14 +380,22 @@
       const price = getProductPrice();
       
       try {
+        // Đảm bảo _id được lấy đúng (MongoDB ObjectId)
+        // Ưu tiên _id, sau đó product_id, cuối cùng là id
+        const productId = productData._id || productData.product_id || productData.id;
+        
         // Tạo checkout item từ sản phẩm hiện tại
         const checkoutItem = {
-          id: productData.id,
+          id: productData.id || productId, // SKU hoặc ID
+          _id: productId, // MongoDB _id (quan trọng nhất để so sánh với voucher)
+          product_id: productId, // Alias cho product_id
           name: productData.name || 'Sản phẩm',
           price: price,
           quantity: 1,
           image: productData.image || ''
         };
+        
+        console.log('Checkout item created:', checkoutItem);
         
         // Lưu vào localStorage để checkout-shipping.html load
         localStorage.setItem('phuclong_checkout_items', JSON.stringify([checkoutItem]));
@@ -395,6 +472,8 @@
             // Lưu vào localStorage để addToCart sử dụng
             localStorage.setItem('phuclong_current_product', JSON.stringify({
               id: product.sku || product._id,
+              _id: product._id, // Lưu MongoDB _id để so sánh với voucher applicable_product_ids
+              product_id: product._id, // Alias cho product_id
               name: product.name,
               price: product.price || 0,
               image: (product.images && product.images.length > 0) ? product.images[0] : '',
@@ -510,6 +589,8 @@
       
       if (priceEl) {
         priceEl.textContent = formatPrice(productPrice);
+        priceEl.style.textDecoration = 'none';
+        priceEl.style.color = '#fb2e86';
         console.log('Price updated to:', formatPrice(productPrice));
       } else {
         console.error('display-price element not found!');
@@ -519,12 +600,100 @@
         priceInput.value = productPrice;
       }
       
+      // Kiểm tra voucher đã áp dụng từ trước
+      const appliedVoucher = localStorage.getItem('phuclong_selected_voucher');
+      const appliedVoucherData = localStorage.getItem('phuclong_selected_voucher_data');
+      if (appliedVoucher && appliedVoucherData) {
+        try {
+          const voucher = JSON.parse(appliedVoucherData);
+          // Kiểm tra xem voucher có áp dụng cho sản phẩm này không
+          const productId = String(product._id || product.id || '');
+          let canApply = true;
+          
+          if (voucher.applicable_product_ids && voucher.applicable_product_ids.length > 0) {
+            const applicableIds = voucher.applicable_product_ids.map(id => String(id));
+            canApply = applicableIds.includes(productId);
+          }
+          
+          if (canApply && voucher.min_order_value <= productPrice) {
+            // Áp dụng lại voucher
+            let discountedPrice = productPrice;
+            if (voucher.type === 'percent') {
+              discountedPrice = productPrice * (1 - voucher.value / 100);
+            } else if (voucher.type === 'fixed') {
+              discountedPrice = Math.max(0, productPrice - voucher.value);
+            }
+            
+            // Hiển thị giá đã giảm
+            const discountedEl = document.getElementById('discounted-price');
+            const voucherBadge = document.getElementById('voucher-applied-badge');
+            const voucherCodeDisplay = document.getElementById('applied-voucher-code-display');
+            
+            if (discountedEl && priceEl) {
+              priceEl.style.textDecoration = 'line-through';
+              priceEl.style.color = '#999';
+              discountedEl.style.display = 'inline';
+              discountedEl.textContent = formatPrice(discountedPrice);
+            }
+            
+            if (voucherBadge && voucherCodeDisplay) {
+              voucherCodeDisplay.textContent = appliedVoucher;
+              voucherBadge.style.display = 'inline-block';
+            }
+          } else {
+            // Voucher không áp dụng cho sản phẩm này, xóa
+            localStorage.removeItem('phuclong_selected_voucher');
+            localStorage.removeItem('phuclong_selected_voucher_data');
+          }
+        } catch (e) {
+          console.error('Error checking applied voucher:', e);
+        }
+      }
+      
       // Cập nhật mô tả sản phẩm
       const descEl = document.getElementById('product-description');
       if (descEl) {
-        const description = product.description || 'Chưa có mô tả sản phẩm.';
+        // Lấy description từ product object (không phải từ localStorage)
+        let description = product.description;
+        
+        console.log('Raw description from product:', description);
+        console.log('Product name:', product.name);
+        console.log('Product SKU/ID:', product.sku || product._id || product.id);
+        
+        // Nếu description là HTML, lấy text thuần
+        if (description && typeof description === 'string') {
+          // Tạo một element tạm để lấy text từ HTML
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = description;
+          const textContent = tempDiv.textContent || tempDiv.innerText || '';
+          
+          // Nếu sau khi lấy text từ HTML mà vẫn có nội dung, dùng nó
+          if (textContent.trim() !== '') {
+            description = textContent.trim();
+          } else {
+            // Nếu không có text, kiểm tra xem có phải là HTML tags trống không
+            const stripped = description.replace(/<[^>]*>/g, '').trim();
+            if (stripped === '') {
+              description = null; // Đánh dấu là rỗng
+            } else {
+              description = stripped;
+            }
+          }
+        }
+        
+        // Kiểm tra nếu description rỗng hoặc không có, dùng tên sản phẩm
+        if (!description || 
+            description.trim() === '' || 
+            description.trim() === '<p><br></p>' || 
+            description.trim() === '<br>' ||
+            description.trim() === '<p></p>') {
+          // Dùng tên sản phẩm thay vì description
+          description = product.name || 'Sản phẩm';
+          console.log('Using product name as description:', description);
+        }
+        
         descEl.textContent = description;
-        console.log('Description updated:', description);
+        console.log('Final description displayed:', description);
       } else {
         console.error('product-description element not found!');
       }
@@ -551,6 +720,333 @@
         imageEl.onerror = function() {
           this.src = '/Assets/images/LogoPhucLong.png';
         };
+      }
+      
+      // Load vouchers sau khi hiển thị product
+      loadVouchersForProduct(product);
+    }
+    
+    // Load vouchers cho sản phẩm
+    async function loadVouchersForProduct(product) {
+      const voucherSection = document.getElementById('voucher-dropdown');
+      const voucherList = document.getElementById('voucher-list');
+      
+      if (!voucherSection || !voucherList) return;
+      
+      try {
+        // Load tất cả vouchers active
+        const response = await fetch(`/api/vouchers?status_q=active&pageSize=50`);
+        const result = await response.json();
+        
+        if (!result.data || result.data.length === 0) {
+          voucherSection.style.display = 'none';
+          return;
+        }
+        
+        // Lọc vouchers có thể áp dụng cho sản phẩm này
+        // Lấy product ID từ _id (MongoDB ObjectId) hoặc id
+        const productId = String(product._id || product.id || '');
+        const productPrice = product.price || 0;
+        const now = new Date();
+        
+        const applicableVouchers = result.data.filter(voucher => {
+          // Kiểm tra status
+          if (voucher.status !== 'active') return false;
+          
+          // Kiểm tra thời gian hiệu lực
+          if (voucher.start_at) {
+            const startAt = new Date(voucher.start_at);
+            if (now < startAt) return false;
+          }
+          if (voucher.end_at) {
+            const endAt = new Date(voucher.end_at);
+            if (now > endAt) return false;
+          }
+          
+          // Kiểm tra applicable_product_ids
+          // Nếu voucher có applicable_product_ids, sản phẩm phải nằm trong danh sách
+          if (voucher.applicable_product_ids && Array.isArray(voucher.applicable_product_ids) && voucher.applicable_product_ids.length > 0) {
+            // Convert tất cả IDs sang string để so sánh
+            const applicableIds = voucher.applicable_product_ids.map(id => String(id));
+            if (!applicableIds.includes(productId)) {
+              return false; // Sản phẩm không nằm trong danh sách áp dụng
+            }
+          }
+          // Nếu không có applicable_product_ids hoặc là empty array, voucher áp dụng cho tất cả sản phẩm
+          
+          // Kiểm tra min_order_value
+          if (voucher.min_order_value && voucher.min_order_value > 0) {
+            if (productPrice < voucher.min_order_value) return false;
+          }
+          
+          return true;
+        });
+        
+        if (applicableVouchers.length > 0) {
+          voucherList.innerHTML = '';
+          
+          // Update voucher count
+          const voucherCount = document.getElementById('voucher-count');
+          if (voucherCount) voucherCount.textContent = applicableVouchers.length;
+          
+          // Kiểm tra voucher đã áp dụng
+          const appliedVoucher = localStorage.getItem('phuclong_selected_voucher');
+          const appliedVoucherData = localStorage.getItem('phuclong_selected_voucher_data');
+          let appliedVoucherObj = null;
+          if (appliedVoucherData) {
+            try {
+              appliedVoucherObj = JSON.parse(appliedVoucherData);
+            } catch (e) {
+              console.error('Error parsing applied voucher:', e);
+            }
+          }
+          
+          applicableVouchers.forEach(voucher => {
+            // Kiểm tra xem voucher này có đang được áp dụng không
+            const isApplied = appliedVoucher && appliedVoucher === voucher.code;
+            
+            const voucherCard = document.createElement('div');
+            
+            // Nếu voucher đã được áp dụng, dùng nền xanh lá
+            if (isApplied) {
+              voucherCard.style.cssText = 'padding: 10px; background: #d4edda; border: 2px solid #28a745; border-radius: 6px; cursor: pointer; transition: all 0.3s;';
+            } else {
+              voucherCard.style.cssText = 'padding: 10px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; transition: all 0.3s;';
+            }
+            
+            voucherCard.onmouseover = () => {
+              if (!isApplied) {
+                voucherCard.style.borderColor = '#fb2e86';
+                voucherCard.style.background = '#fff';
+              }
+            };
+            voucherCard.onmouseout = () => {
+              if (isApplied) {
+                voucherCard.style.borderColor = '#28a745';
+                voucherCard.style.background = '#d4edda';
+              } else {
+                voucherCard.style.borderColor = '#ddd';
+                voucherCard.style.background = '#f8f9fa';
+              }
+            };
+            
+            const discountText = voucher.type === 'percent' 
+              ? `Giảm ${voucher.value}%` 
+              : `Giảm ${formatPrice(voucher.value)}`;
+            
+            // Tạo elements bằng DOM thay vì innerHTML để tránh lỗi
+            const cardContent = document.createElement('div');
+            cardContent.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+            
+            const leftDiv = document.createElement('div');
+            
+            const codeStrong = document.createElement('strong');
+            codeStrong.style.color = isApplied ? '#155724' : '#fb2e86';
+            codeStrong.textContent = voucher.code;
+            leftDiv.appendChild(codeStrong);
+            
+            const discountDiv = document.createElement('div');
+            discountDiv.style.cssText = 'font-size: 14px; color: #666; margin-top: 4px;';
+            discountDiv.textContent = discountText;
+            leftDiv.appendChild(discountDiv);
+            
+            // Hiển thị "Đã áp dụng" nếu voucher đang được áp dụng
+            if (isApplied) {
+              const appliedLabel = document.createElement('div');
+              appliedLabel.style.cssText = 'font-size: 12px; color: #155724; margin-top: 4px; font-weight: 600;';
+              appliedLabel.textContent = '✓ Đã áp dụng';
+              leftDiv.appendChild(appliedLabel);
+            }
+            
+            if (voucher.description) {
+              const descDiv = document.createElement('div');
+              descDiv.style.cssText = 'font-size: 12px; color: #999; margin-top: 2px;';
+              descDiv.textContent = voucher.description;
+              leftDiv.appendChild(descDiv);
+            }
+            
+            if (voucher.min_order_value && voucher.min_order_value > 0) {
+              const conditionDiv = document.createElement('div');
+              conditionDiv.style.cssText = 'font-size: 11px; color: #ff9800; margin-top: 2px;';
+              conditionDiv.textContent = `Đơn tối thiểu: ${formatPrice(voucher.min_order_value)}`;
+              leftDiv.appendChild(conditionDiv);
+            }
+            
+            // Nếu đã áp dụng, hiển thị nút "Hủy áp dụng" thay vì "Áp dụng"
+            const applyBtn = document.createElement('button');
+            if (isApplied) {
+              applyBtn.textContent = 'Hủy áp dụng';
+              applyBtn.style.cssText = 'background: #dc3545; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600;';
+              applyBtn.onclick = (e) => {
+                e.stopPropagation();
+                removeAppliedVoucher();
+                // Reload vouchers để cập nhật UI
+                setTimeout(() => {
+                  loadVouchersForProduct(product);
+                }, 100);
+              };
+            } else {
+              applyBtn.textContent = 'Áp dụng';
+              applyBtn.style.cssText = 'background: #fb2e86; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600;';
+              applyBtn.onclick = (e) => {
+                e.stopPropagation();
+                applyVoucher(voucher.code, productPrice);
+              };
+            }
+            
+            cardContent.appendChild(leftDiv);
+            cardContent.appendChild(applyBtn);
+            voucherCard.appendChild(cardContent);
+            voucherList.appendChild(voucherCard);
+          });
+          
+          voucherSection.style.display = 'block';
+        } else {
+          voucherSection.style.display = 'none';
+        }
+      } catch (error) {
+        console.error('Error loading vouchers:', error);
+        voucherSection.style.display = 'none';
+      }
+    }
+    
+    // Áp dụng voucher
+    function applyVoucher(voucherCode, originalPrice) {
+      // Load voucher details để kiểm tra điều kiện và tính giá giảm
+      fetch(`/api/vouchers/${voucherCode}`)
+        .then(res => res.json())
+        .then(voucher => {
+          // Kiểm tra điều kiện
+          const now = new Date();
+          
+          // Kiểm tra status
+          if (voucher.status !== 'active') {
+            alert('Voucher không còn hiệu lực!');
+            return;
+          }
+          
+          // Kiểm tra thời gian hiệu lực
+          if (voucher.start_at) {
+            const startAt = new Date(voucher.start_at);
+            if (now < startAt) {
+              alert('Voucher chưa đến thời gian hiệu lực!');
+              return;
+            }
+          }
+          if (voucher.end_at) {
+            const endAt = new Date(voucher.end_at);
+            if (now > endAt) {
+              alert('Voucher đã hết hạn!');
+              return;
+            }
+          }
+          
+          // Kiểm tra min_order_value
+          if (voucher.min_order_value && voucher.min_order_value > 0) {
+            if (originalPrice < voucher.min_order_value) {
+              alert(`Voucher yêu cầu đơn hàng tối thiểu ${formatPrice(voucher.min_order_value)}!`);
+              return;
+            }
+          }
+          
+          // Tính giá giảm
+          let discountedPrice = originalPrice;
+          
+          if (voucher.type === 'percent') {
+            discountedPrice = originalPrice * (1 - voucher.value / 100);
+          } else if (voucher.type === 'fixed') {
+            discountedPrice = Math.max(0, originalPrice - voucher.value);
+          }
+          
+          // Lưu voucher code vào localStorage
+          localStorage.setItem('phuclong_selected_voucher', voucherCode);
+          localStorage.setItem('phuclong_selected_voucher_data', JSON.stringify(voucher));
+          
+          // Hiển thị giá đã giảm
+          const discountedEl = document.getElementById('discounted-price');
+          const priceEl = document.getElementById('display-price');
+          const voucherBadge = document.getElementById('voucher-applied-badge');
+          const voucherCodeDisplay = document.getElementById('applied-voucher-code-display');
+          
+          if (discountedEl && priceEl) {
+            priceEl.style.textDecoration = 'line-through';
+            priceEl.style.color = '#999';
+            discountedEl.style.display = 'inline';
+            discountedEl.textContent = formatPrice(discountedPrice);
+          }
+          
+          // Hiển thị badge voucher đã áp dụng
+          if (voucherBadge && voucherCodeDisplay) {
+            voucherCodeDisplay.textContent = voucherCode;
+            voucherBadge.style.display = 'inline-block';
+          }
+          
+          // Reload vouchers để cập nhật UI (highlight voucher đã áp dụng)
+          const productData = JSON.parse(localStorage.getItem('phuclong_current_product') || '{}');
+          const product = {
+            _id: productData._id || productData.product_id,
+            id: productData.id,
+            price: productData.price || originalPrice
+          };
+          if (product._id || product.id) {
+            setTimeout(() => {
+              loadVouchersForProduct(product);
+            }, 100);
+          }
+          
+          // Đóng dropdown nếu đang mở
+          const voucherDropdown = document.getElementById('voucher-dropdown');
+          if (voucherDropdown && voucherDropdown.open) {
+            voucherDropdown.open = false;
+          }
+          
+          alert(`Đã áp dụng voucher ${voucherCode}! Giá giảm: ${formatPrice(originalPrice - discountedPrice)}`);
+        })
+        .catch(error => {
+          console.error('Error applying voucher:', error);
+          alert('Lỗi khi áp dụng voucher. Vui lòng thử lại!');
+        });
+    }
+    
+    // Xóa voucher đã áp dụng
+    function removeAppliedVoucher() {
+      localStorage.removeItem('phuclong_selected_voucher');
+      localStorage.removeItem('phuclong_selected_voucher_data');
+      
+      // Reset giá về ban đầu
+      const priceEl = document.getElementById('display-price');
+      const discountedEl = document.getElementById('discounted-price');
+      const voucherBadge = document.getElementById('voucher-applied-badge');
+      
+      if (priceEl) {
+        priceEl.style.textDecoration = 'none';
+        priceEl.style.color = '#fb2e86';
+      }
+      
+      if (discountedEl) {
+        discountedEl.style.display = 'none';
+      }
+      
+      if (voucherBadge) {
+        voucherBadge.style.display = 'none';
+      }
+      
+      // Reload giá từ product
+      const productData = JSON.parse(localStorage.getItem('phuclong_current_product') || '{}');
+      if (productData.price && priceEl) {
+        priceEl.textContent = formatPrice(productData.price);
+      }
+      
+      // Reload vouchers để cập nhật UI
+      const product = {
+        _id: productData._id || productData.product_id,
+        id: productData.id,
+        price: productData.price || 0
+      };
+      if (product._id || product.id) {
+        setTimeout(() => {
+          loadVouchersForProduct(product);
+        }, 100);
       }
     }
     
@@ -732,9 +1228,24 @@
         
         // Cập nhật hình ảnh
         const productImage = document.querySelector('.product-main-image img');
-        if (productImage) {
-          productImage.src = `../Assets/images/${productData.image}`;
+        if (productImage && productData.image) {
+          // Xử lý image path: nếu đã là full URL (http/https) thì dùng trực tiếp
+          let imageSrc = '';
+          const imagePath = productData.image;
+          if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+            imageSrc = imagePath;
+          } else if (imagePath.startsWith('/')) {
+            imageSrc = imagePath;
+          } else if (imagePath) {
+            imageSrc = `/Assets/images/${imagePath}`;
+          } else {
+            imageSrc = '/Assets/images/LogoPhucLong.png';
+          }
+          productImage.src = imageSrc;
           productImage.alt = productData.name;
+          productImage.onerror = function() {
+            this.src = '/Assets/images/LogoPhucLong.png';
+          };
         }
         
         // Cập nhật giá

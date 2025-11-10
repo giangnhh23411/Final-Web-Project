@@ -180,72 +180,8 @@
     <div class="carousel" data-carousel="1">
       <button class="carousel-arrow left" data-dir="left">‹</button>
       <div class="carousel-window">
-        <div class="carousel-track">
-          <!-- SP1 -->
-          <div class="product-card" onclick="goToProductDetail('hong-tra-dao','Hồng trà đào',60000,'Assets/images/Trà thơm đậm vị/HongTraDao.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà thơm đậm vị/HongTraDao.png" alt="Hồng trà đào" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao','Hồng trà đào',60000,'Assets/images/Trà thơm đậm vị/HongTraDao.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Hồng trà đào</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">60.000 - 69.000₫</div>
-          </div>
-          <!-- SP2 -->
-          <div class="product-card" onclick="goToProductDetail('tra-ba-tuoc-luu-do','Trà bá tước lựu đỏ',60000,'Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png" alt="Trà bá tước lựu đỏ" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-ba-tuoc-luu-do','Trà bá tước lựu đỏ',60000,'Assets/images/Trà thơm đậm vị/TraBaTuocLuuDo.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà bá tước lựu đỏ</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">60.000 - 69.000₫</div>
-          </div>
-          <!-- SP3 -->
-          <div class="product-card" onclick="goToProductDetail('tra-lai-dac-thom','Trà lài đác thơm',59000,'Assets/images/Trà thơm đậm vị/TraLaiDacThom.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà thơm đậm vị/TraLaiDacThom.png" alt="Trà lài đác thơm" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-dac-thom','Trà lài đác thơm',59000,'Assets/images/Trà thơm đậm vị/TraLaiDacThom.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà lài đác thơm</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">59.000 - 65.000₫</div>
-          </div>
-          <!-- SP4 -->
-          <div class="product-card" onclick="goToProductDetail('tra-lai-mang-cau-thach-dua','Trà lài mãng cầu thạch dừa',60000,'Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png" alt="Trà lài mãng cầu thạch dừa" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lai-mang-cau-thach-dua','Trà lài mãng cầu thạch dừa',60000,'Assets/images/Trà thơm đậm vị/TraLaiMangCauThachDua.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà lài mãng cầu thạch dừa</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">60.000 - 69.000₫</div>
-          </div>
-          <!-- SP5 -->
-          <div class="product-card" onclick="goToProductDetail('tra-lucky-tea','Trà Lucky Tea',59000,'Assets/images/Trà thơm đậm vị/TraLuckyTea.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà thơm đậm vị/TraLuckyTea.png" alt="Trà Lucky Tea" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-lucky-tea','Trà Lucky Tea',59000,'Assets/images/Trà thơm đậm vị/TraLuckyTea.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà Lucky Tea</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">59.000 - 69.000₫</div>
-          </div>
+        <div class="carousel-track" id="carousel-track-1">
+          <!-- Products will be loaded dynamically -->
         </div>
       </div>
       <button class="carousel-arrow right" data-dir="right">›</button>
@@ -258,71 +194,8 @@
     <div class="carousel" data-carousel="2">
       <button class="carousel-arrow left" data-dir="left">‹</button>
       <div class="carousel-window">
-        <div class="carousel-track">
-          <div class="product-card" onclick="goToProductDetail('tra-sua-matcha','Trà sữa matcha',49000,'Assets/images/Trà sữa đậm vị/TraSuaMatcha.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà sữa đậm vị/TraSuaMatcha.png" alt="Trà sữa matcha" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-matcha','Trà sữa matcha',49000,'Assets/images/Trà sữa đậm vị/TraSuaMatcha.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà sữa matcha</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">49.000 - 65.000₫</div>
-          </div>
-
-          <div class="product-card" onclick="goToProductDetail('hong-tra-dao-sua-thach-konjac','Hồng trà đào sữa thạch Konjac',54000,'Assets/images/Trà sữa đậm vị/HongTraDaoSuaThachKonjac.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà sữa đậm vị/HongTraDaoSuaThachKonjac.png" alt="Hồng trà đào sữa thạch Konjac" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-dao-sua-thach-konjac','Hồng trà đào sữa thạch Konjac',54000,'Assets/images/Trà sữa đậm vị/HongTraDaoSuaThachKonjac.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Hồng trà đào sữa thạch Konjac</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">54.000 - 65.000₫</div>
-          </div>
-
-          <div class="product-card" onclick="goToProductDetail('hong-tra-sua','Hồng trà sữa',45000,'Assets/images/Trà sữa đậm vị/HongTraSua.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà sữa đậm vị/HongTraSua.png" alt="Hồng trà sữa" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('hong-tra-sua','Hồng trà sữa',45000,'Assets/images/Trà sữa đậm vị/HongTraSua.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Hồng trà sữa</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">45.000 - 55.000₫</div>
-          </div>
-
-          <div class="product-card" onclick="goToProductDetail('tra-sua-ba-tuoc','Trà sữa bá tước',50000,'Assets/images/Trà sữa đậm vị/TraSuaBaTuoc.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà sữa đậm vị/TraSuaBaTuoc.png" alt="Trà sữa bá tước" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-ba-tuoc','Trà sữa bá tước',50000,'Assets/images/Trà sữa đậm vị/TraSuaBaTuoc.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà sữa bá tước</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">50.000 - 55.000₫</div>
-          </div>
-
-          <div class="product-card" onclick="goToProductDetail('tra-sua-lai','Trà sữa lài',55000,'Assets/images/Trà sữa đậm vị/TraSuaLai.png')" style="cursor:pointer;">
-            <div class="product-img">
-              <img src="Assets/images/Trà sữa đậm vị/TraSuaLai.png" alt="Trà sữa lài" />
-              <div class="product-icons">
-                <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart('tra-sua-lai','Trà sữa lài',55000,'Assets/images/Trà sữa đậm vị/TraSuaLai.png')">🛒</button>
-                <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
-              </div>
-            </div>
-            <div class="product-name">Trà sữa lài</div>
-            <div class="product-size">Size: M - L</div>
-            <div class="product-price">55.000 - 59.000₫</div>
-          </div>
+        <div class="carousel-track" id="carousel-track-2">
+          <!-- Products will be loaded dynamically -->
         </div>
       </div>
       <button class="carousel-arrow right" data-dir="right">›</button>
@@ -736,17 +609,137 @@
       if(loginStatus) loginStatus.textContent = isLoggedIn ? 'Logout' : 'Login';
     }
 
-    /* INIT after header/footer loaded */
-    function initPage(){
-      cartManager.updateCartIcon();
-      updateLoginStatus();
-
-      // carousel behaviour
+    /* Load Best Sellers from API */
+    async function loadBestSellers(){
+      try{
+        // Load all products (with large pageSize to get all)
+        const response = await fetch('/api/products?page=1&pageSize=500');
+        if(!response.ok) throw new Error('Failed to load products');
+        const result = await response.json();
+        const allProducts = result.data || [];
+        
+        // Load categories to check category name
+        const catResponse = await fetch('/api/products/categories');
+        const catResult = await catResponse.json();
+        const categories = catResult.data || [];
+        
+        // Find "Thức uống" category
+        const thucUongCategory = categories.find(cat => 
+          cat.name && (cat.name.toLowerCase().includes('thức uống') || cat.name.toLowerCase().includes('thuc uong'))
+        );
+        
+        // Filter products for "TRÀ THƠM CHẤT LƯỢNG"
+        // - Name starts with "trà", "Trà", or "Hồng trà"
+        // - Belongs to "Thức uống" category
+        const traThomProducts = allProducts.filter(product => {
+          const name = (product.name || '').toLowerCase();
+          const startsWithTra = name.startsWith('trà') || name.startsWith('hồng trà');
+          // Compare category_id as strings (both are converted to strings in API response)
+          const inThucUong = thucUongCategory && 
+            String(product.category_id) === String(thucUongCategory._id);
+          return startsWithTra && inThucUong;
+        });
+        
+        // Filter products for "TRÀ SỮA ĐẬM VỊ"
+        // - Name contains "trà sữa"
+        const traSuaProducts = allProducts.filter(product => {
+          const name = (product.name || '').toLowerCase();
+          return name.includes('trà sữa');
+        });
+        
+        // Limit to 15 products per carousel
+        const traThomProductsLimited = traThomProducts.slice(0, 15);
+        const traSuaProductsLimited = traSuaProducts.slice(0, 15);
+        
+        // Render products
+        renderProducts('carousel-track-1', traThomProductsLimited);
+        renderProducts('carousel-track-2', traSuaProductsLimited);
+        
+        // Re-initialize carousel after products are loaded
+        setTimeout(() => {
+          initCarousels();
+        }, 100);
+        
+      }catch(error){
+        console.error('Error loading best sellers:', error);
+      }
+    }
+    
+    function renderProducts(trackId, products){
+      const track = document.getElementById(trackId);
+      if(!track) return;
+      
+      track.innerHTML = '';
+      
+      if(products.length === 0){
+        track.innerHTML = '<div style="padding:20px;text-align:center;color:#999;">Không có sản phẩm</div>';
+        return;
+      }
+      
+      products.forEach(product => {
+        const card = createProductCard(product);
+        track.appendChild(card);
+      });
+    }
+    
+    function createProductCard(product){
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.style.cursor = 'pointer';
+      
+      const sku = product.sku || '';
+      const name = product.name || '';
+      const price = product.price || 0;
+      const image = product.images && product.images.length > 0 ? product.images[0] : '';
+      
+      card.onclick = () => goToProductDetail(sku);
+      
+      const formattedPrice = formatPrice(price);
+      
+      card.innerHTML = `
+        <div class="product-img">
+          <img src="${image}" alt="${name}" onerror="this.src='Assets/images/placeholder.png'" />
+          <div class="product-icons">
+            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCartFromCard('${sku}', '${name.replace(/'/g, "\\'")}', ${price}, '${image}')">🛒</button>
+            <button class="heart-icon-btn" onclick="event.stopPropagation();">❤️</button>
+          </div>
+        </div>
+        <div class="product-name">${name}</div>
+        <div class="product-price">${formattedPrice}</div>
+      `;
+      
+      return card;
+    }
+    
+    function formatPrice(price){
+      if(!price) return '0₫';
+      return new Intl.NumberFormat('vi-VN').format(price) + '₫';
+    }
+    
+    function addToCartFromCard(sku, name, price, image){
+      const isLoggedIn = localStorage.getItem('phuclong_user_logged_in')==='true';
+      if(!isLoggedIn){ 
+        showLoginDialog(); 
+        return; 
+      }
+      cartManager.showConfirmDialog({id: sku, name, price: parseFloat(price), image});
+    }
+    
+    function initCarousels(){
       document.querySelectorAll(".carousel").forEach((carouselEl)=>{
         const track=carouselEl.querySelector(".carousel-track");
         const windowEl=carouselEl.querySelector(".carousel-window");
         const leftBtn=carouselEl.querySelector(".carousel-arrow.left");
         const rightBtn=carouselEl.querySelector(".carousel-arrow.right");
+        
+        if(!track || !windowEl || !leftBtn || !rightBtn) return;
+        
+        // Remove old event listeners by cloning
+        const newLeftBtn = leftBtn.cloneNode(true);
+        const newRightBtn = rightBtn.cloneNode(true);
+        leftBtn.parentNode.replaceChild(newLeftBtn, leftBtn);
+        rightBtn.parentNode.replaceChild(newRightBtn, rightBtn);
+        
         const getStep=()=>{
           const card=track.querySelector(".product-card");
           if(!card) return 220;
@@ -755,20 +748,35 @@
           const marginRight=parseFloat(style.marginRight)||0;
           return cardWidth + marginRight + 16;
         };
-        leftBtn.addEventListener("click",()=>windowEl.scrollBy({left:-getStep(),behavior:"smooth"}));
-        rightBtn.addEventListener("click",()=>windowEl.scrollBy({left:getStep(),behavior:"smooth"}));
+        newLeftBtn.addEventListener("click",()=>windowEl.scrollBy({left:-getStep(),behavior:"smooth"}));
+        newRightBtn.addEventListener("click",()=>windowEl.scrollBy({left:getStep(),behavior:"smooth"}));
         windowEl.style.scrollBehavior="smooth";
         windowEl.style.overflowX="auto";
         windowEl.style.scrollSnapType="x mandatory";
         track.querySelectorAll(".product-card").forEach(card=>{ card.style.scrollSnapAlign="start"; });
       });
+    }
+
+    /* INIT after header/footer loaded */
+    function initPage(){
+      cartManager.updateCartIcon();
+      updateLoginStatus();
+      
+      // Load best sellers from API
+      loadBestSellers();
+      
+      // Initialize carousels
+      initCarousels();
+      
       console.log('Home page loaded with dynamic header/footer');
     }
 
-    function goToProductDetail(id,name,price,image){
-      const productData={id,name,price,image};
-      localStorage.setItem('phuclong_current_product', JSON.stringify(productData));
-      window.location.href='/ClientSite/product-details.html';
+    function goToProductDetail(sku){
+      if(!sku){
+        console.error('SKU is required');
+        return;
+      }
+      window.location.href = `/ClientSite/product-details.html?sku=${encodeURIComponent(sku)}`;
     }
   </script>
 

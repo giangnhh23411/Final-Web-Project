@@ -15,7 +15,7 @@ import aiofiles
 import bleach
 from contextlib import asynccontextmanager
 import datetime
-from passlib.hash import bcrypt
+import bcrypt as bcrypt_lib
 from passlib.context import CryptContext
 
 # -------- CONFIG --------
@@ -987,7 +987,7 @@ async def create_user(
         raise HTTPException(status_code=400, detail="Email already exists")
 
     # 2) hash password -> đảm bảo password_hash tồn trước insert
-    password_hash = bcrypt.hash(password)
+    password_hash = bcrypt_lib.hashpw(password.encode('utf-8'), bcrypt_lib.gensalt()).decode('utf-8')
 
     # chuẩn bị folder avatar và giá trị default (luôn phải là string để thỏa schema)
     os.makedirs(AVATAR_DIR, exist_ok=True)
@@ -1091,7 +1091,8 @@ async def update_user(
     if role is not None:
         update_data["role"] = role
     if password:
-        update_data["password"] = password
+        # Hash password trước khi lưu (giống như register và create_user)
+        update_data["password_hash"] = bcrypt_lib.hashpw(password.encode('utf-8'), bcrypt_lib.gensalt()).decode('utf-8')
 
     if avatar and avatar.filename:
         if avatar.content_type not in ["image/png", "image/jpeg"]:
@@ -1144,13 +1145,25 @@ async def login(
     # 2. Verify password với bcrypt
     password_hash = user.get("password_hash", "")
     if not password_hash:
+        print(f"[LOGIN DEBUG] User {email}: No password_hash found")
         raise HTTPException(status_code=401, detail="Email or password is incorrect")
     
     try:
         # Verify password
-        if not bcrypt.verify(password, password_hash):
+        print(f"[LOGIN DEBUG] User {email}: Verifying password...")
+        print(f"[LOGIN DEBUG] Password hash length: {len(password_hash)}")
+        print(f"[LOGIN DEBUG] Password hash starts with: {password_hash[:10]}")
+        verify_result = bcrypt_lib.checkpw(password.encode('utf-8'), password_hash.encode('utf-8'))
+        print(f"[LOGIN DEBUG] Verify result: {verify_result}")
+        if not verify_result:
+            print(f"[LOGIN DEBUG] User {email}: Password verification failed")
             raise HTTPException(status_code=401, detail="Email or password is incorrect")
+    except HTTPException:
+        raise
     except Exception as e:
+        print(f"[LOGIN DEBUG] User {email}: Exception during verify: {e}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=401, detail="Email or password is incorrect")
     
     # 3. Kiểm tra status
@@ -1161,11 +1174,18 @@ async def login(
     user_dict = doc_to_dict(user)
     user_dict.pop("password_hash", None)  # Xóa password_hash khỏi response
     
-    return {
+    # 5. Kiểm tra role và trả về redirect_url nếu là admin
+    response_data = {
         "success": True,
         "message": "Login successful",
         "user": user_dict
     }
+    
+    # Nếu role là admin, trả về redirect_url
+    if user_dict.get("role") == "admin":
+        response_data["redirect_url"] = "/AdminSite/HTML/dashboard.html"
+    
+    return response_data
 
 @app.post(API_PREFIX + "/auth/register", status_code=201)
 async def register(
@@ -1190,7 +1210,7 @@ async def register(
         raise HTTPException(status_code=400, detail="Email already exists")
     
     # 4. Hash password
-    password_hash = bcrypt.hash(password)
+    password_hash = bcrypt_lib.hashpw(password.encode('utf-8'), bcrypt_lib.gensalt()).decode('utf-8')
     
     # 5. Prepare avatar URL
     os.makedirs(AVATAR_DIR, exist_ok=True)

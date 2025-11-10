@@ -10,6 +10,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Voucher Dropdown Styles */
+        .voucher-dropdown summary {
+            list-style: none;
+        }
+        .voucher-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+        .voucher-dropdown summary::marker {
+            display: none;
+        }
+        /* Chỉ rotate mũi tên, không rotate toàn bộ summary */
+        .voucher-dropdown[open] summary .arrow-icon {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+        .voucher-dropdown summary .arrow-icon {
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        /* Product Voucher Dropdown Styles */
+        .product-voucher-dropdown summary {
+            list-style: none;
+        }
+        .product-voucher-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+        .product-voucher-dropdown summary::marker {
+            display: none;
+        }
+        .product-voucher-dropdown[open] summary .arrow-icon {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+        .product-voucher-dropdown summary .arrow-icon {
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        /* Scrollbar styling cho voucher list */
+        .product-voucher-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .product-voucher-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        .product-voucher-list::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        .product-voucher-list::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -52,6 +106,60 @@
                         <div class="summary-row">
                             <span>Subtotals:</span>
                             <span id="subtotal">₫0</span>
+                        </div>
+                        
+                        <!-- Voucher Section - Badge hiển thị voucher đã áp dụng -->
+                        <div id="voucher-applied-badge" style="display: none; margin: 20px 0; padding: 10px; background: #28a745; color: white; border-radius: 4px; font-size: 12px; font-weight: normal;">
+                            🎟️ Đã áp dụng voucher: <span id="applied-voucher-code-display"></span>
+                            <button onclick="removeVoucher()" style="
+                                margin-left: 8px;
+                                background: rgba(255,255,255,0.3);
+                                color: white;
+                                border: 1px solid white;
+                                padding: 2px 6px;
+                                border-radius: 3px;
+                                cursor: pointer;
+                                font-size: 11px;
+                            ">✕</button>
+                        </div>
+                        
+                        <!-- Voucher Section - Dropdown -->
+                        <details class="voucher-dropdown" id="voucher-dropdown" style="margin: 20px 0; display: none;">
+                            <summary style="
+                                padding: 12px 16px;
+                                background: #f8f9fa;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                font-weight: 600;
+                                color: #333;
+                                list-style: none;
+                                user-select: none;
+                            ">
+                                <span style="display: flex; align-items: center; justify-content: space-between;">
+                                    <span>🎟️ Voucher khả dụng (<span id="voucher-count">0</span>)</span>
+                                    <span class="arrow-icon" style="font-size: 12px; color: #666;">▼</span>
+                                </span>
+                            </summary>
+                            <div id="voucher-list" style="
+                                margin-top: 10px;
+                                padding: 15px;
+                                background: white;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+                                max-height: 300px;
+                                overflow-y: auto;
+                            ">
+                                <!-- Vouchers will be loaded here -->
+                            </div>
+                        </details>
+                        
+                        <div class="summary-row" id="discount-row" style="display: none; color: #28a745;">
+                            <span>Giảm giá:</span>
+                            <span id="discount-amount">-₫0</span>
                         </div>
                         <div class="summary-row">
                             <span>Totals:</span>
@@ -249,7 +357,13 @@
                         ">Tiếp tục mua sắm</a>
                     </div>
                 `;
-                updateCartSummary([]);
+                updateCartSummaryWithVoucher([]);
+                
+                // Load vouchers ngay cả khi cart trống
+                setTimeout(() => {
+                    loadVouchers();
+                }, 300);
+                
                 return;
             }
 
@@ -281,6 +395,41 @@
                             </div>
                             <div class="product-info">
                                 <h3>${item.name}</h3>
+                                <!-- Voucher Dropdown cho từng sản phẩm -->
+                                <details class="product-voucher-dropdown" data-product-id="${productId}" style="margin-top: 8px; display: none;">
+                                    <summary style="
+                                        padding: 10px 14px;
+                                        background: #f8f9fa;
+                                        border: 1px solid #ddd;
+                                        border-radius: 8px;
+                                        cursor: pointer;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: #333;
+                                        list-style: none;
+                                        user-select: none;
+                                    ">
+                                        <span style="display: flex; align-items: center; justify-content: space-between;">
+                                            <span>🎟️ Voucher khả dụng (<span class="voucher-count-${productId}">0</span>)</span>
+                                            <span class="arrow-icon" style="font-size: 12px; color: #666;">▼</span>
+                                        </span>
+                                    </summary>
+                                    <div class="product-voucher-list" data-product-id="${productId}" style="
+                                        margin-top: 10px;
+                                        padding: 12px;
+                                        background: white;
+                                        border: 1px solid #ddd;
+                                        border-radius: 8px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 8px;
+                                        max-height: 250px;
+                                        overflow-y: auto;
+                                        overflow-x: hidden;
+                                    ">
+                                        <!-- Vouchers will be loaded here -->
+                                    </div>
+                                </details>
                             </div>
                         </div>
                         <div class="product-price">₫${(item.price || 0).toLocaleString('vi-VN')}</div>
@@ -306,7 +455,329 @@
             });
             
             updateCartSummaryFromCheckboxes();
+            
+            // Load vouchers cho từng sản phẩm sau khi cart đã load xong
+            setTimeout(() => {
+                loadVouchersForAllProducts();
+            }, 300);
+            
             console.log('Cart data loaded successfully');
+        }
+
+        // Load vouchers cho tất cả sản phẩm trong cart
+        async function loadVouchersForAllProducts() {
+            const productItems = document.querySelectorAll('.product-item');
+            productItems.forEach(productItem => {
+                const productId = productItem.getAttribute('data-product-id');
+                if (productId) {
+                    loadVouchersForProduct(productId);
+                }
+            });
+        }
+        
+        // Load vouchers cho một sản phẩm cụ thể
+        async function loadVouchersForProduct(productId) {
+            const voucherDropdown = document.querySelector(`.product-voucher-dropdown[data-product-id="${productId}"]`);
+            const voucherList = document.querySelector(`.product-voucher-list[data-product-id="${productId}"]`);
+            const voucherCountEl = document.querySelector(`.voucher-count-${productId}`);
+            
+            if (!voucherDropdown || !voucherList) {
+                console.error(`Voucher elements not found for product ${productId}`);
+                return;
+            }
+            
+            try {
+                // Lấy thông tin sản phẩm từ cart
+                const cartItems = await fetchCartFromAPI();
+                const product = cartItems.find(item => (item.product_id || item.id || item._id || item.sku) == productId);
+                
+                if (!product) {
+                    console.log(`Product ${productId} not found in cart`);
+                    voucherDropdown.style.display = 'none';
+                    return;
+                }
+                
+                const productPrice = product.price || 0;
+                const productQuantity = product.quantity || 1;
+                const subtotal = productPrice * productQuantity;
+                
+                // Lấy product IDs (có thể là _id, product_id, id, hoặc sku)
+                const productIds = [
+                    String(product._id || ''),
+                    String(product.product_id || ''),
+                    String(product.id || ''),
+                    String(product.sku || ''),
+                    String(productId)
+                ].filter(id => id && id !== 'undefined' && id !== 'null');
+                
+                console.log(`Loading vouchers for product ${productId}:`, {
+                    productIds,
+                    subtotal,
+                    productName: product.name
+                });
+                
+                const response = await fetch('/api/vouchers?status_q=active&pageSize=50');
+                const result = await response.json();
+                
+                if (result.data && result.data.length > 0) {
+                    voucherList.innerHTML = '';
+                    
+                    const now = new Date();
+                    let hasApplicableVouchers = false;
+                    let applicableCount = 0;
+                    
+                    result.data.forEach(voucher => {
+                        // Kiểm tra điều kiện
+                        if (voucher.status !== 'active') return;
+                        
+                        // Kiểm tra thời gian
+                        if (voucher.start_at) {
+                            const startAt = new Date(voucher.start_at);
+                            if (now < startAt) return;
+                        }
+                        if (voucher.end_at) {
+                            const endAt = new Date(voucher.end_at);
+                            if (now > endAt) return;
+                        }
+                        
+                        // Kiểm tra applicable_product_ids
+                        let productMatch = true;
+                        if (voucher.applicable_product_ids && Array.isArray(voucher.applicable_product_ids) && voucher.applicable_product_ids.length > 0) {
+                            const applicableIds = voucher.applicable_product_ids.map(id => String(id));
+                            productMatch = productIds.some(id => applicableIds.includes(id));
+                            if (!productMatch) return;
+                        }
+                        
+                        // Kiểm tra min_order_value (áp dụng cho subtotal của sản phẩm này)
+                        if (voucher.min_order_value && voucher.min_order_value > 0) {
+                            if (subtotal < voucher.min_order_value) return;
+                        }
+                        
+                        hasApplicableVouchers = true;
+                        applicableCount++;
+                        
+                        // Kiểm tra voucher đã áp dụng cho sản phẩm này
+                        const appliedVoucherKey = `phuclong_selected_voucher_${productId}`;
+                        const appliedVoucher = localStorage.getItem(appliedVoucherKey);
+                        const isApplied = appliedVoucher && appliedVoucher === voucher.code;
+                        
+                        const voucherCard = document.createElement('div');
+                        
+                        // Nếu voucher đã được áp dụng, dùng nền xanh lá
+                        if (isApplied) {
+                            voucherCard.style.cssText = 'padding: 10px; background: #d4edda; border: 2px solid #28a745; border-radius: 6px; cursor: pointer; margin-bottom: 8px; transition: all 0.3s;';
+                        } else {
+                            // Nền tím nhạt cho voucher chưa áp dụng
+                            voucherCard.style.cssText = 'padding: 10px; background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 6px; cursor: pointer; margin-bottom: 8px; transition: all 0.3s;';
+                        }
+                        
+                        voucherCard.onmouseover = () => {
+                            if (!isApplied) {
+                                voucherCard.style.borderColor = '#fb2e86';
+                                voucherCard.style.background = '#f8f4ff';
+                            }
+                        };
+                        voucherCard.onmouseout = () => {
+                            if (isApplied) {
+                                voucherCard.style.borderColor = '#28a745';
+                                voucherCard.style.background = '#d4edda';
+                            } else {
+                                voucherCard.style.borderColor = '#ce93d8';
+                                voucherCard.style.background = '#f3e5f5';
+                            }
+                        };
+                        
+                        const discountText = voucher.type === 'percent' 
+                            ? `Giảm ${voucher.value}%` 
+                            : `Giảm ${formatPrice(voucher.value)}`;
+                        
+                        // Tạo elements bằng DOM
+                        const cardContent = document.createElement('div');
+                        cardContent.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+                        
+                        const leftDiv = document.createElement('div');
+                        leftDiv.style.cssText = 'flex: 1;';
+                        
+                        const codeStrong = document.createElement('strong');
+                        codeStrong.style.cssText = `color: ${isApplied ? '#155724' : '#fb2e86'}; font-size: 14px;`;
+                        codeStrong.textContent = voucher.code;
+                        leftDiv.appendChild(codeStrong);
+                        
+                        const discountDiv = document.createElement('div');
+                        discountDiv.style.cssText = 'font-size: 13px; color: #666; margin-top: 4px;';
+                        discountDiv.textContent = discountText;
+                        leftDiv.appendChild(discountDiv);
+                        
+                        // Hiển thị "Đã áp dụng" nếu voucher đang được áp dụng
+                        if (isApplied) {
+                            const appliedLabel = document.createElement('div');
+                            appliedLabel.style.cssText = 'font-size: 12px; color: #155724; margin-top: 4px; font-weight: 600;';
+                            appliedLabel.textContent = '✓ Đã áp dụng';
+                            leftDiv.appendChild(appliedLabel);
+                        }
+                        
+                        if (voucher.description) {
+                            const descDiv = document.createElement('div');
+                            descDiv.style.cssText = 'font-size: 12px; color: #999; margin-top: 2px;';
+                            descDiv.textContent = voucher.description;
+                            leftDiv.appendChild(descDiv);
+                        }
+                        
+                        if (voucher.min_order_value && voucher.min_order_value > 0) {
+                            const conditionDiv = document.createElement('div');
+                            conditionDiv.style.cssText = 'font-size: 11px; color: #ff9800; margin-top: 2px;';
+                            conditionDiv.textContent = `Đơn tối thiểu: ${formatPrice(voucher.min_order_value)}`;
+                            leftDiv.appendChild(conditionDiv);
+                        }
+                        
+                        // Nếu đã áp dụng, hiển thị nút "Hủy áp dụng" thay vì "Áp dụng"
+                        const applyBtn = document.createElement('button');
+                        if (isApplied) {
+                            applyBtn.textContent = 'Hủy áp dụng';
+                            applyBtn.style.cssText = 'background: #dc3545; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; margin-left: 8px;';
+                            applyBtn.onclick = (e) => {
+                                e.stopPropagation();
+                                removeVoucherFromProduct(productId, voucher.code);
+                            };
+                        } else {
+                            applyBtn.textContent = 'Áp dụng';
+                            applyBtn.style.cssText = 'background: #fb2e86; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; margin-left: 8px;';
+                            applyBtn.onclick = (e) => {
+                                e.stopPropagation();
+                                applyVoucherToProduct(productId, voucher.code);
+                            };
+                        }
+                        
+                        cardContent.appendChild(leftDiv);
+                        cardContent.appendChild(applyBtn);
+                        voucherCard.appendChild(cardContent);
+                        voucherList.appendChild(voucherCard);
+                    });
+                    
+                    // Update voucher count
+                    if (voucherCountEl) voucherCountEl.textContent = applicableCount;
+                    
+                    // Hiển thị dropdown nếu có voucher
+                    if (hasApplicableVouchers) {
+                        voucherDropdown.style.display = 'block';
+                    } else {
+                        voucherDropdown.style.display = 'none';
+                    }
+                    
+                    if (!hasApplicableVouchers) {
+                        voucherList.innerHTML = '<div style="text-align: center; color: #999; padding: 10px; font-size: 13px;">Không có voucher khả dụng cho sản phẩm này</div>';
+                    }
+                } else {
+                    voucherDropdown.style.display = 'none';
+                }
+            } catch (error) {
+                console.error(`Error loading vouchers for product ${productId}:`, error);
+            }
+        }
+        
+        // Áp dụng voucher cho một sản phẩm
+        async function applyVoucherToProduct(productId, voucherCode) {
+            try {
+                const response = await fetch(`/api/vouchers/${voucherCode}`);
+                const result = await response.json();
+                
+                if (!result.code) {
+                    alert('Voucher không tồn tại!');
+                    return;
+                }
+                
+                // Lấy thông tin sản phẩm
+                const cartItems = await fetchCartFromAPI();
+                const product = cartItems.find(item => (item.product_id || item.id || item._id || item.sku) == productId);
+                
+                if (!product) {
+                    alert('Sản phẩm không tồn tại!');
+                    return;
+                }
+                
+                const productPrice = product.price || 0;
+                const productQuantity = product.quantity || 1;
+                const subtotal = productPrice * productQuantity;
+                
+                // Kiểm tra điều kiện
+                const now = new Date();
+                
+                if (result.status !== 'active') {
+                    alert('Voucher không còn hiệu lực!');
+                    return;
+                }
+                
+                if (result.start_at) {
+                    const startAt = new Date(result.start_at);
+                    if (now < startAt) {
+                        alert('Voucher chưa đến thời gian hiệu lực!');
+                        return;
+                    }
+                }
+                if (result.end_at) {
+                    const endAt = new Date(result.end_at);
+                    if (now > endAt) {
+                        alert('Voucher đã hết hạn!');
+                        return;
+                    }
+                }
+                
+                if (result.min_order_value && result.min_order_value > 0) {
+                    if (subtotal < result.min_order_value) {
+                        alert(`Voucher yêu cầu đơn hàng tối thiểu ${formatPrice(result.min_order_value)}!`);
+                        return;
+                    }
+                }
+                
+                // Kiểm tra applicable_product_ids
+                const productIds = [
+                    String(product._id || ''),
+                    String(product.product_id || ''),
+                    String(product.id || ''),
+                    String(product.sku || ''),
+                    String(productId)
+                ].filter(id => id && id !== 'undefined' && id !== 'null');
+                
+                if (result.applicable_product_ids && result.applicable_product_ids.length > 0) {
+                    const applicableIds = result.applicable_product_ids.map(id => String(id));
+                    const hasMatchingProduct = productIds.some(id => applicableIds.includes(id));
+                    if (!hasMatchingProduct) {
+                        alert('Voucher không áp dụng cho sản phẩm này!');
+                        return;
+                    }
+                }
+                
+                // Lưu voucher vào localStorage cho sản phẩm này
+                const appliedVoucherKey = `phuclong_selected_voucher_${productId}`;
+                const appliedVoucherDataKey = `phuclong_selected_voucher_data_${productId}`;
+                localStorage.setItem(appliedVoucherKey, voucherCode);
+                localStorage.setItem(appliedVoucherDataKey, JSON.stringify(result));
+                
+                // Reload vouchers cho sản phẩm này
+                loadVouchersForProduct(productId);
+                
+                // Reload cart summary
+                updateCartSummaryFromCheckboxes();
+                
+                alert(`Đã áp dụng voucher ${voucherCode} cho sản phẩm!`);
+            } catch (error) {
+                console.error('Error applying voucher to product:', error);
+                alert('Lỗi khi áp dụng voucher. Vui lòng thử lại!');
+            }
+        }
+        
+        // Xóa voucher khỏi một sản phẩm
+        function removeVoucherFromProduct(productId, voucherCode) {
+            const appliedVoucherKey = `phuclong_selected_voucher_${productId}`;
+            const appliedVoucherDataKey = `phuclong_selected_voucher_data_${productId}`;
+            localStorage.removeItem(appliedVoucherKey);
+            localStorage.removeItem(appliedVoucherDataKey);
+            
+            // Reload vouchers cho sản phẩm này
+            loadVouchersForProduct(productId);
+            
+            // Reload cart summary
+            updateCartSummaryFromCheckboxes();
         }
         
         // Cập nhật cart summary dựa trên các checkbox được tick
@@ -330,8 +801,66 @@
                 }
             });
             
-            updateCartSummary(checkedItems);
+            updateCartSummaryWithVoucher(checkedItems);
             updateCheckoutButton(checkedItems.length > 0);
+        }
+        
+        // Cập nhật cart summary với voucher
+        function updateCartSummaryWithVoucher(cart) {
+            let subtotal = 0;
+            let totalDiscount = 0;
+            
+            // Tính subtotal và discount cho từng sản phẩm
+            cart.forEach(item => {
+                const productId = String(item.product_id || item.id || item._id || item.sku || '');
+                const itemPrice = item.price || 0;
+                const itemQuantity = item.quantity || 1;
+                const itemSubtotal = itemPrice * itemQuantity;
+                
+                subtotal += itemSubtotal;
+                
+                // Kiểm tra voucher đã áp dụng cho sản phẩm này
+                const appliedVoucherKey = `phuclong_selected_voucher_${productId}`;
+                const appliedVoucherDataKey = `phuclong_selected_voucher_data_${productId}`;
+                const appliedVoucher = localStorage.getItem(appliedVoucherKey);
+                const appliedVoucherData = localStorage.getItem(appliedVoucherDataKey);
+                
+                if (appliedVoucher && appliedVoucherData) {
+                    try {
+                        const voucher = JSON.parse(appliedVoucherData);
+                        let itemDiscount = 0;
+                        
+                        if (voucher.type === 'percent') {
+                            itemDiscount = itemSubtotal * (voucher.value / 100);
+                        } else if (voucher.type === 'fixed') {
+                            itemDiscount = Math.min(voucher.value, itemSubtotal);
+                        }
+                        
+                        totalDiscount += itemDiscount;
+                    } catch (e) {
+                        console.error(`Error parsing voucher data for product ${productId}:`, e);
+                    }
+                }
+            });
+            
+            const total = subtotal - totalDiscount;
+            
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total');
+            const discountRow = document.getElementById('discount-row');
+            const discountAmount = document.getElementById('discount-amount');
+            
+            if (subtotalEl) subtotalEl.textContent = `₫${subtotal.toLocaleString('vi-VN')}`;
+            
+            // Hiển thị discount nếu có
+            if (totalDiscount > 0) {
+                if (discountRow) discountRow.style.display = 'flex';
+                if (discountAmount) discountAmount.textContent = `-₫${totalDiscount.toLocaleString('vi-VN')}`;
+            } else {
+                if (discountRow) discountRow.style.display = 'none';
+            }
+            
+            if (totalEl) totalEl.textContent = `₫${total.toLocaleString('vi-VN')}`;
         }
         
         // Cập nhật trạng thái nút checkout
@@ -446,9 +975,9 @@
                     });
                     
                     if (response.ok) {
-                        localStorage.removeItem('phuclong_cart');
+                localStorage.removeItem('phuclong_cart');
                         await loadCartData();
-                        alert('Đã xóa tất cả sản phẩm trong giỏ hàng!');
+                alert('Đã xóa tất cả sản phẩm trong giỏ hàng!');
                     } else {
                         const result = await response.json();
                         alert(result.detail || 'Lỗi khi xóa giỏ hàng');
@@ -504,6 +1033,349 @@
 
         // Make debug function global
         window.debugCart = debugCart;
+        
+        // Format price
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            }).format(price);
+        }
+        
+        // Load vouchers cho cart
+        async function loadVouchers() {
+            console.log('loadVouchers() called');
+            const voucherList = document.getElementById('voucher-list');
+            const voucherDropdown = document.getElementById('voucher-dropdown');
+            
+            if (!voucherList) {
+                console.error('voucher-list element not found!');
+                return;
+            }
+            
+            if (!voucherDropdown) {
+                console.error('voucher-dropdown element not found!');
+                return;
+            }
+            
+            console.log('voucher-list and voucher-dropdown found');
+            
+            try {
+                // Lấy cart items từ API hoặc localStorage
+                const cartItems = await fetchCartFromAPI();
+                const subtotal = cartItems.reduce((sum, item) => sum + ((item.price || 0) * (item.quantity || 1)), 0);
+                
+                // Lấy tất cả product IDs từ các item
+                const productIds = [];
+                cartItems.forEach(item => {
+                    const id1 = item._id ? String(item._id) : null;
+                    const id2 = item.product_id ? String(item.product_id) : null;
+                    const id3 = item.id ? String(item.id) : null;
+                    const id4 = item.sku ? String(item.sku) : null;
+                    
+                    [id1, id2, id3, id4].forEach(id => {
+                        if (id && id !== 'undefined' && id !== 'null' && !productIds.includes(id)) {
+                            productIds.push(id);
+                        }
+                    });
+                });
+                
+                console.log('Cart items:', cartItems);
+                console.log('Product IDs extracted:', productIds);
+                console.log('Subtotal:', subtotal);
+                
+                const response = await fetch('/api/vouchers?status_q=active&pageSize=50');
+                const result = await response.json();
+                
+                if (result.data && result.data.length > 0) {
+                    voucherList.innerHTML = '';
+                    
+                    const now = new Date();
+                    let hasApplicableVouchers = false;
+                    let applicableCount = 0;
+                    
+                    result.data.forEach(voucher => {
+                        // Kiểm tra điều kiện
+                        if (voucher.status !== 'active') return;
+                        
+                        // Kiểm tra thời gian
+                        if (voucher.start_at) {
+                            const startAt = new Date(voucher.start_at);
+                            if (now < startAt) return;
+                        }
+                        if (voucher.end_at) {
+                            const endAt = new Date(voucher.end_at);
+                            if (now > endAt) return;
+                        }
+                        
+                        // Kiểm tra applicable_product_ids
+                        let productMatch = true;
+                        if (voucher.applicable_product_ids && Array.isArray(voucher.applicable_product_ids) && voucher.applicable_product_ids.length > 0) {
+                            const applicableIds = voucher.applicable_product_ids.map(id => String(id));
+                            productMatch = productIds.some(id => applicableIds.includes(id));
+                            if (!productMatch) return;
+                        }
+                        
+                        // Kiểm tra min_order_value
+                        if (voucher.min_order_value && voucher.min_order_value > 0) {
+                            if (subtotal < voucher.min_order_value) return;
+                        }
+                        
+                        hasApplicableVouchers = true;
+                        applicableCount++;
+                        
+                        // Kiểm tra voucher đã áp dụng
+                        const appliedVoucher = localStorage.getItem('phuclong_selected_voucher');
+                        const isApplied = appliedVoucher && appliedVoucher === voucher.code;
+                        
+                        const voucherCard = document.createElement('div');
+                        
+                        // Nếu voucher đã được áp dụng, dùng nền xanh lá
+                        if (isApplied) {
+                            voucherCard.style.cssText = 'padding: 10px; background: #d4edda; border: 2px solid #28a745; border-radius: 6px; cursor: pointer; margin-bottom: 8px; transition: all 0.3s;';
+                        } else {
+                            voucherCard.style.cssText = 'padding: 10px; background: white; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; margin-bottom: 8px; transition: all 0.3s;';
+                        }
+                        
+                        voucherCard.onmouseover = () => {
+                            if (!isApplied) {
+                                voucherCard.style.borderColor = '#fb2e86';
+                                voucherCard.style.background = '#fff';
+                            }
+                        };
+                        voucherCard.onmouseout = () => {
+                            if (isApplied) {
+                                voucherCard.style.borderColor = '#28a745';
+                                voucherCard.style.background = '#d4edda';
+                            } else {
+                                voucherCard.style.borderColor = '#ddd';
+                                voucherCard.style.background = '#fff';
+                            }
+                        };
+                        
+                        const discountText = voucher.type === 'percent' 
+                            ? `Giảm ${voucher.value}%` 
+                            : `Giảm ${formatPrice(voucher.value)}`;
+                        
+                        // Tạo elements bằng DOM
+                        const cardContent = document.createElement('div');
+                        cardContent.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+                        
+                        const leftDiv = document.createElement('div');
+                        
+                        const codeStrong = document.createElement('strong');
+                        codeStrong.style.color = isApplied ? '#155724' : '#fb2e86';
+                        codeStrong.textContent = voucher.code;
+                        leftDiv.appendChild(codeStrong);
+                        
+                        const discountDiv = document.createElement('div');
+                        discountDiv.style.cssText = 'font-size: 14px; color: #666; margin-top: 4px;';
+                        discountDiv.textContent = discountText;
+                        leftDiv.appendChild(discountDiv);
+                        
+                        // Hiển thị "Đã áp dụng" nếu voucher đang được áp dụng
+                        if (isApplied) {
+                            const appliedLabel = document.createElement('div');
+                            appliedLabel.style.cssText = 'font-size: 12px; color: #155724; margin-top: 4px; font-weight: 600;';
+                            appliedLabel.textContent = '✓ Đã áp dụng';
+                            leftDiv.appendChild(appliedLabel);
+                        }
+                        
+                        if (voucher.description) {
+                            const descDiv = document.createElement('div');
+                            descDiv.style.cssText = 'font-size: 12px; color: #999; margin-top: 2px;';
+                            descDiv.textContent = voucher.description;
+                            leftDiv.appendChild(descDiv);
+                        }
+                        
+                        if (voucher.min_order_value && voucher.min_order_value > 0) {
+                            const conditionDiv = document.createElement('div');
+                            conditionDiv.style.cssText = 'font-size: 11px; color: #ff9800; margin-top: 2px;';
+                            conditionDiv.textContent = `Đơn tối thiểu: ${formatPrice(voucher.min_order_value)}`;
+                            leftDiv.appendChild(conditionDiv);
+                        }
+                        
+                        // Nếu đã áp dụng, hiển thị nút "Hủy áp dụng" thay vì "Áp dụng"
+                        const applyBtn = document.createElement('button');
+                        if (isApplied) {
+                            applyBtn.textContent = 'Hủy áp dụng';
+                            applyBtn.style.cssText = 'background: #dc3545; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600;';
+                            applyBtn.onclick = (e) => {
+                                e.stopPropagation();
+                                removeVoucher();
+                            };
+                        } else {
+                            applyBtn.textContent = 'Áp dụng';
+                            applyBtn.style.cssText = 'background: #fb2e86; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600;';
+                            applyBtn.onclick = (e) => {
+                                e.stopPropagation();
+                                applyVoucherToOrder(voucher.code);
+                            };
+                        }
+                        
+                        cardContent.appendChild(leftDiv);
+                        cardContent.appendChild(applyBtn);
+                        voucherCard.appendChild(cardContent);
+                        voucherList.appendChild(voucherCard);
+                    });
+                    
+                    // Update voucher count
+                    const voucherCount = document.getElementById('voucher-count');
+                    if (voucherCount) voucherCount.textContent = applicableCount;
+                    
+                    // Hiển thị dropdown nếu có voucher
+                    if (hasApplicableVouchers) {
+                        console.log(`Found ${applicableCount} applicable vouchers, showing dropdown`);
+                        voucherDropdown.style.display = 'block';
+                    } else {
+                        console.log('No applicable vouchers found, hiding dropdown');
+                        voucherDropdown.style.display = 'none';
+                    }
+                    
+                    if (!hasApplicableVouchers) {
+                        voucherList.innerHTML = '<div style="text-align: center; color: #999; padding: 10px;">Không có voucher khả dụng cho đơn hàng này</div>';
+                    }
+                } else {
+                    console.log('No vouchers returned from API');
+                    voucherDropdown.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error loading vouchers:', error);
+            }
+        }
+        
+        // Áp dụng voucher vào đơn hàng
+        async function applyVoucherToOrder(voucherCodeParam = null) {
+            const voucherCode = voucherCodeParam || '';
+            if (!voucherCode) {
+                alert('Vui lòng chọn voucher!');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/vouchers/${voucherCode}`);
+                const result = await response.json();
+                
+                if (!result.code) {
+                    alert('Voucher không tồn tại!');
+                    return;
+                }
+                
+                // Kiểm tra điều kiện
+                const now = new Date();
+                const cartItems = await fetchCartFromAPI();
+                const subtotal = cartItems.reduce((sum, item) => sum + ((item.price || 0) * (item.quantity || 1)), 0);
+                const productIds = [];
+                cartItems.forEach(item => {
+                    const id1 = item._id ? String(item._id) : null;
+                    const id2 = item.product_id ? String(item.product_id) : null;
+                    const id3 = item.id ? String(item.id) : null;
+                    const id4 = item.sku ? String(item.sku) : null;
+                    [id1, id2, id3, id4].forEach(id => {
+                        if (id && id !== 'undefined' && id !== 'null' && !productIds.includes(id)) {
+                            productIds.push(id);
+                        }
+                    });
+                });
+                
+                // Kiểm tra status
+                if (result.status !== 'active') {
+                    alert('Voucher không còn hiệu lực!');
+                    return;
+                }
+                
+                // Kiểm tra thời gian hiệu lực
+                if (result.start_at) {
+                    const startAt = new Date(result.start_at);
+                    if (now < startAt) {
+                        alert('Voucher chưa đến thời gian hiệu lực!');
+                        return;
+                    }
+                }
+                if (result.end_at) {
+                    const endAt = new Date(result.end_at);
+                    if (now > endAt) {
+                        alert('Voucher đã hết hạn!');
+                        return;
+                    }
+                }
+                
+                // Kiểm tra min_order_value
+                if (result.min_order_value && result.min_order_value > 0) {
+                    if (subtotal < result.min_order_value) {
+                        alert(`Voucher yêu cầu đơn hàng tối thiểu ${formatPrice(result.min_order_value)}!`);
+                        return;
+                    }
+                }
+                
+                // Kiểm tra applicable_product_ids
+                if (result.applicable_product_ids && result.applicable_product_ids.length > 0) {
+                    const applicableIds = result.applicable_product_ids.map(id => String(id));
+                    const hasMatchingProduct = productIds.some(id => applicableIds.includes(id));
+                    if (!hasMatchingProduct) {
+                        alert('Voucher không áp dụng cho sản phẩm trong giỏ hàng!');
+                        return;
+                    }
+                }
+                
+                // Lưu voucher vào localStorage
+                localStorage.setItem('phuclong_selected_voucher', voucherCode);
+                localStorage.setItem('phuclong_selected_voucher_data', JSON.stringify(result));
+                
+                // Hiển thị voucher đã áp dụng badge
+                const badge = document.getElementById('voucher-applied-badge');
+                const badgeCode = document.getElementById('applied-voucher-code-display');
+                if (badge && badgeCode) {
+                    badgeCode.textContent = voucherCode;
+                    badge.style.display = 'block';
+                }
+                
+                // Reload cart summary để tính lại giá
+                updateCartSummaryFromCheckboxes();
+                
+                // Reload vouchers để cập nhật UI
+                loadVouchers();
+                
+                alert(`Đã áp dụng voucher ${voucherCode}!`);
+            } catch (error) {
+                console.error('Error applying voucher:', error);
+                alert('Lỗi khi áp dụng voucher. Vui lòng thử lại!');
+            }
+        }
+        
+        // Xóa voucher
+        function removeVoucher() {
+            localStorage.removeItem('phuclong_selected_voucher');
+            localStorage.removeItem('phuclong_selected_voucher_data');
+            
+            // Ẩn badge
+            const badge = document.getElementById('voucher-applied-badge');
+            if (badge) {
+                badge.style.display = 'none';
+            }
+            
+            // Reload cart summary để tính lại giá
+            updateCartSummaryFromCheckboxes();
+            
+            // Reload vouchers để cập nhật UI
+            loadVouchers();
+        }
+        
+        // Load vouchers khi trang load - chỉ hiển thị badge nếu có voucher đã áp dụng
+        document.addEventListener('DOMContentLoaded', function() {
+            // Kiểm tra voucher đã áp dụng từ trước
+            const appliedVoucher = localStorage.getItem('phuclong_selected_voucher');
+            if (appliedVoucher) {
+                const badge = document.getElementById('voucher-applied-badge');
+                const badgeCode = document.getElementById('applied-voucher-code-display');
+                if (badge && badgeCode) {
+                    badgeCode.textContent = appliedVoucher;
+                    badge.style.display = 'block';
+                }
+            }
+            
+            // loadVouchers() sẽ được gọi từ loadCartData() sau khi cart đã load xong
+        });
     </script>
 </body>
 </html>

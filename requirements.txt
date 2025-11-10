@@ -8,4 +8,9 @@ certifi
 pymongo
 pyaml
 dill
+bcrypt
+passlib
+fastapi
+uvicorn
+motor
 

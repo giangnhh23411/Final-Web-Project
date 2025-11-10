@@ -307,8 +307,8 @@ function showLoginDialog() {
             </h3>
             <form id="loginForm" style="text-align: left;">
                 <div style="margin-bottom: 15px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Tài khoản:</label>
-                    <input type="text" id="loginUsername" placeholder="Nhập tài khoản" style="
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Email:</label>
+                    <input type="email" id="loginEmail" placeholder="Nhập email" style="
                         width: 100%;
                         padding: 10px;
                         border: 1px solid #ddd;
@@ -372,16 +372,71 @@ function showLoginDialog() {
         showRegisterDialog();
     });
 
-    modal.querySelector('#loginForm').addEventListener('submit', (e) => {
+    modal.querySelector('#loginForm').addEventListener('submit', async (e) => {
         e.preventDefault();
-        const username = document.getElementById('loginUsername').value;
+        const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
         
-        if (loginUser(username, password)) {
-            document.body.removeChild(modal);
-            showSuccessMessage('Đăng nhập thành công!');
-        } else {
-            showErrorMessage('Tài khoản hoặc mật khẩu không đúng!');
+        try {
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('password', password);
+            
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
+                // Lưu thông tin user
+                localStorage.setItem('phuclong_user_logged_in', 'true');
+                localStorage.setItem('phuclong_current_user', JSON.stringify(result.user));
+                
+                // Load cart từ API nếu có
+                if (result.user && result.user.id) {
+                    try {
+                        const cartResponse = await fetch(`/api/carts?user_id=${result.user.id}`);
+                        if (cartResponse.ok) {
+                            const cartData = await cartResponse.json();
+                            if (cartData.data && cartData.data.length > 0) {
+                                const cartItems = cartData.data.map(item => ({
+                                    id: item.product_id,
+                                    sku: item.sku,
+                                    name: item.product_name,
+                                    price: item.unit_price,
+                                    quantity: item.quantity,
+                                    image: item.product_image || ''
+                                }));
+                                localStorage.setItem('phuclong_cart', JSON.stringify(cartItems));
+                            }
+                        }
+                    } catch (cartError) {
+                        console.error('Error loading cart:', cartError);
+                    }
+                }
+                
+                document.body.removeChild(modal);
+                showSuccessMessage('Đăng nhập thành công!');
+                
+                // Redirect admin nếu có redirect_url
+                if (result.redirect_url) {
+                    setTimeout(() => {
+                        window.location.href = result.redirect_url;
+                    }, 500);
+                } else {
+                    // Reload page để cập nhật header
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 500);
+                }
+            } else {
+                showErrorMessage(result.detail || 'Email hoặc mật khẩu không đúng!');
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+            showErrorMessage('Đã xảy ra lỗi khi đăng nhập. Vui lòng thử lại!');
         }
     });
 
